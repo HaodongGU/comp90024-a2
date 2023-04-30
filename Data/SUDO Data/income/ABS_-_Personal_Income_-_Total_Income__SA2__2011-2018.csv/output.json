@@ -1,0 +1,2312 @@
+{
+  "205021080": {
+    "sa2_name": "Alps - East",
+    "median_income": "31114.0",
+    "mean_income": "22659.0"
+  },
+  "201021012": {
+    "sa2_name": "Gordon (Vicnp)",
+    "median_income": "47895.0",
+    "mean_income": "57960.0"
+  },
+  "201031013": {
+    "sa2_name": "Avoca",
+    "median_income": "38543.0",
+    "mean_income": "43798.0"
+  },
+  "201031014": {
+    "sa2_name": "Beaufort",
+    "median_income": "38984.0",
+    "mean_income": "48542.0"
+  },
+  "205011079": {
+    "sa2_name": "Warragul",
+    "median_income": "45069.0",
+    "mean_income": "56425.0"
+  },
+  "205021081": {
+    "sa2_name": "Bairnsdale",
+    "median_income": "42091.0",
+    "mean_income": "48731.0"
+  },
+  "205021082": {
+    "sa2_name": "Bruthen - Omeo",
+    "median_income": "38409.0",
+    "mean_income": "44548.0"
+  },
+  "205021083": {
+    "sa2_name": "Lake King",
+    "median_income": "null",
+    "mean_income": "null"
+  },
+  "205021084": {
+    "sa2_name": "Lakes Entrance",
+    "median_income": "35390.0",
+    "mean_income": "44329.0"
+  },
+  "206061136": {
+    "sa2_name": "Prahran - Windsor",
+    "median_income": "63435.0",
+    "mean_income": "83932.0"
+  },
+  "205021086": {
+    "sa2_name": "Paynesville",
+    "median_income": "36444.0",
+    "mean_income": "45800.0"
+  },
+  "210031440": {
+    "sa2_name": "Hadfield",
+    "median_income": "49025.0",
+    "mean_income": "55674.0"
+  },
+  "205031087": {
+    "sa2_name": "Foster",
+    "median_income": "34854.0",
+    "mean_income": "44045.0"
+  },
+  "205031088": {
+    "sa2_name": "French Island",
+    "median_income": "18177.0",
+    "mean_income": "32022.0"
+  },
+  "213041359": {
+    "sa2_name": "Rockbank - Mount Cottrell",
+    "median_income": "48697.0",
+    "mean_income": "62969.0"
+  },
+  "215011387": {
+    "sa2_name": "Ararat Region",
+    "median_income": "41086.0",
+    "mean_income": "50571.0"
+  },
+  "206071141": {
+    "sa2_name": "Collingwood",
+    "median_income": "60589.0",
+    "mean_income": "73036.0"
+  },
+  "205031090": {
+    "sa2_name": "Leongatha",
+    "median_income": "40948.0",
+    "mean_income": "50610.0"
+  },
+  "205031091": {
+    "sa2_name": "Phillip Island",
+    "median_income": "36813.0",
+    "mean_income": "46341.0"
+  },
+  "205031092": {
+    "sa2_name": "Wilsons Promontory",
+    "median_income": "61865.0",
+    "mean_income": "70567.0"
+  },
+  "215011392": {
+    "sa2_name": "Stawell",
+    "median_income": "42677.0",
+    "mean_income": "48418.0"
+  },
+  "215011393": {
+    "sa2_name": "West Wimmera",
+    "median_income": "41948.0",
+    "mean_income": "50581.0"
+  },
+  "210041240": {
+    "sa2_name": "Sunbury",
+    "median_income": "53005.0",
+    "mean_income": "62313.0"
+  },
+  "210041241": {
+    "sa2_name": "Sunbury - South",
+    "median_income": "53013.0",
+    "mean_income": "60086.0"
+  },
+  "206071142": {
+    "sa2_name": "Fitzroy",
+    "median_income": "58258.0",
+    "mean_income": "83189.0"
+  },
+  "213051466": {
+    "sa2_name": "Point Cook - South",
+    "median_income": "57871.0",
+    "mean_income": "65867.0"
+  },
+  "215021398": {
+    "sa2_name": "Mildura Region",
+    "median_income": "42045.0",
+    "mean_income": "50768.0"
+  },
+  "215021399": {
+    "sa2_name": "Red Cliffs",
+    "median_income": "42248.0",
+    "mean_income": "45559.0"
+  },
+  "215021469": {
+    "sa2_name": "Mildura - North",
+    "median_income": "43297.0",
+    "mean_income": "50647.0"
+  },
+  "205051099": {
+    "sa2_name": "Alps - West",
+    "median_income": "18835.0",
+    "mean_income": "27804.0"
+  },
+  "205051100": {
+    "sa2_name": "Longford - Loch Sport",
+    "median_income": "40507.0",
+    "mean_income": "53400.0"
+  },
+  "205051101": {
+    "sa2_name": "Maffra",
+    "median_income": "43501.0",
+    "mean_income": "52197.0"
+  },
+  "208021180": {
+    "sa2_name": "Hughesdale",
+    "median_income": "52692.0",
+    "mean_income": "66808.0"
+  },
+  "205051102": {
+    "sa2_name": "Rosedale",
+    "median_income": "42172.0",
+    "mean_income": "50211.0"
+  },
+  "205051103": {
+    "sa2_name": "Sale",
+    "median_income": "46718.0",
+    "mean_income": "59498.0"
+  },
+  "205051104": {
+    "sa2_name": "Yarram",
+    "median_income": "38003.0",
+    "mean_income": "45840.0"
+  },
+  "215011394": {
+    "sa2_name": "Yarriambiack",
+    "median_income": "46030.0",
+    "mean_income": "58228.0"
+  },
+  "201011008": {
+    "sa2_name": "Wendouree - Miners Rest",
+    "median_income": "45002.0",
+    "mean_income": "49104.0"
+  },
+  "201021009": {
+    "sa2_name": "Bacchus Marsh Region",
+    "median_income": "50002.0",
+    "mean_income": "66628.0"
+  },
+  "207031162": {
+    "sa2_name": "Blackburn South",
+    "median_income": "47174.0",
+    "mean_income": "61704.0"
+  },
+  "215021395": {
+    "sa2_name": "Irymple",
+    "median_income": "45791.0",
+    "mean_income": "55398.0"
+  },
+  "215021396": {
+    "sa2_name": "Merbein",
+    "median_income": "42744.0",
+    "mean_income": "46796.0"
+  },
+  "216021411": {
+    "sa2_name": "Cobram",
+    "median_income": "43115.0",
+    "mean_income": "49449.0"
+  },
+  "201021010": {
+    "sa2_name": "Creswick - Clunes",
+    "median_income": "41021.0",
+    "mean_income": "51504.0"
+  },
+  "208011170": {
+    "sa2_name": "Brighton East",
+    "median_income": "59841.0",
+    "mean_income": "100390.0"
+  },
+  "201021011": {
+    "sa2_name": "Daylesford",
+    "median_income": "38686.0",
+    "mean_income": "50440.0"
+  },
+  "201031015": {
+    "sa2_name": "Golden Plains - North",
+    "median_income": "44154.0",
+    "mean_income": "50394.0"
+  },
+  "216021412": {
+    "sa2_name": "Moira",
+    "median_income": "40771.0",
+    "mean_income": "48208.0"
+  },
+  "216021413": {
+    "sa2_name": "Numurkah",
+    "median_income": "39931.0",
+    "mean_income": "44383.0"
+  },
+  "202011021": {
+    "sa2_name": "Flora Hill - Spring Gully",
+    "median_income": "46562.0",
+    "mean_income": "54870.0"
+  },
+  "202011022": {
+    "sa2_name": "Kangaroo Flat - Golden Square",
+    "median_income": "45451.0",
+    "mean_income": "49833.0"
+  },
+  "202011023": {
+    "sa2_name": "Maiden Gully",
+    "median_income": "52247.0",
+    "mean_income": "59251.0"
+  },
+  "202011024": {
+    "sa2_name": "Strathfieldsaye",
+    "median_income": "53073.0",
+    "mean_income": "64329.0"
+  },
+  "216021414": {
+    "sa2_name": "Yarrawonga",
+    "median_income": "40572.0",
+    "mean_income": "48313.0"
+  },
+  "206041120": {
+    "sa2_name": "Flemington Racecourse",
+    "median_income": "51725.0",
+    "mean_income": "61137.0"
+  },
+  "207031167": {
+    "sa2_name": "Surrey Hills (East) - Mont Albert",
+    "median_income": "57777.0",
+    "mean_income": "87699.0"
+  },
+  "208011171": {
+    "sa2_name": "Cheltenham - Highett (West)",
+    "median_income": "57299.0",
+    "mean_income": "75767.0"
+  },
+  "217031475": {
+    "sa2_name": "Corangamite - South",
+    "median_income": "36852.0",
+    "mean_income": "44325.0"
+  },
+  "206041122": {
+    "sa2_name": "Melbourne",
+    "median_income": "28806.0",
+    "mean_income": "51528.0"
+  },
+  "208021427": {
+    "sa2_name": "Bentleigh East (South)",
+    "median_income": "53287.0",
+    "mean_income": "67723.0"
+  },
+  "217031476": {
+    "sa2_name": "Otway",
+    "median_income": "33929.0",
+    "mean_income": "44755.0"
+  },
+  "217041477": {
+    "sa2_name": "Moyne - East",
+    "median_income": "44000.0",
+    "mean_income": "50652.0"
+  },
+  "217041478": {
+    "sa2_name": "Moyne - West",
+    "median_income": "43136.0",
+    "mean_income": "52080.0"
+  },
+  "202011025": {
+    "sa2_name": "White Hills - Ascot",
+    "median_income": "49283.0",
+    "mean_income": "54304.0"
+  },
+  "202021026": {
+    "sa2_name": "Bendigo Region - South",
+    "median_income": "49529.0",
+    "mean_income": "59455.0"
+  },
+  "206011105": {
+    "sa2_name": "Brunswick",
+    "median_income": "54409.0",
+    "mean_income": "66873.0"
+  },
+  "204011059": {
+    "sa2_name": "Seymour",
+    "median_income": "43392.0",
+    "mean_income": "49885.0"
+  },
+  "204011060": {
+    "sa2_name": "Seymour Region",
+    "median_income": "49991.0",
+    "mean_income": "56193.0"
+  },
+  "204011061": {
+    "sa2_name": "Upper Yarra Valley",
+    "median_income": "43740.0",
+    "mean_income": "43071.0"
+  },
+  "204011062": {
+    "sa2_name": "Yea",
+    "median_income": "37163.0",
+    "mean_income": "47070.0"
+  },
+  "204021063": {
+    "sa2_name": "Benalla",
+    "median_income": "42700.0",
+    "mean_income": "48684.0"
+  },
+  "204021064": {
+    "sa2_name": "Benalla Region",
+    "median_income": "37975.0",
+    "mean_income": "45396.0"
+  },
+  "217041479": {
+    "sa2_name": "Warrnambool - North",
+    "median_income": "46945.0",
+    "mean_income": "59812.0"
+  },
+  "217041480": {
+    "sa2_name": "Warrnambool - South",
+    "median_income": "45726.0",
+    "mean_income": "54849.0"
+  },
+  "204021066": {
+    "sa2_name": "Wangaratta",
+    "median_income": "45587.0",
+    "mean_income": "53216.0"
+  },
+  "204021067": {
+    "sa2_name": "Wangaratta Region",
+    "median_income": "40688.0",
+    "mean_income": "48495.0"
+  },
+  "208021174": {
+    "sa2_name": "Bentleigh - McKinnon",
+    "median_income": "54863.0",
+    "mean_income": "74073.0"
+  },
+  "204011056": {
+    "sa2_name": "Kilmore - Broadford",
+    "median_income": "49320.0",
+    "mean_income": "56871.0"
+  },
+  "204011057": {
+    "sa2_name": "Mansfield (Vicnp)",
+    "median_income": "37862.0",
+    "mean_income": "46772.0"
+  },
+  "204011058": {
+    "sa2_name": "Nagambie",
+    "median_income": "45235.0",
+    "mean_income": "53483.0"
+  },
+  "204021065": {
+    "sa2_name": "Rutherglen",
+    "median_income": "45971.0",
+    "mean_income": "51788.0"
+  },
+  "205011076": {
+    "sa2_name": "Drouin",
+    "median_income": "44882.0",
+    "mean_income": "51698.0"
+  },
+  "205011077": {
+    "sa2_name": "Mount Baw Baw Region",
+    "median_income": "41422.0",
+    "mean_income": "50686.0"
+  },
+  "205011078": {
+    "sa2_name": "Trafalgar (Vicnp)",
+    "median_income": "44410.0",
+    "mean_income": "54698.0"
+  },
+  "205021085": {
+    "sa2_name": "Orbost",
+    "median_income": "35600.0",
+    "mean_income": "42589.0"
+  },
+  "205031089": {
+    "sa2_name": "Korumburra",
+    "median_income": "41642.0",
+    "mean_income": "49538.0"
+  },
+  "206011106": {
+    "sa2_name": "Brunswick East",
+    "median_income": "56690.0",
+    "mean_income": "67534.0"
+  },
+  "205031093": {
+    "sa2_name": "Wonthaggi - Inverloch",
+    "median_income": "38060.0",
+    "mean_income": "47392.0"
+  },
+  "205041094": {
+    "sa2_name": "Churchill",
+    "median_income": "46847.0",
+    "mean_income": "59177.0"
+  },
+  "205041095": {
+    "sa2_name": "Moe - Newborough",
+    "median_income": "43433.0",
+    "mean_income": "54040.0"
+  },
+  "205041096": {
+    "sa2_name": "Morwell",
+    "median_income": "42558.0",
+    "mean_income": "49917.0"
+  },
+  "205041097": {
+    "sa2_name": "Traralgon",
+    "median_income": "52169.0",
+    "mean_income": "64109.0"
+  },
+  "205041098": {
+    "sa2_name": "Yallourn North - Glengarry",
+    "median_income": "50472.0",
+    "mean_income": "62653.0"
+  },
+  "208011172": {
+    "sa2_name": "Hampton",
+    "median_income": "59892.0",
+    "mean_income": "100880.0"
+  },
+  "208031183": {
+    "sa2_name": "Aspendale Gardens - Waterways",
+    "median_income": "51722.0",
+    "mean_income": "64877.0"
+  },
+  "201011007": {
+    "sa2_name": "Smythes Creek",
+    "median_income": "49822.0",
+    "mean_income": "56172.0"
+  },
+  "208021181": {
+    "sa2_name": "Murrumbeena",
+    "median_income": "54121.0",
+    "mean_income": "69958.0"
+  },
+  "208031184": {
+    "sa2_name": "Braeside",
+    "median_income": "57749.0",
+    "mean_income": "88033.0"
+  },
+  "203011034": {
+    "sa2_name": "Bannockburn",
+    "median_income": "52230.0",
+    "mean_income": "61746.0"
+  },
+  "203011035": {
+    "sa2_name": "Golden Plains - South",
+    "median_income": "47743.0",
+    "mean_income": "56477.0"
+  },
+  "203011036": {
+    "sa2_name": "Winchelsea",
+    "median_income": "45264.0",
+    "mean_income": "59172.0"
+  },
+  "206011109": {
+    "sa2_name": "Pascoe Vale South",
+    "median_income": "56576.0",
+    "mean_income": "68803.0"
+  },
+  "206041118": {
+    "sa2_name": "Docklands",
+    "median_income": "54047.0",
+    "mean_income": "69260.0"
+  },
+  "206041119": {
+    "sa2_name": "East Melbourne",
+    "median_income": "71759.0",
+    "mean_income": "128069.0"
+  },
+  "201011001": {
+    "sa2_name": "Alfredton",
+    "median_income": "52448.0",
+    "mean_income": "62315.0"
+  },
+  "208021176": {
+    "sa2_name": "Carnegie",
+    "median_income": "52685.0",
+    "mean_income": "66873.0"
+  },
+  "206061135": {
+    "sa2_name": "Armadale",
+    "median_income": "66098.0",
+    "mean_income": "107488.0"
+  },
+  "201011002": {
+    "sa2_name": "Ballarat",
+    "median_income": "51736.0",
+    "mean_income": "74671.0"
+  },
+  "206041125": {
+    "sa2_name": "South Yarra - West",
+    "median_income": "68512.0",
+    "mean_income": "135941.0"
+  },
+  "201011003": {
+    "sa2_name": "Ballarat - North",
+    "median_income": "49211.0",
+    "mean_income": "59786.0"
+  },
+  "212031300": {
+    "sa2_name": "Cranbourne",
+    "median_income": "46576.0",
+    "mean_income": "49556.0"
+  },
+  "201011004": {
+    "sa2_name": "Ballarat - South",
+    "median_income": "44293.0",
+    "mean_income": "49041.0"
+  },
+  "201011005": {
+    "sa2_name": "Buninyong",
+    "median_income": "51034.0",
+    "mean_income": "61565.0"
+  },
+  "201011006": {
+    "sa2_name": "Delacombe",
+    "median_income": "47759.0",
+    "mean_income": "52199.0"
+  },
+  "212031301": {
+    "sa2_name": "Cranbourne East",
+    "median_income": "51548.0",
+    "mean_income": "55599.0"
+  },
+  "201031016": {
+    "sa2_name": "Maryborough (Vicnp)",
+    "median_income": "39827.0",
+    "mean_income": "44231.0"
+  },
+  "201031017": {
+    "sa2_name": "Maryborough Region",
+    "median_income": "36938.0",
+    "mean_income": "42490.0"
+  },
+  "202011018": {
+    "sa2_name": "Bendigo",
+    "median_income": "46208.0",
+    "mean_income": "56944.0"
+  },
+  "212021453": {
+    "sa2_name": "Endeavour Hills - North",
+    "median_income": "47811.0",
+    "mean_income": "55217.0"
+  },
+  "202011019": {
+    "sa2_name": "California Gully - Eaglehawk",
+    "median_income": "44261.0",
+    "mean_income": "47779.0"
+  },
+  "208021182": {
+    "sa2_name": "Ormond - Glen Huntly",
+    "median_income": "52837.0",
+    "mean_income": "68150.0"
+  },
+  "206041126": {
+    "sa2_name": "Southbank",
+    "median_income": "51696.0",
+    "mean_income": "73634.0"
+  },
+  "203021046": {
+    "sa2_name": "Newtown (Vicnp)",
+    "median_income": "57818.0",
+    "mean_income": "83648.0"
+  },
+  "202011020": {
+    "sa2_name": "East Bendigo - Kennington",
+    "median_income": "46635.0",
+    "mean_income": "57894.0"
+  },
+  "208031187": {
+    "sa2_name": "Chelsea Heights",
+    "median_income": "52094.0",
+    "mean_income": "58104.0"
+  },
+  "203021047": {
+    "sa2_name": "North Geelong - Bell Park",
+    "median_income": "47651.0",
+    "mean_income": "56636.0"
+  },
+  "202021027": {
+    "sa2_name": "Castlemaine",
+    "median_income": "42109.0",
+    "mean_income": "50841.0"
+  },
+  "202021028": {
+    "sa2_name": "Castlemaine Region",
+    "median_income": "41255.0",
+    "mean_income": "50249.0"
+  },
+  "202021029": {
+    "sa2_name": "Heathcote",
+    "median_income": "41695.0",
+    "mean_income": "49637.0"
+  },
+  "202021030": {
+    "sa2_name": "Kyneton",
+    "median_income": "46315.0",
+    "mean_income": "58009.0"
+  },
+  "202021031": {
+    "sa2_name": "Woodend",
+    "median_income": "53778.0",
+    "mean_income": "70793.0"
+  },
+  "202031032": {
+    "sa2_name": "Bendigo Region - North",
+    "median_income": "45727.0",
+    "mean_income": "53186.0"
+  },
+  "202031033": {
+    "sa2_name": "Loddon",
+    "median_income": "40616.0",
+    "mean_income": "48536.0"
+  },
+  "203021037": {
+    "sa2_name": "Belmont",
+    "median_income": "46078.0",
+    "mean_income": "53674.0"
+  },
+  "203021038": {
+    "sa2_name": "Corio - Norlane",
+    "median_income": "42649.0",
+    "mean_income": "47323.0"
+  },
+  "203031051": {
+    "sa2_name": "Portarlington",
+    "median_income": "38323.0",
+    "mean_income": "51822.0"
+  },
+  "203031052": {
+    "sa2_name": "Point Lonsdale - Queenscliff",
+    "median_income": "39994.0",
+    "mean_income": "60224.0"
+  },
+  "203021039": {
+    "sa2_name": "Geelong",
+    "median_income": "50550.0",
+    "mean_income": "64680.0"
+  },
+  "203021040": {
+    "sa2_name": "Geelong West - Hamlyn Heights",
+    "median_income": "52867.0",
+    "mean_income": "63102.0"
+  },
+  "203031053": {
+    "sa2_name": "Torquay",
+    "median_income": "52107.0",
+    "mean_income": "68034.0"
+  },
+  "204011054": {
+    "sa2_name": "Alexandra",
+    "median_income": "37890.0",
+    "mean_income": "46205.0"
+  },
+  "204011055": {
+    "sa2_name": "Euroa",
+    "median_income": "38987.0",
+    "mean_income": "45870.0"
+  },
+  "203021041": {
+    "sa2_name": "Grovedale",
+    "median_income": "48496.0",
+    "mean_income": "55567.0"
+  },
+  "203021042": {
+    "sa2_name": "Highton",
+    "median_income": "49958.0",
+    "mean_income": "66089.0"
+  },
+  "203021043": {
+    "sa2_name": "Lara",
+    "median_income": "53119.0",
+    "mean_income": "62036.0"
+  },
+  "203021044": {
+    "sa2_name": "Leopold",
+    "median_income": "48341.0",
+    "mean_income": "55093.0"
+  },
+  "203021045": {
+    "sa2_name": "Newcomb - Moolap",
+    "median_income": "43613.0",
+    "mean_income": "48159.0"
+  },
+  "204031071": {
+    "sa2_name": "Myrtleford",
+    "median_income": "39638.0",
+    "mean_income": "47691.0"
+  },
+  "206011108": {
+    "sa2_name": "Coburg",
+    "median_income": "52108.0",
+    "mean_income": "63488.0"
+  },
+  "204031072": {
+    "sa2_name": "Towong",
+    "median_income": "39305.0",
+    "mean_income": "47150.0"
+  },
+  "204031073": {
+    "sa2_name": "West Wodonga",
+    "median_income": "49702.0",
+    "mean_income": "54887.0"
+  },
+  "204031074": {
+    "sa2_name": "Wodonga",
+    "median_income": "48998.0",
+    "mean_income": "54529.0"
+  },
+  "204031075": {
+    "sa2_name": "Yackandandah",
+    "median_income": "47466.0",
+    "mean_income": "54936.0"
+  },
+  "207031166": {
+    "sa2_name": "Burwood East",
+    "median_income": "40641.0",
+    "mean_income": "53465.0"
+  },
+  "203031048": {
+    "sa2_name": "Clifton Springs",
+    "median_income": "45472.0",
+    "mean_income": "55036.0"
+  },
+  "203031049": {
+    "sa2_name": "Lorne - Anglesea",
+    "median_income": "40485.0",
+    "mean_income": "56809.0"
+  },
+  "203031050": {
+    "sa2_name": "Ocean Grove - Barwon Heads",
+    "median_income": "50235.0",
+    "mean_income": "64215.0"
+  },
+  "204031068": {
+    "sa2_name": "Beechworth",
+    "median_income": "42008.0",
+    "mean_income": "50023.0"
+  },
+  "204031069": {
+    "sa2_name": "Bright - Mount Beauty",
+    "median_income": "37190.0",
+    "mean_income": "46724.0"
+  },
+  "204031070": {
+    "sa2_name": "Chiltern - Indigo Valley",
+    "median_income": "49193.0",
+    "mean_income": "52982.0"
+  },
+  "206011107": {
+    "sa2_name": "Brunswick West",
+    "median_income": "52890.0",
+    "mean_income": "65111.0"
+  },
+  "206021110": {
+    "sa2_name": "Alphington - Fairfield",
+    "median_income": "59610.0",
+    "mean_income": "79356.0"
+  },
+  "208021426": {
+    "sa2_name": "Bentleigh East (North)",
+    "median_income": "53612.0",
+    "mean_income": "68618.0"
+  },
+  "206021111": {
+    "sa2_name": "Northcote",
+    "median_income": "60986.0",
+    "mean_income": "78691.0"
+  },
+  "206041127": {
+    "sa2_name": "West Melbourne",
+    "median_income": "93272.0",
+    "mean_income": "237158.0"
+  },
+  "206021112": {
+    "sa2_name": "Thornbury",
+    "median_income": "56044.0",
+    "mean_income": "68016.0"
+  },
+  "206051130": {
+    "sa2_name": "Port Melbourne",
+    "median_income": "74967.0",
+    "mean_income": "107132.0"
+  },
+  "206031113": {
+    "sa2_name": "Ascot Vale",
+    "median_income": "59981.0",
+    "mean_income": "77927.0"
+  },
+  "206031114": {
+    "sa2_name": "Essendon - Aberfeldie",
+    "median_income": "59116.0",
+    "mean_income": "80759.0"
+  },
+  "212031305": {
+    "sa2_name": "Hampton Park - Lynbrook",
+    "median_income": "45462.0",
+    "mean_income": "47769.0"
+  },
+  "206031115": {
+    "sa2_name": "Flemington",
+    "median_income": "51553.0",
+    "mean_income": "64204.0"
+  },
+  "206041121": {
+    "sa2_name": "Kensington (Vicnp)",
+    "median_income": "65563.0",
+    "mean_income": "77638.0"
+  },
+  "206031116": {
+    "sa2_name": "Moonee Ponds",
+    "median_income": "60879.0",
+    "mean_income": "80195.0"
+  },
+  "206041117": {
+    "sa2_name": "Carlton",
+    "median_income": "37254.0",
+    "mean_income": "57176.0"
+  },
+  "206041123": {
+    "sa2_name": "North Melbourne",
+    "median_income": "48424.0",
+    "mean_income": "65142.0"
+  },
+  "206041124": {
+    "sa2_name": "Parkville",
+    "median_income": "46314.0",
+    "mean_income": "66765.0"
+  },
+  "206051128": {
+    "sa2_name": "Albert Park",
+    "median_income": "66627.0",
+    "mean_income": "117352.0"
+  },
+  "206051129": {
+    "sa2_name": "Elwood",
+    "median_income": "65893.0",
+    "mean_income": "88876.0"
+  },
+  "206051131": {
+    "sa2_name": "Port Melbourne Industrial",
+    "median_income": "49240.0",
+    "mean_income": "87256.0"
+  },
+  "206051134": {
+    "sa2_name": "St Kilda East",
+    "median_income": "56841.0",
+    "mean_income": "71332.0"
+  },
+  "206051132": {
+    "sa2_name": "South Melbourne",
+    "median_income": "63351.0",
+    "mean_income": "94718.0"
+  },
+  "206051133": {
+    "sa2_name": "St Kilda",
+    "median_income": "56940.0",
+    "mean_income": "75745.0"
+  },
+  "206061137": {
+    "sa2_name": "South Yarra - East",
+    "median_income": "63969.0",
+    "mean_income": "92513.0"
+  },
+  "206061138": {
+    "sa2_name": "Toorak",
+    "median_income": "72451.0",
+    "mean_income": "177645.0"
+  },
+  "206071139": {
+    "sa2_name": "Abbotsford",
+    "median_income": "61476.0",
+    "mean_income": "75384.0"
+  },
+  "206071140": {
+    "sa2_name": "Carlton North - Princes Hill",
+    "median_income": "57240.0",
+    "mean_income": "82747.0"
+  },
+  "206071143": {
+    "sa2_name": "Fitzroy North",
+    "median_income": "62727.0",
+    "mean_income": "87614.0"
+  },
+  "206071144": {
+    "sa2_name": "Richmond (Vicnp)",
+    "median_income": "66967.0",
+    "mean_income": "85193.0"
+  },
+  "206071145": {
+    "sa2_name": "Yarra - North",
+    "median_income": "68435.0",
+    "mean_income": "94560.0"
+  },
+  "207011147": {
+    "sa2_name": "Balwyn",
+    "median_income": "50044.0",
+    "mean_income": "86736.0"
+  },
+  "207011146": {
+    "sa2_name": "Ashburton (Vicnp)",
+    "median_income": "61321.0",
+    "mean_income": "93355.0"
+  },
+  "207011152": {
+    "sa2_name": "Hawthorn East",
+    "median_income": "61766.0",
+    "mean_income": "94263.0"
+  },
+  "207011149": {
+    "sa2_name": "Camberwell",
+    "median_income": "59133.0",
+    "mean_income": "97237.0"
+  },
+  "207021160": {
+    "sa2_name": "Templestowe Lower",
+    "median_income": "45926.0",
+    "mean_income": "62627.0"
+  },
+  "207011148": {
+    "sa2_name": "Balwyn North",
+    "median_income": "50469.0",
+    "mean_income": "79364.0"
+  },
+  "207011153": {
+    "sa2_name": "Kew",
+    "median_income": "61588.0",
+    "mean_income": "108907.0"
+  },
+  "207011150": {
+    "sa2_name": "Glen Iris - East",
+    "median_income": "63403.0",
+    "mean_income": "98877.0"
+  },
+  "207011151": {
+    "sa2_name": "Hawthorn",
+    "median_income": "57352.0",
+    "mean_income": "99465.0"
+  },
+  "207031161": {
+    "sa2_name": "Blackburn",
+    "median_income": "50380.0",
+    "mean_income": "68474.0"
+  },
+  "207011154": {
+    "sa2_name": "Kew East",
+    "median_income": "58226.0",
+    "mean_income": "89125.0"
+  },
+  "207011155": {
+    "sa2_name": "Surrey Hills (West) - Canterbury",
+    "median_income": "63041.0",
+    "mean_income": "115344.0"
+  },
+  "207021156": {
+    "sa2_name": "Bulleen",
+    "median_income": "47352.0",
+    "mean_income": "63983.0"
+  },
+  "207021157": {
+    "sa2_name": "Doncaster",
+    "median_income": "41278.0",
+    "mean_income": "59361.0"
+  },
+  "207021159": {
+    "sa2_name": "Templestowe",
+    "median_income": "47638.0",
+    "mean_income": "75928.0"
+  },
+  "211031265": {
+    "sa2_name": "Croydon Hills - Warranwood",
+    "median_income": "52995.0",
+    "mean_income": "65765.0"
+  },
+  "207021424": {
+    "sa2_name": "Doncaster East (North)",
+    "median_income": "43211.0",
+    "mean_income": "59891.0"
+  },
+  "207021425": {
+    "sa2_name": "Doncaster East (South)",
+    "median_income": "40689.0",
+    "mean_income": "55094.0"
+  },
+  "207031163": {
+    "sa2_name": "Box Hill",
+    "median_income": "37811.0",
+    "mean_income": "53975.0"
+  },
+  "208031185": {
+    "sa2_name": "Carrum - Patterson Lakes",
+    "median_income": "54598.0",
+    "mean_income": "68945.0"
+  },
+  "208021177": {
+    "sa2_name": "Caulfield - North",
+    "median_income": "58709.0",
+    "mean_income": "92598.0"
+  },
+  "207031165": {
+    "sa2_name": "Burwood",
+    "median_income": "35000.0",
+    "mean_income": "53470.0"
+  },
+  "207031164": {
+    "sa2_name": "Box Hill North",
+    "median_income": "46864.0",
+    "mean_income": "64453.0"
+  },
+  "208011168": {
+    "sa2_name": "Beaumaris",
+    "median_income": "57097.0",
+    "mean_income": "92062.0"
+  },
+  "208021178": {
+    "sa2_name": "Caulfield - South",
+    "median_income": "57298.0",
+    "mean_income": "82784.0"
+  },
+  "208011169": {
+    "sa2_name": "Brighton (Vicnp)",
+    "median_income": "67255.0",
+    "mean_income": "136482.0"
+  },
+  "208021179": {
+    "sa2_name": "Elsternwick",
+    "median_income": "60327.0",
+    "mean_income": "90346.0"
+  },
+  "208011173": {
+    "sa2_name": "Sandringham - Black Rock",
+    "median_income": "61573.0",
+    "mean_income": "100966.0"
+  },
+  "211031266": {
+    "sa2_name": "Ringwood",
+    "median_income": "48466.0",
+    "mean_income": "57209.0"
+  },
+  "208031186": {
+    "sa2_name": "Chelsea - Bonbeach",
+    "median_income": "55691.0",
+    "mean_income": "65349.0"
+  },
+  "208031188": {
+    "sa2_name": "Cheltenham - Highett (East)",
+    "median_income": "53465.0",
+    "mean_income": "64774.0"
+  },
+  "208031190": {
+    "sa2_name": "Mentone",
+    "median_income": "54225.0",
+    "mean_income": "68079.0"
+  },
+  "209011196": {
+    "sa2_name": "Bundoora - East",
+    "median_income": "45700.0",
+    "mean_income": "56074.0"
+  },
+  "208031189": {
+    "sa2_name": "Edithvale - Aspendale",
+    "median_income": "57916.0",
+    "mean_income": "71182.0"
+  },
+  "210011227": {
+    "sa2_name": "Essendon Airport",
+    "median_income": "27711.0",
+    "mean_income": "42355.0"
+  },
+  "208031191": {
+    "sa2_name": "Moorabbin - Heatherton",
+    "median_income": "51528.0",
+    "mean_income": "64276.0"
+  },
+  "208031192": {
+    "sa2_name": "Moorabbin Airport",
+    "median_income": "50000.0",
+    "mean_income": "60501.0"
+  },
+  "209011197": {
+    "sa2_name": "Greensborough",
+    "median_income": "54987.0",
+    "mean_income": "65342.0"
+  },
+  "209021429": {
+    "sa2_name": "Preston - West",
+    "median_income": "52506.0",
+    "mean_income": "63787.0"
+  },
+  "209011204": {
+    "sa2_name": "Watsonia",
+    "median_income": "53672.0",
+    "mean_income": "61633.0"
+  },
+  "209031213": {
+    "sa2_name": "Plenty - Yarrambat",
+    "median_income": "57025.0",
+    "mean_income": "76598.0"
+  },
+  "209031214": {
+    "sa2_name": "Research - North Warrandyte",
+    "median_income": "55958.0",
+    "mean_income": "80173.0"
+  },
+  "209041217": {
+    "sa2_name": "Bundoora - West",
+    "median_income": "43578.0",
+    "mean_income": "49927.0"
+  },
+  "209041219": {
+    "sa2_name": "Lalor",
+    "median_income": "42243.0",
+    "mean_income": "47815.0"
+  },
+  "208031193": {
+    "sa2_name": "Mordialloc - Parkdale",
+    "median_income": "58033.0",
+    "mean_income": "73482.0"
+  },
+  "209021205": {
+    "sa2_name": "Kingsbury",
+    "median_income": "41039.0",
+    "mean_income": "56812.0"
+  },
+  "209021207": {
+    "sa2_name": "Reservoir - East",
+    "median_income": "45257.0",
+    "mean_income": "51497.0"
+  },
+  "209021208": {
+    "sa2_name": "Reservoir - West",
+    "median_income": "47756.0",
+    "mean_income": "55123.0"
+  },
+  "208041194": {
+    "sa2_name": "Malvern - Glen Iris",
+    "median_income": "66233.0",
+    "mean_income": "114118.0"
+  },
+  "209041435": {
+    "sa2_name": "South Morang (North)",
+    "median_income": "54061.0",
+    "mean_income": "61329.0"
+  },
+  "208041195": {
+    "sa2_name": "Malvern East",
+    "median_income": "59019.0",
+    "mean_income": "98625.0"
+  },
+  "209031209": {
+    "sa2_name": "Eltham",
+    "median_income": "56728.0",
+    "mean_income": "73534.0"
+  },
+  "209031210": {
+    "sa2_name": "Hurstbridge",
+    "median_income": "53364.0",
+    "mean_income": "64296.0"
+  },
+  "209031211": {
+    "sa2_name": "Kinglake",
+    "median_income": "46711.0",
+    "mean_income": "55315.0"
+  },
+  "209031212": {
+    "sa2_name": "Panton Hill - St Andrews",
+    "median_income": "48745.0",
+    "mean_income": "68166.0"
+  },
+  "209011198": {
+    "sa2_name": "Heidelberg - Rosanna",
+    "median_income": "56659.0",
+    "mean_income": "71117.0"
+  },
+  "210011226": {
+    "sa2_name": "Airport West",
+    "median_income": "55912.0",
+    "mean_income": "63576.0"
+  },
+  "209011199": {
+    "sa2_name": "Heidelberg West",
+    "median_income": "47865.0",
+    "mean_income": "56266.0"
+  },
+  "209011200": {
+    "sa2_name": "Ivanhoe",
+    "median_income": "61543.0",
+    "mean_income": "88705.0"
+  },
+  "209041225": {
+    "sa2_name": "Whittlesea",
+    "median_income": "50795.0",
+    "mean_income": "61101.0"
+  },
+  "209011201": {
+    "sa2_name": "Ivanhoe East - Eaglemont",
+    "median_income": "63761.0",
+    "mean_income": "109674.0"
+  },
+  "209011202": {
+    "sa2_name": "Montmorency - Briar Hill",
+    "median_income": "56972.0",
+    "mean_income": "70820.0"
+  },
+  "209011203": {
+    "sa2_name": "Viewbank - Yallambie",
+    "median_income": "53932.0",
+    "mean_income": "64718.0"
+  },
+  "209041430": {
+    "sa2_name": "Doreen",
+    "median_income": "55044.0",
+    "mean_income": "62163.0"
+  },
+  "209021428": {
+    "sa2_name": "Preston - East",
+    "median_income": "49779.0",
+    "mean_income": "58367.0"
+  },
+  "210011230": {
+    "sa2_name": "Niddrie - Essendon West",
+    "median_income": "56809.0",
+    "mean_income": "69816.0"
+  },
+  "209031215": {
+    "sa2_name": "Wattle Glen - Diamond Creek",
+    "median_income": "55982.0",
+    "mean_income": "67781.0"
+  },
+  "209041431": {
+    "sa2_name": "Epping - East",
+    "median_income": "46641.0",
+    "mean_income": "52271.0"
+  },
+  "209041432": {
+    "sa2_name": "Epping - South",
+    "median_income": "43767.0",
+    "mean_income": "48547.0"
+  },
+  "209041216": {
+    "sa2_name": "Bundoora - North",
+    "median_income": "47008.0",
+    "mean_income": "57965.0"
+  },
+  "209041433": {
+    "sa2_name": "Epping - West",
+    "median_income": "48478.0",
+    "mean_income": "54323.0"
+  },
+  "209041434": {
+    "sa2_name": "Mernda",
+    "median_income": "53190.0",
+    "mean_income": "58609.0"
+  },
+  "209041220": {
+    "sa2_name": "Mill Park - North",
+    "median_income": "49127.0",
+    "mean_income": "55737.0"
+  },
+  "209041221": {
+    "sa2_name": "Mill Park - South",
+    "median_income": "47934.0",
+    "mean_income": "53472.0"
+  },
+  "209041223": {
+    "sa2_name": "Thomastown",
+    "median_income": "41612.0",
+    "mean_income": "46808.0"
+  },
+  "209041224": {
+    "sa2_name": "Wallan",
+    "median_income": "52622.0",
+    "mean_income": "58517.0"
+  },
+  "209041436": {
+    "sa2_name": "South Morang (South)",
+    "median_income": "51029.0",
+    "mean_income": "56998.0"
+  },
+  "209041437": {
+    "sa2_name": "Wollert",
+    "median_income": "50802.0",
+    "mean_income": "55656.0"
+  },
+  "210011228": {
+    "sa2_name": "Keilor",
+    "median_income": "52595.0",
+    "mean_income": "66759.0"
+  },
+  "210011229": {
+    "sa2_name": "Keilor East",
+    "median_income": "51798.0",
+    "mean_income": "62902.0"
+  },
+  "210011231": {
+    "sa2_name": "Strathmore",
+    "median_income": "58830.0",
+    "mean_income": "78306.0"
+  },
+  "210021232": {
+    "sa2_name": "Gisborne",
+    "median_income": "55891.0",
+    "mean_income": "71287.0"
+  },
+  "213041360": {
+    "sa2_name": "Taylors Hill",
+    "median_income": "53453.0",
+    "mean_income": "61123.0"
+  },
+  "210021233": {
+    "sa2_name": "Macedon",
+    "median_income": "58258.0",
+    "mean_income": "84900.0"
+  },
+  "210021234": {
+    "sa2_name": "Riddells Creek",
+    "median_income": "53730.0",
+    "mean_income": "65578.0"
+  },
+  "210021235": {
+    "sa2_name": "Romsey",
+    "median_income": "51057.0",
+    "mean_income": "62830.0"
+  },
+  "213041461": {
+    "sa2_name": "Burnside",
+    "median_income": "49747.0",
+    "mean_income": "55619.0"
+  },
+  "210031236": {
+    "sa2_name": "Coburg North",
+    "median_income": "51037.0",
+    "mean_income": "59756.0"
+  },
+  "210031237": {
+    "sa2_name": "Fawkner",
+    "median_income": "41577.0",
+    "mean_income": "49407.0"
+  },
+  "210031439": {
+    "sa2_name": "Gowanbrae",
+    "median_income": "59224.0",
+    "mean_income": "69213.0"
+  },
+  "210031438": {
+    "sa2_name": "Glenroy",
+    "median_income": "45035.0",
+    "mean_income": "51598.0"
+  },
+  "210051248": {
+    "sa2_name": "Melbourne Airport",
+    "median_income": "48493.0",
+    "mean_income": "60466.0"
+  },
+  "210031239": {
+    "sa2_name": "Pascoe Vale",
+    "median_income": "55524.0",
+    "mean_income": "64174.0"
+  },
+  "211031452": {
+    "sa2_name": "Croydon South",
+    "median_income": "51460.0",
+    "mean_income": "58822.0"
+  },
+  "210051242": {
+    "sa2_name": "Broadmeadows",
+    "median_income": "36296.0",
+    "mean_income": "41320.0"
+  },
+  "210051247": {
+    "sa2_name": "Meadow Heights",
+    "median_income": "37904.0",
+    "mean_income": "42233.0"
+  },
+  "210051243": {
+    "sa2_name": "Campbellfield - Coolaroo",
+    "median_income": "35707.0",
+    "mean_income": "42703.0"
+  },
+  "211011251": {
+    "sa2_name": "Bayswater",
+    "median_income": "48747.0",
+    "mean_income": "53822.0"
+  },
+  "211011254": {
+    "sa2_name": "Knoxfield - Scoresby",
+    "median_income": "48557.0",
+    "mean_income": "57632.0"
+  },
+  "210051245": {
+    "sa2_name": "Gladstone Park - Westmeadows",
+    "median_income": "49166.0",
+    "mean_income": "55799.0"
+  },
+  "210051246": {
+    "sa2_name": "Greenvale - Bulla",
+    "median_income": "51654.0",
+    "mean_income": "62773.0"
+  },
+  "211011258": {
+    "sa2_name": "Rowville - South",
+    "median_income": "52632.0",
+    "mean_income": "62929.0"
+  },
+  "211011259": {
+    "sa2_name": "Wantirna",
+    "median_income": "46633.0",
+    "mean_income": "56387.0"
+  },
+  "211011260": {
+    "sa2_name": "Wantirna South",
+    "median_income": "46780.0",
+    "mean_income": "58190.0"
+  },
+  "210051249": {
+    "sa2_name": "Roxburgh Park - Somerton",
+    "median_income": "42304.0",
+    "mean_income": "48045.0"
+  },
+  "210051250": {
+    "sa2_name": "Tullamarine",
+    "median_income": "51599.0",
+    "mean_income": "55024.0"
+  },
+  "210051441": {
+    "sa2_name": "Craigieburn - Central",
+    "median_income": "46365.0",
+    "mean_income": "50970.0"
+  },
+  "210051442": {
+    "sa2_name": "Craigieburn - North",
+    "median_income": "49167.0",
+    "mean_income": "55001.0"
+  },
+  "210051444": {
+    "sa2_name": "Craigieburn - West",
+    "median_income": "47518.0",
+    "mean_income": "52323.0"
+  },
+  "210051445": {
+    "sa2_name": "Mickleham - Yuroke",
+    "median_income": "51369.0",
+    "mean_income": "56712.0"
+  },
+  "210051443": {
+    "sa2_name": "Craigieburn - South",
+    "median_income": "47479.0",
+    "mean_income": "51743.0"
+  },
+  "211011255": {
+    "sa2_name": "Lysterfield",
+    "median_income": "54743.0",
+    "mean_income": "73149.0"
+  },
+  "211011257": {
+    "sa2_name": "Rowville - North",
+    "median_income": "52075.0",
+    "mean_income": "62102.0"
+  },
+  "211011256": {
+    "sa2_name": "Rowville - Central",
+    "median_income": "50125.0",
+    "mean_income": "59141.0"
+  },
+  "211011446": {
+    "sa2_name": "Boronia",
+    "median_income": "49399.0",
+    "mean_income": "54522.0"
+  },
+  "211011447": {
+    "sa2_name": "Ferntree Gully (North)",
+    "median_income": "49642.0",
+    "mean_income": "56007.0"
+  },
+  "211011448": {
+    "sa2_name": "Ferntree Gully (South) - Upper Ferntree Gully",
+    "median_income": "50092.0",
+    "mean_income": "56941.0"
+  },
+  "211031267": {
+    "sa2_name": "Ringwood East",
+    "median_income": "51592.0",
+    "mean_income": "61542.0"
+  },
+  "211031268": {
+    "sa2_name": "Ringwood North",
+    "median_income": "52794.0",
+    "mean_income": "66752.0"
+  },
+  "211011449": {
+    "sa2_name": "The Basin",
+    "median_income": "51067.0",
+    "mean_income": "58701.0"
+  },
+  "211021261": {
+    "sa2_name": "Donvale - Park Orchards",
+    "median_income": "50735.0",
+    "mean_income": "75886.0"
+  },
+  "211021262": {
+    "sa2_name": "Warrandyte - Wonga Park",
+    "median_income": "55011.0",
+    "mean_income": "85193.0"
+  },
+  "211041269": {
+    "sa2_name": "Forest Hill",
+    "median_income": "46295.0",
+    "mean_income": "56685.0"
+  },
+  "211041270": {
+    "sa2_name": "Mitcham (Vicnp)",
+    "median_income": "52436.0",
+    "mean_income": "63593.0"
+  },
+  "211031450": {
+    "sa2_name": "Croydon - East",
+    "median_income": "50598.0",
+    "mean_income": "55946.0"
+  },
+  "211031451": {
+    "sa2_name": "Croydon - West",
+    "median_income": "49419.0",
+    "mean_income": "58979.0"
+  },
+  "211051275": {
+    "sa2_name": "Chirnside Park",
+    "median_income": "51146.0",
+    "mean_income": "61025.0"
+  },
+  "211031263": {
+    "sa2_name": "Bayswater North",
+    "median_income": "51111.0",
+    "mean_income": "58008.0"
+  },
+  "211051276": {
+    "sa2_name": "Healesville - Yarra Glen",
+    "median_income": "44776.0",
+    "mean_income": "54324.0"
+  },
+  "211041272": {
+    "sa2_name": "Vermont",
+    "median_income": "47530.0",
+    "mean_income": "60317.0"
+  },
+  "211041273": {
+    "sa2_name": "Vermont South",
+    "median_income": "42348.0",
+    "mean_income": "58813.0"
+  },
+  "211051282": {
+    "sa2_name": "Mount Dandenong - Olinda",
+    "median_income": "49421.0",
+    "mean_income": "64485.0"
+  },
+  "211041271": {
+    "sa2_name": "Nunawading",
+    "median_income": "50193.0",
+    "mean_income": "61162.0"
+  },
+  "211051274": {
+    "sa2_name": "Belgrave - Selby",
+    "median_income": "51296.0",
+    "mean_income": "63939.0"
+  },
+  "211051277": {
+    "sa2_name": "Kilsyth",
+    "median_income": "49591.0",
+    "mean_income": "56374.0"
+  },
+  "211051278": {
+    "sa2_name": "Lilydale - Coldstream",
+    "median_income": "49666.0",
+    "mean_income": "61266.0"
+  },
+  "211051279": {
+    "sa2_name": "Monbulk - Silvan",
+    "median_income": "46045.0",
+    "mean_income": "57893.0"
+  },
+  "211051280": {
+    "sa2_name": "Montrose",
+    "median_income": "51060.0",
+    "mean_income": "60518.0"
+  },
+  "211051281": {
+    "sa2_name": "Mooroolbark",
+    "median_income": "50593.0",
+    "mean_income": "58240.0"
+  },
+  "212011291": {
+    "sa2_name": "Pakenham - North",
+    "median_income": "50151.0",
+    "mean_income": "54167.0"
+  },
+  "212031306": {
+    "sa2_name": "Lynbrook - Lyndhurst",
+    "median_income": "51352.0",
+    "mean_income": "56742.0"
+  },
+  "212031308": {
+    "sa2_name": "Pearcedale - Tooradin",
+    "median_income": "49975.0",
+    "mean_income": "59045.0"
+  },
+  "211051283": {
+    "sa2_name": "Mount Evelyn",
+    "median_income": "49054.0",
+    "mean_income": "57467.0"
+  },
+  "212021454": {
+    "sa2_name": "Endeavour Hills - South",
+    "median_income": "46427.0",
+    "mean_income": "52262.0"
+  },
+  "211051284": {
+    "sa2_name": "Upwey - Tecoma",
+    "median_income": "53054.0",
+    "mean_income": "61182.0"
+  },
+  "211051285": {
+    "sa2_name": "Wandin - Seville",
+    "median_income": "50071.0",
+    "mean_income": "59851.0"
+  },
+  "211051286": {
+    "sa2_name": "Yarra Valley",
+    "median_income": "45106.0",
+    "mean_income": "51519.0"
+  },
+  "212011287": {
+    "sa2_name": "Beaconsfield - Officer",
+    "median_income": "54964.0",
+    "mean_income": "63819.0"
+  },
+  "212011288": {
+    "sa2_name": "Bunyip - Garfield",
+    "median_income": "46667.0",
+    "mean_income": "55563.0"
+  },
+  "212011289": {
+    "sa2_name": "Emerald - Cockatoo",
+    "median_income": "51277.0",
+    "mean_income": "62741.0"
+  },
+  "212011290": {
+    "sa2_name": "Koo Wee Rup",
+    "median_income": "46281.0",
+    "mean_income": "52632.0"
+  },
+  "212011292": {
+    "sa2_name": "Pakenham - South",
+    "median_income": "48516.0",
+    "mean_income": "53761.0"
+  },
+  "212021293": {
+    "sa2_name": "Berwick - North",
+    "median_income": "51353.0",
+    "mean_income": "65386.0"
+  },
+  "212021294": {
+    "sa2_name": "Berwick - South",
+    "median_income": "52611.0",
+    "mean_income": "62656.0"
+  },
+  "212021295": {
+    "sa2_name": "Doveton",
+    "median_income": "40209.0",
+    "mean_income": "42827.0"
+  },
+  "212021297": {
+    "sa2_name": "Hallam",
+    "median_income": "44062.0",
+    "mean_income": "48718.0"
+  },
+  "212021299": {
+    "sa2_name": "Narre Warren North",
+    "median_income": "52262.0",
+    "mean_income": "76893.0"
+  },
+  "212021455": {
+    "sa2_name": "Narre Warren - North East",
+    "median_income": "48869.0",
+    "mean_income": "54307.0"
+  },
+  "212021456": {
+    "sa2_name": "Narre Warren - South West",
+    "median_income": "46712.0",
+    "mean_income": "49911.0"
+  },
+  "212031302": {
+    "sa2_name": "Cranbourne North",
+    "median_income": "49514.0",
+    "mean_income": "53835.0"
+  },
+  "212031303": {
+    "sa2_name": "Cranbourne South",
+    "median_income": "53619.0",
+    "mean_income": "62305.0"
+  },
+  "212031304": {
+    "sa2_name": "Cranbourne West",
+    "median_income": "49496.0",
+    "mean_income": "52342.0"
+  },
+  "212031457": {
+    "sa2_name": "Narre Warren South (East)",
+    "median_income": "49704.0",
+    "mean_income": "59237.0"
+  },
+  "212031458": {
+    "sa2_name": "Narre Warren South (West)",
+    "median_income": "47731.0",
+    "mean_income": "52889.0"
+  },
+  "212041309": {
+    "sa2_name": "Clarinda - Oakleigh South",
+    "median_income": "46330.0",
+    "mean_income": "53359.0"
+  },
+  "212041310": {
+    "sa2_name": "Clayton South",
+    "median_income": "40706.0",
+    "mean_income": "47345.0"
+  },
+  "212041311": {
+    "sa2_name": "Dandenong",
+    "median_income": "39276.0",
+    "mean_income": "44205.0"
+  },
+  "212041312": {
+    "sa2_name": "Dandenong North",
+    "median_income": "43163.0",
+    "mean_income": "48722.0"
+  },
+  "212041313": {
+    "sa2_name": "Dingley Village",
+    "median_income": "49812.0",
+    "mean_income": "60172.0"
+  },
+  "212041459": {
+    "sa2_name": "Noble Park - East",
+    "median_income": "41703.0",
+    "mean_income": "45110.0"
+  },
+  "212041314": {
+    "sa2_name": "Keysborough",
+    "median_income": "47046.0",
+    "mean_income": "55823.0"
+  },
+  "212041316": {
+    "sa2_name": "Noble Park North",
+    "median_income": "45231.0",
+    "mean_income": "48684.0"
+  },
+  "212041317": {
+    "sa2_name": "Springvale",
+    "median_income": "36924.0",
+    "mean_income": "42139.0"
+  },
+  "212041318": {
+    "sa2_name": "Springvale South",
+    "median_income": "40359.0",
+    "mean_income": "43909.0"
+  },
+  "212041460": {
+    "sa2_name": "Noble Park - West",
+    "median_income": "39918.0",
+    "mean_income": "43145.0"
+  },
+  "212051319": {
+    "sa2_name": "Ashwood - Chadstone",
+    "median_income": "49496.0",
+    "mean_income": "62564.0"
+  },
+  "212051320": {
+    "sa2_name": "Clayton",
+    "median_income": "34178.0",
+    "mean_income": "44622.0"
+  },
+  "212051321": {
+    "sa2_name": "Glen Waverley - East",
+    "median_income": "40903.0",
+    "mean_income": "58082.0"
+  },
+  "212051322": {
+    "sa2_name": "Glen Waverley - West",
+    "median_income": "41184.0",
+    "mean_income": "57462.0"
+  },
+  "212051323": {
+    "sa2_name": "Mount Waverley - North",
+    "median_income": "44299.0",
+    "mean_income": "62757.0"
+  },
+  "212051324": {
+    "sa2_name": "Mount Waverley - South",
+    "median_income": "47729.0",
+    "mean_income": "63883.0"
+  },
+  "212051325": {
+    "sa2_name": "Mulgrave",
+    "median_income": "48369.0",
+    "mean_income": "58047.0"
+  },
+  "212051326": {
+    "sa2_name": "Oakleigh - Huntingdale",
+    "median_income": "50111.0",
+    "mean_income": "60602.0"
+  },
+  "212051327": {
+    "sa2_name": "Wheelers Hill",
+    "median_income": "45504.0",
+    "mean_income": "66880.0"
+  },
+  "213011328": {
+    "sa2_name": "Ardeer - Albion",
+    "median_income": "43579.0",
+    "mean_income": "48816.0"
+  },
+  "213011329": {
+    "sa2_name": "Cairnlea",
+    "median_income": "47564.0",
+    "mean_income": "54391.0"
+  },
+  "213011332": {
+    "sa2_name": "Keilor Downs",
+    "median_income": "46823.0",
+    "mean_income": "53880.0"
+  },
+  "213011333": {
+    "sa2_name": "Kings Park (Vicnp)",
+    "median_income": "43026.0",
+    "mean_income": "45976.0"
+  },
+  "213011330": {
+    "sa2_name": "Deer Park - Derrimut",
+    "median_income": "48045.0",
+    "mean_income": "52634.0"
+  },
+  "213011331": {
+    "sa2_name": "Delahey",
+    "median_income": "46529.0",
+    "mean_income": "50446.0"
+  },
+  "213011334": {
+    "sa2_name": "St Albans - North",
+    "median_income": "37761.0",
+    "mean_income": "42113.0"
+  },
+  "213021343": {
+    "sa2_name": "Altona North",
+    "median_income": "53368.0",
+    "mean_income": "61391.0"
+  },
+  "213011339": {
+    "sa2_name": "Sydenham",
+    "median_income": "47777.0",
+    "mean_income": "53949.0"
+  },
+  "213011335": {
+    "sa2_name": "St Albans - South",
+    "median_income": "37770.0",
+    "mean_income": "42876.0"
+  },
+  "213011337": {
+    "sa2_name": "Sunshine North",
+    "median_income": "40282.0",
+    "mean_income": "45528.0"
+  },
+  "213011336": {
+    "sa2_name": "Sunshine",
+    "median_income": "41723.0",
+    "mean_income": "48530.0"
+  },
+  "213021342": {
+    "sa2_name": "Altona Meadows",
+    "median_income": "52072.0",
+    "mean_income": "57686.0"
+  },
+  "213011338": {
+    "sa2_name": "Sunshine West",
+    "median_income": "43417.0",
+    "mean_income": "47974.0"
+  },
+  "213011340": {
+    "sa2_name": "Taylors Lakes",
+    "median_income": "51181.0",
+    "mean_income": "61177.0"
+  },
+  "213021341": {
+    "sa2_name": "Altona",
+    "median_income": "57585.0",
+    "mean_income": "69301.0"
+  },
+  "213021344": {
+    "sa2_name": "Newport",
+    "median_income": "66161.0",
+    "mean_income": "80219.0"
+  },
+  "213021345": {
+    "sa2_name": "Seabrook",
+    "median_income": "52078.0",
+    "mean_income": "60249.0"
+  },
+  "213021346": {
+    "sa2_name": "Williamstown",
+    "median_income": "63892.0",
+    "mean_income": "90668.0"
+  },
+  "213031351": {
+    "sa2_name": "West Footscray - Tottenham",
+    "median_income": "51551.0",
+    "mean_income": "59885.0"
+  },
+  "213031347": {
+    "sa2_name": "Braybrook",
+    "median_income": "43989.0",
+    "mean_income": "51530.0"
+  },
+  "213051362": {
+    "sa2_name": "Hoppers Crossing - South",
+    "median_income": "45768.0",
+    "mean_income": "51319.0"
+  },
+  "213031348": {
+    "sa2_name": "Footscray",
+    "median_income": "46955.0",
+    "mean_income": "55519.0"
+  },
+  "213031352": {
+    "sa2_name": "Yarraville",
+    "median_income": "66233.0",
+    "mean_income": "79585.0"
+  },
+  "213041353": {
+    "sa2_name": "Bacchus Marsh",
+    "median_income": "53816.0",
+    "mean_income": "61650.0"
+  },
+  "213041355": {
+    "sa2_name": "Hillside",
+    "median_income": "53281.0",
+    "mean_income": "60105.0"
+  },
+  "213041356": {
+    "sa2_name": "Melton",
+    "median_income": "47357.0",
+    "mean_income": "51938.0"
+  },
+  "213041357": {
+    "sa2_name": "Melton South",
+    "median_income": "50239.0",
+    "mean_income": "54596.0"
+  },
+  "213031349": {
+    "sa2_name": "Maribyrnong",
+    "median_income": "52575.0",
+    "mean_income": "64646.0"
+  },
+  "213031350": {
+    "sa2_name": "Seddon - Kingsville",
+    "median_income": "63841.0",
+    "mean_income": "75083.0"
+  },
+  "213041358": {
+    "sa2_name": "Melton West",
+    "median_income": "49547.0",
+    "mean_income": "54310.0"
+  },
+  "213041462": {
+    "sa2_name": "Burnside Heights",
+    "median_income": "50944.0",
+    "mean_income": "57829.0"
+  },
+  "213041463": {
+    "sa2_name": "Caroline Springs",
+    "median_income": "54704.0",
+    "mean_income": "63092.0"
+  },
+  "213051361": {
+    "sa2_name": "Hoppers Crossing - North",
+    "median_income": "48776.0",
+    "mean_income": "55029.0"
+  },
+  "213051363": {
+    "sa2_name": "Laverton",
+    "median_income": "46852.0",
+    "mean_income": "55310.0"
+  },
+  "213051365": {
+    "sa2_name": "Tarneit",
+    "median_income": "48616.0",
+    "mean_income": "54321.0"
+  },
+  "213051366": {
+    "sa2_name": "Truganina",
+    "median_income": "48546.0",
+    "mean_income": "54134.0"
+  },
+  "213051368": {
+    "sa2_name": "Werribee - South",
+    "median_income": "52000.0",
+    "mean_income": "61353.0"
+  },
+  "213051369": {
+    "sa2_name": "Wyndham Vale",
+    "median_income": "51493.0",
+    "mean_income": "56229.0"
+  },
+  "213051464": {
+    "sa2_name": "Point Cook - East",
+    "median_income": "53150.0",
+    "mean_income": "67071.0"
+  },
+  "213051465": {
+    "sa2_name": "Point Cook - North",
+    "median_income": "54720.0",
+    "mean_income": "64152.0"
+  },
+  "213051467": {
+    "sa2_name": "Werribee - East",
+    "median_income": "46229.0",
+    "mean_income": "51519.0"
+  },
+  "213051468": {
+    "sa2_name": "Werribee - West",
+    "median_income": "52436.0",
+    "mean_income": "59281.0"
+  },
+  "214011370": {
+    "sa2_name": "Carrum Downs",
+    "median_income": "50667.0",
+    "mean_income": "54305.0"
+  },
+  "214011371": {
+    "sa2_name": "Frankston",
+    "median_income": "47388.0",
+    "mean_income": "53259.0"
+  },
+  "214011372": {
+    "sa2_name": "Frankston North",
+    "median_income": "45692.0",
+    "mean_income": "48577.0"
+  },
+  "214011376": {
+    "sa2_name": "Skye - Sandhurst",
+    "median_income": "54210.0",
+    "mean_income": "64367.0"
+  },
+  "214011373": {
+    "sa2_name": "Frankston South",
+    "median_income": "51192.0",
+    "mean_income": "65367.0"
+  },
+  "214011374": {
+    "sa2_name": "Langwarrin",
+    "median_income": "51940.0",
+    "mean_income": "59972.0"
+  },
+  "214011375": {
+    "sa2_name": "Seaford (Vicnp)",
+    "median_income": "50587.0",
+    "mean_income": "56528.0"
+  },
+  "214021377": {
+    "sa2_name": "Dromana",
+    "median_income": "42729.0",
+    "mean_income": "57195.0"
+  },
+  "214021378": {
+    "sa2_name": "Flinders",
+    "median_income": "47280.0",
+    "mean_income": "77756.0"
+  },
+  "214021379": {
+    "sa2_name": "Hastings - Somers",
+    "median_income": "45601.0",
+    "mean_income": "54913.0"
+  },
+  "214021380": {
+    "sa2_name": "Mornington",
+    "median_income": "45608.0",
+    "mean_income": "60236.0"
+  },
+  "214021381": {
+    "sa2_name": "Mount Eliza",
+    "median_income": "55000.0",
+    "mean_income": "83275.0"
+  },
+  "214021382": {
+    "sa2_name": "Mount Martha",
+    "median_income": "49556.0",
+    "mean_income": "68706.0"
+  },
+  "214021383": {
+    "sa2_name": "Point Nepean",
+    "median_income": "40382.0",
+    "mean_income": "60284.0"
+  },
+  "217011422": {
+    "sa2_name": "Portland",
+    "median_income": "46812.0",
+    "mean_income": "55632.0"
+  },
+  "214021384": {
+    "sa2_name": "Rosebud - McCrae",
+    "median_income": "39596.0",
+    "mean_income": "47756.0"
+  },
+  "217011423": {
+    "sa2_name": "Southern Grampians",
+    "median_income": "42664.0",
+    "mean_income": "57001.0"
+  },
+  "216031415": {
+    "sa2_name": "Mooroopna",
+    "median_income": "44321.0",
+    "mean_income": "47317.0"
+  },
+  "216031416": {
+    "sa2_name": "Shepparton - North",
+    "median_income": "47629.0",
+    "mean_income": "56418.0"
+  },
+  "215011386": {
+    "sa2_name": "Ararat",
+    "median_income": "43904.0",
+    "mean_income": "49151.0"
+  },
+  "214021385": {
+    "sa2_name": "Somerville",
+    "median_income": "48755.0",
+    "mean_income": "58976.0"
+  },
+  "216031417": {
+    "sa2_name": "Shepparton - South",
+    "median_income": "43183.0",
+    "mean_income": "50116.0"
+  },
+  "216031418": {
+    "sa2_name": "Shepparton Region - East",
+    "median_income": "42574.0",
+    "mean_income": "48209.0"
+  },
+  "216031419": {
+    "sa2_name": "Shepparton Region - West",
+    "median_income": "41983.0",
+    "mean_income": "48350.0"
+  },
+  "217011420": {
+    "sa2_name": "Glenelg (Vicnp)",
+    "median_income": "42273.0",
+    "mean_income": "50806.0"
+  },
+  "217011421": {
+    "sa2_name": "Hamilton (Vicnp)",
+    "median_income": "42871.0",
+    "mean_income": "49549.0"
+  },
+  "216011409": {
+    "sa2_name": "Rochester",
+    "median_income": "42188.0",
+    "mean_income": "49474.0"
+  },
+  "216011410": {
+    "sa2_name": "Rushworth",
+    "median_income": "38359.0",
+    "mean_income": "45788.0"
+  },
+  "217031472": {
+    "sa2_name": "Colac",
+    "median_income": "45879.0",
+    "mean_income": "50671.0"
+  },
+  "217031473": {
+    "sa2_name": "Colac Region",
+    "median_income": "40060.0",
+    "mean_income": "46723.0"
+  },
+  "215011388": {
+    "sa2_name": "Horsham",
+    "median_income": "46612.0",
+    "mean_income": "52518.0"
+  },
+  "215011389": {
+    "sa2_name": "Horsham Region",
+    "median_income": "46405.0",
+    "mean_income": "54219.0"
+  },
+  "215011390": {
+    "sa2_name": "Nhill Region",
+    "median_income": "45952.0",
+    "mean_income": "56733.0"
+  },
+  "215011391": {
+    "sa2_name": "St Arnaud",
+    "median_income": "40191.0",
+    "mean_income": "47995.0"
+  },
+  "215021470": {
+    "sa2_name": "Mildura - South",
+    "median_income": "45574.0",
+    "mean_income": "51806.0"
+  },
+  "215031400": {
+    "sa2_name": "Buloke",
+    "median_income": "40423.0",
+    "mean_income": "50300.0"
+  },
+  "215031401": {
+    "sa2_name": "Gannawarra",
+    "median_income": "39347.0",
+    "mean_income": "46320.0"
+  },
+  "215031402": {
+    "sa2_name": "Kerang",
+    "median_income": "39727.0",
+    "mean_income": "46432.0"
+  },
+  "215031403": {
+    "sa2_name": "Robinvale",
+    "median_income": "43082.0",
+    "mean_income": "54055.0"
+  },
+  "215031404": {
+    "sa2_name": "Swan Hill",
+    "median_income": "46178.0",
+    "mean_income": "53675.0"
+  },
+  "215031405": {
+    "sa2_name": "Swan Hill Region",
+    "median_income": "43983.0",
+    "mean_income": "51610.0"
+  },
+  "216011406": {
+    "sa2_name": "Echuca",
+    "median_income": "44986.0",
+    "mean_income": "52698.0"
+  },
+  "216011407": {
+    "sa2_name": "Kyabram",
+    "median_income": "42832.0",
+    "mean_income": "46980.0"
+  },
+  "216011408": {
+    "sa2_name": "Lockington - Gunbower",
+    "median_income": "42116.0",
+    "mean_income": "47050.0"
+  },
+  "217031471": {
+    "sa2_name": "Camperdown",
+    "median_income": "42348.0",
+    "mean_income": "48007.0"
+  },
+  "217031474": {
+    "sa2_name": "Corangamite - North",
+    "median_income": "42284.0",
+    "mean_income": "48418.0"
+  }
+}

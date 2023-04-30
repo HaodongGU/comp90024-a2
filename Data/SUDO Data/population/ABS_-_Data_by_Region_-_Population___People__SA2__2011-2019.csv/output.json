@@ -1,0 +1,1838 @@
+{
+  "201031013": {
+    "sa2_name": "Avoca",
+    "median_age": "53.2"
+  },
+  "203021045": {
+    "sa2_name": "Newcomb - Moolap",
+    "median_age": "44.0"
+  },
+  "203031050": {
+    "sa2_name": "Ocean Grove - Barwon Heads",
+    "median_age": "39.3"
+  },
+  "202021026": {
+    "sa2_name": "Bendigo Region - South",
+    "median_age": "40.0"
+  },
+  "205031088": {
+    "sa2_name": "French Island",
+    "median_age": "64.4"
+  },
+  "203031051": {
+    "sa2_name": "Portarlington",
+    "median_age": "58.4"
+  },
+  "201011001": {
+    "sa2_name": "Alfredton",
+    "median_age": "34.2"
+  },
+  "201011005": {
+    "sa2_name": "Buninyong",
+    "median_age": "38.6"
+  },
+  "201011002": {
+    "sa2_name": "Ballarat",
+    "median_age": "42.7"
+  },
+  "201021012": {
+    "sa2_name": "Gordon (Vic.)",
+    "median_age": "44.9"
+  },
+  "201011003": {
+    "sa2_name": "Ballarat - North",
+    "median_age": "38.8"
+  },
+  "201011006": {
+    "sa2_name": "Delacombe",
+    "median_age": "33.2"
+  },
+  "201011007": {
+    "sa2_name": "Smythes Creek",
+    "median_age": "41.4"
+  },
+  "201021009": {
+    "sa2_name": "Bacchus Marsh Region",
+    "median_age": "43.3"
+  },
+  "201011004": {
+    "sa2_name": "Ballarat - South",
+    "median_age": "35.8"
+  },
+  "201021010": {
+    "sa2_name": "Creswick - Clunes",
+    "median_age": "48.4"
+  },
+  "201021011": {
+    "sa2_name": "Daylesford",
+    "median_age": "51.8"
+  },
+  "201011008": {
+    "sa2_name": "Wendouree - Miners Rest",
+    "median_age": "38.4"
+  },
+  "201031014": {
+    "sa2_name": "Beaufort",
+    "median_age": "49.9"
+  },
+  "204011061": {
+    "sa2_name": "Upper Yarra Valley",
+    "median_age": "50.3"
+  },
+  "201031015": {
+    "sa2_name": "Golden Plains - North",
+    "median_age": "43.1"
+  },
+  "201031017": {
+    "sa2_name": "Maryborough Region",
+    "median_age": "51.7"
+  },
+  "202021028": {
+    "sa2_name": "Castlemaine Region",
+    "median_age": "51.9"
+  },
+  "201031016": {
+    "sa2_name": "Maryborough (Vic.)",
+    "median_age": "49.6"
+  },
+  "202021029": {
+    "sa2_name": "Heathcote",
+    "median_age": "53.7"
+  },
+  "202011018": {
+    "sa2_name": "Bendigo",
+    "median_age": "37.8"
+  },
+  "202011022": {
+    "sa2_name": "Kangaroo Flat - Golden Square",
+    "median_age": "39.4"
+  },
+  "202011019": {
+    "sa2_name": "California Gully - Eaglehawk",
+    "median_age": "36.8"
+  },
+  "202011023": {
+    "sa2_name": "Maiden Gully",
+    "median_age": "36.8"
+  },
+  "202011024": {
+    "sa2_name": "Strathfieldsaye",
+    "median_age": "37.1"
+  },
+  "202011020": {
+    "sa2_name": "East Bendigo - Kennington",
+    "median_age": "42.8"
+  },
+  "202011021": {
+    "sa2_name": "Flora Hill - Spring Gully",
+    "median_age": "34.2"
+  },
+  "202011025": {
+    "sa2_name": "White Hills - Ascot",
+    "median_age": "32.9"
+  },
+  "202021030": {
+    "sa2_name": "Kyneton",
+    "median_age": "44.6"
+  },
+  "202021031": {
+    "sa2_name": "Woodend",
+    "median_age": "43.4"
+  },
+  "202021027": {
+    "sa2_name": "Castlemaine",
+    "median_age": "48.0"
+  },
+  "202031032": {
+    "sa2_name": "Bendigo Region - North",
+    "median_age": "44.2"
+  },
+  "202031033": {
+    "sa2_name": "Loddon",
+    "median_age": "52.4"
+  },
+  "203011034": {
+    "sa2_name": "Bannockburn",
+    "median_age": "34.5"
+  },
+  "203011035": {
+    "sa2_name": "Golden Plains - South",
+    "median_age": "41.1"
+  },
+  "203011036": {
+    "sa2_name": "Winchelsea",
+    "median_age": "44.5"
+  },
+  "203021038": {
+    "sa2_name": "Corio - Norlane",
+    "median_age": "36.3"
+  },
+  "203021037": {
+    "sa2_name": "Belmont",
+    "median_age": "37.2"
+  },
+  "203021040": {
+    "sa2_name": "Geelong West - Hamlyn Heights",
+    "median_age": "36.9"
+  },
+  "203021039": {
+    "sa2_name": "Geelong",
+    "median_age": "39.1"
+  },
+  "203021041": {
+    "sa2_name": "Grovedale",
+    "median_age": "34.0"
+  },
+  "203021042": {
+    "sa2_name": "Highton",
+    "median_age": "37.4"
+  },
+  "203021043": {
+    "sa2_name": "Lara",
+    "median_age": "36.8"
+  },
+  "203021044": {
+    "sa2_name": "Leopold",
+    "median_age": "39.1"
+  },
+  "203021047": {
+    "sa2_name": "North Geelong - Bell Park",
+    "median_age": "40.7"
+  },
+  "203031049": {
+    "sa2_name": "Lorne - Anglesea",
+    "median_age": "52.1"
+  },
+  "203021046": {
+    "sa2_name": "Newtown (Vic.)",
+    "median_age": "39.8"
+  },
+  "203031048": {
+    "sa2_name": "Clifton Springs",
+    "median_age": "44.5"
+  },
+  "203031052": {
+    "sa2_name": "Point Lonsdale - Queenscliff",
+    "median_age": "58.8"
+  },
+  "203031053": {
+    "sa2_name": "Torquay",
+    "median_age": "39.2"
+  },
+  "204031069": {
+    "sa2_name": "Bright - Mount Beauty",
+    "median_age": "47.4"
+  },
+  "204011054": {
+    "sa2_name": "Alexandra",
+    "median_age": "53.2"
+  },
+  "204011055": {
+    "sa2_name": "Euroa",
+    "median_age": "54.2"
+  },
+  "204011056": {
+    "sa2_name": "Kilmore - Broadford",
+    "median_age": "38.5"
+  },
+  "204011057": {
+    "sa2_name": "Mansfield (Vic.)",
+    "median_age": "47.1"
+  },
+  "204011058": {
+    "sa2_name": "Nagambie",
+    "median_age": "49.1"
+  },
+  "204011059": {
+    "sa2_name": "Seymour",
+    "median_age": "44.0"
+  },
+  "204011060": {
+    "sa2_name": "Seymour Region",
+    "median_age": "37.4"
+  },
+  "204011062": {
+    "sa2_name": "Yea",
+    "median_age": "50.6"
+  },
+  "204021063": {
+    "sa2_name": "Benalla",
+    "median_age": "49.1"
+  },
+  "204021064": {
+    "sa2_name": "Benalla Region",
+    "median_age": "51.3"
+  },
+  "204021065": {
+    "sa2_name": "Rutherglen",
+    "median_age": "46.8"
+  },
+  "204031070": {
+    "sa2_name": "Chiltern - Indigo Valley",
+    "median_age": "46.0"
+  },
+  "204021066": {
+    "sa2_name": "Wangaratta",
+    "median_age": "42.8"
+  },
+  "204021067": {
+    "sa2_name": "Wangaratta Region",
+    "median_age": "48.0"
+  },
+  "204031068": {
+    "sa2_name": "Beechworth",
+    "median_age": "48.8"
+  },
+  "204031071": {
+    "sa2_name": "Myrtleford",
+    "median_age": "48.8"
+  },
+  "204031072": {
+    "sa2_name": "Towong",
+    "median_age": "51.3"
+  },
+  "204031073": {
+    "sa2_name": "West Wodonga",
+    "median_age": "36.6"
+  },
+  "204031074": {
+    "sa2_name": "Wodonga",
+    "median_age": "35.5"
+  },
+  "204031075": {
+    "sa2_name": "Yackandandah",
+    "median_age": "46.4"
+  },
+  "209031209": {
+    "sa2_name": "Eltham",
+    "median_age": "42.0"
+  },
+  "205011076": {
+    "sa2_name": "Drouin",
+    "median_age": "37.7"
+  },
+  "205011077": {
+    "sa2_name": "Mount Baw Baw Region",
+    "median_age": "48.5"
+  },
+  "205011078": {
+    "sa2_name": "Trafalgar (Vic.)",
+    "median_age": "42.6"
+  },
+  "205011079": {
+    "sa2_name": "Warragul",
+    "median_age": "40.7"
+  },
+  "205021080": {
+    "sa2_name": "Alps - East",
+    "median_age": "34.0"
+  },
+  "205021081": {
+    "sa2_name": "Bairnsdale",
+    "median_age": "43.2"
+  },
+  "205021082": {
+    "sa2_name": "Bruthen - Omeo",
+    "median_age": "48.6"
+  },
+  "211011251": {
+    "sa2_name": "Bayswater",
+    "median_age": "37.4"
+  },
+  "205021084": {
+    "sa2_name": "Lakes Entrance",
+    "median_age": "54.5"
+  },
+  "205021085": {
+    "sa2_name": "Orbost",
+    "median_age": "55.2"
+  },
+  "205021086": {
+    "sa2_name": "Paynesville",
+    "median_age": "58.8"
+  },
+  "209041436": {
+    "sa2_name": "South Morang (South)",
+    "median_age": "36.2"
+  },
+  "205031087": {
+    "sa2_name": "Foster",
+    "median_age": "53.3"
+  },
+  "205031089": {
+    "sa2_name": "Korumburra",
+    "median_age": "44.7"
+  },
+  "205031090": {
+    "sa2_name": "Leongatha",
+    "median_age": "45.0"
+  },
+  "205031091": {
+    "sa2_name": "Phillip Island",
+    "median_age": "50.1"
+  },
+  "205031092": {
+    "sa2_name": "Wilsons Promontory",
+    "median_age": "44.4"
+  },
+  "205031093": {
+    "sa2_name": "Wonthaggi - Inverloch",
+    "median_age": "49.4"
+  },
+  "205041094": {
+    "sa2_name": "Churchill",
+    "median_age": "42.9"
+  },
+  "205041095": {
+    "sa2_name": "Moe - Newborough",
+    "median_age": "43.3"
+  },
+  "205041096": {
+    "sa2_name": "Morwell",
+    "median_age": "42.5"
+  },
+  "205041097": {
+    "sa2_name": "Traralgon",
+    "median_age": "37.8"
+  },
+  "211051279": {
+    "sa2_name": "Monbulk - Silvan",
+    "median_age": "42.6"
+  },
+  "205041098": {
+    "sa2_name": "Yallourn North - Glengarry",
+    "median_age": "40.3"
+  },
+  "205051099": {
+    "sa2_name": "Alps - West",
+    "median_age": "56.0"
+  },
+  "205051100": {
+    "sa2_name": "Longford - Loch Sport",
+    "median_age": "52.1"
+  },
+  "205051101": {
+    "sa2_name": "Maffra",
+    "median_age": "42.4"
+  },
+  "205051102": {
+    "sa2_name": "Rosedale",
+    "median_age": "40.0"
+  },
+  "211051281": {
+    "sa2_name": "Mooroolbark",
+    "median_age": "35.8"
+  },
+  "205051103": {
+    "sa2_name": "Sale",
+    "median_age": "39.2"
+  },
+  "205051104": {
+    "sa2_name": "Yarram",
+    "median_age": "51.6"
+  },
+  "206011105": {
+    "sa2_name": "Brunswick",
+    "median_age": "33.1"
+  },
+  "206011106": {
+    "sa2_name": "Brunswick East",
+    "median_age": "32.9"
+  },
+  "206011107": {
+    "sa2_name": "Brunswick West",
+    "median_age": "34.2"
+  },
+  "206031114": {
+    "sa2_name": "Essendon - Aberfeldie",
+    "median_age": "37.1"
+  },
+  "206011108": {
+    "sa2_name": "Coburg",
+    "median_age": "35.8"
+  },
+  "206031115": {
+    "sa2_name": "Flemington",
+    "median_age": "32.3"
+  },
+  "206011109": {
+    "sa2_name": "Pascoe Vale South",
+    "median_age": "37.9"
+  },
+  "209031210": {
+    "sa2_name": "Hurstbridge",
+    "median_age": "40.1"
+  },
+  "206021110": {
+    "sa2_name": "Alphington - Fairfield",
+    "median_age": "36.1"
+  },
+  "209031211": {
+    "sa2_name": "Kinglake",
+    "median_age": "41.2"
+  },
+  "206021111": {
+    "sa2_name": "Northcote",
+    "median_age": "36.4"
+  },
+  "206021112": {
+    "sa2_name": "Thornbury",
+    "median_age": "36.0"
+  },
+  "206041120": {
+    "sa2_name": "Flemington Racecourse",
+    "median_age": "37.5"
+  },
+  "206031113": {
+    "sa2_name": "Ascot Vale",
+    "median_age": "35.7"
+  },
+  "209031212": {
+    "sa2_name": "Panton Hill - St Andrews",
+    "median_age": "45.5"
+  },
+  "206031116": {
+    "sa2_name": "Moonee Ponds",
+    "median_age": "37.4"
+  },
+  "206041117": {
+    "sa2_name": "Carlton",
+    "median_age": "24.7"
+  },
+  "206041118": {
+    "sa2_name": "Docklands",
+    "median_age": "31.2"
+  },
+  "209031213": {
+    "sa2_name": "Plenty - Yarrambat",
+    "median_age": "39.8"
+  },
+  "206041119": {
+    "sa2_name": "East Melbourne",
+    "median_age": "38.2"
+  },
+  "206041122": {
+    "sa2_name": "Melbourne",
+    "median_age": "26.6"
+  },
+  "206041121": {
+    "sa2_name": "Kensington (Vic.)",
+    "median_age": "34.0"
+  },
+  "206041127": {
+    "sa2_name": "West Melbourne",
+    "median_age": "60.5"
+  },
+  "206041123": {
+    "sa2_name": "North Melbourne",
+    "median_age": "28.8"
+  },
+  "206041124": {
+    "sa2_name": "Parkville",
+    "median_age": "26.5"
+  },
+  "209031214": {
+    "sa2_name": "Research - North Warrandyte",
+    "median_age": "42.1"
+  },
+  "206041125": {
+    "sa2_name": "South Yarra - West",
+    "median_age": "35.8"
+  },
+  "206041126": {
+    "sa2_name": "Southbank",
+    "median_age": "31.6"
+  },
+  "206071142": {
+    "sa2_name": "Fitzroy",
+    "median_age": "33.5"
+  },
+  "206071144": {
+    "sa2_name": "Richmond (Vic.)",
+    "median_age": "33.6"
+  },
+  "206051128": {
+    "sa2_name": "Albert Park",
+    "median_age": "39.5"
+  },
+  "206051129": {
+    "sa2_name": "Elwood",
+    "median_age": "36.1"
+  },
+  "206051130": {
+    "sa2_name": "Port Melbourne",
+    "median_age": "40.5"
+  },
+  "206061136": {
+    "sa2_name": "Prahran - Windsor",
+    "median_age": "33.7"
+  },
+  "206051131": {
+    "sa2_name": "Port Melbourne Industrial",
+    "median_age": "33.7"
+  },
+  "206051134": {
+    "sa2_name": "St Kilda East",
+    "median_age": "33.4"
+  },
+  "206051132": {
+    "sa2_name": "South Melbourne",
+    "median_age": "36.8"
+  },
+  "206061135": {
+    "sa2_name": "Armadale",
+    "median_age": "36.7"
+  },
+  "206051133": {
+    "sa2_name": "St Kilda",
+    "median_age": "34.9"
+  },
+  "206061137": {
+    "sa2_name": "South Yarra - East",
+    "median_age": "32.2"
+  },
+  "206071140": {
+    "sa2_name": "Carlton North - Princes Hill",
+    "median_age": "33.5"
+  },
+  "206071145": {
+    "sa2_name": "Yarra - North",
+    "median_age": "36.6"
+  },
+  "206061138": {
+    "sa2_name": "Toorak",
+    "median_age": "44.6"
+  },
+  "206071141": {
+    "sa2_name": "Collingwood",
+    "median_age": "32.3"
+  },
+  "209041437": {
+    "sa2_name": "Wollert",
+    "median_age": "30.9"
+  },
+  "206071139": {
+    "sa2_name": "Abbotsford",
+    "median_age": "32.3"
+  },
+  "206071143": {
+    "sa2_name": "Fitzroy North",
+    "median_age": "35.7"
+  },
+  "207011148": {
+    "sa2_name": "Balwyn North",
+    "median_age": "40.8"
+  },
+  "207011146": {
+    "sa2_name": "Ashburton (Vic.)",
+    "median_age": "38.6"
+  },
+  "207011151": {
+    "sa2_name": "Hawthorn",
+    "median_age": "32.3"
+  },
+  "207011147": {
+    "sa2_name": "Balwyn",
+    "median_age": "41.9"
+  },
+  "207011153": {
+    "sa2_name": "Kew",
+    "median_age": "38.4"
+  },
+  "207021156": {
+    "sa2_name": "Bulleen",
+    "median_age": "44.1"
+  },
+  "207011149": {
+    "sa2_name": "Camberwell",
+    "median_age": "39.4"
+  },
+  "207021157": {
+    "sa2_name": "Doncaster",
+    "median_age": "39.2"
+  },
+  "207011150": {
+    "sa2_name": "Glen Iris - East",
+    "median_age": "39.6"
+  },
+  "207011152": {
+    "sa2_name": "Hawthorn East",
+    "median_age": "33.6"
+  },
+  "207021159": {
+    "sa2_name": "Templestowe",
+    "median_age": "44.1"
+  },
+  "207011154": {
+    "sa2_name": "Kew East",
+    "median_age": "38.8"
+  },
+  "207021424": {
+    "sa2_name": "Doncaster East (North)",
+    "median_age": "41.8"
+  },
+  "207011155": {
+    "sa2_name": "Surrey Hills (West) - Canterbury",
+    "median_age": "42.1"
+  },
+  "207021425": {
+    "sa2_name": "Doncaster East (South)",
+    "median_age": "38.6"
+  },
+  "207031161": {
+    "sa2_name": "Blackburn",
+    "median_age": "39.0"
+  },
+  "212051325": {
+    "sa2_name": "Mulgrave",
+    "median_age": "38.4"
+  },
+  "207021160": {
+    "sa2_name": "Templestowe Lower",
+    "median_age": "44.1"
+  },
+  "207031162": {
+    "sa2_name": "Blackburn South",
+    "median_age": "40.5"
+  },
+  "207031164": {
+    "sa2_name": "Box Hill North",
+    "median_age": "37.4"
+  },
+  "208031183": {
+    "sa2_name": "Aspendale Gardens - Waterways",
+    "median_age": "39.8"
+  },
+  "207031163": {
+    "sa2_name": "Box Hill",
+    "median_age": "31.7"
+  },
+  "208011171": {
+    "sa2_name": "Cheltenham - Highett (West)",
+    "median_age": "39.0"
+  },
+  "207031166": {
+    "sa2_name": "Burwood East",
+    "median_age": "37.7"
+  },
+  "207031165": {
+    "sa2_name": "Burwood",
+    "median_age": "27.4"
+  },
+  "207031167": {
+    "sa2_name": "Surrey Hills (East) - Mont Albert",
+    "median_age": "39.1"
+  },
+  "210011228": {
+    "sa2_name": "Keilor",
+    "median_age": "44.1"
+  },
+  "208011168": {
+    "sa2_name": "Beaumaris",
+    "median_age": "46.7"
+  },
+  "210011229": {
+    "sa2_name": "Keilor East",
+    "median_age": "42.3"
+  },
+  "210011230": {
+    "sa2_name": "Niddrie - Essendon West",
+    "median_age": "38.8"
+  },
+  "208011169": {
+    "sa2_name": "Brighton (Vic.)",
+    "median_age": "45.4"
+  },
+  "208011170": {
+    "sa2_name": "Brighton East",
+    "median_age": "43.3"
+  },
+  "208011172": {
+    "sa2_name": "Hampton",
+    "median_age": "42.1"
+  },
+  "210021232": {
+    "sa2_name": "Gisborne",
+    "median_age": "39.5"
+  },
+  "208011173": {
+    "sa2_name": "Sandringham - Black Rock",
+    "median_age": "45.2"
+  },
+  "208021174": {
+    "sa2_name": "Bentleigh - McKinnon",
+    "median_age": "38.9"
+  },
+  "208021176": {
+    "sa2_name": "Carnegie",
+    "median_age": "33.6"
+  },
+  "208021178": {
+    "sa2_name": "Caulfield - South",
+    "median_age": "39.2"
+  },
+  "208021177": {
+    "sa2_name": "Caulfield - North",
+    "median_age": "33.7"
+  },
+  "210021234": {
+    "sa2_name": "Riddells Creek",
+    "median_age": "41.9"
+  },
+  "208021179": {
+    "sa2_name": "Elsternwick",
+    "median_age": "36.7"
+  },
+  "208021180": {
+    "sa2_name": "Hughesdale",
+    "median_age": "35.0"
+  },
+  "208021181": {
+    "sa2_name": "Murrumbeena",
+    "median_age": "36.0"
+  },
+  "208021182": {
+    "sa2_name": "Ormond - Glen Huntly",
+    "median_age": "33.7"
+  },
+  "208021426": {
+    "sa2_name": "Bentleigh East (North)",
+    "median_age": "38.3"
+  },
+  "210021235": {
+    "sa2_name": "Romsey",
+    "median_age": "41.4"
+  },
+  "208021427": {
+    "sa2_name": "Bentleigh East (South)",
+    "median_age": "39.8"
+  },
+  "208031187": {
+    "sa2_name": "Chelsea Heights",
+    "median_age": "39.1"
+  },
+  "208031184": {
+    "sa2_name": "Braeside",
+    "median_age": "16.8"
+  },
+  "209021205": {
+    "sa2_name": "Kingsbury",
+    "median_age": "28.5"
+  },
+  "208031185": {
+    "sa2_name": "Carrum - Patterson Lakes",
+    "median_age": "43.4"
+  },
+  "209021207": {
+    "sa2_name": "Reservoir - East",
+    "median_age": "35.9"
+  },
+  "209021208": {
+    "sa2_name": "Reservoir - West",
+    "median_age": "37.5"
+  },
+  "208031186": {
+    "sa2_name": "Chelsea - Bonbeach",
+    "median_age": "40.4"
+  },
+  "208031188": {
+    "sa2_name": "Cheltenham - Highett (East)",
+    "median_age": "39.4"
+  },
+  "209041432": {
+    "sa2_name": "Epping - South",
+    "median_age": "36.3"
+  },
+  "208031189": {
+    "sa2_name": "Edithvale - Aspendale",
+    "median_age": "39.6"
+  },
+  "209041219": {
+    "sa2_name": "Lalor",
+    "median_age": "36.9"
+  },
+  "208031190": {
+    "sa2_name": "Mentone",
+    "median_age": "40.5"
+  },
+  "209041434": {
+    "sa2_name": "Mernda",
+    "median_age": "31.6"
+  },
+  "208031191": {
+    "sa2_name": "Moorabbin - Heatherton",
+    "median_age": "38.3"
+  },
+  "209011196": {
+    "sa2_name": "Bundoora - East",
+    "median_age": "36.8"
+  },
+  "209011197": {
+    "sa2_name": "Greensborough",
+    "median_age": "39.8"
+  },
+  "208031193": {
+    "sa2_name": "Mordialloc - Parkdale",
+    "median_age": "40.1"
+  },
+  "209011200": {
+    "sa2_name": "Ivanhoe",
+    "median_age": "39.2"
+  },
+  "209011202": {
+    "sa2_name": "Montmorency - Briar Hill",
+    "median_age": "41.1"
+  },
+  "208041194": {
+    "sa2_name": "Malvern - Glen Iris",
+    "median_age": "37.1"
+  },
+  "208041195": {
+    "sa2_name": "Malvern East",
+    "median_age": "34.0"
+  },
+  "209011203": {
+    "sa2_name": "Viewbank - Yallambie",
+    "median_age": "40.3"
+  },
+  "209041221": {
+    "sa2_name": "Mill Park - South",
+    "median_age": "37.5"
+  },
+  "209041223": {
+    "sa2_name": "Thomastown",
+    "median_age": "38.6"
+  },
+  "209011198": {
+    "sa2_name": "Heidelberg - Rosanna",
+    "median_age": "38.6"
+  },
+  "209011199": {
+    "sa2_name": "Heidelberg West",
+    "median_age": "35.0"
+  },
+  "209011201": {
+    "sa2_name": "Ivanhoe East - Eaglemont",
+    "median_age": "43.4"
+  },
+  "209011204": {
+    "sa2_name": "Watsonia",
+    "median_age": "39.5"
+  },
+  "209021428": {
+    "sa2_name": "Preston - East",
+    "median_age": "35.4"
+  },
+  "209021429": {
+    "sa2_name": "Preston - West",
+    "median_age": "36.7"
+  },
+  "209041224": {
+    "sa2_name": "Wallan",
+    "median_age": "33.7"
+  },
+  "209031215": {
+    "sa2_name": "Wattle Glen - Diamond Creek",
+    "median_age": "37.7"
+  },
+  "209041225": {
+    "sa2_name": "Whittlesea",
+    "median_age": "39.9"
+  },
+  "209041430": {
+    "sa2_name": "Doreen",
+    "median_age": "31.8"
+  },
+  "209041216": {
+    "sa2_name": "Bundoora - North",
+    "median_age": "31.6"
+  },
+  "209041217": {
+    "sa2_name": "Bundoora - West",
+    "median_age": "36.7"
+  },
+  "209041435": {
+    "sa2_name": "South Morang (North)",
+    "median_age": "33.7"
+  },
+  "209041220": {
+    "sa2_name": "Mill Park - North",
+    "median_age": "38.1"
+  },
+  "209041431": {
+    "sa2_name": "Epping - East",
+    "median_age": "35.0"
+  },
+  "209041433": {
+    "sa2_name": "Epping - West",
+    "median_age": "32.0"
+  },
+  "210031237": {
+    "sa2_name": "Fawkner",
+    "median_age": "34.2"
+  },
+  "210011226": {
+    "sa2_name": "Airport West",
+    "median_age": "39.6"
+  },
+  "211011254": {
+    "sa2_name": "Knoxfield - Scoresby",
+    "median_age": "37.3"
+  },
+  "211011446": {
+    "sa2_name": "Boronia",
+    "median_age": "38.4"
+  },
+  "210011231": {
+    "sa2_name": "Strathmore",
+    "median_age": "40.6"
+  },
+  "210021233": {
+    "sa2_name": "Macedon",
+    "median_age": "44.9"
+  },
+  "211021261": {
+    "sa2_name": "Donvale - Park Orchards",
+    "median_age": "42.9"
+  },
+  "210031236": {
+    "sa2_name": "Coburg North",
+    "median_age": "36.2"
+  },
+  "210041240": {
+    "sa2_name": "Sunbury",
+    "median_age": "38.6"
+  },
+  "210031239": {
+    "sa2_name": "Pascoe Vale",
+    "median_age": "35.7"
+  },
+  "210041241": {
+    "sa2_name": "Sunbury - South",
+    "median_age": "36.3"
+  },
+  "210031438": {
+    "sa2_name": "Glenroy",
+    "median_age": "33.6"
+  },
+  "210031439": {
+    "sa2_name": "Gowanbrae",
+    "median_age": "38.7"
+  },
+  "210031440": {
+    "sa2_name": "Hadfield",
+    "median_age": "37.9"
+  },
+  "210051246": {
+    "sa2_name": "Greenvale - Bulla",
+    "median_age": "34.3"
+  },
+  "210051248": {
+    "sa2_name": "Melbourne Airport",
+    "median_age": "39.5"
+  },
+  "210051242": {
+    "sa2_name": "Broadmeadows",
+    "median_age": "32.4"
+  },
+  "210051243": {
+    "sa2_name": "Campbellfield - Coolaroo",
+    "median_age": "33.7"
+  },
+  "210051442": {
+    "sa2_name": "Craigieburn - North",
+    "median_age": "30.3"
+  },
+  "210051245": {
+    "sa2_name": "Gladstone Park - Westmeadows",
+    "median_age": "40.3"
+  },
+  "210051247": {
+    "sa2_name": "Meadow Heights",
+    "median_age": "31.9"
+  },
+  "211011258": {
+    "sa2_name": "Rowville - South",
+    "median_age": "39.8"
+  },
+  "212031301": {
+    "sa2_name": "Cranbourne East",
+    "median_age": "30.5"
+  },
+  "210051249": {
+    "sa2_name": "Roxburgh Park - Somerton",
+    "median_age": "29.9"
+  },
+  "210051250": {
+    "sa2_name": "Tullamarine",
+    "median_age": "38.7"
+  },
+  "210051445": {
+    "sa2_name": "Mickleham - Yuroke",
+    "median_age": "29.2"
+  },
+  "210051441": {
+    "sa2_name": "Craigieburn - Central",
+    "median_age": "34.1"
+  },
+  "210051443": {
+    "sa2_name": "Craigieburn - South",
+    "median_age": "31.5"
+  },
+  "210051444": {
+    "sa2_name": "Craigieburn - West",
+    "median_age": "30.3"
+  },
+  "211011259": {
+    "sa2_name": "Wantirna",
+    "median_age": "40.2"
+  },
+  "211011255": {
+    "sa2_name": "Lysterfield",
+    "median_age": "37.8"
+  },
+  "211011260": {
+    "sa2_name": "Wantirna South",
+    "median_age": "41.5"
+  },
+  "211011256": {
+    "sa2_name": "Rowville - Central",
+    "median_age": "38.4"
+  },
+  "211011257": {
+    "sa2_name": "Rowville - North",
+    "median_age": "39.2"
+  },
+  "211021262": {
+    "sa2_name": "Warrandyte - Wonga Park",
+    "median_age": "44.0"
+  },
+  "211011447": {
+    "sa2_name": "Ferntree Gully (North)",
+    "median_age": "39.4"
+  },
+  "211041270": {
+    "sa2_name": "Mitcham (Vic.)",
+    "median_age": "37.9"
+  },
+  "211041271": {
+    "sa2_name": "Nunawading",
+    "median_age": "37.7"
+  },
+  "211011448": {
+    "sa2_name": "Ferntree Gully (South) - Upper Ferntree Gully",
+    "median_age": "38.4"
+  },
+  "211031266": {
+    "sa2_name": "Ringwood",
+    "median_age": "37.0"
+  },
+  "211031267": {
+    "sa2_name": "Ringwood East",
+    "median_age": "38.7"
+  },
+  "211041273": {
+    "sa2_name": "Vermont South",
+    "median_age": "43.7"
+  },
+  "211011449": {
+    "sa2_name": "The Basin",
+    "median_age": "38.2"
+  },
+  "211031263": {
+    "sa2_name": "Bayswater North",
+    "median_age": "36.8"
+  },
+  "211031265": {
+    "sa2_name": "Croydon Hills - Warranwood",
+    "median_age": "39.2"
+  },
+  "211031451": {
+    "sa2_name": "Croydon - West",
+    "median_age": "38.9"
+  },
+  "211031268": {
+    "sa2_name": "Ringwood North",
+    "median_age": "41.1"
+  },
+  "211031450": {
+    "sa2_name": "Croydon - East",
+    "median_age": "36.9"
+  },
+  "211031452": {
+    "sa2_name": "Croydon South",
+    "median_age": "38.7"
+  },
+  "211041269": {
+    "sa2_name": "Forest Hill",
+    "median_age": "39.9"
+  },
+  "211051274": {
+    "sa2_name": "Belgrave - Selby",
+    "median_age": "40.1"
+  },
+  "211051282": {
+    "sa2_name": "Mount Dandenong - Olinda",
+    "median_age": "44.6"
+  },
+  "211051276": {
+    "sa2_name": "Healesville - Yarra Glen",
+    "median_age": "42.7"
+  },
+  "211041272": {
+    "sa2_name": "Vermont",
+    "median_age": "39.0"
+  },
+  "211051278": {
+    "sa2_name": "Lilydale - Coldstream",
+    "median_age": "38.9"
+  },
+  "211051285": {
+    "sa2_name": "Wandin - Seville",
+    "median_age": "37.7"
+  },
+  "211051275": {
+    "sa2_name": "Chirnside Park",
+    "median_age": "37.6"
+  },
+  "211051277": {
+    "sa2_name": "Kilsyth",
+    "median_age": "37.8"
+  },
+  "211051286": {
+    "sa2_name": "Yarra Valley",
+    "median_age": "42.0"
+  },
+  "211051280": {
+    "sa2_name": "Montrose",
+    "median_age": "39.6"
+  },
+  "212011287": {
+    "sa2_name": "Beaconsfield - Officer",
+    "median_age": "31.7"
+  },
+  "212011288": {
+    "sa2_name": "Bunyip - Garfield",
+    "median_age": "41.7"
+  },
+  "212011289": {
+    "sa2_name": "Emerald - Cockatoo",
+    "median_age": "40.7"
+  },
+  "211051283": {
+    "sa2_name": "Mount Evelyn",
+    "median_age": "37.1"
+  },
+  "212011290": {
+    "sa2_name": "Koo Wee Rup",
+    "median_age": "35.8"
+  },
+  "211051284": {
+    "sa2_name": "Upwey - Tecoma",
+    "median_age": "40.0"
+  },
+  "212021293": {
+    "sa2_name": "Berwick - North",
+    "median_age": "41.1"
+  },
+  "212021294": {
+    "sa2_name": "Berwick - South",
+    "median_age": "33.8"
+  },
+  "212011291": {
+    "sa2_name": "Pakenham - North",
+    "median_age": "31.0"
+  },
+  "212021295": {
+    "sa2_name": "Doveton",
+    "median_age": "34.1"
+  },
+  "212021299": {
+    "sa2_name": "Narre Warren North",
+    "median_age": "39.3"
+  },
+  "212011292": {
+    "sa2_name": "Pakenham - South",
+    "median_age": "33.1"
+  },
+  "212021297": {
+    "sa2_name": "Hallam",
+    "median_age": "35.2"
+  },
+  "212021453": {
+    "sa2_name": "Endeavour Hills - North",
+    "median_age": "38.1"
+  },
+  "212021454": {
+    "sa2_name": "Endeavour Hills - South",
+    "median_age": "39.0"
+  },
+  "212021455": {
+    "sa2_name": "Narre Warren - North East",
+    "median_age": "35.7"
+  },
+  "212021456": {
+    "sa2_name": "Narre Warren - South West",
+    "median_age": "34.4"
+  },
+  "212031300": {
+    "sa2_name": "Cranbourne",
+    "median_age": "34.6"
+  },
+  "212031308": {
+    "sa2_name": "Pearcedale - Tooradin",
+    "median_age": "40.3"
+  },
+  "212031302": {
+    "sa2_name": "Cranbourne North",
+    "median_age": "31.5"
+  },
+  "212031303": {
+    "sa2_name": "Cranbourne South",
+    "median_age": "34.2"
+  },
+  "212031304": {
+    "sa2_name": "Cranbourne West",
+    "median_age": "30.9"
+  },
+  "212031305": {
+    "sa2_name": "Hampton Park - Lynbrook",
+    "median_age": "32.8"
+  },
+  "212031306": {
+    "sa2_name": "Lynbrook - Lyndhurst",
+    "median_age": "33.0"
+  },
+  "212041311": {
+    "sa2_name": "Dandenong",
+    "median_age": "33.2"
+  },
+  "212031457": {
+    "sa2_name": "Narre Warren South (East)",
+    "median_age": "35.3"
+  },
+  "212031458": {
+    "sa2_name": "Narre Warren South (West)",
+    "median_age": "32.0"
+  },
+  "212041309": {
+    "sa2_name": "Clarinda - Oakleigh South",
+    "median_age": "41.9"
+  },
+  "212041312": {
+    "sa2_name": "Dandenong North",
+    "median_age": "37.5"
+  },
+  "212051327": {
+    "sa2_name": "Wheelers Hill",
+    "median_age": "44.9"
+  },
+  "212041310": {
+    "sa2_name": "Clayton South",
+    "median_age": "32.9"
+  },
+  "212041313": {
+    "sa2_name": "Dingley Village",
+    "median_age": "43.6"
+  },
+  "212041314": {
+    "sa2_name": "Keysborough",
+    "median_age": "35.3"
+  },
+  "212041316": {
+    "sa2_name": "Noble Park North",
+    "median_age": "39.8"
+  },
+  "212041317": {
+    "sa2_name": "Springvale",
+    "median_age": "34.2"
+  },
+  "212041459": {
+    "sa2_name": "Noble Park - East",
+    "median_age": "33.9"
+  },
+  "212041318": {
+    "sa2_name": "Springvale South",
+    "median_age": "35.9"
+  },
+  "212051321": {
+    "sa2_name": "Glen Waverley - East",
+    "median_age": "40.6"
+  },
+  "212041460": {
+    "sa2_name": "Noble Park - West",
+    "median_age": "34.5"
+  },
+  "212051319": {
+    "sa2_name": "Ashwood - Chadstone",
+    "median_age": "34.7"
+  },
+  "212051320": {
+    "sa2_name": "Clayton",
+    "median_age": "24.9"
+  },
+  "212051322": {
+    "sa2_name": "Glen Waverley - West",
+    "median_age": "37.6"
+  },
+  "212051323": {
+    "sa2_name": "Mount Waverley - North",
+    "median_age": "39.7"
+  },
+  "212051324": {
+    "sa2_name": "Mount Waverley - South",
+    "median_age": "38.3"
+  },
+  "213011328": {
+    "sa2_name": "Ardeer - Albion",
+    "median_age": "34.5"
+  },
+  "213021341": {
+    "sa2_name": "Altona",
+    "median_age": "41.6"
+  },
+  "212051326": {
+    "sa2_name": "Oakleigh - Huntingdale",
+    "median_age": "35.0"
+  },
+  "213011331": {
+    "sa2_name": "Delahey",
+    "median_age": "36.2"
+  },
+  "213011329": {
+    "sa2_name": "Cairnlea",
+    "median_age": "34.2"
+  },
+  "213021342": {
+    "sa2_name": "Altona Meadows",
+    "median_age": "38.6"
+  },
+  "213021344": {
+    "sa2_name": "Newport",
+    "median_age": "37.4"
+  },
+  "213011330": {
+    "sa2_name": "Deer Park - Derrimut",
+    "median_age": "33.4"
+  },
+  "213011332": {
+    "sa2_name": "Keilor Downs",
+    "median_age": "39.8"
+  },
+  "213011333": {
+    "sa2_name": "Kings Park (Vic.)",
+    "median_age": "37.4"
+  },
+  "213011334": {
+    "sa2_name": "St Albans - North",
+    "median_age": "34.7"
+  },
+  "213021346": {
+    "sa2_name": "Williamstown",
+    "median_age": "42.6"
+  },
+  "213011335": {
+    "sa2_name": "St Albans - South",
+    "median_age": "34.7"
+  },
+  "213011336": {
+    "sa2_name": "Sunshine",
+    "median_age": "33.8"
+  },
+  "213011339": {
+    "sa2_name": "Sydenham",
+    "median_age": "34.1"
+  },
+  "213011340": {
+    "sa2_name": "Taylors Lakes",
+    "median_age": "42.0"
+  },
+  "213011337": {
+    "sa2_name": "Sunshine North",
+    "median_age": "34.9"
+  },
+  "213011338": {
+    "sa2_name": "Sunshine West",
+    "median_age": "36.0"
+  },
+  "213041356": {
+    "sa2_name": "Melton",
+    "median_age": "34.7"
+  },
+  "213021343": {
+    "sa2_name": "Altona North",
+    "median_age": "36.8"
+  },
+  "213041357": {
+    "sa2_name": "Melton South",
+    "median_age": "31.9"
+  },
+  "213041358": {
+    "sa2_name": "Melton West",
+    "median_age": "31.6"
+  },
+  "213021345": {
+    "sa2_name": "Seabrook",
+    "median_age": "36.1"
+  },
+  "213041359": {
+    "sa2_name": "Rockbank - Mount Cottrell",
+    "median_age": "32.0"
+  },
+  "213031347": {
+    "sa2_name": "Braybrook",
+    "median_age": "33.0"
+  },
+  "213031348": {
+    "sa2_name": "Footscray",
+    "median_age": "32.3"
+  },
+  "213041353": {
+    "sa2_name": "Bacchus Marsh",
+    "median_age": "37.3"
+  },
+  "213031349": {
+    "sa2_name": "Maribyrnong",
+    "median_age": "33.7"
+  },
+  "213031350": {
+    "sa2_name": "Seddon - Kingsville",
+    "median_age": "35.8"
+  },
+  "213041355": {
+    "sa2_name": "Hillside",
+    "median_age": "32.3"
+  },
+  "213031351": {
+    "sa2_name": "West Footscray - Tottenham",
+    "median_age": "34.2"
+  },
+  "213031352": {
+    "sa2_name": "Yarraville",
+    "median_age": "36.9"
+  },
+  "213041461": {
+    "sa2_name": "Burnside",
+    "median_age": "35.8"
+  },
+  "213041360": {
+    "sa2_name": "Taylors Hill",
+    "median_age": "33.0"
+  },
+  "213051365": {
+    "sa2_name": "Tarneit",
+    "median_age": "30.6"
+  },
+  "213041462": {
+    "sa2_name": "Burnside Heights",
+    "median_age": "32.1"
+  },
+  "213051366": {
+    "sa2_name": "Truganina",
+    "median_age": "30.6"
+  },
+  "213041463": {
+    "sa2_name": "Caroline Springs",
+    "median_age": "34.2"
+  },
+  "213051361": {
+    "sa2_name": "Hoppers Crossing - North",
+    "median_age": "35.8"
+  },
+  "213051362": {
+    "sa2_name": "Hoppers Crossing - South",
+    "median_age": "35.4"
+  },
+  "213051368": {
+    "sa2_name": "Werribee - South",
+    "median_age": "36.9"
+  },
+  "213051369": {
+    "sa2_name": "Wyndham Vale",
+    "median_age": "31.5"
+  },
+  "213051464": {
+    "sa2_name": "Point Cook - East",
+    "median_age": "32.1"
+  },
+  "213051363": {
+    "sa2_name": "Laverton",
+    "median_age": "32.0"
+  },
+  "213051465": {
+    "sa2_name": "Point Cook - North",
+    "median_age": "33.9"
+  },
+  "213051466": {
+    "sa2_name": "Point Cook - South",
+    "median_age": "32.5"
+  },
+  "213051468": {
+    "sa2_name": "Werribee - West",
+    "median_age": "33.1"
+  },
+  "214021382": {
+    "sa2_name": "Mount Martha",
+    "median_age": "44.3"
+  },
+  "213051467": {
+    "sa2_name": "Werribee - East",
+    "median_age": "35.0"
+  },
+  "214011370": {
+    "sa2_name": "Carrum Downs",
+    "median_age": "35.9"
+  },
+  "214011371": {
+    "sa2_name": "Frankston",
+    "median_age": "38.8"
+  },
+  "214021383": {
+    "sa2_name": "Point Nepean",
+    "median_age": "51.4"
+  },
+  "214011372": {
+    "sa2_name": "Frankston North",
+    "median_age": "38.2"
+  },
+  "214011374": {
+    "sa2_name": "Langwarrin",
+    "median_age": "37.5"
+  },
+  "214021378": {
+    "sa2_name": "Flinders",
+    "median_age": "53.5"
+  },
+  "214011373": {
+    "sa2_name": "Frankston South",
+    "median_age": "43.1"
+  },
+  "214021379": {
+    "sa2_name": "Hastings - Somers",
+    "median_age": "40.9"
+  },
+  "214011375": {
+    "sa2_name": "Seaford (Vic.)",
+    "median_age": "40.8"
+  },
+  "214021380": {
+    "sa2_name": "Mornington",
+    "median_age": "47.3"
+  },
+  "214011376": {
+    "sa2_name": "Skye - Sandhurst",
+    "median_age": "36.5"
+  },
+  "214021381": {
+    "sa2_name": "Mount Eliza",
+    "median_age": "44.7"
+  },
+  "214021377": {
+    "sa2_name": "Dromana",
+    "median_age": "49.8"
+  },
+  "215011387": {
+    "sa2_name": "Ararat Region",
+    "median_age": "48.1"
+  },
+  "215011389": {
+    "sa2_name": "Horsham Region",
+    "median_age": "44.5"
+  },
+  "214021384": {
+    "sa2_name": "Rosebud - McCrae",
+    "median_age": "50.3"
+  },
+  "215011390": {
+    "sa2_name": "Nhill Region",
+    "median_age": "49.7"
+  },
+  "216031419": {
+    "sa2_name": "Shepparton Region - West",
+    "median_age": "43.5"
+  },
+  "214021385": {
+    "sa2_name": "Somerville",
+    "median_age": "40.0"
+  },
+  "215011391": {
+    "sa2_name": "St Arnaud",
+    "median_age": "52.3"
+  },
+  "215011392": {
+    "sa2_name": "Stawell",
+    "median_age": "47.6"
+  },
+  "215011393": {
+    "sa2_name": "West Wimmera",
+    "median_age": "49.8"
+  },
+  "215011386": {
+    "sa2_name": "Ararat",
+    "median_age": "45.4"
+  },
+  "215011388": {
+    "sa2_name": "Horsham",
+    "median_age": "40.3"
+  },
+  "215011394": {
+    "sa2_name": "Yarriambiack",
+    "median_age": "50.8"
+  },
+  "215021395": {
+    "sa2_name": "Irymple",
+    "median_age": "40.1"
+  },
+  "216031416": {
+    "sa2_name": "Shepparton - North",
+    "median_age": "36.7"
+  },
+  "215021396": {
+    "sa2_name": "Merbein",
+    "median_age": "42.1"
+  },
+  "215021398": {
+    "sa2_name": "Mildura Region",
+    "median_age": "46.0"
+  },
+  "215021399": {
+    "sa2_name": "Red Cliffs",
+    "median_age": "40.1"
+  },
+  "215021469": {
+    "sa2_name": "Mildura - North",
+    "median_age": "36.4"
+  },
+  "215031400": {
+    "sa2_name": "Buloke",
+    "median_age": "51.2"
+  },
+  "215031401": {
+    "sa2_name": "Gannawarra",
+    "median_age": "51.1"
+  },
+  "215031402": {
+    "sa2_name": "Kerang",
+    "median_age": "48.5"
+  },
+  "215021470": {
+    "sa2_name": "Mildura - South",
+    "median_age": "38.5"
+  },
+  "215031403": {
+    "sa2_name": "Robinvale",
+    "median_age": "34.9"
+  },
+  "215031404": {
+    "sa2_name": "Swan Hill",
+    "median_age": "38.5"
+  },
+  "215031405": {
+    "sa2_name": "Swan Hill Region",
+    "median_age": "45.3"
+  },
+  "216011406": {
+    "sa2_name": "Echuca",
+    "median_age": "43.7"
+  },
+  "216011407": {
+    "sa2_name": "Kyabram",
+    "median_age": "44.4"
+  },
+  "217031471": {
+    "sa2_name": "Camperdown",
+    "median_age": "49.9"
+  },
+  "216011408": {
+    "sa2_name": "Lockington - Gunbower",
+    "median_age": "44.1"
+  },
+  "216011410": {
+    "sa2_name": "Rushworth",
+    "median_age": "52.8"
+  },
+  "216021411": {
+    "sa2_name": "Cobram",
+    "median_age": "46.6"
+  },
+  "216021412": {
+    "sa2_name": "Moira",
+    "median_age": "48.8"
+  },
+  "216011409": {
+    "sa2_name": "Rochester",
+    "median_age": "49.7"
+  },
+  "216021413": {
+    "sa2_name": "Numurkah",
+    "median_age": "44.8"
+  },
+  "216021414": {
+    "sa2_name": "Yarrawonga",
+    "median_age": "50.1"
+  },
+  "216031417": {
+    "sa2_name": "Shepparton - South",
+    "median_age": "36.3"
+  },
+  "216031418": {
+    "sa2_name": "Shepparton Region - East",
+    "median_age": "43.7"
+  },
+  "216031415": {
+    "sa2_name": "Mooroopna",
+    "median_age": "42.1"
+  },
+  "217011420": {
+    "sa2_name": "Glenelg (Vic.)",
+    "median_age": "51.0"
+  },
+  "217011421": {
+    "sa2_name": "Hamilton (Vic.)",
+    "median_age": "45.2"
+  },
+  "217031473": {
+    "sa2_name": "Colac Region",
+    "median_age": "46.2"
+  },
+  "217011422": {
+    "sa2_name": "Portland",
+    "median_age": "46.3"
+  },
+  "217011423": {
+    "sa2_name": "Southern Grampians",
+    "median_age": "48.8"
+  },
+  "217031472": {
+    "sa2_name": "Colac",
+    "median_age": "41.7"
+  },
+  "217031474": {
+    "sa2_name": "Corangamite - North",
+    "median_age": "48.6"
+  },
+  "217031475": {
+    "sa2_name": "Corangamite - South",
+    "median_age": "44.6"
+  },
+  "217031476": {
+    "sa2_name": "Otway",
+    "median_age": "51.5"
+  },
+  "217041477": {
+    "sa2_name": "Moyne - East",
+    "median_age": "42.5"
+  },
+  "217041478": {
+    "sa2_name": "Moyne - West",
+    "median_age": "44.7"
+  },
+  "217041479": {
+    "sa2_name": "Warrnambool - North",
+    "median_age": "38.2"
+  },
+  "217041480": {
+    "sa2_name": "Warrnambool - South",
+    "median_age": "42.4"
+  }
+}
