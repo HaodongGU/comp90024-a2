@@ -1,0 +1,36 @@
+ansible-playbook 2.10.17
+  config file = /etc/ansible/ansible.cfg
+  configured module search path = ['/home/gu/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/gu/.local/lib/python3.10/site-packages/ansible
+  executable location = /home/gu/.local/bin/ansible-playbook
+  python version = 3.10.6 (main, Mar 10 2023, 10:55:28) [GCC 11.3.0]
+Using /etc/ansible/ansible.cfg as config file
+Skipping callback 'default', as we already have a stdout callback.
+Skipping callback 'minimal', as we already have a stdout callback.
+Skipping callback 'oneline', as we already have a stdout callback.
+
+PLAYBOOK: harvester.yaml *******************************************************
+1 plays in ./couchdb/harvester.yaml
+
+PLAY [install python with Mastodon and CouchDB] ********************************
+
+TASK [Gathering Facts] *********************************************************
+task path: /home/gu/Desktop/ansible/couchdb/harvester.yaml:2
+ok: [172.26.134.122]
+META: ran handlers
+
+TASK [install Python3, pip] ****************************************************
+task path: /home/gu/Desktop/ansible/couchdb/harvester.yaml:6
+ok: [172.26.134.122] => {"cache_update_time": 1683846382, "cache_updated": false, "changed": false}
+
+TASK [copy] ********************************************************************
+task path: /home/gu/Desktop/ansible/couchdb/harvester.yaml:17
+ok: [172.26.134.122] => {"changed": false, "dest": "./", "src": "/home/gu/Desktop/ansible/couchdb/../src"}
+
+TASK [shell] *******************************************************************
+task path: /home/gu/Desktop/ansible/couchdb/harvester.yaml:21
+fatal: [172.26.134.122]: FAILED! => {"changed": true, "cmd": "sudo snap install couchdb\nsudo systemctl enable snap.couchdb.server.service\nsudo snap restart couchdb\nrm -f /var/snap/couchdb/current/etc/local.ini\ncp ./src/local.ini /var/snap/couchdb/current/etc/\nsudo snap restart couchdb\npython3 ./src/mastodon.py\n", "delta": "0:00:01.331940", "end": "2023-05-12 00:56:16.044088", "msg": "non-zero return code", "rc": 1, "start": "2023-05-12 00:56:14.712148", "stderr": "snap \"couchdb\" is already installed, see 'snap help refresh'\nTraceback (most recent call last):\n  File \"/home/ubuntu/./src/mastodon.py\", line 2, in <module>\n    from mastodon import Mastodon, StreamListener\n  File \"/home/ubuntu/src/mastodon.py\", line 2, in <module>\n    from mastodon import Mastodon, StreamListener\nImportError: cannot import name 'Mastodon' from partially initialized module 'mastodon' (most likely due to a circular import) (/home/ubuntu/src/mastodon.py)", "stderr_lines": ["snap \"couchdb\" is already installed, see 'snap help refresh'", "Traceback (most recent call last):", "  File \"/home/ubuntu/./src/mastodon.py\", line 2, in <module>", "    from mastodon import Mastodon, StreamListener", "  File \"/home/ubuntu/src/mastodon.py\", line 2, in <module>", "    from mastodon import Mastodon, StreamListener", "ImportError: cannot import name 'Mastodon' from partially initialized module 'mastodon' (most likely due to a circular import) (/home/ubuntu/src/mastodon.py)"], "stdout": "\r\u001b[0m\u001b[?25h\u001b[KRestarted.\n\rRun service command \"restart\" for running services of snap \"couchdb\"           /\r\u001b[0m\u001b[?25h\u001b[KRestarted.", "stdout_lines": ["", "\u001b[0m\u001b[?25h\u001b[KRestarted.", "", "Run service command \"restart\" for running services of snap \"couchdb\"           /", "\u001b[0m\u001b[?25h\u001b[KRestarted."]}
+
+PLAY RECAP *********************************************************************
+172.26.134.122             : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+
