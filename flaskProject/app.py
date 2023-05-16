@@ -33,6 +33,11 @@ def hello_world():  # put application's code here
     return 'Hello World!'
 
 
+@app.route('/hello_world_json')
+def hello_world_json():  # put application's code here
+    return {'Hello World!'}
+
+
 #######################################################################################################################
 #       scenario 1 The top5 with the most sports facilities and the bottom five
 #######################################################################################################################
@@ -120,7 +125,7 @@ def get_sport_specific(param):
 
 
 #######################################################################################################################
-#       scenario 2 The top5 employ rate and unemployed rate SA4
+#       scenario 2 The top5 employ rate and unemployed rate SA4      sa2？？？？？？？？？？？？
 #       DJSB Labour Market Data - Population by Labour Force Status SA4 2018
 #######################################################################################################################
 # Map function
