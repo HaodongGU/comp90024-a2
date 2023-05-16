@@ -21,9 +21,9 @@ internet_db = couch['']
 public_transport_db = couch['transport']
 employment_db = couch['employment']
 income_db = couch['income']
-population_db = couch['']
+population_db = couch['population_sa2_data']
 age_db = couch['median_age_sa2_data']
-twitter_db = couch['twitter']
+twitter_db = couch['']
 mastodon_db = couch['']
 crime_db = couch['crime_data']
 
@@ -428,13 +428,86 @@ def public_transport_top_bottom():
 
 
 #######################################################################################################################
-#       scenario 7 The top5 and bot 5
-# This dataset presents the Spatial Network Analysis for Multimodal Urban Transport Systems (SNAMUTS) indicators by
-# activity node locations for the year of 2016.
+#       scenario 7 The top5 and bot 5 population density   sa2name sa2density
 #
-# Composite Accessibility Index: This index can be a good choice for accessibility, as it usually takes into account the
-# time or distance to various facilities such as schools, hospitals, shopping centers, and so on.
 #######################################################################################################################
+get_top_density_func = """
+function (doc) {
+  if (doc[" population_density_as_at_30_june_population_density_personskm2"] && doc[" sa2_name_2016"] && doc[" sa2_maincode_2016"]) {
+    emit(doc[" population_density_as_at_30_june_population_density_personskm2"], {sa2_name_2016: doc[" sa2_name_2016"], sa2_maincode_2016: doc[" sa2_maincode_2016"]});
+  }
+}
+"""
+
+
+# Create the view
+top_density_view_id = "_design/top_density_view"
+if top_density_view_id in population_db:
+    print("top_density_view Design document already exists. Updating it now.")
+    # design_doc = population_db[top_density_view_id]
+    #
+    # # Update the view
+    # design_doc['views']['by_density'] = {"map": get_top_density_func}
+    # # Save the updated design document back to the database
+    # population_db.save(design_doc)
+else:
+    print("top_density_view Design document does not exist. Creating it now.")
+    population_db.save({
+        "_id": top_density_view_id,
+        "views": {
+            "by_density": {
+                "map": get_top_density_func
+            }
+        }
+    })
+
+
+@app.route('/population_density', methods=['GET'])
+def population_density():
+    # Fetch the view
+    view = population_db.view("top_density_view/by_density")
+
+    # Create a dictionary to store the density value and associated areas
+    density_dict = {}
+    for row in view:
+        # Skip entries where the density is "null"
+        if row.key == "null":
+            continue
+
+        if row.key in density_dict:
+            density_dict[row.key].append({
+                'name': row.value['sa2_name_2016'],
+                'code': row.value['sa2_maincode_2016']
+            })
+        else:
+            density_dict[row.key] = [{
+                'name': row.value['sa2_name_2016'],
+                'code': row.value['sa2_maincode_2016']
+            }]
+
+    # Sort the density and get top 5 and bottom 5
+    sorted_density_list = sorted(density_dict.items(), key=lambda x: x[0], reverse=True)
+    top_5_density = sorted_density_list[:5]
+    bottom_5_density = sorted_density_list[-5:]
+
+    return {'Top 5': top_5_density, 'Bottom 5': bottom_5_density}
+
+
+
+#######################################################################################################################
+#       scenario 8 The top5 and bot 5 internet
+#
+#######################################################################################################################
+
+# Map function
+get_twitter_total_map_func = '''function(doc) {
+    if (doc.Place && doc["Sentiment Score"]) {
+        var total = parseFloat(doc["Sentiment Score"]);
+        emit(doc.Place, total);
+    }
+}'''
+
+
 
 @app.route('/internet_db/<param>', methods=['GET'])
 def internet_db(param):
@@ -453,106 +526,14 @@ def internet_db(param):
     return {'data': results}
 
 
+#######################################################################################################################
+#       scenario 9 Twitter
+#
+#######################################################################################################################
 
 
-@app.route('/population_db/<param>', methods=['GET'])
-def population_db(param):
-    # Mango Queries
-    query = {
-        "selector": {
-            "Suburb": param
-        }
-    }
-    # Execute the query
-    results = []
-    docs = population_db.find(query)
-    for row in docs:
-        results.append(row)
-    # Return the results as JSON
-    return {'data': results}
 
 
-# Map function
-get_twitter_total_map_func = '''function(doc) {
-    if (doc.Place && doc["Sentiment Score"]) {
-        var total = parseFloat(doc["Sentiment Score"]);
-        emit(doc.Place, total);
-    }
-}'''
-
-# Reduce function
-get_twitter_total_reduce_func = '''function(keys, values) {
-    var total = sum(values);
-    var count = values.length;
-    return {total: total, count: count};
-}'''
-
-# Create the view
-# Check if the design document already exists
-twitter_design_doc_id = "_design/total_senti_by_suburb_view"
-if twitter_design_doc_id in twitter_db:
-    print("Design document already exists. Updating it now.")
-    design_doc = twitter_db[twitter_design_doc_id]
-
-    # Update the view
-    design_doc['views'] = {
-        "by_suburb_sentiment": {
-            "map": get_twitter_total_map_func,
-            "reduce": get_twitter_total_reduce_func
-        }
-    }
-
-    # Save the updated design document back to the database
-    twitter_db.save(design_doc)
-
-else:
-    print("Design document does not exist. Creating it now.")
-    # Create the view
-    twitter_db.save({
-        "_id": twitter_design_doc_id,
-        "views": {
-            "by_suburb_sentiment": {
-                "map": get_twitter_total_map_func,
-                "reduce": get_twitter_total_reduce_func
-            }
-        }
-    })
-
-
-@app.route('/twitter_db_get/<param>', methods=['GET'])
-def twitter_db_get(param):
-    # Get the total facilities for a suburb
-    result = twitter_db.view('total_senti_by_suburb_view/by_suburb_sentiment', key=str(param))
-
-    total = 0
-    count = 0
-    for row in result:
-        total = row.value['total']
-        count = row.value['count']
-
-    # Calculate the average
-    # avg_senti = total / count if count != 0 else 0
-
-    # Return the result as JSON
-    # return {'Place': param, 'total_senti': total, "avg_senti": avg_senti}
-    return {'Place': param, 'total_senti': total, "avg_senti": count}
-
-
-@app.route('/twitter_dbtry_get/<param>', methods=['GET'])
-def twitter_dbtry_get(param):
-    # Get the total facilities for a suburb
-    result = twitter_db.view('tweeter/new-view', key=str(param))
-    print(result)
-    for i in result:
-        tmp = i.value["count"]
-
-    return {"total": tmp}
-    # Calculate the average
-    # avg_senti = total / count if count != 0 else 0
-
-    # Return the result as JSON
-    # return {'Place': param, 'total_senti': total, "avg_senti": avg_senti}
-    # return {'Place': param, 'total_senti': total, "avg_senti": count}
 
 
 @app.route('/mastodon_db/<param>', methods=['GET'])
