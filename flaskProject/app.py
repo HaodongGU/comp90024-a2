@@ -18,13 +18,14 @@ couch = couchdb.Server(url)
 # total_sport_facility_suburb_db = couch['total_number_of_facility_suburb']
 sport_facility_suburb_db = couch['sports_facility_suburb']
 internet_db = couch['']
-public_transport_db = couch['']
+public_transport_db = couch['transport']
 employment_db = couch['employment']
 income_db = couch['income']
 population_db = couch['']
-age_db = couch['']
+age_db = couch['median_age_sa2_data']
 twitter_db = couch['twitter']
 mastodon_db = couch['']
+crime_db = couch['crime_data']
 
 
 @app.route('/')
@@ -256,8 +257,183 @@ def income_db_top_bot():
 
 
 #######################################################################################################################
-#       scenario 4 The top5 median income and bot5 sa2_name
+#       scenario 4 The top5 crime and bot 5 crime lga_name11 and lga_code11
+# This dataset presents the footprint of the number of criminal incidents by principal offence recorded on the Victoria
+# Police Law Enforcement Assistance Program (LEAP).
+#       VIC CSA - Crime Statistics - Criminal Incidents by Principal Offence (LGA) 2010-2019
+#######################################################################################################################
+
+# there is a space before each features.........
+crime_func = '''function(doc) {
+    if (doc[" lga_name11"] && doc[" lga_code11"]) {
+        var total = 0;
+        if (doc[" total_division_a_offences"] != "null") {
+            total += parseInt(doc[" total_division_a_offences"]);
+        }
+        if (doc[" total_division_b_offences"] != "null") {
+            total += parseInt(doc[" total_division_b_offences"]);
+        }
+        if (doc[" total_division_c_offences"] != "null") {
+            total += parseInt(doc[" total_division_c_offences"]);
+        }
+        if (doc[" total_division_d_offences"] != "null") {
+            total += parseInt(doc[" total_division_d_offences"]);
+        }
+        if (doc[" total_division_e_offences"] != "null") {
+            total += parseInt(doc[" total_division_e_offences"]);
+        }
+        if (doc[" total_division_f_offences"] != "null") {
+            total += parseInt(doc[" total_division_f_offences"]);
+        }
+        emit(doc[" lga_name11"], {"total": total, "lga_code11": doc[" lga_code11"]});
+    }
+}'''
+
+# Create the view
+crime_id = "_design/crime_func_view"
+if crime_id in crime_db:
+    print("crime_func_view Design document already exists. Updating it now.")
+    # # Get the existing design document
+    # design_doc = crime_db[crime_id]
+    # # Update the view
+    # design_doc['views']['by_ga_name11'] = {"map": crime_func}
+    # # Save the updated design document back to the database
+    # crime_db.save(design_doc)
+else:
+    print("crime_func_view Design document does not exist. Creating it now.")
+    # Create the view
+    crime_db.save({
+        "_id": crime_id,
+        "views": {
+            "by_ga_name11": {
+                "map": crime_func
+            }
+        }
+    })
+
+
+@app.route('/crime_top_bot/', methods=['GET'])
+def crime_top_bot():
+    # Get crime total
+    crime_view = crime_db.view('crime_func_view/by_ga_name11')
+    crime_results = [dict(lga_name11=row.key, total=row.value["total"], lga_code11=row.value["lga_code11"]) for row in
+                     crime_view]
+    crime_results.sort(key=lambda x: x['total'], reverse=True)
+    top_5_crime = crime_results[:5]
+    bottom_5_crime = crime_results[-5:]
+
+    # Return the results as JSON
+    return {'Top 5': top_5_crime, 'Bottom 5': bottom_5_crime}
+
+
+#######################################################################################################################
+#       scenario 5 The top5 and bot 5 median age sa2_name
 #
+#######################################################################################################################
+# Define a map function that emits median_age and sa2_name
+age_view_map_func = '''function(doc) {
+    if (doc.sa2_name && doc.median_age) {
+        emit(parseFloat(doc.median_age), doc.sa2_name);
+    }
+}'''
+
+# Create the view
+age_view_id = "_design/age_view"
+if age_view_id in age_db:
+    print("age_view_id Design document already exists. Updating it now.")
+    # # Get the existing design document
+    # design_doc = crime_db[crime_id]
+    # # Update the view
+    # design_doc['views']['by_ga_name11'] = {"map": crime_func}
+    # # Save the updated design document back to the database
+    # crime_db.save(design_doc)
+else:
+    print("age_view_id Design document does not exist. Creating it now.")
+    # Create the view
+    age_db.save({
+        "_id": age_view_id,
+        "views": {
+            "by_median_age": {
+                "map": age_view_map_func
+            }
+        }
+    })
+
+
+@app.route('/age_top_bot/', methods=['GET'])
+def age_top_bot():
+    # Get ages
+    age_view = age_db.view('age_view/by_median_age')
+    age_results = [dict(sa2_name=row.value, median_age=row.key) for row in age_view]
+    age_results.sort(key=lambda x: x['median_age'], reverse=True)
+    top_5_age = age_results[:5]
+    bottom_5_age = age_results[-5:]
+
+    # Return the results as JSON
+    return {'Top 5': top_5_age, 'Bottom 5': bottom_5_age}
+
+
+#######################################################################################################################
+#       scenario 6 The top5 and bot 5 Composite Accessibility Index
+# This dataset presents the Spatial Network Analysis for Multimodal Urban Transport Systems (SNAMUTS) indicators by
+# activity node locations for the year of 2016.
+#
+# Composite Accessibility Index: This index can be a good choice for accessibility, as it usually takes into account the
+# time or distance to various facilities such as schools, hospitals, shopping centers, and so on.
+#######################################################################################################################
+composite_index_view_map_func = '''function(doc) {
+    if (doc.coordinates && doc.composite_index) {
+        emit(parseFloat(doc.composite_index), doc.coordinates);
+    }
+}'''
+
+# Create the view
+public_transport_view_id = "_design/composite_index_view"
+if public_transport_view_id in public_transport_db:
+    print("composite_index_view Design document already exists. Updating it now.")
+else:
+    print("composite_index_view Design document does not exist. Creating it now.")
+    # Create the view
+    public_transport_db.save({
+        "_id": public_transport_view_id,
+        "views": {
+            "by_composite_index": {
+                "map": composite_index_view_map_func
+            }
+        }
+    })
+
+
+@app.route('/public_transport_top_bottom/', methods=['GET'])
+def public_transport_top_bottom():
+    # Get public transport data
+    public_transport_view = public_transport_db.view('composite_index_view/by_composite_index')
+    public_transport_dict = {}
+    for row in public_transport_view:
+        if row.value in public_transport_dict:
+            public_transport_dict[row.value].append(row.key)
+        else:
+            public_transport_dict[row.value] = [row.key]
+
+    # Calculate average composite_index for each coordinates
+    avg_composite_index_dict = {coordinates: sum(values)/len(values) for coordinates, values in public_transport_dict.items()}
+
+    # Sort by composite_index and get top 5 and bottom 5
+    sorted_composite_index_list = sorted(avg_composite_index_dict.items(), key=lambda x: x[1], reverse=True)
+    top_5_public_transport = sorted_composite_index_list[:5]
+    bottom_5_public_transport = sorted_composite_index_list[-5:]
+
+    # Return the results as JSON
+    return {'Top 5': top_5_public_transport, 'Bottom 5': bottom_5_public_transport}
+
+
+#######################################################################################################################
+#       scenario 7 The top5 and bot 5
+# This dataset presents the Spatial Network Analysis for Multimodal Urban Transport Systems (SNAMUTS) indicators by
+# activity node locations for the year of 2016.
+#
+# Composite Accessibility Index: This index can be a good choice for accessibility, as it usually takes into account the
+# time or distance to various facilities such as schools, hospitals, shopping centers, and so on.
 #######################################################################################################################
 
 @app.route('/internet_db/<param>', methods=['GET'])
@@ -277,21 +453,6 @@ def internet_db(param):
     return {'data': results}
 
 
-@app.route('/public_transport_db/<param>', methods=['GET'])
-def public_transport_db(param):
-    # Mango Queries
-    query = {
-        "selector": {
-            "Suburb": param
-        }
-    }
-    # Execute the query
-    results = []
-    docs = public_transport_db.find(query)
-    for row in docs:
-        results.append(row)
-    # Return the results as JSON
-    return {'data': results}
 
 
 @app.route('/population_db/<param>', methods=['GET'])
@@ -305,23 +466,6 @@ def population_db(param):
     # Execute the query
     results = []
     docs = population_db.find(query)
-    for row in docs:
-        results.append(row)
-    # Return the results as JSON
-    return {'data': results}
-
-
-@app.route('/age_db/<param>', methods=['GET'])
-def age_db(param):
-    # Mango Queries
-    query = {
-        "selector": {
-            "Suburb": param
-        }
-    }
-    # Execute the query
-    results = []
-    docs = age_db.find(query)
     for row in docs:
         results.append(row)
     # Return the results as JSON
