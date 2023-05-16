@@ -45,16 +45,16 @@ const MapWithSuburbBoundaries = () => {
   })
 
   const renderSuburbBoundaries = () => {
-    // var output = suburbData.features.map((feature) => (
-    //   <Polygon
-    //     key={feature.id}
-    //     path={feature.geometry.coordinates[0][0].map((coord) => ({
-    //       lat: coord[1],
-    //       lng: coord[0],
-    //     }))}
-    //     options={options}
-    //   />
-    // ));
+    var output = suburbData.features.map((feature) => (
+      <Polygon
+        key={feature.id}
+        path={feature.geometry.coordinates[0][0].map((coord) => ({
+          lat: coord[1],
+          lng: coord[0],
+        }))}
+        options={options}
+      />
+    ));
     // console.log("features size: ", suburbData.features.length);
     // console.log("output size: ", output.length);
     // console.log(suburbData.features[0].geometry.coordinates[0][0][0][0], suburbData.features[0].geometry.coordinates[0][0][0][1])

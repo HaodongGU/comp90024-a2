@@ -1,13 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import 'leaflet/dist/leaflet.css';
 import "./Map.scss"
-
+import AnalysisChart from "./AnalysisChart";
 
 
 const AttrListItem = (props) => {
   const AnalysisButton = () => {
     return(
-      <div className="map_analysis_button_div">
+      <div className="map_analysis_button_div" onClick={props.buttonClickHandler}>
         <h4 className="map_analysis_button">View Analysis</h4>
       </div>
     )
@@ -29,22 +29,33 @@ const AttrListItem = (props) => {
 }
 
 
-const AttrList = (props) => {
+const AttrList = (props) => {  
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  const buttonClickHandler = () => {
+    setModalIsOpen(true);
+    console.log("AttrList buttonClickHandler modalIsOpen: ", modalIsOpen);
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+    console.log("AttrList closeModal modalIsOpen: ", modalIsOpen);
+  };
+
   return (
+    // <div>
+      
+    //   {/* <AnalysisChart modalIsOpen={modalIsOpen} closeModal={closeModal}/> */}
+    // </div>
     <div className="map_left">
       <h3 className="attr_btn"> Impact Factor: </h3>
-      <AttrListItem attrName={"Income"} selectedAttr={props.selectedAttr} handleRadioChange={props.handleRadioChange}/>
-      <AttrListItem attrName={"Age"} selectedAttr={props.selectedAttr} handleRadioChange={props.handleRadioChange}/>
-      <AttrListItem attrName={"Crime Rate"} selectedAttr={props.selectedAttr} handleRadioChange={props.handleRadioChange}/>
-      <AttrListItem attrName={"Public Transport"} selectedAttr={props.selectedAttr} handleRadioChange={props.handleRadioChange}/>
-      <AttrListItem attrName={"Public Transport4"} selectedAttr={props.selectedAttr} handleRadioChange={props.handleRadioChange}/>
-      <AttrListItem attrName={"Public Transport5"} selectedAttr={props.selectedAttr} handleRadioChange={props.handleRadioChange}/>
-      <AttrListItem attrName={"Public Transport6"} selectedAttr={props.selectedAttr} handleRadioChange={props.handleRadioChange}/>
-      <AttrListItem attrName={"Public Transport7"} selectedAttr={props.selectedAttr} handleRadioChange={props.handleRadioChange}/>
-      <AttrListItem attrName={"Public Transport8"} selectedAttr={props.selectedAttr} handleRadioChange={props.handleRadioChange}/>
-      <AttrListItem attrName={"Public Transport9"} selectedAttr={props.selectedAttr} handleRadioChange={props.handleRadioChange}/>
-      <AttrListItem attrName={"Public Transport10"} selectedAttr={props.selectedAttr} handleRadioChange={props.handleRadioChange}/>
-      <AttrListItem attrName={"Public Transport11"} selectedAttr={props.selectedAttr} handleRadioChange={props.handleRadioChange}/>
+      <AttrListItem attrName={"Income"} selectedAttr={props.selectedAttr} handleRadioChange={props.handleRadioChange} buttonClickHandler={buttonClickHandler}/>
+      <AttrListItem attrName={"Age"} selectedAttr={props.selectedAttr} handleRadioChange={props.handleRadioChange} buttonClickHandler={buttonClickHandler}/>
+      <AttrListItem attrName={"Public Transport"} selectedAttr={props.selectedAttr} handleRadioChange={props.handleRadioChange} buttonClickHandler={buttonClickHandler}/>
+      <AttrListItem attrName={"Income1"} selectedAttr={props.selectedAttr} handleRadioChange={props.handleRadioChange} buttonClickHandler={buttonClickHandler}/>
+      <AttrListItem attrName={"Income2"} selectedAttr={props.selectedAttr} handleRadioChange={props.handleRadioChange} buttonClickHandler={buttonClickHandler}/>
+
+      <AnalysisChart modalIsOpen={modalIsOpen} closeModal={closeModal} attrName={props.selectedAttr}/>
     </div>
   )
 }

@@ -29,7 +29,18 @@ const CustomMarker = (props) => {
   )
 };
 
-const SuburbsMap = () => {
+const CustomMarkers = (props) => {
+  const demo = [[-37.8136, 144.9631], [-37.9136, 145.0631], [-38.0136, 145.1631]]
+  const positions = demo; //TODO: get request!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  console.log("CustomMarkers positions len: ", positions.length);
+  const output = positions.map((position) => (
+    <CustomMarker position={position} attrName={props.attrName}/>
+  ));
+  
+  return output;
+}
+
+const SuburbsMap = (props) => {
   const [selectedSuburb, setSelectedSuburb] = useState(null);
 
   const handleSuburbClick = (event) => {
@@ -44,6 +55,7 @@ const SuburbsMap = () => {
     if (suburbName===selectedSuburb){
       return '#ff0000'; // red
     }
+    //TODO: get request!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     return '#ffffff'; // white? trans 
   }
 
@@ -66,7 +78,7 @@ const SuburbsMap = () => {
     <MapContainer center={[-37.8136, 144.9631]} zoom={10} style={{ height: '100vh', width: '100%' }}>
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
       <GeoJSON data={suburbsData} {...geoJsonOptions} />
-      <CustomMarker position={[-37.8136, 144.9631]} attrName="Income"/>
+      <CustomMarkers attrName={props.attrName}/>
     </MapContainer>
   );
 };

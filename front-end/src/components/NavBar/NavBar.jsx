@@ -1,20 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useState } from "react";
 import "./NavBar.scss"
 import VicLogo from "../../static/figure/VicGov.png"
 import AusLogo from "../../static/figure/aus.png"
 
 const NavBar = () => {
-  const [curUser, setCurUser] = useState("Anonymous");
-  const [loginState, setLoginState] = useState(false);
-
 	return (
 		<div className="navbar">
       <div className="logo">
-					<img src={VicLogo}/>
+					<img src={VicLogo} alt="VicLogo"/>
           <span>
-            Victorians' Happiness
+            Victorians' Happiness {String.fromCodePoint(0x1F603)}{String.fromCodePoint(0x1F61E)}
           </span>
 			</div>
 
@@ -35,7 +31,7 @@ const NavBar = () => {
           <h3>Feedback</h3>
         </Link> */}
         
-        <img src={AusLogo}/>
+        <img src={AusLogo} alt="AusLogo"/>
         {/* <span>{curUser}</span>
         {loginState ? 
           <span>logout</span> : <span>login</span>
