@@ -1,0 +1,55 @@
+$unimelbBlue: #094183;
+
+.greeting_r{
+  font-family:cursive;
+  display: inline;
+  color: red;
+}
+.greeting_g{
+  font-family:cursive;
+  display: inline;
+  color: green;
+}
+.greeting_b{
+  font-family:cursive;
+  display: inline;
+  color: blue;
+}
+
+.greeting_w{
+  font-family:cursive;
+  display: inline;
+  color: white;
+}
+
+.home_main{
+  // min-height: calc(80vh - 2px);
+  min-height: calc(90vh - 2px);
+  display: flex;
+	align-items: center;
+  justify-content: space-between;
+  background-image: url("../../static/figure/Collins Street Melbourne.png");
+  // background-image: url("../../static/figure/flinder station.jpg");
+  background-size: cover;
+  // height: "500px"; /* set the height of the background */
+  // width: "100%"; /* set the width of the background */
+
+  img{
+    width: 300px;
+    height: 300px;
+    margin-left: 20px;
+    margin-right: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  .title_home{
+    width: 300px;
+    height: 300px;
+    margin-left: 20px;
+    margin-right: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 200px;
+  }
+}

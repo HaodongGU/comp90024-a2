@@ -1,0 +1,57 @@
+.map_main{
+  background-color: black;
+  min-height: calc(90vh - 2px);
+  display: flex;
+  flex-direction: row;
+}
+
+.attr_btn{
+  display: flex;
+  align-items: center;
+  color: white;
+  max-height: 30px;
+  // h4{
+  //   color: white;
+  // }
+}
+.attr_item{
+  padding: 0px;
+  margin: 0px;
+  margin-bottom: 10px;
+}
+
+.map_left{
+  height: calc(90vh - 50px);
+  width: calc(20% - 2px);
+  border: 2px solid white;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 1pc;
+}
+
+.map_analysis_button_div {
+  display: flex;
+  // justify-content: center;
+  align-items: center;
+  max-height: 6vh;
+}
+
+.map_analysis_button {
+  background-color: wheat;
+  width: 60%;
+  height: 6vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.map_right{
+  color: white;
+  height: calc(90vh - 50px);
+  width: calc(80% - 2px);
+  border: 2px solid white;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 1pc;
+}

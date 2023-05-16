@@ -1,0 +1,42 @@
+$unimelbBlue: #094183;
+
+p article section{
+  display: block;
+}
+.root{
+  background-color: black;
+}
+
+.content{
+	// display: flex;
+	// justify-content: center;
+  // min-height: calc(80vh - 2px);
+  min-height: calc(90vh - 2px);
+  margin-left: 12.5vh;
+  margin-right: 12.5vh;
+  word-wrap: break-word;
+	word-break: normal;
+}
+
+@media only screen and (max-width:500px) {
+	/* For mobile phones: */
+	// .menu, .main, .right {
+	//   width: 100%;
+	// }
+
+  .main{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .root{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content{
+    margin-left: 5px;
+    margin-right: 5px;
+    // max-width: calc(40vh - 10px);
+  }
+}
