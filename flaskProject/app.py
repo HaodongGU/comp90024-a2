@@ -1,10 +1,11 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify
 from flask_restful import Api, Resource
-# from flask_cors import CORS
+from flask_cors import CORS
 
 import couchdb
 
 app = Flask(__name__)
+CORS(app)
 
 # authentication
 admin = 'admin'
@@ -35,7 +36,12 @@ def hello_world():  # put application's code here
 
 @app.route('/hello_world_json')
 def hello_world_json():  # put application's code here
-    return {'Hello World!'}
+    data = {
+        'name': 'Changwen Li',
+        'agreeting': 'Hello World',
+        'city': 'Melb'
+    }
+    return jsonify(data)
 
 
 #######################################################################################################################
