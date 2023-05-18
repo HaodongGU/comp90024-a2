@@ -20,7 +20,7 @@ ChartJS.register(
   Legend
 );
 
-Modal.setAppElement('#root'); // this line is needed for accessibility reasons
+Modal.setAppElement('#root'); 
 
 const xlabelName = (attrName) => {
   switch (attrName){
@@ -67,7 +67,7 @@ const AnalysisChart = (props) => {
           display: true,
           text: xlabelName(props.attrName),
           font: {
-            size: 16, // Adjust the font size for the y-axis label
+            size: 16, 
           },
         },
       },
@@ -76,7 +76,7 @@ const AnalysisChart = (props) => {
           display: true,
           text: 'Sentiment Value',
           font: {
-            size: 16, // Adjust the font size for the y-axis label
+            size: 16, 
           },
         },
       },
@@ -84,10 +84,10 @@ const AnalysisChart = (props) => {
     plugins: {
       tooltip: {
         titleFont: {
-          size: 16, // Set the font size for the tooltip title
+          size: 16, 
         },
         bodyFont: {
-          size: 14, // Set the font size for the tooltip body
+          size: 14, 
         },
       },
     },

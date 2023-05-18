@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useEffect }from "react";
 import { Link } from "react-router-dom";
 import Fade from 'react-reveal/Fade';
 import Swing from 'react-reveal/Swing';
 import SadEmoji from "../../static/figure/sadEmoji.png"
 import HappyEmoji from "../../static/figure/happyEmoji.png"
-
+import axios from "axios";
 import "./Home.scss"
+
+const ip="localhost";
 
 class FadeExample extends React.Component {
   render() {
@@ -33,6 +35,20 @@ class FadeExample extends React.Component {
 }
 
 const Home = () => {
+  useEffect(() => {
+    const testConnections = async () => {
+      try {
+        const url = "http://"+ip+":5000/hello_world_json";
+        const res0 = await axios.get(url);
+        console.log("res0: ", res0);
+        console.log("res0 data: ", res0.data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    testConnections();
+  }, []);
+
   return (
     <div>
       <FadeExample/>

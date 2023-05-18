@@ -3,6 +3,16 @@ import 'leaflet/dist/leaflet.css';
 import "./Map.scss"
 import AnalysisChart from "./AnalysisChart";
 
+const getMarkHint = (attr) => {
+  switch (attr){
+    case "Income":
+      return "HIGH median income";
+    case "Age":
+      return "HIGH median age";
+    default:
+      return "DEFAULT MARK VALUE?";
+  }
+}
 
 const AttrListItem = (props) => {
   const AnalysisButton = () => {
@@ -49,11 +59,17 @@ const AttrList = (props) => {
     // </div>
     <div className="map_left">
       <h3 className="attr_btn"> Impact Factor: </h3>
+      {props.selectedAttr !== "" && <p className="map_right_mark_hint">The suburbs with <i>{getMarkHint(props.selectedAttr)}</i> is marked on the map. </p>}
       <AttrListItem attrName={"Income"} selectedAttr={props.selectedAttr} handleRadioChange={props.handleRadioChange} buttonClickHandler={buttonClickHandler}/>
       <AttrListItem attrName={"Age"} selectedAttr={props.selectedAttr} handleRadioChange={props.handleRadioChange} buttonClickHandler={buttonClickHandler}/>
       <AttrListItem attrName={"Public Transport"} selectedAttr={props.selectedAttr} handleRadioChange={props.handleRadioChange} buttonClickHandler={buttonClickHandler}/>
       <AttrListItem attrName={"Income1"} selectedAttr={props.selectedAttr} handleRadioChange={props.handleRadioChange} buttonClickHandler={buttonClickHandler}/>
       <AttrListItem attrName={"Income2"} selectedAttr={props.selectedAttr} handleRadioChange={props.handleRadioChange} buttonClickHandler={buttonClickHandler}/>
+      <AttrListItem attrName={"Income3"} selectedAttr={props.selectedAttr} handleRadioChange={props.handleRadioChange} buttonClickHandler={buttonClickHandler}/>
+      <AttrListItem attrName={"Income4"} selectedAttr={props.selectedAttr} handleRadioChange={props.handleRadioChange} buttonClickHandler={buttonClickHandler}/>
+      <AttrListItem attrName={"Income5"} selectedAttr={props.selectedAttr} handleRadioChange={props.handleRadioChange} buttonClickHandler={buttonClickHandler}/>
+      <AttrListItem attrName={"Income6"} selectedAttr={props.selectedAttr} handleRadioChange={props.handleRadioChange} buttonClickHandler={buttonClickHandler}/>
+      <AttrListItem attrName={"Income7"} selectedAttr={props.selectedAttr} handleRadioChange={props.handleRadioChange} buttonClickHandler={buttonClickHandler}/>
 
       <AnalysisChart modalIsOpen={modalIsOpen} closeModal={closeModal} attrName={props.selectedAttr}/>
     </div>
