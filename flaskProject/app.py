@@ -38,7 +38,7 @@ def hello_world():  # put application's code here
 def hello_world_json():  # put application's code here
     data = {
         'name': 'Changwen Li',
-        'agreeting': 'Hello World',
+        'greeting': 'Hello World',
         'city': 'Melb'
     }
     return jsonify(data)
@@ -254,17 +254,22 @@ else:
         }
     })
 
-
-@app.route('/income_db_top_bot', methods=['GET'])
+# Please use this request as a template. 
+@app.route('/income_top_bot', methods=['GET'])
 def income_db_top_bot():
+    # lcw: create meta data, storing discription of data attributes
+    meta = {
+        'name': 'sa2 name',
+        'value': 'median income (AUD/year)'
+    }
     # Query the view
     results = income_db.view('income_by_sa2_name_view/by_sa2_name')
-    sorted_results = [dict(sa2_name=row.value, median_income=row.key) for row in results]
+    sorted_results = [dict(name=row.value, value=row.key) for row in results]
     # Get top 5 and bottom 5
-    top_5 = sorted_results[-5:]
-    bottom_5 = sorted_results[:5]
+    top_5 = sorted_results[-10:]
+    bottom_5 = sorted_results[:10]
     # Return the results as JSON
-    return {'Top 5': top_5, 'Bottom 5': bottom_5}
+    return {'meta':meta, 'top data': top_5, 'bottom data': bottom_5}
 
 
 #######################################################################################################################
@@ -373,15 +378,20 @@ else:
 
 @app.route('/age_top_bot/', methods=['GET'])
 def age_top_bot():
+    # lcw: create meta data, storing discription of data attributes
+    meta = {
+        'name': 'sa2 name',
+        'value': 'median age (years)'
+    }
     # Get ages
     age_view = age_db.view('age_view/by_median_age')
-    age_results = [dict(sa2_name=row.value, median_age=row.key) for row in age_view]
-    age_results.sort(key=lambda x: x['median_age'], reverse=True)
-    top_5_age = age_results[:5]
-    bottom_5_age = age_results[-5:]
+    age_results = [dict(name=row.value, value=row.key) for row in age_view]
+    age_results.sort(key=lambda x: x['value'], reverse=True)
+    top_5_age = age_results[:10]
+    bottom_5_age = age_results[-10:]
 
     # Return the results as JSON
-    return {'Top 5': top_5_age, 'Bottom 5': bottom_5_age}
+    return {'meta':meta, 'top data': top_5_age, 'bottom data': bottom_5_age}
 
 
 #######################################################################################################################
