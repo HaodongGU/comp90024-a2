@@ -84,8 +84,8 @@ else:
 
 
 # Get top5 with the most sports facilities and the bottom five suburb
-@app.route('/get_top_bot_sport', methods=['GET'])
-def get_top_bot_sport():
+@app.route('/sport_top_bot', methods=['GET'])
+def sport_top_bot():
     result = sport_facility_suburb_db.view('total_facilities_by_suburb_view/by_suburb', group=True)
 
     # Convert the result to a list of dictionaries
@@ -95,10 +95,13 @@ def get_top_bot_sport():
     sorted_suburbs = sorted(suburbs, key=lambda k: k['total_facilities'])
 
     # Get the top 5 and bottom 5 suburbs
-    top_suburbs = sorted_suburbs[-5:]
-    bottom_suburbs = sorted_suburbs[:5]
-
-    return {'Top 5 Suburbs': top_suburbs, 'Bottom 5 Suburbs': bottom_suburbs}
+    top_suburbs = sorted_suburbs[-10:]
+    bottom_suburbs = sorted_suburbs[:10]
+    meta_sport = {
+        'name': 'sa2 name',
+        'value': 'sports facilities'
+    }
+    return {'meta': meta_sport, 'top data': top_suburbs, 'bottom data': bottom_suburbs}
 
 
 @app.route('/get_sport_total/<param>', methods=['GET'])
@@ -196,25 +199,30 @@ else:
     })
 
 
-@app.route('/employment_top_top', methods=['GET'])
+@app.route('/employment_top_bot', methods=['GET'])
 def employment_top_bot():
     # Fulltime rate
     fulltime_rate_view = employment_db.view('get_fulltime_rate_view/by_sa4_name11')
     fulltime_rate_results = [dict(sa4_name11=row.key, fulltime_rate=row.value) for row in fulltime_rate_view]
     fulltime_rate_results.sort(key=lambda x: x['fulltime_rate'], reverse=True)
-    top_5_fulltime_rate = fulltime_rate_results[:5]
+    top_10_fulltime_rate = fulltime_rate_results[:10]
 
     # Unemployment rate
     unemployment_rate_view = employment_db.view('get_unemployed_rate_view/by_sa4_name11')
     unemployment_rate_results = [dict(sa4_name11=row.key, unemployment_rate=row.value) for row in
                                  unemployment_rate_view]
     unemployment_rate_results.sort(key=lambda x: x['unemployment_rate'], reverse=True)
-    top_5_unemployment_rate = unemployment_rate_results[:5]
+    top_10_unemployment_rate = unemployment_rate_results[:10]
 
-    # Return the results as JSON
+    meta_emp = {
+        'name': 'sa4 name',
+        'value': 'emp unemp rate'
+    }
+
     return {
-        'top_5_fulltime_rate': top_5_fulltime_rate,
-        'top_5_unemployment_rate': top_5_unemployment_rate,
+        'meta': meta_emp,
+        'top data': top_10_fulltime_rate,
+        'bottom data': top_10_unemployment_rate,
     }
 
 
@@ -258,7 +266,7 @@ else:
 @app.route('/income_top_bot', methods=['GET'])
 def income_db_top_bot():
     # lcw: create meta data, storing discription of data attributes
-    meta = {
+    meta_income = {
         'name': 'sa2 name',
         'value': 'median income (AUD/year)'
     }
@@ -269,7 +277,7 @@ def income_db_top_bot():
     top_5 = sorted_results[-10:]
     bottom_5 = sorted_results[:10]
     # Return the results as JSON
-    return {'meta':meta, 'top data': top_5, 'bottom data': bottom_5}
+    return {'meta': meta_income, 'top data': top_5, 'bottom data': bottom_5}
 
 
 #######################################################################################################################
@@ -335,11 +343,14 @@ def crime_top_bot():
     crime_results = [dict(lga_name11=row.key, total=row.value["total"], lga_code11=row.value["lga_code11"]) for row in
                      crime_view]
     crime_results.sort(key=lambda x: x['total'], reverse=True)
-    top_5_crime = crime_results[:5]
-    bottom_5_crime = crime_results[-5:]
-
+    top_5_crime = crime_results[:10]
+    bottom_5_crime = crime_results[-10:]
+    meta_cri = {
+        'name': 'lga name',
+        'value': 'crime rate'
+    }
     # Return the results as JSON
-    return {'Top 5': top_5_crime, 'Bottom 5': bottom_5_crime}
+    return {"meta": meta_cri, 'top data': top_5_crime, 'bottom data': bottom_5_crime}
 
 
 #######################################################################################################################
@@ -391,7 +402,7 @@ def age_top_bot():
     bottom_5_age = age_results[-10:]
 
     # Return the results as JSON
-    return {'meta':meta, 'top data': top_5_age, 'bottom data': bottom_5_age}
+    return {'meta': meta, 'top data': top_5_age, 'bottom data': bottom_5_age}
 
 
 #######################################################################################################################
@@ -425,8 +436,8 @@ else:
     })
 
 
-@app.route('/public_transport_top_bottom/', methods=['GET'])
-def public_transport_top_bottom():
+@app.route('/transport_top_bot/', methods=['GET'])
+def transport_top_bot():
     # Get public transport data
     public_transport_view = public_transport_db.view('composite_index_view/by_composite_index')
     public_transport_dict = {}
@@ -441,11 +452,14 @@ def public_transport_top_bottom():
 
     # Sort by composite_index and get top 5 and bottom 5
     sorted_composite_index_list = sorted(avg_composite_index_dict.items(), key=lambda x: x[1], reverse=True)
-    top_5_public_transport = sorted_composite_index_list[:5]
-    bottom_5_public_transport = sorted_composite_index_list[-5:]
-
+    top_5_public_transport = sorted_composite_index_list[:10]
+    bottom_5_public_transport = sorted_composite_index_list[-10:]
+    meta = {
+        'name': 'station',
+        'value': 'CAI transport'
+    }
     # Return the results as JSON
-    return {'Top 5': top_5_public_transport, 'Bottom 5': bottom_5_public_transport}
+    return {"meta": meta, 'top data': top_5_public_transport, 'bottom data': bottom_5_public_transport}
 
 
 #######################################################################################################################
@@ -483,8 +497,8 @@ else:
     })
 
 
-@app.route('/population_density', methods=['GET'])
-def population_density():
+@app.route('/population_top_bot', methods=['GET'])
+def population_top_bot():
     # Fetch the view
     view = population_db.view("top_density_view/by_density")
 
@@ -508,10 +522,13 @@ def population_density():
 
     # Sort the density and get top 5 and bottom 5
     sorted_density_list = sorted(density_dict.items(), key=lambda x: x[0], reverse=True)
-    top_5_density = sorted_density_list[:5]
-    bottom_5_density = sorted_density_list[-5:]
-
-    return {'Top 5': top_5_density, 'Bottom 5': bottom_5_density}
+    top_5_density = sorted_density_list[:10]
+    bottom_5_density = sorted_density_list[-10:]
+    meta = {
+        'name': 'sa2',
+        'value': 'ppl density'
+    }
+    return {"meta": meta, 'top data': top_5_density, 'bottom data': bottom_5_density}
 
 
 
