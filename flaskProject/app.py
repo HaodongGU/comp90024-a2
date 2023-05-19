@@ -89,10 +89,10 @@ def sport_top_bot():
     result = sport_facility_suburb_db.view('total_facilities_by_suburb_view/by_suburb', group=True)
 
     # Convert the result to a list of dictionaries
-    suburbs = [{'Suburb': row.key, 'total_facilities': row.value} for row in result]
+    suburbs = [{'name': row.key, 'value': row.value} for row in result]
 
     # Sort the list of dictionaries by total_facilities
-    sorted_suburbs = sorted(suburbs, key=lambda k: k['total_facilities'])
+    sorted_suburbs = sorted(suburbs, key=lambda k: k['value'])
 
     # Get the top 5 and bottom 5 suburbs
     top_suburbs = sorted_suburbs[-10:]
@@ -203,15 +203,15 @@ else:
 def employment_top_bot():
     # Fulltime rate
     fulltime_rate_view = employment_db.view('get_fulltime_rate_view/by_sa4_name11')
-    fulltime_rate_results = [dict(sa4_name11=row.key, fulltime_rate=row.value) for row in fulltime_rate_view]
-    fulltime_rate_results.sort(key=lambda x: x['fulltime_rate'], reverse=True)
+    fulltime_rate_results = [dict(name=row.key, value=row.value) for row in fulltime_rate_view]
+    fulltime_rate_results.sort(key=lambda x: x["value"], reverse=True)
     top_10_fulltime_rate = fulltime_rate_results[:10]
 
     # Unemployment rate
     unemployment_rate_view = employment_db.view('get_unemployed_rate_view/by_sa4_name11')
-    unemployment_rate_results = [dict(sa4_name11=row.key, unemployment_rate=row.value) for row in
+    unemployment_rate_results = [dict(name=row.key, value=row.value) for row in
                                  unemployment_rate_view]
-    unemployment_rate_results.sort(key=lambda x: x['unemployment_rate'], reverse=True)
+    unemployment_rate_results.sort(key=lambda x: x["value"], reverse=True)
     top_10_unemployment_rate = unemployment_rate_results[:10]
 
     meta_emp = {
@@ -340,9 +340,9 @@ else:
 def crime_top_bot():
     # Get crime total
     crime_view = crime_db.view('crime_func_view/by_ga_name11')
-    crime_results = [dict(lga_name11=row.key, total=row.value["total"], lga_code11=row.value["lga_code11"]) for row in
+    crime_results = [dict(value=row.key, name=row.value["total"]) for row in
                      crime_view]
-    crime_results.sort(key=lambda x: x['total'], reverse=True)
+    crime_results.sort(key=lambda x: x['name'], reverse=True)
     top_5_crime = crime_results[:10]
     bottom_5_crime = crime_results[-10:]
     meta_cri = {
@@ -448,12 +448,18 @@ def transport_top_bot():
             public_transport_dict[row.value] = [row.key]
 
     # Calculate average composite_index for each coordinates
-    avg_composite_index_dict = {coordinates: sum(values)/len(values) for coordinates, values in public_transport_dict.items()}
+    avg_composite_index_dict = {coordinates: sum(values) / len(values) for coordinates, values in
+                                public_transport_dict.items()}
 
     # Sort by composite_index and get top 5 and bottom 5
     sorted_composite_index_list = sorted(avg_composite_index_dict.items(), key=lambda x: x[1], reverse=True)
-    top_5_public_transport = sorted_composite_index_list[:10]
-    bottom_5_public_transport = sorted_composite_index_list[-10:]
+
+    # Convert top and bottom lists to desired format
+    top_5_public_transport = [{"name": location, "value": index} for location, index in
+                              sorted_composite_index_list[:10]]
+    bottom_5_public_transport = [{"name": location, "value": index} for location, index in
+                                 sorted_composite_index_list[-10:]]
+
     meta = {
         'name': 'station',
         'value': 'CAI transport'
@@ -522,14 +528,19 @@ def population_top_bot():
 
     # Sort the density and get top 5 and bottom 5
     sorted_density_list = sorted(density_dict.items(), key=lambda x: x[0], reverse=True)
-    top_5_density = sorted_density_list[:10]
-    bottom_5_density = sorted_density_list[-10:]
+
+    # convert top and bottom density lists to desired format
+    top_5_density = [{"name": area['name'], "value": density} for density, areas in sorted_density_list[:10] for area in
+                     areas]
+    bottom_5_density = [{"name": area['name'], "value": density} for density, areas in sorted_density_list[-10:] for
+                        area in areas]
+
     meta = {
         'name': 'sa2',
         'value': 'ppl density'
     }
-    return {"meta": meta, 'top data': top_5_density, 'bottom data': bottom_5_density}
 
+    return {"meta": meta, 'top data': top_5_density, 'bottom data': bottom_5_density}
 
 
 #######################################################################################################################
