@@ -340,7 +340,7 @@ else:
 def crime_top_bot():
     # Get crime total
     crime_view = crime_db.view('crime_func_view/by_ga_name11')
-    crime_results = [dict(value=row.key, name=row.value["total"]) for row in
+    crime_results = [dict(name=row.key, value=row.value["total"]) for row in
                      crime_view]
     crime_results.sort(key=lambda x: x['name'], reverse=True)
     top_5_crime = crime_results[:10]
