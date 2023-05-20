@@ -7,7 +7,8 @@ import HappyEmoji from "../../static/figure/happyEmoji.png"
 import axios from "axios";
 import "./Home.scss"
 
-const ip="localhost";
+const ip = process.env.REACT_APP_IP;
+console.log("home env ip: ", process.env.REACT_APP_IP);
 
 class FadeExample extends React.Component {
   render() {
