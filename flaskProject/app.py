@@ -18,14 +18,11 @@ couch = couchdb.Server(url)
 # indicate the db name
 # total_sport_facility_suburb_db = couch['total_number_of_facility_suburb']
 sport_facility_suburb_db = couch['sports_facility_suburb']
-internet_db = couch['']
 public_transport_db = couch['transport']
 employment_db = couch['employment']
 income_db = couch['income']
 population_db = couch['population_sa2_data']
 age_db = couch['median_age_sa2_data']
-twitter_db = couch['']
-mastodon_db = couch['']
 crime_db = couch['crime_data']
 
 
@@ -262,7 +259,8 @@ else:
         }
     })
 
-# Please use this request as a template. 
+
+# Please use this request as a template.
 @app.route('/income_top_bot', methods=['GET'])
 def income_db_top_bot():
     # lcw: create meta data, storing discription of data attributes
@@ -480,7 +478,6 @@ function (doc) {
 }
 """
 
-
 # Create the view
 top_density_view_id = "_design/top_density_view"
 if top_density_view_id in population_db:
@@ -544,62 +541,378 @@ def population_top_bot():
 
 
 #######################################################################################################################
-#       scenario 8 The top5 and bot 5 internet
-#
+#       scenario 8.1 Twitter avg senti vs suburb
 #######################################################################################################################
 
-# Map function
-get_twitter_total_map_func = '''function(doc) {
-    if (doc.Place && doc["Sentiment Score"]) {
-        var total = parseFloat(doc["Sentiment Score"]);
-        emit(doc.Place, total);
+twitter_db = couch['v9_all_data']
+twitter_avgsenti_map = """
+function(doc) {
+    if ('avgsenti' in doc) {
+        emit(doc._id, doc.avgsenti);
     }
-}'''
+}
+"""
 
+# Create the view
+avg_senti_view_id = "_design/avg_senti_view"
+if avg_senti_view_id in twitter_db:
+    print("avg_senti_view_id Design document already exists. Deleting it.")
+    twitter_db.delete(twitter_db[avg_senti_view_id])
 
-
-@app.route('/internet_db/<param>', methods=['GET'])
-def internet_db(param):
-    # Mango Queries
-    query = {
-        "selector": {
-            "Suburb": param
+print("Creating avg_senti_view_id Design document.")
+twitter_db.save({
+    "_id": avg_senti_view_id,
+    "views": {
+        "avgSenti": {
+            "map": twitter_avgsenti_map,
         }
     }
-    # Execute the query
+})
+
+
+@app.route('/avg_senti', methods=['GET'])
+def avg_senti():
+    # Fetch the view
+    view = twitter_db.view("avg_senti_view/avgSenti")
+
     results = []
-    docs = internet_db.find(query)
-    for row in docs:
-        results.append(row)
-    # Return the results as JSON
-    return {'data': results}
 
+    for row in view:
+        results.append({
+            'suburb': row['key'],
+            'avgsenti': row['value'],
+        })
+
+    meta = {
+        'name': 'sa2',
+        'value': 'avg senti'
+    }
+
+    return {"meta": meta, 'data': results}
 
 #######################################################################################################################
-#       scenario 9 Twitter
-#
+#       scenario 8.2 Twitter topics vs suburb
 #######################################################################################################################
+twitter_topics_uniquetwts_map = """
+function(doc) {
+    if ('topics' in doc && 'uniquetwts' in doc) {
+        emit(doc._id, { 'topics': doc.topics, 'uniquetwts': doc.uniquetwts });
+    }
+}
+"""
 
+# Create the view
+topics_uniquetwts_view_id = "_design/topics_uniquetwts_view"
+if topics_uniquetwts_view_id in twitter_db:
+    print("topics_uniquetwts_view_id Design document already exists. Deleting it.")
+    twitter_db.delete(twitter_db[topics_uniquetwts_view_id])
 
-
-
-
-
-@app.route('/mastodon_db/<param>', methods=['GET'])
-def mastodon_db(param):
-    # Mango Queries
-    query = {
-        "selector": {
-            "Suburb": param
+print("Creating topics_uniquetwts_view_id Design document.")
+twitter_db.save({
+    "_id": topics_uniquetwts_view_id,
+    "views": {
+        "topicsUniquetwts": {
+            "map": twitter_topics_uniquetwts_map,
         }
     }
-    # Execute the query
+})
+
+
+@app.route('/topics_uniquetwts', methods=['GET'])
+def topics_uniquetwts():
+    # Fetch the view
+    view = twitter_db.view("topics_uniquetwts_view/topicsUniquetwts")
+
     results = []
-    docs = mastodon_db.find(query)
-    for row in docs:
-        results.append(row)
-    # Return the results as JSON
-    return {'data': results}
+
+    for row in view:
+        results.append({
+            'suburb': row['key'],
+            'topics_uniquetwts': row['value'],
+        })
+
+    meta = {
+        'name': 'sa2',
+        'value': 'topics and unique tweets'
+    }
+
+    return {"meta": meta, 'data': results}
+
+
+
+#######################################################################################################################
+#       scenario 9.1 twitter for correlation plot (senti vs sports)
+#######################################################################################################################
+
+twitter_db = couch['v9_all_data']
+
+twitter_avgsenti_sports_map = """
+function(doc) {
+    if ('sports' in doc && 'avgsenti' in doc) {
+        emit(doc._id, [doc.avgsenti, doc.sports]);
+    }
+}
+"""
+
+# Create the view
+avgsenti_sports_view_id = "_design/avgsenti_sports_view"
+if avgsenti_sports_view_id in twitter_db:
+    print("avgsenti_sports_view_id Design document already exists. Deleting it.")
+    twitter_db.delete(twitter_db[avgsenti_sports_view_id])
+
+print("Creating avgsenti_sports_view_id Design document.")
+twitter_db.save({
+    "_id": avgsenti_sports_view_id,
+    "views": {
+        "avgSentiSports": {
+            "map": twitter_avgsenti_sports_map,
+        }
+    }
+})
+
+
+@app.route('/senti_sports', methods=['GET'])
+def senti_sports():
+    # Fetch the view
+    view = twitter_db.view("avgsenti_sports_view/avgSentiSports")
+
+    results = []
+
+    for row in view:
+        results.append({
+            'suburb': row['key'],
+            'avgsenti_sports': row['value'],
+        })
+
+    meta = {
+        'name': 'sa2',
+        'value': 'avg senti and sports'
+    }
+
+    return {"meta": meta, 'data': results}
+
+#######################################################################################################################
+#       scenario 9.2 twitter for correlation plot (senti vs median income)
+#######################################################################################################################
+twitter_avgsenti_income_map = """
+function(doc) {
+    if ('median income' in doc && 'avgsenti' in doc) {
+        emit(doc._id, [doc.avgsenti, doc["median income"]]);
+    }
+}
+"""
+
+# Create the view
+avgsenti_income_view_id = "_design/avgsenti_income_view"
+if avgsenti_income_view_id in twitter_db:
+    print("avgsenti_income_view_id Design document already exists. Deleting it.")
+    twitter_db.delete(twitter_db[avgsenti_income_view_id])
+
+print("Creating avgsenti_income_view_id Design document.")
+twitter_db.save({
+    "_id": avgsenti_income_view_id,
+    "views": {
+        "avgSentiIncome": {
+            "map": twitter_avgsenti_income_map,
+        }
+    }
+})
+
+
+@app.route('/senti_income', methods=['GET'])
+def senti_income():
+    # Fetch the view
+    view = twitter_db.view("avgsenti_income_view/avgSentiIncome")
+
+    results = []
+
+    for row in view:
+        results.append({
+            'suburb': row['key'],
+            'avgsenti_income': row['value'],
+        })
+
+    meta = {
+        'name': 'sa2',
+        'value': 'avg senti and income'
+    }
+
+    return {"meta": meta, 'data': results}
+
+#######################################################################################################################
+#       scenario 9.3 twitter for correlation plot (senti vs median age)
+#######################################################################################################################
+twitter_avgsenti_age_map = """
+function(doc) {
+    if ('median age' in doc && 'avgsenti' in doc) {
+        emit(doc._id, [doc.avgsenti, doc["median age"]]);
+    }
+}
+"""
+
+# Create the view
+avgsenti_age_view_id = "_design/avgsenti_age_view"
+if avgsenti_age_view_id in twitter_db:
+    print("avgsenti_age_view_id Design document already exists. Deleting it.")
+    twitter_db.delete(twitter_db[avgsenti_age_view_id])
+
+print("Creating avgsenti_age_view_id Design document.")
+twitter_db.save({
+    "_id": avgsenti_age_view_id,
+    "views": {
+        "avgSentiAge": {
+            "map": twitter_avgsenti_age_map,
+        }
+    }
+})
+
+
+@app.route('/senti_age', methods=['GET'])
+def senti_age():
+    # Fetch the view
+    view = twitter_db.view("avgsenti_age_view/avgSentiAge")
+
+    results = []
+
+    for row in view:
+        results.append({
+            'suburb': row['key'],
+            'avgsenti_age': row['value'],
+        })
+
+    meta = {
+        'name': 'sa2',
+        'value': 'avg senti and age'
+    }
+
+    return {"meta": meta, 'data': results}
+
+
+#######################################################################################################################
+#       scenario 9.4 twitter for correlation plot (senti vs transport CAI)
+#######################################################################################################################
+twitter_avgsenti_transport_map = """
+function(doc) {
+    if ('transport CAI' in doc && 'avgsenti' in doc) {
+        emit(doc._id, [doc.avgsenti, doc["transport CAI"]]);
+    }
+}
+"""
+
+# Create the view
+avgsenti_transport_view_id = "_design/avgsenti_transport_view"
+if avgsenti_transport_view_id in twitter_db:
+    print("avgsenti_transport_view_id Design document already exists. Deleting it.")
+    twitter_db.delete(twitter_db[avgsenti_transport_view_id])
+
+print("Creating avgsenti_transport_view_id Design document.")
+twitter_db.save({
+    "_id": avgsenti_transport_view_id,
+    "views": {
+        "avgSentiTransport": {
+            "map": twitter_avgsenti_transport_map,
+        }
+    }
+})
+
+
+@app.route('/senti_transport', methods=['GET'])
+def senti_transport():
+    # Fetch the view
+    view = twitter_db.view("avgsenti_transport_view/avgSentiTransport")
+
+    results = []
+
+    for row in view:
+        results.append({
+            'suburb': row['key'],
+            'avgsenti_transport': row['value'],
+        })
+
+    meta = {
+        'name': 'sa2',
+        'value': 'avg senti and transport'
+    }
+
+    return {"meta": meta, 'data': results}
+
+
+#######################################################################################################################
+#       scenario 9.4 twitter for correlation plot (senti vs population density)
+#######################################################################################################################
+twitter_avgsenti_population_map = """
+function(doc) {
+    if ('population density' in doc && 'avgsenti' in doc) {
+        var populationDensity = parseFloat(doc["population density"]);
+        if (!isNaN(populationDensity)) {
+            emit(doc._id, [doc.avgsenti, populationDensity]);
+        }
+    }
+}
+"""
+
+
+# Create the view
+avgsenti_population_view_id = "_design/avgsenti_population_view"
+if avgsenti_population_view_id in twitter_db:
+    print("avgsenti_population_view_id Design document already exists. Deleting it.")
+    twitter_db.delete(twitter_db[avgsenti_population_view_id])
+
+print("Creating avgsenti_population_view_id Design document.")
+twitter_db.save({
+    "_id": avgsenti_population_view_id,
+    "views": {
+        "avgSentiPopulation": {
+            "map": twitter_avgsenti_population_map,
+        }
+    }
+})
+
+
+@app.route('/senti_population', methods=['GET'])
+def senti_population():
+    # Fetch the view
+    view = twitter_db.view("avgsenti_population_view/avgSentiPopulation")
+
+    results = []
+
+    for row in view:
+        results.append({
+            'suburb': row['key'],
+            'avgsenti_population': row['value'],
+        })
+
+    meta = {
+        'name': 'sa2',
+        'value': 'avg senti and population density'
+    }
+
+    return {"meta": meta, 'data': results}
+
+
+#######################################################################################################################
+#       scenario 10 mastodon real time
+#
+#######################################################################################################################
+#
+# mastodon_db = couch['']
+#
+#
+# @app.route('/mastodon_db/<param>', methods=['GET'])
+# def mastodon_db(param):
+#     # Mango Queries
+#     query = {
+#         "selector": {
+#             "Suburb": param
+#         }
+#     }
+#     # Execute the query
+#     results = []
+#     docs = mastodon_db.find(query)
+#     for row in docs:
+#         results.append(row)
+#     # Return the results as JSON
+#     return {'data': results}
 
 
 if __name__ == '__main__':
