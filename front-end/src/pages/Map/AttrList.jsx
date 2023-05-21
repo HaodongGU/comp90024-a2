@@ -65,11 +65,7 @@ const AttrList = (props) => {
       <AttrListItem attrName={"Population"} selectedAttr={props.selectedAttr} handleRadioChange={props.handleRadioChange} buttonClickHandler={buttonClickHandler}/>
       <AttrListItem attrName={"Crime"} selectedAttr={props.selectedAttr} handleRadioChange={props.handleRadioChange} buttonClickHandler={buttonClickHandler}/>
       <AttrListItem attrName={"Public Transport"} selectedAttr={props.selectedAttr} handleRadioChange={props.handleRadioChange} buttonClickHandler={buttonClickHandler}/>
-      <AttrListItem attrName={"Income3"} selectedAttr={props.selectedAttr} handleRadioChange={props.handleRadioChange} buttonClickHandler={buttonClickHandler}/>
-      <AttrListItem attrName={"Income4"} selectedAttr={props.selectedAttr} handleRadioChange={props.handleRadioChange} buttonClickHandler={buttonClickHandler}/>
-      <AttrListItem attrName={"Income5"} selectedAttr={props.selectedAttr} handleRadioChange={props.handleRadioChange} buttonClickHandler={buttonClickHandler}/>
-      <AttrListItem attrName={"Income6"} selectedAttr={props.selectedAttr} handleRadioChange={props.handleRadioChange} buttonClickHandler={buttonClickHandler}/>
-      <AttrListItem attrName={"Income7"} selectedAttr={props.selectedAttr} handleRadioChange={props.handleRadioChange} buttonClickHandler={buttonClickHandler}/>
+      <AttrListItem attrName={"Sport"} selectedAttr={props.selectedAttr} handleRadioChange={props.handleRadioChange} buttonClickHandler={buttonClickHandler}/>
 
       <AnalysisChart modalIsOpen={modalIsOpen} closeModal={closeModal} attrName={props.selectedAttr}/>
     </div>

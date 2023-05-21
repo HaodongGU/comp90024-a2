@@ -92,8 +92,8 @@ def sport_top_bot():
     sorted_suburbs = sorted(suburbs, key=lambda k: k['value'])
 
     # Get the top 5 and bottom 5 suburbs
-    top_suburbs = sorted_suburbs[-10:]
-    bottom_suburbs = sorted_suburbs[:10]
+    top_suburbs = sorted_suburbs[-25:]
+    bottom_suburbs = sorted_suburbs[:25]
     meta_sport = {
         'name': 'sa2 name',
         'value': 'sports facilities'

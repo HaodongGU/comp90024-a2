@@ -139,7 +139,7 @@ const CustomMarkers = (props) => {
           if (count===10) break;
           const item = rawTop[i];
           if (suburbsCentre.hasOwnProperty(convertStrFormat(item.name))){
-            console.log(`Item ${count + 1}: Name: ${item.name}, Value: ${item.value}`);
+            // console.log(`Item ${count + 1}: Name: ${item.name}, Value: ${item.value}`);
             // console.log(convertStrFormat(item.name)+" is found in json file");
             outputTopTemp.push({
               'name': convertStrFormat(item.name),
@@ -159,7 +159,7 @@ const CustomMarkers = (props) => {
           if (count===10) break;
           const item = rawBot[i];
           if (suburbsCentre.hasOwnProperty(convertStrFormat(item.name))){
-            console.log(`Item ${count + 1}: Name: ${item.name}, Value: ${item.value}`);
+            // console.log(`Item ${count + 1}: Name: ${item.name}, Value: ${item.value}`);
             // console.log(convertStrFormat(item.name)+" is found in json file");
             outputBotTemp.push({
               'name': convertStrFormat(item.name),
@@ -176,14 +176,14 @@ const CustomMarkers = (props) => {
 
 
         setOutputTop(outputTopTemp);
-        console.log("output top temp: ", outputTopTemp);
-        console.log("output top: ", outputTop);
-        console.log("CustomMarkers top data len: ", outputTop.length);
+        // console.log("output top temp: ", outputTopTemp);
+        // console.log("output top: ", outputTop);
+        // console.log("CustomMarkers top data len: ", outputTop.length);
 
         setOutputBot(outputBotTemp);
-        console.log("output bot temp: ", outputBotTemp);
-        console.log("output bot: ", outputBot);
-        console.log("CustomMarkers bot data len: ", outputBot.length);
+        // console.log("output bot temp: ", outputBotTemp);
+        // console.log("output bot: ", outputBot);
+        // console.log("CustomMarkers bot data len: ", outputBot.length);
       } catch (err) {
         console.log(err);
       }

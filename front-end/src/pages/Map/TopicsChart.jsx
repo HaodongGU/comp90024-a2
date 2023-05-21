@@ -35,7 +35,7 @@ const xlabelName = (attrName) => {
 }
 
 const TopicsChart = (props) => {
-  console.log("TopicsAnalysis: suburbName: ", props.suburbName);
+  // console.log("TopicsAnalysis: suburbName: ", props.suburbName);
   const labelName = "Twitter Topics of " + props.suburbName;
   const demo = [
     { x: 1, y: 2 },
