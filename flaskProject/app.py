@@ -487,7 +487,7 @@ if top_density_view_id in population_db:
     print("top_density_view Design document already exists. Updating it now.")
     population_db.delete(population_db[top_density_view_id])
     # design_doc = population_db[top_density_view_id]
-    #
+    ##
     # # Update the view
     # design_doc['views']['by_density'] = {"map": get_top_density_func}
     # # Save the updated design document back to the database
