@@ -639,6 +639,91 @@ def topics_uniquetwts():
     return {"meta": meta, 'data': results}
 
 
+#######################################################################################################################
+#       scenario 8.3 Twitter topics total proportion
+#######################################################################################################################
+topicAll_map = """
+function(doc) {
+    if ('topics' in doc && 'uniquetwts' in doc) {
+        var topics = doc.topics;
+        var uniquetwts = doc.uniquetwts;
+        for (var topic in topics) {
+            emit(topic, topics[topic] * uniquetwts);
+        }
+    }
+}
+"""
+
+topicAll_map_reduce = """
+function(keys, values, rereduce) {
+    return sum(values);
+}
+"""
+
+# Create the view
+topicAll_id = "_design/topicAll_map_view"
+if topicAll_id in twitter_db:
+    print("topicAll_id Design document already exists. Deleting it.")
+    twitter_db.delete(twitter_db[topicAll_id])
+
+print("Creating topics_uniquetwts_view_id Design document.")
+twitter_db.save({
+    "_id": topicAll_id,
+    "views": {
+        "topicAll": {
+            "map": topicAll_map,
+            "reduce": topicAll_map_reduce
+        }
+    }
+})
+
+
+twitter_uniquetwts_total_map = """
+function(doc) {
+    if ('uniquetwts' in doc) {
+        emit(null, doc.uniquetwts);
+    }
+}
+"""
+
+twitter_uniquetwts_total_reduce = """
+function(keys, values, rereduce) {
+    return sum(values);
+}
+"""
+
+uniquetwts_total_id = "_design/uniquetwts_total_view"
+if uniquetwts_total_id in twitter_db:
+    print("uniquetwts_total_id Design document already exists. Deleting it.")
+    twitter_db.delete(twitter_db[uniquetwts_total_id])
+
+print("Creating uniquetwts_total_id Design document.")
+twitter_db.save({
+    "_id": uniquetwts_total_id,
+    "views": {
+        "uniquetwtsTotal": {
+            "map": twitter_uniquetwts_total_map,
+            "reduce": twitter_uniquetwts_total_reduce
+        }
+    }
+})
+
+@app.route('/topics_all_proportion', methods=['GET'])
+def topics_all_proportion():
+    uniquetwts_total = 0
+    for row in twitter_db.view('uniquetwts_total_view/uniquetwtsTotal'):
+        uniquetwts_total += row.value
+
+    results = []
+    for row in twitter_db.view('topicAll_map_view/topicAll', group=True):
+        if row.key is not None:  # only include records with a topic
+            results.append({'topic': row.key, 'proportion': row.value / uniquetwts_total})
+    return jsonify(results)
+
+
+
+
+
 
 #######################################################################################################################
 #       scenario 9.1 twitter for correlation plot (senti vs sports)
