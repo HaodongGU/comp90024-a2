@@ -81,7 +81,7 @@ else:
 
 
 # Get top5 with the most sports facilities and the bottom five suburb
-@app.route('/sport_top_bot', methods=['GET'])
+@app.route('/sports_top_bot', methods=['GET'])
 def sport_top_bot():
     result = sport_facility_suburb_db.view('total_facilities_by_suburb_view/by_suburb', group=True)
 
@@ -345,7 +345,7 @@ def crime_top_bot():
     bottom_5_crime = crime_results[:50]
     meta_cri = {
         'name': 'lga name',
-        'value': 'crime rate'
+        'value': 'crime counts'
     }
     # Return the results as JSON
     return {"meta": meta_cri, 'top data': top_5_crime, 'bottom data': bottom_5_crime}

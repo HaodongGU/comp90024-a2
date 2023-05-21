@@ -98,7 +98,7 @@ const CustomMarker = (props) => {
           <button onClick={handleTopicsClick}>Suburb Twitter Topics</button>
         </Popup>
       </LeafletMarker>
-      <TopicsChart modalIsOpen={modalIsOpen} closeModal={closeModal} suburbName={suburbName}/>
+      <TopicsChart modalIsOpen={modalIsOpen} closeModal={closeModal} suburbName={suburbName} attrName={props.attrName}/>
 
     </div>
     
@@ -137,6 +137,7 @@ const CustomMarkers = (props) => {
         let count = 0;
         for (let i = rawTop.length - 1; i >= 0; i--) {
           if (count===10) break;
+          // if (count===1) break;
           const item = rawTop[i];
           if (suburbsCentre.hasOwnProperty(convertStrFormat(item.name))){
             // console.log(`Item ${count + 1}: Name: ${item.name}, Value: ${item.value}`);
@@ -157,6 +158,7 @@ const CustomMarkers = (props) => {
         count = 0;
         for (let i = 0; i <= rawBot.length - 1; i++) {
           if (count===10) break;
+          // if (count===1) break;
           const item = rawBot[i];
           if (suburbsCentre.hasOwnProperty(convertStrFormat(item.name))){
             // console.log(`Item ${count + 1}: Name: ${item.name}, Value: ${item.value}`);

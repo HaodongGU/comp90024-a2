@@ -65,7 +65,7 @@ const AttrList = (props) => {
       <AttrListItem attrName={"Population"} selectedAttr={props.selectedAttr} handleRadioChange={props.handleRadioChange} buttonClickHandler={buttonClickHandler}/>
       <AttrListItem attrName={"Crime"} selectedAttr={props.selectedAttr} handleRadioChange={props.handleRadioChange} buttonClickHandler={buttonClickHandler}/>
       <AttrListItem attrName={"Public Transport"} selectedAttr={props.selectedAttr} handleRadioChange={props.handleRadioChange} buttonClickHandler={buttonClickHandler}/>
-      <AttrListItem attrName={"Sport"} selectedAttr={props.selectedAttr} handleRadioChange={props.handleRadioChange} buttonClickHandler={buttonClickHandler}/>
+      <AttrListItem attrName={"Sports"} selectedAttr={props.selectedAttr} handleRadioChange={props.handleRadioChange} buttonClickHandler={buttonClickHandler}/>
 
       <AnalysisChart modalIsOpen={modalIsOpen} closeModal={closeModal} attrName={props.selectedAttr}/>
     </div>
