@@ -475,8 +475,8 @@ def transport_top_bot():
 #######################################################################################################################
 get_top_density_func = """
 function (doc) {
-  if (doc[" population_density_as_at_30_june_population_density_personskm2"] && doc[" sa2_name_2016"] && doc[" sa2_maincode_2016"]) {
-    emit(doc[" population_density_as_at_30_june_population_density_personskm2"], {sa2_name_2016: doc[" sa2_name_2016"], sa2_maincode_2016: doc[" sa2_maincode_2016"]});
+  if (parseFloat(doc[" population_density_as_at_30_june_population_density_personskm2"]) && doc[" sa2_name_2016"] && doc[" sa2_maincode_2016"]) {
+    emit(parseFloat(doc[" population_density_as_at_30_june_population_density_personskm2"]), {sa2_name_2016: doc[" sa2_name_2016"], sa2_maincode_2016: doc[" sa2_maincode_2016"]});
   }
 }
 """
@@ -485,22 +485,23 @@ function (doc) {
 top_density_view_id = "_design/top_density_view"
 if top_density_view_id in population_db:
     print("top_density_view Design document already exists. Updating it now.")
+    population_db.delete(population_db[top_density_view_id])
     # design_doc = population_db[top_density_view_id]
     #
     # # Update the view
     # design_doc['views']['by_density'] = {"map": get_top_density_func}
     # # Save the updated design document back to the database
     # population_db.save(design_doc)
-else:
-    print("top_density_view Design document does not exist. Creating it now.")
-    population_db.save({
-        "_id": top_density_view_id,
-        "views": {
-            "by_density": {
-                "map": get_top_density_func
-            }
+
+print("top_density_view Design document does not exist. Creating it now.")
+population_db.save({
+    "_id": top_density_view_id,
+    "views": {
+        "by_density": {
+            "map": get_top_density_func
         }
-    })
+    }
+})
 
 
 @app.route('/population_top_bot', methods=['GET'])
@@ -530,10 +531,10 @@ def population_top_bot():
     sorted_density_list = sorted(density_dict.items(), key=lambda x: x[0])
 
     # convert top and bottom density lists to desired format
-    top_5_density = [{"name": area['name'], "value": density} for density, areas in sorted_density_list[-25:] for area in
-                     areas]
-    bottom_5_density = [{"name": area['name'], "value": density} for density, areas in sorted_density_list[:25] for
-                        area in areas]
+    top_5_density = [{"name": area['name'], "value": float(density)} for density, areas in sorted_density_list[-25:] for
+                     area in areas]
+    bottom_5_density = [{"name": area['name'], "value": float(density)} for density, areas in sorted_density_list[:25]
+                        for area in areas]
 
     meta = {
         'name': 'sa2',
@@ -930,7 +931,7 @@ def senti_transport():
 
 
 #######################################################################################################################
-#       scenario 9.4 twitter for correlation plot (senti vs population density)
+#       scenario 9.5 twitter for correlation plot (senti vs population density)
 #######################################################################################################################
 twitter_avgsenti_population_map = """
 function(doc) {
@@ -980,6 +981,59 @@ def senti_population():
     }
 
     return {"meta": meta, 'data': results}
+
+#######################################################################################################################
+#       scenario 9.6 twitter for correlation plot (senti vs crime)
+#######################################################################################################################
+twitter_avgsenti_crime_map = """
+function(doc) {
+    if ('crime' in doc && 'avgsenti' in doc) {
+        var crimcnt = doc["crime"];
+        if (!isNaN(crimcnt)) {
+            emit(doc._id, [doc.avgsenti, crimcnt]);
+        }
+    }
+}
+"""
+
+
+# Create the view
+avgsenti_crime_view_id = "_design/avgsenti_crime_view"
+if avgsenti_crime_view_id in twitter_db:
+    print("avgsenti_crime_view_id Design document already exists. Deleting it.")
+    twitter_db.delete(twitter_db[avgsenti_crime_view_id])
+
+print("Creating avgsenti_crime_view_id Design document.")
+twitter_db.save({
+    "_id": avgsenti_crime_view_id,
+    "views": {
+        "avgSentiCrime": {
+            "map": twitter_avgsenti_crime_map,
+        }
+    }
+})
+
+
+@app.route('/senti_crime', methods=['GET'])
+def senti_crime():
+    # Fetch the view
+    view = twitter_db.view("avgsenti_crime_view/avgSentiCrime")
+
+    results = []
+
+    for row in view:
+        results.append({
+            'suburb': row['key'],
+            'avgsenti_crime': row['value'],
+        })
+
+    meta = {
+        'name': 'sa2',
+        'value': 'avg senti and crime'
+    }
+
+    return {"meta": meta, 'data': results}
+
 
 
 #######################################################################################################################
