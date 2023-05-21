@@ -48,7 +48,7 @@ const MarkHint = (props) => {
       IconTop = MarkerTransportTop;
       break;
     case "Sports":
-      word = "Sport facility number";
+      word = "Sports facility number";
       IconBot = MarkerSportsBot;
       IconTop = MarkerSportsTop;
       break;
@@ -65,7 +65,7 @@ const MarkHint = (props) => {
         <img src={IconTop} alt="IconTop"/>
       </div>
       <div className="hint">
-        <p className="map_right_mark_hint"><b>LOW </b><i>{word}</i>: </p>
+        <p className="map_right_mark_hint"><b>LOW &nbsp;</b><i>{word}</i>: </p>
         <img src={IconBot} alt="IconBot"/>
       </div>
     </div>
