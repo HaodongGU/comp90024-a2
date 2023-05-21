@@ -33,6 +33,7 @@ function convertStrFormat(str) {
 }
 
 const CustomMarker = (props) => {
+  console.log(props.type);
   let IconName;
   switch (props.attrName){
     case "Income":
@@ -92,33 +93,56 @@ const CustomMarkers = (props) => {
         console.log("rawBot data: ", rawBot);
         console.log('value name: ', valueName);
 
-
-        rawTop.forEach((item, index) => {
+        let count = 0;
+        for (let i = rawTop.length - 1; i >= 0; i--) {
+          if (count===10) break;
+          const item = rawTop[i];
           if (suburbsCentre.hasOwnProperty(convertStrFormat(item.name))){
-            console.log(convertStrFormat(item.name)+" is found in json file");
+            console.log(`Item ${count + 1}: Name: ${item.name}, Value: ${item.value}`);
+            // console.log(convertStrFormat(item.name)+" is found in json file");
             outputTopTemp.push({
               'name': convertStrFormat(item.name),
               'value': item.value,
               'valueName': valueName,
               'coordinates': suburbsCentre[convertStrFormat(item.name)].center_coordinates
             });
+            count += 1;
           }
           else {
-            console.log(convertStrFormat(item.name)+" is NOT found in json file");
+            // console.log(convertStrFormat(item.name)+" is NOT found in json file");
           }
+        }
 
-          console.log(`Item ${index + 1}: Name: ${item.name}, Value: ${item.value}`);
-        });
+        count = 0;
+        for (let i = 0; i <= rawBot.length - 1; i++) {
+          if (count===10) break;
+          const item = rawBot[i];
+          if (suburbsCentre.hasOwnProperty(convertStrFormat(item.name))){
+            console.log(`Item ${count + 1}: Name: ${item.name}, Value: ${item.value}`);
+            // console.log(convertStrFormat(item.name)+" is found in json file");
+            outputBotTemp.push({
+              'name': convertStrFormat(item.name),
+              'value': item.value,
+              'valueName': valueName,
+              'coordinates': suburbsCentre[convertStrFormat(item.name)].center_coordinates
+            });
+            count += 1;
+          }
+          else {
+            // console.log(convertStrFormat(item.name)+" is NOT found in json file");
+          }
+        }
+
 
         setOutputTop(outputTopTemp);
         console.log("output top temp: ", outputTopTemp);
         console.log("output top: ", outputTop);
-        console.log("CustomMarkers data len: ", outputTop.length);
-        // output = outputTop.map((data) => (
-        //   <CustomMarker suburbData={data} attrName={props.attrName}/>
-        // ));
-        // console.log("output markers: ", output);
-        // return output;
+        console.log("CustomMarkers top data len: ", outputTop.length);
+
+        setOutputBot(outputBotTemp);
+        console.log("output bot temp: ", outputBotTemp);
+        console.log("output bot: ", outputBot);
+        console.log("CustomMarkers bot data len: ", outputBot.length);
       } catch (err) {
         console.log(err);
       }
@@ -127,16 +151,8 @@ const CustomMarkers = (props) => {
   }, [props.attrName]);
 
 
-
-  // const demoPositions = [
-  //   [-37.841076468482306, 144.97409770106265], 
-  //   [-37.81935288212765, 144.9397721328937], 
-  //   [-37.8158073266, 144.9810374616]];
-  // const positions = demoPositions; //TODO: get request!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-  
-  console.log("CustomMarkers data len000000000000000: ", outputTop.length);
   output = outputTop.map((data) => (
-    <CustomMarker suburbData={data} attrName={props.attrName}/>
+    <CustomMarker suburbData={data} attrName={props.attrName} type="top"/>
   ));
   console.log("output markers: ", output);
   return output;
