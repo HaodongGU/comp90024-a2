@@ -1,6 +1,7 @@
 from flask import Flask, render_template, jsonify
 from flask_restful import Api, Resource
 from flask_cors import CORS
+import numpy as np
 
 import couchdb
 
@@ -769,8 +770,17 @@ def senti_sports():
     # Fetch the view
     view = twitter_db.view("avgsenti_sports_view/avgSentiSports")
 
-    results = []
+    left_values = []
+    right_values = []
 
+    for row in view:
+        if row['value'][0] and row['value'][1]:
+            left_values.append(row['value'][0])
+            right_values.append(row['value'][1])
+
+    correlation = np.corrcoef(left_values, right_values)[0, 1] if len(left_values) == len(right_values) else 0
+
+    results = []
     for row in view:
         results.append({
             'suburb': row['key'],
@@ -779,7 +789,8 @@ def senti_sports():
 
     meta = {
         'name': 'sa2',
-        'value': 'avg senti and sports'
+        'value': 'avg senti and sports',
+        'correlation': correlation
     }
 
     return {"meta": meta, 'data': results}
@@ -825,9 +836,20 @@ def senti_income():
             'avgsenti_income': row['value'],
         })
 
+    left_values = []
+    right_values = []
+
+    for row in view:
+        if row['value'][0] and row['value'][1]:
+            left_values.append(row['value'][0])
+            right_values.append(row['value'][1])
+
+    correlation = np.corrcoef(left_values, right_values)[0, 1] if len(left_values) == len(right_values) else 0
+
     meta = {
         'name': 'sa2',
-        'value': 'avg senti and income'
+        'value': 'avg senti and income',
+        'correlation': correlation
     }
 
     return {"meta": meta, 'data': results}
@@ -873,9 +895,20 @@ def senti_age():
             'avgsenti_age': row['value'],
         })
 
+    left_values = []
+    right_values = []
+
+    for row in view:
+        if row['value'][0] and row['value'][1]:
+            left_values.append(row['value'][0])
+            right_values.append(row['value'][1])
+
+    correlation = np.corrcoef(left_values, right_values)[0, 1] if len(left_values) == len(right_values) else 0
+
     meta = {
         'name': 'sa2',
-        'value': 'avg senti and age'
+        'value': 'avg senti and age',
+        'correlation': correlation
     }
 
     return {"meta": meta, 'data': results}
@@ -922,9 +955,20 @@ def senti_transport():
             'avgsenti_transport': row['value'],
         })
 
+    left_values = []
+    right_values = []
+
+    for row in view:
+        if row['value'][0] and row['value'][1]:
+            left_values.append(row['value'][0])
+            right_values.append(row['value'][1])
+
+    correlation = np.corrcoef(left_values, right_values)[0, 1] if len(left_values) == len(right_values) else 0
+
     meta = {
         'name': 'sa2',
-        'value': 'avg senti and transport'
+        'value': 'avg senti and transport',
+        'correlation': correlation
     }
 
     return {"meta": meta, 'data': results}
@@ -975,9 +1019,20 @@ def senti_population():
             'avgsenti_population': row['value'],
         })
 
+    left_values = []
+    right_values = []
+
+    for row in view:
+        if row['value'][0] and row['value'][1]:
+            left_values.append(row['value'][0])
+            right_values.append(row['value'][1])
+
+    correlation = np.corrcoef(left_values, right_values)[0, 1] if len(left_values) == len(right_values) else 0
+
     meta = {
         'name': 'sa2',
-        'value': 'avg senti and population density'
+        'value': 'avg senti and population density',
+        'correlation': correlation
     }
 
     return {"meta": meta, 'data': results}
@@ -1027,9 +1082,20 @@ def senti_crime():
             'avgsenti_crime': row['value'],
         })
 
+    left_values = []
+    right_values = []
+
+    for row in view:
+        if row['value'][0] and row['value'][1]:
+            left_values.append(row['value'][0])
+            right_values.append(row['value'][1])
+
+    correlation = np.corrcoef(left_values, right_values)[0, 1] if len(left_values) == len(right_values) else 0
+
     meta = {
         'name': 'sa2',
-        'value': 'avg senti and crime'
+        'value': 'avg senti and crime',
+        'correlation': correlation
     }
 
     return {"meta": meta, 'data': results}
