@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Modal from 'react-modal';
 import axios from "axios";
+import 'chartjs-plugin-trendline';
 
-import { Scatter } from 'react-chartjs-2';
+import { Scatter, Line } from 'react-chartjs-2';
 import {
   Chart as ChartJS,
   LineElement,
@@ -47,17 +48,10 @@ const xlabelName = (attrName) => {
 
 const AnalysisChart = (props) => {
   const [tuples, setTuples] = useState([]);
+  const [correlation, setCorrelation] = useState(0);
 
   console.log("DataAnalysis: attrname: ", props.attrName);
   const labelName = "Analysis of " + props.attrName;
-
-  const demo = [
-    { x: 1, y: 2 },
-    { x: 2, y: 4 },
-    { x: 3, y: 1 },
-    { x: 4, y: 5 },
-    { x: 5, y: 3 },
-  ];
   useEffect(() => {
     const testConnections = async () => {
       try {
@@ -70,6 +64,7 @@ const AnalysisChart = (props) => {
         const res = await axios.get(url);
         console.log("res data: ", res.data);
 
+        setCorrelation(res.data.meta.correlation);
         const tempData = res.data.data;
         // console.log("Tuples in scatter graph0: ", tempData);
         // console.log("Tuples in scatter graph1: ", tempData[0]);
@@ -96,8 +91,6 @@ const AnalysisChart = (props) => {
 
   
 
-  // const coordinates=??? // TODO: GET .......................................
-
   const data = {
     datasets: [
       {
@@ -105,13 +98,14 @@ const AnalysisChart = (props) => {
         data: tuples,
         backgroundColor: 'rgba(75,192,192,0.4)',
         borderColor: 'rgba(75,192,192,1)',
-        pointRadius: 5,
+        pointRadius: 3,
         pointHoverRadius: 7,
       },
     ],
   };
 
   const options = {
+    
     scales: {
       x: {
         title: {
@@ -142,7 +136,70 @@ const AnalysisChart = (props) => {
         },
       },
     },
+
   };
+
+
+  // Calculate regression line data
+  const regressionData = calculateRegressionLine(data.datasets[0].data);
+
+  // Helper function to calculate regression line
+  function calculateRegressionLine(data) {
+    const xData = data.map(point => point.x);
+    const yData = data.map(point => point.y);
+
+    const sumX = xData.reduce((sum, value) => sum + value, 0);
+    const sumY = yData.reduce((sum, value) => sum + value, 0);
+    const sumXX = xData.reduce((sum, value) => sum + value * value, 0);
+    const sumXY = data.reduce((sum, point) => sum + point.x * point.y, 0);
+
+    const n = data.length;
+    const slope = (n * sumXY - sumX * sumY) / (n * sumXX - sumX * sumX);
+    const intercept = (sumY - slope * sumX) / n;
+
+    const minX = Math.min(...xData);
+    const maxX = Math.max(...xData);
+    const minY = Math.min(...yData);
+    const maxY = Math.max(...yData);
+
+    const regressionLine = [
+      { x: minX, y: slope * minX + intercept },
+      { x: maxX, y: slope * maxX + intercept },
+    ];
+
+    return regressionLine;
+  }
+
+  const regressionOptions = {
+    showLine: true,
+    spanGaps: false,
+    maintainAspectRatio: false,
+    scales: {
+      x: {
+        type: 'linear',
+        position: 'bottom',
+      },
+      y: {
+        type: 'linear',
+        position: 'left',
+      },
+    },
+  };
+
+  const regressionChartData = {
+    datasets: [
+      {
+        label: "Regression Line",
+        data: regressionData,
+        backgroundColor: 'rgba(255, 99, 132, 0.4)',
+        borderColor: 'rgba(255, 99, 132, 1)',
+        borderWidth: 1,
+        showLine: true,
+      },
+      
+    ],
+  };
+
 
   const customStyles = {
     overlay: {
@@ -151,7 +208,18 @@ const AnalysisChart = (props) => {
     },
   };
 
+
+  const chartData = {
+    datasets: [
+      
+      regressionChartData.datasets[0],
+      data.datasets[0],
+    ],
+  };
+
   return (
+    
+
     <div>
       <Modal
         isOpen={props.modalIsOpen}
@@ -159,8 +227,17 @@ const AnalysisChart = (props) => {
         contentLabel={labelName}
         style={customStyles}
       >
-        <Scatter data={data} options={options} />
-        <button onClick={() => props.closeModal()}>Close</button>
+        <div className="modal-content">
+          <div className="modal-body">
+            <div style={{ width: '1000px', height: '500px' }}>
+              <Scatter data={chartData} options={options} />
+            </div>
+            <p>The correlation between <b>{props.attrName}</b> and sentiment is {correlation}</p>
+            <button onClick={() => props.closeModal()}>Close</button>
+          </div>
+        </div>
+
+        
       </Modal>
     </div>
   );

@@ -56,9 +56,9 @@
   border-radius: 1pc;
 }
 
-.map_right_mark_hint{
-  color:wheat;
-}
+// .map_right_mark_hint{
+//   color:wheat;
+// }
 
 .color_bar{
   height: 5vh;
@@ -83,4 +83,28 @@
   color: white;
   display: flex;
   justify-content: flex-end;
+}
+
+.modal-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.modal-body {
+  text-align: center;
+}
+
+.hint{
+  padding-left: 3px;
+  background-color: wheat;
+  display: flex;
+  align-items: center;
+  img{
+    width: 50px;
+    height: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 }

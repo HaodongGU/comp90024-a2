@@ -6,8 +6,7 @@ import {
 } from "react-router-dom";
 import Home from "./pages/Home/Home"
 import Map from "./pages/Map/Map";
-
-
+import Mastodon from "./pages/Mastodon/Mastodon";
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
 import "./style.scss"
@@ -40,7 +39,10 @@ const router = createBrowserRouter([
         path:"/map",
         element:<Map/>
       },
-      
+      {
+        path:"/mastodon",
+        element:<Mastodon/>
+      },
     ]
   },
 ]);

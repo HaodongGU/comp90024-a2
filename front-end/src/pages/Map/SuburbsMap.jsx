@@ -15,6 +15,12 @@ import MarkerCrimeBot from "../../static/figure/MarkerCrimeBot.png";
 import MarkerCrimeTop from "../../static/figure/MarkerCrimeTop.png";
 import MarkerAgeBot from "../../static/figure/MarkerAgeBot.png";
 import MarkerAgeTop from "../../static/figure/MarkerAgeTop.png";
+import MarkerPopulationBot from "../../static/figure/MarkerPopulationBot.png";
+import MarkerPopulationTop from "../../static/figure/MarkerPopulationTop.png";
+import MarkerTransportBot from "../../static/figure/MarkerTransportBot.png";
+import MarkerTransportTop from "../../static/figure/MarkerTransportTop.png";
+import MarkerSportsBot from "../../static/figure/MarkerSportsBot.png";
+import MarkerSportsTop from "../../static/figure/MarkerSportsTop.png";
 import "./Map.scss"
 
 
@@ -72,6 +78,18 @@ const CustomMarker = (props) => {
       if (props.type==="top") IconName=MarkerAgeTop;
       else IconName = MarkerAgeBot;
       break;
+    case "Population":
+      if (props.type==="top") IconName=MarkerPopulationTop;
+      else IconName = MarkerPopulationBot;
+      break;
+    case "Public Transport":
+      if (props.type==="top") IconName=MarkerTransportTop;
+      else IconName = MarkerTransportBot;
+      break;
+    case "Sports":
+      if (props.type==="top") IconName=MarkerSportsTop;
+      else IconName = MarkerSportsBot;
+      break;
     default:
       if (props.type==="top") IconName=HappyEmpji;
       else IconName = SadEmoji;
@@ -88,13 +106,20 @@ const CustomMarker = (props) => {
   const suburbName = props.suburbData.name;
   const value = props.suburbData.value;
   const valueName = props.suburbData.valueName;
-
+  let senti = null;
+  if (suburbsCentre[suburbName].avgsenti!==undefined){
+    senti = suburbsCentre[suburbName].avgsenti;
+  }
+  else{
+    senti = "No data available";
+  }
   return (
     <div>
       <LeafletMarker position={coodinates} icon={markerIcon}>
         <Popup>
           <b>Suburb: </b>{suburbName} <br /> 
           <b>{valueName}: </b>{value} <br /> 
+          <b>Sentiment: </b>{senti} <br /> 
           <button onClick={handleTopicsClick}>Suburb Twitter Topics</button>
         </Popup>
       </LeafletMarker>
@@ -104,7 +129,7 @@ const CustomMarker = (props) => {
     
   )
 };
-
+/////////////////////
 const CustomMarkers = (props) => {
   const [outputTop, setOutputTop] = useState([]);
   const [outputBot, setOutputBot] = useState([]);

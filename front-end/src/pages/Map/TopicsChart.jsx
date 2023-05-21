@@ -138,19 +138,27 @@ const TopicsChart = (props) => {
   };
 
   return (
-    <div>
-      <Modal
+    <Modal
         isOpen={props.modalIsOpen}
         onRequestClose={props.closeModal}
         contentLabel={labelName}
         style={customStyles}
       >
-        <h2>Twitter Topics in {props.suburbName}</h2>
-        <p>Total Unique Twitters in {props.suburbName}: {uniqueTwitts}</p>
-        <Bar data={topics} options={options} />
-        <button onClick={() => props.closeModal()}>Close</button>
+
+      <div className="modal-content">
+        <div className="modal-body">
+          {/* <h2>Twitter Topics in {props.suburbName}</h2>
+          <p>Total Unique Twitters in {props.suburbName}: {uniqueTwitts}</p> */}
+          <div style={{ width: '1000px', height: '500px' }}>
+            <Bar data={topics} options={options} />
+          </div>
+          {/* <Bar data={topics} options={options} width={50} height={20}/> */}
+          <p>Total Unique Twitters in <b>{props.suburbName}</b>: {uniqueTwitts}</p>
+          <button onClick={() => props.closeModal()}>Close</button>
+        </div>
+      </div>
+      
       </Modal>
-    </div>
   );
 };
 
