@@ -618,25 +618,32 @@ twitter_db.save({
 })
 
 
-@app.route('/topics_uniquetwts', methods=['GET'])
-def topics_uniquetwts():
+@app.route('/topics_uniquetwts/', methods=['GET'])
+@app.route('/topics_uniquetwts/<suburb>', methods=['GET'])
+def topics_uniquetwts(suburb=None):
     # Fetch the view
     view = twitter_db.view("topics_uniquetwts_view/topicsUniquetwts")
 
     results = []
 
     for row in view:
-        results.append({
-            'suburb': row['key'],
-            'topics_uniquetwts': row['value'],
-        })
+        if suburb is None or suburb.lower() == row['key'].lower():
+            results.append({
+                'suburb': row['key'],
+                'topics_uniquetwts': row['value'],
+            })
+            if suburb is not None:
+                break
 
-    meta = {
-        'name': 'sa2',
-        'value': 'topics and unique tweets'
-    }
+    if len(results) > 0:
+        meta = {
+            'name': 'sa2',
+            'value': 'topics and unique tweets'
+        }
+        return {"meta": meta, 'data': results}
+    else:
+        return {"meta": {}, 'data': []}
 
-    return {"meta": meta, 'data': results}
 
 
 #######################################################################################################################
@@ -719,9 +726,6 @@ def topics_all_proportion():
         if row.key is not None:  # only include records with a topic
             results.append({'topic': row.key, 'proportion': row.value / uniquetwts_total})
     return jsonify(results)
-
-
-
 
 
 
