@@ -262,7 +262,7 @@ else:
 
 # Please use this request as a template.
 @app.route('/income_top_bot', methods=['GET'])
-def income_db_top_bot():
+def income_top_bot():
     # lcw: create meta data, storing discription of data attributes
     meta_income = {
         'name': 'sa2 name',
