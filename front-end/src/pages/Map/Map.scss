@@ -21,7 +21,7 @@
 }
 
 .map_left{
-  height: calc(90vh - 50px);
+  min-height:  calc(90vh - 50px);
   width: calc(20% - 2px);
   border: 2px solid white;
   margin: 5px;

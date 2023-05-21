@@ -272,8 +272,8 @@ def income_db_top_bot():
     results = income_db.view('income_by_sa2_name_view/by_sa2_name')
     sorted_results = [dict(name=row.value, value=row.key) for row in results]
     # Get top 5 and bottom 5
-    top_5 = sorted_results[-10:]
-    bottom_5 = sorted_results[:10]
+    top_5 = sorted_results[-25:]
+    bottom_5 = sorted_results[:25]
     # Return the results as JSON
     return {'meta': meta_income, 'top data': top_5, 'bottom data': bottom_5}
 
