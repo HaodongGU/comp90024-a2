@@ -340,9 +340,9 @@ def crime_top_bot():
     crime_view = crime_db.view('crime_func_view/by_ga_name11')
     crime_results = [dict(name=row.key, value=row.value["total"]) for row in
                      crime_view]
-    crime_results.sort(key=lambda x: x['name'], reverse=True)
-    top_5_crime = crime_results[:10]
-    bottom_5_crime = crime_results[-10:]
+    crime_results.sort(key=lambda x: x['value'])
+    top_5_crime = crime_results[-50:]
+    bottom_5_crime = crime_results[:50]
     meta_cri = {
         'name': 'lga name',
         'value': 'crime rate'
@@ -395,9 +395,12 @@ def age_top_bot():
     # Get ages
     age_view = age_db.view('age_view/by_median_age')
     age_results = [dict(name=row.value, value=row.key) for row in age_view]
-    age_results.sort(key=lambda x: x['value'], reverse=True)
-    top_5_age = age_results[:10]
-    bottom_5_age = age_results[-10:]
+    # age_results.sort(key=lambda x: x['value'], reverse=True)
+    # top_5_age = age_results[:10]
+    # bottom_5_age = age_results[-10:]
+    age_results.sort(key=lambda x: x['value'])
+    top_5_age = age_results[-25:]
+    bottom_5_age = age_results[:25]
 
     # Return the results as JSON
     return {'meta': meta, 'top data': top_5_age, 'bottom data': bottom_5_age}
@@ -450,13 +453,13 @@ def transport_top_bot():
                                 public_transport_dict.items()}
 
     # Sort by composite_index and get top 5 and bottom 5
-    sorted_composite_index_list = sorted(avg_composite_index_dict.items(), key=lambda x: x[1], reverse=True)
+    sorted_composite_index_list = sorted(avg_composite_index_dict.items(), key=lambda x: x[1])
 
     # Convert top and bottom lists to desired format
     top_5_public_transport = [{"name": location, "value": index} for location, index in
-                              sorted_composite_index_list[:10]]
+                              sorted_composite_index_list[-25:]]
     bottom_5_public_transport = [{"name": location, "value": index} for location, index in
-                                 sorted_composite_index_list[-10:]]
+                                 sorted_composite_index_list[:25]]
 
     meta = {
         'name': 'station',
@@ -524,17 +527,17 @@ def population_top_bot():
             }]
 
     # Sort the density and get top 5 and bottom 5
-    sorted_density_list = sorted(density_dict.items(), key=lambda x: x[0], reverse=True)
+    sorted_density_list = sorted(density_dict.items(), key=lambda x: x[0])
 
     # convert top and bottom density lists to desired format
-    top_5_density = [{"name": area['name'], "value": density} for density, areas in sorted_density_list[:10] for area in
+    top_5_density = [{"name": area['name'], "value": density} for density, areas in sorted_density_list[-25:] for area in
                      areas]
-    bottom_5_density = [{"name": area['name'], "value": density} for density, areas in sorted_density_list[-10:] for
+    bottom_5_density = [{"name": area['name'], "value": density} for density, areas in sorted_density_list[:25] for
                         area in areas]
 
     meta = {
         'name': 'sa2',
-        'value': 'ppl density'
+        'value': 'population density (persons/km^2)'
     }
 
     return {"meta": meta, 'top data': top_5_density, 'bottom data': bottom_5_density}

@@ -6,8 +6,15 @@ import suburbsData from './suburbsData.json';
 import suburbsCentre from './suburb_centre.json'
 import { Icon } from 'leaflet';
 import { Marker as LeafletMarker } from 'react-leaflet';
+import TopicsChart from "./TopicsChart";
+import HappyEmpji from "../../static/figure/happyEmoji.png";
 import SadEmoji from "../../static/figure/sadEmoji.png";
-import MarkerIncome from "../../static/figure/MarkerIncome.png"
+import MarkerIncomeBot from "../../static/figure/MarkerIncomeBot.png";
+import MarkerIncomeTop from "../../static/figure/MarkerIncomeTop.png";
+import MarkerCrimeBot from "../../static/figure/MarkerCrimeBot.png";
+import MarkerCrimeTop from "../../static/figure/MarkerCrimeTop.png";
+import MarkerAgeBot from "../../static/figure/MarkerAgeBot.png";
+import MarkerAgeTop from "../../static/figure/MarkerAgeTop.png";
 import "./Map.scss"
 
 
@@ -27,20 +34,47 @@ const color1 = '#FF0000';
 
 // function used in suburb centre finding
 function convertStrFormat(str) {
+  str = str.replace("Greater ", "");
+  str = str.replace(" (C)", "");
+  str = str.replace(" (S)", "");
+  str = str.replace(" (B)", "");
+  str = str.replace(" (RC)", "");
+
+
   var convertedString = str.toUpperCase();
   convertedString = convertedString.replace(/[^A-Za-z\s]/g, '')
   return convertedString;
 }
 
 const CustomMarker = (props) => {
-  console.log(props.type);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const handleTopicsClick = () => {
+    setModalIsOpen(true);
+    console.log("showTopics: ", modalIsOpen);
+  }
+  const closeModal = () => {
+    setModalIsOpen(false);
+    console.log("Suburbs Marker closeModal modalIsOpen: ", modalIsOpen);
+  };
+
+  // console.log(props.type);
   let IconName;
   switch (props.attrName){
     case "Income":
-      IconName = MarkerIncome;
+      if (props.type==="top") IconName=MarkerIncomeTop;
+      else IconName = MarkerIncomeBot;
+      break;
+    case "Crime":
+      if (props.type==="top") IconName=MarkerCrimeTop;
+      else IconName = MarkerCrimeBot;
+      break;
+    case "Age":
+      if (props.type==="top") IconName=MarkerAgeTop;
+      else IconName = MarkerAgeBot;
       break;
     default:
-      IconName = SadEmoji;
+      if (props.type==="top") IconName=HappyEmpji;
+      else IconName = SadEmoji;
       break;
   }
   
@@ -56,12 +90,18 @@ const CustomMarker = (props) => {
   const valueName = props.suburbData.valueName;
 
   return (
-    <LeafletMarker position={coodinates} icon={markerIcon}>
-      <Popup>
-        Suburb: {suburbName} <br /> 
-        {valueName}: {value}
-      </Popup>
-    </LeafletMarker>
+    <div>
+      <LeafletMarker position={coodinates} icon={markerIcon}>
+        <Popup>
+          <b>Suburb: </b>{suburbName} <br /> 
+          <b>{valueName}: </b>{value} <br /> 
+          <button onClick={handleTopicsClick}>Suburb Twitter Topics</button>
+        </Popup>
+      </LeafletMarker>
+      <TopicsChart modalIsOpen={modalIsOpen} closeModal={closeModal} suburbName={suburbName}/>
+
+    </div>
+    
   )
 };
 
@@ -82,16 +122,17 @@ const CustomMarkers = (props) => {
   useEffect(() => {
     const testConnections = async () => {
       try {
-        const url = "http://"+ip+":5000/"+props.attrName.toLowerCase()+"_top_bot";
+        let url = "http://"+ip+":5000/"+props.attrName.toLowerCase()+"_top_bot";
+        if (props.attrName=="Public Transport") url = "http://"+ip+":5000/"+"transport_top_bot";
         const res = await axios.get(url);
         console.log("res data: ", res.data);
         rawTop = res.data['top data'];
         rawBot = res.data['bottom data'];
         meta = res.data['meta'];
         valueName = meta.value;
-        console.log("rawTop data: ", rawTop);
-        console.log("rawBot data: ", rawBot);
-        console.log('value name: ', valueName);
+        // console.log("rawTop data: ", rawTop);
+        // console.log("rawBot data: ", rawBot);
+        // console.log('value name: ', valueName);
 
         let count = 0;
         for (let i = rawTop.length - 1; i >= 0; i--) {
@@ -151,9 +192,13 @@ const CustomMarkers = (props) => {
   }, [props.attrName]);
 
 
-  output = outputTop.map((data) => (
+  const topMarkers = outputTop.map((data) => (
     <CustomMarker suburbData={data} attrName={props.attrName} type="top"/>
   ));
+  const botMarkers = outputBot.map((data) => (
+    <CustomMarker suburbData={data} attrName={props.attrName} type="bot"/>
+  ));
+  output = [...topMarkers, ...botMarkers];
   console.log("output markers: ", output);
   return output;
 }
