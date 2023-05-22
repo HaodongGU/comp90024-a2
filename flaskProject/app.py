@@ -1334,7 +1334,12 @@ def mas_latest_doc():
 #######################################################################################################################
 #       scenario 10.2 total Mastodon
 #######################################################################################################################
-mastodon_db = couch['mastodon_test']
+@app.route('/mas_total', methods=['GET'])
+def mas_total():
+    total_docs = 0
+    for row in mastodon_db.view('total_docs_view/totalDocs'):
+        total_docs += row.value
+    return jsonify(total_docs)
 
 
 if __name__ == '__main__':
