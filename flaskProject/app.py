@@ -785,8 +785,6 @@ else:
     })
 
 
-
-
 @app.route('/twt_topic_sentiment', methods=['GET'])
 def twt_topic_sentiment():
     results = defaultdict(list)
@@ -1107,6 +1105,7 @@ twitter_db.save({
     }
 })
 
+
 @app.route('/senti_population', methods=['GET'])
 def senti_population():
     # Fetch the view
@@ -1295,10 +1294,10 @@ def mas_topics_proportion():
 #######################################################################################################################
 latest_doc_map = """
 function(doc) {
-    if (doc.created_at) {
+    if (doc.created_at && doc.content && doc.topics && doc.url && doc.sentiment_score) {
         var dateStr = doc.created_at.substring(0, 19) + 'Z';  // Cut the date string to second and append 'Z' for UTC time
         var timestamp = Date.parse(dateStr);
-        emit(timestamp, { "content": doc.content, "topics": doc.topics, "url": doc.url, "sentiment_score": doc.sentiment_score });
+        emit(timestamp, { "content": doc.content, "topics": doc.topics, "url": doc.url, "sentiment_score": doc.sentiment_score});
     }
 }
 """
@@ -1330,6 +1329,12 @@ def mas_latest_doc():
 
         return jsonify(data)
     return jsonify({"error": "No documents found"})
+
+
+#######################################################################################################################
+#       scenario 10.2 total Mastodon
+#######################################################################################################################
+mastodon_db = couch['mastodon_test']
 
 
 if __name__ == '__main__':
