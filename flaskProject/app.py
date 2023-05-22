@@ -785,8 +785,6 @@ else:
     })
 
 
-
-
 @app.route('/twt_topic_sentiment', methods=['GET'])
 def twt_topic_sentiment():
     results = defaultdict(list)
@@ -1116,12 +1114,12 @@ def senti_population():
     results = []
 
     for row in view:
-        # Check if the value is positive before applying np.log
-        log_values = [np.log(val) if val > 0 else val for val in row['value']]
+        avgsenti, pop_density = row['value']
+        pop_density = np.log(pop_density) if pop_density > 0 else pop_density
 
         results.append({
             'suburb': row['key'],
-            'avgsenti_population': log_values,
+            'avgsenti_population': [avgsenti, pop_density],
         })
 
     left_values = []
@@ -1136,7 +1134,7 @@ def senti_population():
 
     meta = {
         'name': 'sa2',
-        'value': 'avg senti and log population density',
+        'value': 'avg senti and population density',
         'correlation': correlation
     }
 
@@ -1296,10 +1294,10 @@ def mas_topics_proportion():
 #######################################################################################################################
 latest_doc_map = """
 function(doc) {
-    if (doc.created_at) {
+    if (doc.created_at && doc.content && doc.topics && doc.url && doc.sentiment_score) {
         var dateStr = doc.created_at.substring(0, 19) + 'Z';  // Cut the date string to second and append 'Z' for UTC time
         var timestamp = Date.parse(dateStr);
-        emit(timestamp, { "content": doc.content, "topics": doc.topics, "url": doc.url, "sentiment_score": doc.sentiment_score });
+        emit(timestamp, { "content": doc.content, "topics": doc.topics, "url": doc.url, "sentiment_score": doc.sentiment_score});
     }
 }
 """
@@ -1331,6 +1329,17 @@ def mas_latest_doc():
 
         return jsonify(data)
     return jsonify({"error": "No documents found"})
+
+
+#######################################################################################################################
+#       scenario 10.2 total Mastodon
+#######################################################################################################################
+@app.route('/mas_total', methods=['GET'])
+def mas_total():
+    total_docs = 0
+    for row in mastodon_db.view('total_docs_view/totalDocs'):
+        total_docs += row.value
+    return jsonify(total_docs)
 
 
 if __name__ == '__main__':
