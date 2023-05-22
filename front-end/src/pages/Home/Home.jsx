@@ -13,23 +13,26 @@ console.log("home env ip: ", process.env.REACT_APP_IP);
 class FadeExample extends React.Component {
   render() {
     return (
+      // <div >
+      //   <Swing down>
+      //     <div className="title_home">
+      //       <h1 className="greeting_w">What Correlates with Victorians' Happiness?</h1>
+      //     </div>
+      //   </Swing>
+      // </div>
+
       <div className="home_main">
-        <Fade left>
+        {/* <Fade left>
         <img src={HappyEmoji}/>
-        </Fade>
+        </Fade> */}
 
         <Swing down>
-          <div className="title_home">
-            {/* <h1 className="greeting_r">What </h1>
-            <h1 className="greeting_g">Correlates with </h1>
-            <h1 className="greeting_b">Victorians' Happiness? </h1> */}
-            <h1 className="greeting_w">What Correlates with Victorians' Happiness?</h1>
-          </div>
+          <h1 className="greeting_w">What Correlates with Victorians' Sentiments?</h1>
         </Swing>
 
-        <Fade right>
+        {/* <Fade right>
         <img src={SadEmoji}/>
-        </Fade>
+        </Fade> */}
       </div>
     );
   }

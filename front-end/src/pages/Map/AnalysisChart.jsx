@@ -33,7 +33,7 @@ const xlabelName = (attrName) => {
     case "Age":
       return "Age (years old)";
     case "Population":
-      return "Population Density (persons/km^2)";
+      return "Logarithmic Population Density (persons/km^2 in logarithmic scale)";
     case "Public Transport":
       return "Composite Accessibility Index";
     case "Sport":
