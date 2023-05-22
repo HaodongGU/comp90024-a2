@@ -2,6 +2,7 @@ from flask import Flask, render_template, jsonify
 from flask_restful import Api, Resource
 from flask_cors import CORS
 import numpy as np
+from datetime import datetime
 
 import couchdb
 
@@ -595,6 +596,7 @@ def avg_senti():
 
     return {"meta": meta, 'data': results}
 
+
 #######################################################################################################################
 #       scenario 8.2 Twitter topics vs suburb
 #######################################################################################################################
@@ -650,7 +652,6 @@ def topics_uniquetwts(suburb=None):
         return {"meta": {}, 'data': []}
 
 
-
 #######################################################################################################################
 #       scenario 8.3 Twitter topics total proportion
 #######################################################################################################################
@@ -689,7 +690,6 @@ twitter_db.save({
     }
 })
 
-
 twitter_uniquetwts_total_map = """
 function(doc) {
     if ('uniquetwts' in doc) {
@@ -720,6 +720,7 @@ twitter_db.save({
     }
 })
 
+
 @app.route('/topics_all_proportion', methods=['GET'])
 def topics_all_proportion():
     uniquetwts_total = 0
@@ -731,7 +732,6 @@ def topics_all_proportion():
         if row.key is not None:  # only include records with a topic
             results.append({'topic': row.key, 'proportion': row.value / uniquetwts_total})
     return jsonify(results)
-
 
 
 #######################################################################################################################
@@ -795,6 +795,7 @@ def senti_sports():
 
     return {"meta": meta, 'data': results}
 
+
 #######################################################################################################################
 #       scenario 9.2 twitter for correlation plot (senti vs median income)
 #######################################################################################################################
@@ -853,6 +854,7 @@ def senti_income():
     }
 
     return {"meta": meta, 'data': results}
+
 
 #######################################################################################################################
 #       scenario 9.3 twitter for correlation plot (senti vs median age)
@@ -988,7 +990,6 @@ function(doc) {
 }
 """
 
-
 # Create the view
 avgsenti_population_view_id = "_design/avgsenti_population_view"
 if avgsenti_population_view_id in twitter_db:
@@ -1037,6 +1038,7 @@ def senti_population():
 
     return {"meta": meta, 'data': results}
 
+
 #######################################################################################################################
 #       scenario 9.6 twitter for correlation plot (senti vs crime)
 #######################################################################################################################
@@ -1050,7 +1052,6 @@ function(doc) {
     }
 }
 """
-
 
 # Create the view
 avgsenti_crime_view_id = "_design/avgsenti_crime_view"
@@ -1101,30 +1102,130 @@ def senti_crime():
     return {"meta": meta, 'data': results}
 
 
+#######################################################################################################################
+#       scenario 10 Mastodon topics total proportion
+#######################################################################################################################
+
+mastodon_db = couch['mastodon_test']
+# Map function for counting occurrence of each topic
+mas_topic_count_map = """
+function(doc) {
+    if (doc.topics) {
+        doc.topics.forEach(function(topic) {
+            emit(topic, 1);
+        });
+    }
+}
+"""
+
+# Reduce function for summing up the counts
+mas_topic_count_reduce = """
+function(keys, values, rereduce) {
+    return sum(values);
+}
+"""
+
+# Create the view for topic count
+mas_topic_count_view_id = "_design/topic_count_view"
+if mas_topic_count_view_id in mastodon_db:
+    print("mas_topic_count_view_id Design document already exists. Deleting it.")
+    mastodon_db.delete(mastodon_db[mas_topic_count_view_id])
+
+print("Creating mas_topic_count_view_id Design document.")
+mastodon_db.save({
+    "_id": mas_topic_count_view_id,
+    "views": {
+        "topicCount": {
+            "map": mas_topic_count_map,
+            "reduce": mas_topic_count_reduce
+        }
+    }
+})
+
+# Map function for counting the total number of documents
+mas_total_docs_map = """
+function(doc) {
+    emit(null, 1);
+}
+"""
+
+# Reduce function for summing up the counts
+mas_total_docs_reduce = """
+function(keys, values, rereduce) {
+    return sum(values);
+}
+"""
+
+# Create the view for total document count
+mas_total_docs_view_id = "_design/total_docs_view"
+if mas_total_docs_view_id in mastodon_db:
+    print("mas_total_docs_view_id Design document already exists. Deleting it.")
+    mastodon_db.delete(mastodon_db[mas_total_docs_view_id])
+
+print("Creating mas_total_docs_view_id Design document.")
+mastodon_db.save({
+    "_id": mas_total_docs_view_id,
+    "views": {
+        "totalDocs": {
+            "map": mas_total_docs_map,
+            "reduce": mas_total_docs_reduce
+        }
+    }
+})
+
+
+@app.route('/mas_topics_proportion', methods=['GET'])
+def mas_topics_proportion():
+    total_docs = 0
+    for row in mastodon_db.view('total_docs_view/totalDocs'):
+        total_docs += row.value
+
+    results = []
+    for row in mastodon_db.view('topic_count_view/topicCount', group=True):
+        if row.key is not None:  # only include records with a topic
+            results.append({'topic': row.key, 'proportion': row.value / total_docs})
+    return jsonify(results)
+
 
 #######################################################################################################################
-#       scenario 10 mastodon real time
-#
+#       scenario 10.1 Mastodon topic real time predict, with time slot
 #######################################################################################################################
-#
-# mastodon_db = couch['']
-#
-#
-# @app.route('/mastodon_db/<param>', methods=['GET'])
-# def mastodon_db(param):
-#     # Mango Queries
-#     query = {
-#         "selector": {
-#             "Suburb": param
-#         }
-#     }
-#     # Execute the query
-#     results = []
-#     docs = mastodon_db.find(query)
-#     for row in docs:
-#         results.append(row)
-#     # Return the results as JSON
-#     return {'data': results}
+latest_doc_map = """
+function(doc) {
+    if (doc.created_at) {
+        var dateStr = doc.created_at.substring(0, 19) + 'Z';  // Cut the date string to second and append 'Z' for UTC time
+        var timestamp = Date.parse(dateStr);
+        emit(timestamp, { "content": doc.content, "topics": doc.topics, "url": doc.url, "sentiment_score": doc.sentiment_score });
+    }
+}
+"""
+
+# Create the view for getting the latest document
+latest_doc_view_id = "_design/latest_doc_view"
+if latest_doc_view_id in mastodon_db:
+    print("latest_doc_view_id Design document already exists. Deleting it.")
+    mastodon_db.delete(mastodon_db[latest_doc_view_id])
+
+print("Creating latest_doc_view_id Design document.")
+mastodon_db.save({
+    "_id": latest_doc_view_id,
+    "views": {
+        "latestDoc": {
+            "map": latest_doc_map,
+        }
+    }
+})
+
+
+@app.route('/mas_latest_doc', methods=['GET'])
+def mas_latest_doc():
+    results = mastodon_db.view('latest_doc_view/latestDoc', descending=True, limit=1)
+    for row in results:
+        data = row.value
+        data['timestamp'] = datetime.fromtimestamp(row.key / 1000).strftime(
+            '%Y-%m-%d %H:%M:%S')  # convert to human-readable date string
+        return jsonify(data)
+    return jsonify({"error": "No documents found"})
 
 
 if __name__ == '__main__':
