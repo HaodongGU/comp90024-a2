@@ -1,8 +1,11 @@
+from collections import defaultdict
+
 from flask import Flask, render_template, jsonify
 from flask_restful import Api, Resource
 from flask_cors import CORS
 import numpy as np
 from datetime import datetime
+import random
 
 import couchdb
 
@@ -735,6 +738,102 @@ def topics_all_proportion():
 
 
 #######################################################################################################################
+#       scenario 8.4 all senti for each topic in Twitter
+#######################################################################################################################
+twitter_raw_db = couch['tweets_processed2']
+
+topicSentimentMap = """
+function(doc) {
+    if ('Topics' in doc && 'Sentiment_Score' in doc) {
+        doc.Topics.forEach(function(topic) {
+            emit(topic, doc.Sentiment_Score);
+        });
+    }
+}
+"""
+#
+# topicSentimentReduce = """
+# function(keys, values, rereduce) {
+#     if (rereduce) {
+#         var result = [];
+#         values.forEach(function(val) {
+#             result = result.concat(val);
+#         });
+#         return result;
+#     } else {
+#         return values;
+#     }
+# }
+# """
+
+# Create the view
+topicSentimentViewId = "_design/topicSentimentView"
+if topicSentimentViewId in twitter_raw_db:
+    print("topicSentimentView Design document already exists. Deleting it.")
+    # twitter_raw_db.delete(twitter_raw_db[topicSentimentViewId])
+
+print("Creating topicSentimentView Design document.")
+twitter_raw_db.save({
+    "_id": topicSentimentViewId,
+    "views": {
+        "topicSentiment": {
+            "map": topicSentimentMap,
+            # "reduce": topicSentimentReduce
+        }
+    }
+})
+
+
+@app.route('/twt_topic_sentiment', methods=['GET'])
+def twt_topic_sentiment():
+    results = defaultdict(list)
+    for row in twitter_raw_db.view('topicSentimentView/topicSentiment'):
+        if random.random() < 0.1:  # 10% chance to keep the record
+            results[row.key].append(row.value)
+    return jsonify(results)
+
+
+#######################################################################################################################
+#       scenario 8.5 all senti for each topic in mastodon
+#######################################################################################################################
+mastodon_db = couch['mastodon_test']
+
+mas_topicSentimentMap = """
+function(doc) {
+    if ('topics' in doc && 'sentiment_score' in doc) {
+        doc.topics.forEach(function(topic) {
+            emit(topic, doc.sentiment_score);
+        });
+    }
+}
+"""
+
+# Create the view
+mas_topicSentimentViewId = "_design/topicSentimentView"
+if mas_topicSentimentViewId in mastodon_db:
+    print("topicSentimentView Design document already exists. Deleting it.")
+    mastodon_db.delete(mastodon_db[mas_topicSentimentViewId])
+
+print("Creating topicSentimentView Design document.")
+mastodon_db.save({
+    "_id": mas_topicSentimentViewId,
+    "views": {
+        "topicSentiment": {
+            "map": mas_topicSentimentMap,
+        }
+    }
+})
+
+
+@app.route('/mas_topic_sentiment', methods=['GET'])
+def mas_topic_sentiment():
+    results = defaultdict(list)
+    for row in mastodon_db.view('topicSentimentView/topicSentiment'):
+        results[row.key].append(row.value)
+    return jsonify(results)
+
+
+#######################################################################################################################
 #       scenario 9.1 twitter for correlation plot (senti vs sports)
 #######################################################################################################################
 
@@ -977,7 +1076,7 @@ def senti_transport():
 
 
 #######################################################################################################################
-#       scenario 9.5 twitter for correlation plot (senti vs population density)
+#       scenario 9.5 twitter for correlation plot (senti vs log(population density))
 #######################################################################################################################
 twitter_avgsenti_population_map = """
 function(doc) {
@@ -1007,17 +1106,20 @@ twitter_db.save({
 })
 
 
-@app.route('/senti_population', methods=['GET'])
-def senti_population():
+@app.route('/senti_log_population', methods=['GET'])
+def senti_log_population():
     # Fetch the view
     view = twitter_db.view("avgsenti_population_view/avgSentiPopulation")
 
     results = []
 
     for row in view:
+        # Check if the value is positive before applying np.log
+        log_values = [np.log(val) if val > 0 else val for val in row['value']]
+
         results.append({
             'suburb': row['key'],
-            'avgsenti_population': row['value'],
+            'avgsenti_population': log_values,
         })
 
     left_values = []
