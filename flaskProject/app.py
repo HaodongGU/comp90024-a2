@@ -798,7 +798,7 @@ def twt_topic_sentiment():
 #######################################################################################################################
 #       scenario 8.5 all senti for each topic in mastodon
 #######################################################################################################################
-mastodon_db = couch['mastodon_test']
+mastodon_db = couch['copy_boxplot_mastodon']
 
 mas_topicSentimentMap = """
 function(doc) {
@@ -814,17 +814,17 @@ function(doc) {
 mas_topicSentimentViewId = "_design/topicSentimentView"
 if mas_topicSentimentViewId in mastodon_db:
     print("topicSentimentView Design document already exists. Deleting it.")
-    mastodon_db.delete(mastodon_db[mas_topicSentimentViewId])
-
-print("Creating topicSentimentView Design document.")
-mastodon_db.save({
-    "_id": mas_topicSentimentViewId,
-    "views": {
-        "topicSentiment": {
-            "map": mas_topicSentimentMap,
+    # mastodon_db.delete(mastodon_db[mas_topicSentimentViewId])
+else:
+    print("Creating topicSentimentView Design document.")
+    mastodon_db.save({
+        "_id": mas_topicSentimentViewId,
+        "views": {
+            "topicSentiment": {
+                "map": mas_topicSentimentMap,
+            }
         }
-    }
-})
+    })
 
 
 @app.route('/mas_topic_sentiment', methods=['GET'])
