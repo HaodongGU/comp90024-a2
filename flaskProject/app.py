@@ -1107,7 +1107,6 @@ twitter_db.save({
     }
 })
 
-
 @app.route('/senti_population', methods=['GET'])
 def senti_population():
     # Fetch the view
@@ -1116,12 +1115,12 @@ def senti_population():
     results = []
 
     for row in view:
-        # Check if the value is positive before applying np.log
-        log_values = [np.log(val) if val > 0 else val for val in row['value']]
+        avgsenti, pop_density = row['value']
+        pop_density = np.log(pop_density) if pop_density > 0 else pop_density
 
         results.append({
             'suburb': row['key'],
-            'avgsenti_population': log_values,
+            'avgsenti_population': [avgsenti, pop_density],
         })
 
     left_values = []
@@ -1136,7 +1135,7 @@ def senti_population():
 
     meta = {
         'name': 'sa2',
-        'value': 'avg senti and log population density',
+        'value': 'avg senti and population density',
         'correlation': correlation
     }
 
