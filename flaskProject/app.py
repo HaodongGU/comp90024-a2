@@ -744,7 +744,7 @@ twitter_raw_db = couch['tweets_processed2']
 
 topicSentimentMap = """
 function(doc) {
-    if ('Topics' in doc && 'Sentiment_Score' in doc) {
+    if ('Topics' in doc && 'Sentiment_Score' in doc && doc.Suburb == "Melbourne") {
         doc.Topics.forEach(function(topic) {
             emit(topic, doc.Sentiment_Score);
         });
@@ -771,25 +771,26 @@ topicSentimentViewId = "_design/topicSentimentView"
 if topicSentimentViewId in twitter_raw_db:
     print("topicSentimentView Design document already exists. Deleting it.")
     # twitter_raw_db.delete(twitter_raw_db[topicSentimentViewId])
-
-print("Creating topicSentimentView Design document.")
-twitter_raw_db.save({
-    "_id": topicSentimentViewId,
-    "views": {
-        "topicSentiment": {
-            "map": topicSentimentMap,
-            # "reduce": topicSentimentReduce
+else:
+    print("Creating topicSentimentView Design document.")
+    twitter_raw_db.save({
+        "_id": topicSentimentViewId,
+        "views": {
+            "topicSentiment": {
+                "map": topicSentimentMap,
+                # "reduce": topicSentimentReduce
+            }
         }
-    }
-})
+    })
+
+
 
 
 @app.route('/twt_topic_sentiment', methods=['GET'])
 def twt_topic_sentiment():
     results = defaultdict(list)
     for row in twitter_raw_db.view('topicSentimentView/topicSentiment'):
-        if random.random() < 0.1:  # 10% chance to keep the record
-            results[row.key].append(row.value)
+        results[row.key].append(row.value)
     return jsonify(results)
 
 
