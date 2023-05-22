@@ -1222,8 +1222,9 @@ def mas_latest_doc():
     results = mastodon_db.view('latest_doc_view/latestDoc', descending=True, limit=1)
     for row in results:
         data = row.value
-        data['timestamp'] = datetime.fromtimestamp(row.key / 1000).strftime(
-            '%Y-%m-%d %H:%M:%S')  # convert to human-readable date string
+        data['timestamp'] = datetime.utcfromtimestamp(row.key / 1000).strftime(
+            '%Y-%m-%d %H:%M:%S')  # convert to human-readable date string in UTC
+
         return jsonify(data)
     return jsonify({"error": "No documents found"})
 
