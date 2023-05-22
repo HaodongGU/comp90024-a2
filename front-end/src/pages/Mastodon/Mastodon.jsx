@@ -1,7 +1,29 @@
 import React, { useState, useEffect } from 'react';
-import { Scatter, Line, Bar} from 'react-chartjs-2';
+import { Scatter, Line, Bar } from 'react-chartjs-2';
+import Plot from 'react-plotly.js';
+
 import "./Mastodon.scss"
 import axios from "axios";
+import {
+  Chart as Chart,
+  LineElement,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  Tooltip,
+  Legend, 
+  registerables
+} from 'chart.js';
+
+Chart.register(
+  // LineElement,
+  // CategoryScale,
+  // LinearScale,
+  // PointElement,
+  // Tooltip,
+  // Legend
+  ...registerables
+);
 
 const ip = process.env.REACT_APP_IP;
 
@@ -35,28 +57,28 @@ function BarChart() {
     scales: {
       y: {
         beginAtZero: true,
-        grid: {
-          color: 'white', // Set the y-axis grid color here
-        },
-        ticks: {
-          color: 'white', // Adjust color of y-axis labels
-        },
+        // grid: {
+        //   color: 'white', // Set the y-axis grid color here
+        // },
+        // ticks: {
+        //   color: 'white', // Adjust color of y-axis labels
+        // },
       },
       x: {
-        grid: {
-          color: 'white', // Set the y-axis grid color here
-        },
-        ticks: {
-          color: 'white', // Adjust color of x-axis labels
-        },
+        // grid: {
+        //   color: 'white', // Set the y-axis grid color here
+        // },
+        // ticks: {
+        //   color: 'white', // Adjust color of x-axis labels
+        // },
       },
     },
     plugins: {
-      legend: {
-        labels: {
-          color: 'white', // Set the label color here
-        },
-      },
+      // legend: {
+      //   labels: {
+      //     color: 'white', // Set the label color here
+      //   },
+      // },
     },
   }
 
@@ -95,15 +117,124 @@ function BarChart() {
 
   return (
     <div>
-      <h2>Bar Chart</h2>
-      <Bar data={data} options={options}/>
+      <h2>Proportions of Different Topics in Mastodon and Twitter Data</h2>
+      <div style={{backgroundColor: 'white', color: 'black'}}>
+        <Bar data={data} options={options}/>
+      </div>
     </div>
   );
 }
 
+const BoxPlotChart = () => {
+  // Define the data for two sets
+  const [data, setData] = useState([]);
+
+  // let tempData0 = [
+  //   {
+  //     y: dataset1,
+  //     type: 'box',
+  //     name: 'Dataset 1',
+  //     boxpoints: 'all',
+  //     jitter: 0.3,
+  //     pointpos: -1.8,
+  //     marker: { color: 'rgba(255, 99, 132, 0.5)' },
+  //     showlegend: false,
+
+  //   },
+  //   {
+  //     y: dataset2,
+  //     type: 'box',
+  //     name: 'Dataset 2',
+  //     boxpoints: 'all',
+  //     jitter: 0.3,
+  //     pointpos: -1.8,
+  //     marker: { color: 'rgba(54, 162, 235, 0.5)' },
+  //     showlegend: false,
+
+  //   },
+  // ];
+
+  let tempData = [];
+
+  useEffect(() => {
+    const testConnections = async () => {
+      try {
+        let urlMast = "http://"+ip+":5000/mas_topic_sentiment";
+        const res_mast_senti = await axios.get(urlMast);
+        console.log("mastodon data of topic sentimet", res_mast_senti.data);
+
+        let urlTwit = "http://"+ip+":5000/twt_topic_sentiment";
+        const res_twit_senti = await axios.get(urlTwit);
+        console.log("twitter data of topic sentiment", res_twit_senti.data);
+
+        for (let key in res_mast_senti.data) {
+          if (res_twit_senti.data.hasOwnProperty(key)){
+            tempData.push({ // mastodone
+              y: res_mast_senti.data[key],
+              type: 'box',
+              name: 'Mas: '+key,
+              boxpoints: 'all',
+              jitter: 0.3,
+              pointpos: -1.8,
+              marker: { color: 'rgba(255, 99, 132, 0.5)' },
+              showlegend: false,
+            });
+
+            tempData.push({ // twitter
+              y: res_twit_senti.data[key],
+              type: 'box',
+              name: 'Twt: '+key,
+              boxpoints: 'all',
+              jitter: 0.3,
+              pointpos: -1.8,
+              marker: { color: 'rgba(54, 162, 235, 0.5)' },
+              showlegend: false,
+            })
+          }
+        }
+        console.log("Temp data for box chart: ", tempData);
+        setData(tempData);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    testConnections();
+  }, []);
+  
+
+  // Define the layout for the chart
+  const layout = {
+    title: 'Sentiment Value of Different Topics',
+    yaxis: { title: 'Sentiment Value' },
+    showlegend: true,
+    height: 600,
+    width: 1340,
+    margin: {
+      // l: 50,
+      // r: 20,
+      b: 200,
+      // t: 80,
+      pad: 0,
+    },
+    xaxis: {
+      tickangle: 45,
+    },
+  };
+
+  return (
+    <div>
+      <h2>Sentiment Value of Different Topics</h2>
+      <Plot data={data} layout={layout} />
+    </div>
+  );
+};
+
+
+
+
 const Mastodon = () => {
   const [time, setTime] = useState(new Date());
-  const [newestMastodon, setNewestMastodon] = useState({});
+  const [newestMastodon, setNewestMastodon] = useState({"content":"","sentiment_score":0,"timestamp":"", "topics":[],"url":""});
   const [dataNum, setDataNum] = useState(0);
   
   const currentDate = new Date();
@@ -118,44 +249,15 @@ const Mastodon = () => {
           console.log("res latest Mastodon data: ", res_latest_data.data);
           setNewestMastodon(res_latest_data.data);
 
-          // let url_data_num = "http://"+ip+":5000/mas_latest_doc";
-          // const res_latest_data = await axios.get(url_data_num);
-          // console.log("res latest Mastodon data: ", res_latest_data.data);
-          // setNewestMastodon(res_latest_data);
-  
-          // const tempData = res.data.data[0].topics_uniquetwts.topics;
-          // console.log("Tuples in scatter graph0: ", tempData);
-          // console.log("Tuples in scatter graph1: ", tempData[0]);
-          // console.log("Tuples in scatter graph2: ", tempData[0][tupleName][1]);
-          // console.log("Tuples in scatter graph2: ", tempData[0][tupleName][0]);
-  
-          // setUniqueTwitts(res.data.data[0].topics_uniquetwts.uniquetwts);
-          // console.log("Unique twts0: ", uniqueTwitts);
-          // console.log("Unique twts1: ", res.data.data[0].topics_uniquetwts.uniquetwts);
-  
-          // for (const item in tempData) {
-          //   // console.log(`${item}: ${tempData[item]}`);
-          //   // labelList.push(item);
-          //   // Perform other operations on the key-value pairs
-          //   data.labels.push(item);
-          //   data.datasets[0].data.push(tempData[item]);
-          // }
-          // setTopics(data);
-          // console.log("Data in bar: ", data);
-          // console.log("Topics in bar: ", topics);
-          // console.log("Tuples in scatter graph1: ", tuples);
-  
+          let url_data_num = "http://"+ip+":5000/mas_total";
+          const res_data_num = await axios.get(url_data_num);
+          console.log("res latest Mastodon data: ", res_data_num.data);
+          setDataNum(res_data_num.data);
         } catch (err) {
-          // setTopics(data);
-          // setUniqueTwitts(0);
           console.log(err);
         }
       };
       testConnections();
-      
-
-
-
     }, 1000);
 
     return () => {
@@ -192,8 +294,9 @@ const Mastodon = () => {
         
 
       </div>
-
       <BarChart/>
+      <br/>
+      <BoxPlotChart />
     </div>
     // <h1>hhh</h1>
   );

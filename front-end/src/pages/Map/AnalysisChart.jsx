@@ -232,7 +232,7 @@ const AnalysisChart = (props) => {
             <div style={{ width: '1000px', height: '500px' }}>
               <Scatter data={chartData} options={options} />
             </div>
-            <p>The correlation between <b>{props.attrName}</b> and sentiment is {correlation}</p>
+            <p>The correlation between <b>{props.attrName}</b> and sentiment is {correlation.toFixed(5)}</p>
             <button onClick={() => props.closeModal()}>Close</button>
           </div>
         </div>
