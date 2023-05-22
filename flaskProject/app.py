@@ -1108,8 +1108,8 @@ twitter_db.save({
 })
 
 
-@app.route('/senti_log_population', methods=['GET'])
-def senti_log_population():
+@app.route('/senti_population', methods=['GET'])
+def senti_population():
     # Fetch the view
     view = twitter_db.view("avgsenti_population_view/avgSentiPopulation")
 
@@ -1136,7 +1136,7 @@ def senti_log_population():
 
     meta = {
         'name': 'sa2',
-        'value': 'avg senti and population density',
+        'value': 'avg senti and log population density',
         'correlation': correlation
     }
 
