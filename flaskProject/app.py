@@ -746,7 +746,8 @@ topicSentimentMap = """
 function(doc) {
     if ('Topics' in doc && 'Sentiment_Score' in doc) {
         var suburbLower = doc.Suburb.toLowerCase();
-        if (suburbLower.includes("melbourne") || suburbLower.includes("carlton")) {
+        if (suburbLower.includes("melbourne") || suburbLower.includes("bentleigh") 
+        || suburbLower.includes("clifton springs")) {
             doc.Topics.forEach(function(topic) {
                 emit(topic, doc.Sentiment_Score);
             });
