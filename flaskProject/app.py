@@ -756,7 +756,6 @@ function(doc) {
 }
 """
 
-
 #
 # topicSentimentReduce = """
 # function(keys, values, rereduce) {
@@ -1297,10 +1296,12 @@ def mas_topics_proportion():
 #######################################################################################################################
 #       scenario 10.1 Mastodon topic real time predict, with time slot
 #######################################################################################################################
+from datetime import datetime
+
 latest_doc_map = """
 function(doc) {
     if (doc.created_at) {
-        var dateStr = doc.created_at.substring(0, 19) + 'Z';  // Cut the date string to second and append 'Z' for UTC time
+        var dateStr = doc.created_at.split(' ')[0]+' '+doc.created_at.split(' ')[1];
         var timestamp = Date.parse(dateStr);
         emit(timestamp, { "content": doc.content, "topics": doc.topics, "url": doc.url, "sentiment_score": doc.sentiment_score});
     }
@@ -1310,7 +1311,7 @@ function(doc) {
 # Create the view for getting the latest document
 latest_doc_view_id = "_design/latest_doc_view"
 if latest_doc_view_id in mastodon_db:
-    print("latest_doc_view_id Design document already exists. Deleting it.")
+    print("latest_doc_view_id Design document already exists.")
     # mastodon_db.delete(mastodon_db[latest_doc_view_id])
 else:
     print("Creating latest_doc_view_id Design document.")
@@ -1329,11 +1330,12 @@ def mas_latest_doc():
     results = mastodon_db.view('latest_doc_view/latestDoc', descending=True, limit=1)
     for row in results:
         data = row.value
-        data['timestamp'] = datetime.utcfromtimestamp(row.key / 1000).strftime(
-            '%Y-%m-%d %H:%M:%S')  # convert to human-readable date string in UTC
+        timestamp = datetime.utcfromtimestamp(row.key / 1000)  # The timestamp is in milliseconds
+        data['timestamp'] = timestamp.strftime('%Y-%m-%d %H:%M:%S')
 
         return jsonify(data)
     return jsonify({"error": "No documents found"})
+
 
 
 #######################################################################################################################
@@ -1500,9 +1502,6 @@ def mastopic_sentiment():
             results[range][topic] = proportion
 
     return jsonify(results)
-
-
-
 
 
 if __name__ == '__main__':
