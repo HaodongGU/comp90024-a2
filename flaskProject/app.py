@@ -793,7 +793,8 @@ else:
 def twt_topic_sentiment():
     results = defaultdict(list)
     for row in twitter_raw_db.view('topicSentimentView/topicSentiment'):
-        results[row.key].append(row.value)
+        if -1 <= row.value <= 1:
+            results[row.key].append(row.value)
     return jsonify(results)
 
 
