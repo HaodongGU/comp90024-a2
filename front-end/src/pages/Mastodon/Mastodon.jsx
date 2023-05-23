@@ -57,6 +57,12 @@ function BarChart() {
     scales: {
       y: {
         beginAtZero: true,
+        // ticks: {
+        //   maxRotation: 90,
+        //   minRotation: 90,
+        //   autoSkip: false,
+        //   fontSize: 16, // Adjust the font size for the labels
+        // },
         // grid: {
         //   color: 'white', // Set the y-axis grid color here
         // },
@@ -65,20 +71,30 @@ function BarChart() {
         // },
       },
       x: {
-        // grid: {
-        //   color: 'white', // Set the y-axis grid color here
-        // },
-        // ticks: {
-        //   color: 'white', // Adjust color of x-axis labels
-        // },
+        ticks: {
+          font: {
+            size: 13, // Adjust the font size for the x-axis labels
+          },
+        },
       },
     },
     plugins: {
-      // legend: {
-      //   labels: {
-      //     color: 'white', // Set the label color here
-      //   },
-      // },
+      legend: {
+        labels: {
+          font: {
+            size: 16, // Adjust the font size for the dataset labels
+          },
+        },
+      },
+
+      tooltip: {
+        titleFont: {
+          size: 16, // Adjust the font size for the marker text
+        },
+        bodyFont: {
+          size: 16, // Adjust the font size for the marker text
+        },
+      }
     },
   }
 
@@ -229,7 +245,7 @@ const BoxPlotChart = () => {
       // ticktext: [0, 0, 0, 0,0],
       // showtickprefix:"first",
       // tickprefix:"haha",
-      tickangle: 45,
+      tickangle: -45,
     },
   };
 
@@ -331,6 +347,14 @@ const PieChart = (props) => {
           }
         },
       },
+      tooltip: {
+        titleFont: {
+          size: 16, // Adjust the font size for the marker text
+        },
+        bodyFont: {
+          size: 16, // Adjust the font size for the marker text
+        },
+      }
     },
   }
 
