@@ -1347,5 +1347,163 @@ def mas_total():
     return jsonify(total_docs)
 
 
+#######################################################################################################################
+#       scenario 10.3 proportion of twt topics for each senti interval
+#######################################################################################################################
+twitter_raw_db = couch['tweets_processed2']
+
+topic_sentiment_map = """
+function(doc) {
+    if ('Topics' in doc && 'Sentiment_Score' in doc) {
+        var sentiment_score = doc.Sentiment_Score;
+        var range;
+
+        if (sentiment_score >= -1 && sentiment_score < -0.5) {
+            range = '-1_-0.5';
+        } else if (sentiment_score >= -0.5 && sentiment_score < 0) {
+            range = '-0.5_0';
+        } else if (sentiment_score >= 0 && sentiment_score < 0.5) {
+            range = '0_0.5';
+        } else if (sentiment_score >= 0.5 && sentiment_score <= 1) {
+            range = '0.5_1';
+        }
+
+        if (range) {
+            doc.Topics.forEach(function(topic) {
+                emit([range, topic], 1);
+            });
+        }
+    }
+}
+"""
+
+topic_sentiment_reduce = """
+function(keys, values) {
+    return sum(values);
+}
+"""
+
+# Create the view
+topic_sentiment_id = "_design/twttopic_sentiment_view"
+if topic_sentiment_id in twitter_raw_db:
+    print("topic_sentiment_id Design document already exists. Deleting it.")
+    # twitter_raw_db.delete(twitter_raw_db[topic_sentiment_id])
+else:
+    print("Creating topic_sentiment_id Design document.")
+    twitter_raw_db.save({
+        "_id": topic_sentiment_id,
+        "views": {
+            "twttopicSentiment": {
+                "map": topic_sentiment_map,
+                "reduce": topic_sentiment_reduce
+            }
+        }
+    })
+
+
+@app.route('/twttopic_sentiment', methods=['GET'])
+def twttopic_sentiment():
+    view = twitter_raw_db.view("twttopic_sentiment_view/twttopicSentiment", group=True)
+
+    results = defaultdict(dict)
+    total_counts = defaultdict(int)
+
+    for row in view:
+        range = row['key'][0]
+        topic = row['key'][1]
+        count = row['value']
+
+        results[range][topic] = count
+        total_counts[range] += count
+
+    # Calculate the proportions
+    for range, topics in results.items():
+        for topic, count in topics.items():
+            proportion = count / total_counts[range]
+            results[range][topic] = proportion
+
+    return jsonify(results)
+
+
+#######################################################################################################################
+#       scenario 10.4 proportion of mas topics for each senti interval
+#######################################################################################################################
+mastodon_raw_db = couch['mastodon_test']  # 替换为你的数据库名
+
+topic_sentiment_map = """
+function(doc) {
+    if ('topics' in doc && 'sentiment_score' in doc) {
+        var sentiment_score = doc.sentiment_score;
+        var range;
+
+        if (sentiment_score >= -1 && sentiment_score < -0.5) {
+            range = '-1_-0.5';
+        } else if (sentiment_score >= -0.5 && sentiment_score < 0) {
+            range = '-0.5_0';
+        } else if (sentiment_score >= 0 && sentiment_score < 0.5) {
+            range = '0_0.5';
+        } else if (sentiment_score >= 0.5 && sentiment_score <= 1) {
+            range = '0.5_1';
+        }
+
+        if (range) {
+            doc.topics.forEach(function(topic) {
+                emit([range, topic], 1);
+            });
+        }
+    }
+}
+"""
+
+topic_sentiment_reduce = """
+function(keys, values) {
+    return sum(values);
+}
+"""
+
+topic_sentiment_id = "_design/mastopic_sentiment_view"
+if topic_sentiment_id in mastodon_raw_db:
+    print("topic_sentiment_id Design document already exists. Deleting it.")
+    # mastodon_raw_db.delete(mastodon_raw_db[topic_sentiment_id])
+else:
+    print("Creating topic_sentiment_id Design document.")
+    mastodon_raw_db.save({
+        "_id": topic_sentiment_id,
+        "views": {
+            "mastopicSentiment": {
+                "map": topic_sentiment_map,
+                "reduce": topic_sentiment_reduce
+            }
+        }
+    })
+
+
+@app.route('/mastopic_sentiment', methods=['GET'])
+def mastopic_sentiment():
+    view = mastodon_raw_db.view("mastopic_sentiment_view/mastopicSentiment", group=True)
+
+    results = defaultdict(dict)
+    total_counts = defaultdict(int)
+
+    for row in view:
+        range = row['key'][0]
+        topic = row['key'][1]
+        count = row['value']
+
+        results[range][topic] = count
+        total_counts[range] += count
+
+    # Calculate the proportions
+    for range, topics in results.items():
+        for topic, count in topics.items():
+            proportion = count / total_counts[range]
+            results[range][topic] = proportion
+
+    return jsonify(results)
+
+
+
+
+
 if __name__ == '__main__':
     app.run(host="0.0.0.0", debug=True)
