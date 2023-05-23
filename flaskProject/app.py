@@ -1428,7 +1428,7 @@ def twttopic_sentiment():
 #######################################################################################################################
 #       scenario 10.4 proportion of mas topics for each senti interval
 #######################################################################################################################
-mastodon_raw_db = couch['mastodon_test']  # 替换为你的数据库名
+mastodon_raw_db = couch['mastodon_test']
 
 topic_sentiment_map = """
 function(doc) {
