@@ -1,0 +1,9 @@
+html2text
+pytz
+nltk
+transformers
+torch
+scipy
+couchdb
+requests
+Mastodon.py
