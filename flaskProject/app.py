@@ -1299,7 +1299,7 @@ def mas_topics_proportion():
 #######################################################################################################################
 latest_doc_map = """
 function(doc) {
-    if (doc.created_at && doc.content && doc.topics && doc.url && doc.sentiment_score) {
+    if (doc.created_at) {
         var dateStr = doc.created_at.substring(0, 19) + 'Z';  // Cut the date string to second and append 'Z' for UTC time
         var timestamp = Date.parse(dateStr);
         emit(timestamp, { "content": doc.content, "topics": doc.topics, "url": doc.url, "sentiment_score": doc.sentiment_score});
