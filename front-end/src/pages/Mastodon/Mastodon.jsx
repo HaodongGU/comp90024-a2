@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Scatter, Line, Bar } from 'react-chartjs-2';
+import { Scatter, Line, Bar, Pie  } from 'react-chartjs-2';
 import Plot from 'react-plotly.js';
 
 import "./Mastodon.scss"
@@ -172,23 +172,29 @@ const BoxPlotChart = () => {
             tempData.push({ // mastodone
               y: res_mast_senti.data[key],
               type: 'box',
-              name: 'Mas: '+key,
+              name: "Mas: "+key,
+              x: key,
               boxpoints: 'all',
               jitter: 0.3,
               pointpos: -1.8,
               marker: { color: 'rgba(255, 99, 132, 0.5)' },
               showlegend: false,
+              boxpoints: false,
+              // // showticklabels: false,
+              // text: "fuck",
             });
 
             tempData.push({ // twitter
               y: res_twit_senti.data[key],
               type: 'box',
-              name: 'Twt: '+key,
+              name: "Twt: "+key,
+              x: key,
               boxpoints: 'all',
               jitter: 0.3,
               pointpos: -1.8,
               marker: { color: 'rgba(54, 162, 235, 0.5)' },
               showlegend: false,
+              boxpoints: false,
             })
           }
         }
@@ -217,6 +223,12 @@ const BoxPlotChart = () => {
       pad: 0,
     },
     xaxis: {
+      // title: '',
+      // showticklabels: false, // Hide the tick labels on the x-axis
+      // tickvals: [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36],
+      // ticktext: [0, 0, 0, 0,0],
+      // showtickprefix:"first",
+      // tickprefix:"haha",
       tickangle: 45,
     },
   };
@@ -230,6 +242,118 @@ const BoxPlotChart = () => {
 };
 
 
+const PieChart = (props) => {
+  const colors = [
+    '#FF6384', '#63FF84', '#84FF63', '#6384FF', '#8463FF', '#FF8463',
+    '#1F77B4', '#AEC7E8', '#FF7F0E', '#FFBB78', '#2CA02C', '#98DF8A',
+    '#D62728', '#FF9896', '#9467BD', '#C5B0D5', '#8C564B', '#C49C94',
+    '#E377C2'
+];
+  const initialData = {
+    labels: ['Red', 'Blue', 'Yellow'],
+    datasets: [
+      {
+        data: [300, 50, 100],
+        backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
+        hoverBackgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
+      },
+    ],
+  };
+  const [selectedOption, setSelectedOption] = useState("");
+  const [rawData, setRawData] = useState(initialData);
+  const [allData, setAllData] = useState({});
+
+  // console.log("INITIAL rawdata: ", rawData);
+  const handleChange = (event) => {
+    setSelectedOption(event.target.value);
+  };
+
+  useEffect(() => {
+    const testConnections = async () => {
+      try {
+        let url = "";
+        switch (props.source){
+          case "Twitter":
+            url = "http://"+ip+":5000/twttopic_sentiment";
+            break;
+          case "Mastodon":
+            url = "http://"+ip+":5000/mastopic_sentiment";
+            break;
+        }
+        const res = await axios.get(url);
+        console.log("Data Source: ", props.source, ", data: ", res.data);
+        setAllData(res.data);
+        // console.log("tempTopics: ",tempTopics);
+        // console.log("tempMastTopic: ",tempMastTopic);
+        // console.log("tempTwitter: ",tempTwitter);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    testConnections();
+  }, []);
+
+  useEffect(() => {
+    let topics=[];
+    let proportions=[];
+    const intervalData = allData[selectedOption];
+    console.log("src: ", props.source," interval: ", selectedOption, " interval data: ", intervalData);
+  
+    for(let key in intervalData) {
+      if(intervalData.hasOwnProperty(key)) {
+        console.log(key + " -> " + intervalData[key]);
+        topics.push(key);
+        proportions.push(intervalData[key]);
+      }
+    }
+  
+    const data = {
+      labels: topics,
+      datasets: [
+        {
+          data: proportions,
+          backgroundColor: colors,
+          hoverBackgroundColor: colors,
+        },
+      ],
+    };
+    setRawData(data);
+    console.log("Data Source: ", props.source, ", raw data: ", rawData);
+  }, [selectedOption]);
+
+  const options={
+    plugins: {
+      legend: {
+        labels: {
+          color: 'white', // Set the label color here
+          font: {
+            size: 14 // Set the desired label text size
+          }
+        },
+      },
+    },
+  }
+
+  return (
+    <div style={{flex:1}}>
+      <p>Please choose a sentiment interval of <i><b>{props.source}</b></i> data: </p>
+      <div >
+        <select value={selectedOption} onChange={handleChange} style={{fontSize:'16px'}}>
+          <option value="">Select a sentiment interval</option>
+          <option value="-1_-0.5">sentiment interval: [-1, -0.5)</option>
+          <option value="-0.5_0">sentiment interval: [-0.5, 0)</option>
+          <option value="0_0.5">sentiment interval: [0, 0.5)</option>
+          <option value="0.5_1">sentiment interval: [0.5, 1)</option>
+
+        </select>
+        {/* <p>Selected: {selectedOption}</p> */}
+      </div>
+      <div style={{ width: '600px', height: '600px'}}>
+        <Pie data={rawData} options={options}/>
+      </div>
+    </div>
+  );
+};
 
 
 const Mastodon = () => {
@@ -246,12 +370,12 @@ const Mastodon = () => {
         try {  
           let url_latest_data = "http://"+ip+":5000/mas_latest_doc";
           const res_latest_data = await axios.get(url_latest_data);
-          console.log("res latest Mastodon data: ", res_latest_data.data);
+          // console.log("res latest Mastodon data: ", res_latest_data.data);
           setNewestMastodon(res_latest_data.data);
 
           let url_data_num = "http://"+ip+":5000/mas_total";
           const res_data_num = await axios.get(url_data_num);
-          console.log("res latest Mastodon data: ", res_data_num.data);
+          // console.log("res latest Mastodon data: ", res_data_num.data);
           setDataNum(res_data_num.data);
         } catch (err) {
           console.log(err);
@@ -297,6 +421,13 @@ const Mastodon = () => {
       <BarChart/>
       <br/>
       <BoxPlotChart />
+      <br/>
+      <h2 style={{marginBottom:"0px"}}>Proportions of Topics within Different Sentiment Intervals</h2>
+      <div style={{display: "flex", marginTop: "0px"}}>
+        <PieChart source="Twitter"/>
+        <PieChart source="Mastodon"/>
+      </div>
+      
     </div>
     // <h1>hhh</h1>
   );
