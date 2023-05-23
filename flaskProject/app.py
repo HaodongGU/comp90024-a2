@@ -1311,17 +1311,17 @@ function(doc) {
 latest_doc_view_id = "_design/latest_doc_view"
 if latest_doc_view_id in mastodon_db:
     print("latest_doc_view_id Design document already exists. Deleting it.")
-    mastodon_db.delete(mastodon_db[latest_doc_view_id])
-
-print("Creating latest_doc_view_id Design document.")
-mastodon_db.save({
-    "_id": latest_doc_view_id,
-    "views": {
-        "latestDoc": {
-            "map": latest_doc_map,
+    # mastodon_db.delete(mastodon_db[latest_doc_view_id])
+else:
+    print("Creating latest_doc_view_id Design document.")
+    mastodon_db.save({
+        "_id": latest_doc_view_id,
+        "views": {
+            "latestDoc": {
+                "map": latest_doc_map,
+            }
         }
-    }
-})
+    })
 
 
 @app.route('/mas_latest_doc', methods=['GET'])
