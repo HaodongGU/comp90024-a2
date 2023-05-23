@@ -796,7 +796,7 @@ def twt_topic_sentiment():
 #######################################################################################################################
 #       scenario 8.5 all senti for each topic in mastodon
 #######################################################################################################################
-mastodon_db = couch['copy_boxplot_mastodon']
+mastodon_copy_db = couch['copy_boxplot_mastodon']
 
 mas_topicSentimentMap = """
 function(doc) {
@@ -810,12 +810,12 @@ function(doc) {
 
 # Create the view
 mas_topicSentimentViewId = "_design/topicSentimentView"
-if mas_topicSentimentViewId in mastodon_db:
+if mas_topicSentimentViewId in mastodon_copy_db:
     print("topicSentimentView Design document already exists. Deleting it.")
     # mastodon_db.delete(mastodon_db[mas_topicSentimentViewId])
 else:
     print("Creating topicSentimentView Design document.")
-    mastodon_db.save({
+    mastodon_copy_db.save({
         "_id": mas_topicSentimentViewId,
         "views": {
             "topicSentiment": {
@@ -828,7 +828,7 @@ else:
 @app.route('/mas_topic_sentiment', methods=['GET'])
 def mas_topic_sentiment():
     results = defaultdict(list)
-    for row in mastodon_db.view('topicSentimentView/topicSentiment'):
+    for row in mastodon_copy_db.view('topicSentimentView/topicSentiment'):
         results[row.key].append(row.value)
     return jsonify(results)
 
