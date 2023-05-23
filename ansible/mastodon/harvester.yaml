@@ -1,0 +1,23 @@
+---
+- name: install python with Mastodon and CouchDB
+  hosts: COMP90024
+  become: yes
+  tasks:
+    - name: install Python3, pip
+      apt:
+        name: ["python3", "python3-pip"]
+        state: latest
+      
+    - name: install Mastodon, CouchDB and Python APIs
+      pip:
+        name: "Mastodon.py, couchdb, html2text, pytz, nltk, transformers, torch, scipy, requests"
+        state: latest
+        
+    - copy:
+        src: ./src
+        dest: ./
+
+    - name: start harvester
+      shell: |
+        cd src
+        python3 mastodon_harvester.py

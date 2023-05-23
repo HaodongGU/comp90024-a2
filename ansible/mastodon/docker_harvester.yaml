@@ -1,0 +1,21 @@
+---
+- name: run mastodon harvest with docker
+  hosts: COMP90024
+  become: yes
+  tasks:
+    - name: install Python3, pip
+      apt:
+        name: ["python3", "python3-pip"]
+        state: latest
+        
+    - copy:
+        src: ./src
+        dest: ./
+
+    - name: start harvester
+      shell: |
+        cd src
+        chmod +x install_docker.sh
+        sudo ./install_docker.sh
+        sudo docker build . -t mastodon
+        sudo docker run mastodon

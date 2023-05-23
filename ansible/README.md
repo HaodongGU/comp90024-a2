@@ -1,5 +1,8 @@
 # COMP90024 A2 Ansible
 
-## 
+## Auto-configure an instance on MRC
+./build_mrc
 
-YjdjMjE5ZmVmNzBjNTY2
+## Mastodon
+
+./mastodon

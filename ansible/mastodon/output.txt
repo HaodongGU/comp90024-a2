@@ -1,0 +1,31 @@
+ansible-playbook 2.10.17
+  config file = /etc/ansible/ansible.cfg
+  configured module search path = ['/home/gu/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/gu/.local/lib/python3.10/site-packages/ansible
+  executable location = /home/gu/.local/bin/ansible-playbook
+  python version = 3.10.6 (main, Mar 10 2023, 10:55:28) [GCC 11.3.0]
+Using /etc/ansible/ansible.cfg as config file
+Skipping callback 'default', as we already have a stdout callback.
+Skipping callback 'minimal', as we already have a stdout callback.
+Skipping callback 'oneline', as we already have a stdout callback.
+
+PLAYBOOK: docker_harvester.yaml ************************************************
+1 plays in docker_harvester.yaml
+
+PLAY [run mastodon harvest with docker] ****************************************
+
+TASK [Gathering Facts] *********************************************************
+task path: /home/gu/Desktop/comp90024-a2/ansible/mastodon/docker_harvester.yaml:2
+ok: [172.26.134.190]
+META: ran handlers
+
+TASK [install Python3, pip] ****************************************************
+task path: /home/gu/Desktop/comp90024-a2/ansible/mastodon/docker_harvester.yaml:6
+ok: [172.26.134.190] => {"cache_update_time": 1684807949, "cache_updated": false, "changed": false}
+
+TASK [copy] ********************************************************************
+task path: /home/gu/Desktop/comp90024-a2/ansible/mastodon/docker_harvester.yaml:11
+changed: [172.26.134.190] => {"changed": true, "dest": "./", "src": "/home/gu/Desktop/comp90024-a2/ansible/mastodon/./src"}
+
+TASK [start harvester] *********************************************************
+task path: /home/gu/Desktop/comp90024-a2/ansible/mastodon/docker_harvester.yaml:15
