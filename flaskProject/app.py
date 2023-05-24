@@ -15,21 +15,31 @@ CORS(app)
 # authentication
 admin = 'admin'
 password = 'admin'
-url = f'http://{admin}:{password}@172.26.135.221:5984/'
+hosts = ["172.26.135.221", "172.26.130.7", "172.26.134.190"]
 
-# get couchdb instance
-couch = couchdb.Server(url)
+# create a list of couchdb connections
+couches = [couchdb.Server(f"http://{admin}:{password}@{host}:5984/") for host in hosts]
+print("Connected to couchdb.")
 
-# indicate the db name
+
+def get_db(name):
+    for couch in couches:
+        try:
+            return couch[name]
+        except Exception:
+            # if exception occurs, try next couch connection
+            continue
+    raise Exception("No valid couchdb connection.")
+
+
 # total_sport_facility_suburb_db = couch['total_number_of_facility_suburb']
-sport_facility_suburb_db = couch['sports_facility_suburb']
-public_transport_db = couch['transport']
-employment_db = couch['employment']
-income_db = couch['income']
-population_db = couch['population_sa2_data']
-age_db = couch['median_age_sa2_data']
-crime_db = couch['crime_data']
-
+sport_facility_suburb_db = get_db('sports_facility_suburb')
+public_transport_db = get_db('transport')
+employment_db = get_db('employment')
+income_db = get_db('income')
+population_db = get_db('population_sa2_data')
+age_db = get_db('median_age_sa2_data')
+crime_db = get_db('crime_data')
 
 @app.route('/')
 def hello_world():  # put application's code here
@@ -553,7 +563,7 @@ def population_top_bot():
 #       scenario 8.1 Twitter avg senti vs suburb
 #######################################################################################################################
 
-twitter_db = couch['v9_all_data']
+twitter_db = get_db('v9_all_data')
 twitter_avgsenti_map = """
 function(doc) {
     if ('avgsenti' in doc) {
@@ -740,7 +750,7 @@ def topics_all_proportion():
 #######################################################################################################################
 #       scenario 8.4 all senti for each topic in Twitter
 #######################################################################################################################
-twitter_raw_db = couch['tweets_processed2']
+twitter_raw_db = get_db('tweets_processed2')
 
 topicSentimentMap = """
 function(doc) {
@@ -801,7 +811,7 @@ def twt_topic_sentiment():
 #######################################################################################################################
 #       scenario 8.5 all senti for each topic in mastodon
 #######################################################################################################################
-mastodon_copy_db = couch['copy_boxplot_mastodon']
+mastodon_copy_db = get_db('copy_boxplot_mastodon')
 
 mas_topicSentimentMap = """
 function(doc) {
@@ -842,7 +852,7 @@ def mas_topic_sentiment():
 #       scenario 9.1 twitter for correlation plot (senti vs sports)
 #######################################################################################################################
 
-twitter_db = couch['v9_all_data']
+twitter_db = get_db('v9_all_data')
 
 twitter_avgsenti_sports_map = """
 function(doc) {
@@ -1213,7 +1223,7 @@ def senti_crime():
 #       scenario 10 Mastodon topics total proportion
 #######################################################################################################################
 
-mastodon_db = couch['mastodon_test']
+mastodon_db = get_db('mastodon_test')
 # Map function for counting occurrence of each topic
 mas_topic_count_map = """
 function(doc) {
@@ -1338,7 +1348,6 @@ def mas_latest_doc():
     return jsonify({"error": "No documents found"})
 
 
-
 #######################################################################################################################
 #       scenario 10.2 total Mastodon
 #######################################################################################################################
@@ -1353,7 +1362,7 @@ def mas_total():
 #######################################################################################################################
 #       scenario 10.3 proportion of twt topics for each senti interval
 #######################################################################################################################
-twitter_raw_db = couch['tweets_processed2']
+twitter_raw_db = get_db('tweets_processed2')
 
 topic_sentiment_map = """
 function(doc) {
@@ -1431,7 +1440,7 @@ def twttopic_sentiment():
 #######################################################################################################################
 #       scenario 10.4 proportion of mas topics for each senti interval
 #######################################################################################################################
-mastodon_raw_db = couch['mastodon_test']
+mastodon_raw_db = get_db('mastodon_test')
 
 topic_sentiment_map = """
 function(doc) {
