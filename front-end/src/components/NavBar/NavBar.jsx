@@ -10,7 +10,7 @@ const NavBar = () => {
       <div className="logo">
 					<img src={VicLogo} alt="VicLogo"/>
           <span>
-            Victorians' Happiness {String.fromCodePoint(0x1F603)}{String.fromCodePoint(0x1F61E)}
+            Victorians' Sentiments {String.fromCodePoint(0x1F603)}{String.fromCodePoint(0x1F61E)}
           </span>
 			</div>
 

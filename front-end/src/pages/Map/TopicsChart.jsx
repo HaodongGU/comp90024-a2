@@ -127,6 +127,13 @@ const TopicsChart = (props) => {
           size: 14, 
         },
       },
+      legend: {
+        labels: {
+          font: {
+            size: 16 // Set the desired label text size
+          }
+        },
+      },
     },
   };
 

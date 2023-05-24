@@ -119,7 +119,7 @@ const CustomMarker = (props) => {
         <Popup>
           <b>Suburb: </b>{suburbName} <br /> 
           <b>{valueName}: </b>{value} <br /> 
-          <b>Sentiment: </b>{senti.toFixed(5)} <br /> 
+          <b>Sentiment: </b>{typeof senti === 'number' && Number.isFinite(senti) && !Number.isInteger(senti) ? senti.toFixed(5):"no data"} <br /> 
           <button onClick={handleTopicsClick}>Suburb Twitter Topics</button>
         </Popup>
       </LeafletMarker>
