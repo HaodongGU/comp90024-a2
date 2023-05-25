@@ -11,11 +11,23 @@ https://youtu.be/VGHe7GJrFYQ
 
 ## Table of Contents
 
-1. [Data](#data)
-2. [Ansible](#ansible)
-3. [Backend](#backend)
-4. [Crawler](#crawler)
-5. [Docs](#docs)
-6. [front-end](#frontend)
-7. [Sentiment-Analysis](#sentiment-analysis)
-
+├── Data/
+|   ├──── SUDO data/
+|   ├──── Twitter data/
+|   └──── Other data/
+├── Mastodon_harvester/
+|   ├──── mastodon_au/                                      
+|   ├──── mastodon_world/
+|   ├──── mastodon_toots_processing.py                                             
+├── ansible/
+|   ├──── mrc builder/
+|   ├──── couchDB builder/
+|   ├──── front-end builder/
+|   ├──── couchdb-cluster/
+├── flaskProject/
+|   ├──── app.py
+|   ├──── flaskDocker/
+|   ├──── runBackEnd.sh
+├── front-end/
+|   ├──── src/
+├── README.md/    <---------
