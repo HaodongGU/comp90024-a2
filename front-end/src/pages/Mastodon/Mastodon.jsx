@@ -38,15 +38,15 @@ function BarChart() {
     datasets: [
       {
         label: 'Mastodon Topics and Their Percentages',
-        backgroundColor: 'rgba(75,192,192,0.4)',
-        borderColor: 'rgba(75,192,192,1)',
+        backgroundColor: 'rgba(255,99,132,0.4)',
+        borderColor: 'rgba(255,99,132,1)',
         borderWidth: 1,
         data: mastPercentage, // Replace with your actual data values for Dataset 1
       },
       {
         label: 'Twitter Topics and Their Percentages',
-        backgroundColor: 'rgba(255,99,132,0.4)',
-        borderColor: 'rgba(255,99,132,1)',
+        backgroundColor: 'rgba(75,192,192,0.4)',
+        borderColor: 'rgba(75,192,192,1)',
         borderWidth: 1,
         data: twitterPercentage, // Replace with your actual data values for Dataset 2
       },
@@ -231,8 +231,8 @@ const BoxPlotChart = () => {
     title: 'Sentiment Value of Different Topics',
     yaxis: { title: 'Sentiment Value' },
     showlegend: true,
-    height: 600,
-    width: 1340,
+    height: window.innerHeight*0.8,
+    width: window.innerWidth*0.9 - 17.5,
     margin: {
       // l: 50,
       // r: 20,
@@ -252,7 +252,7 @@ const BoxPlotChart = () => {
   };
 
   return (
-    <div style={{width:'75vw'}}>
+    <div >
       <h2>Sentiment Value of Different Topics</h2>
       <Plot data={data} layout={layout} />
     </div>
