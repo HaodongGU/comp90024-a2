@@ -12,22 +12,23 @@ https://youtu.be/VGHe7GJrFYQ
 ## Table of Contents
 .
 ├── Data
-│   ├── SUDO data
-│   ├── Twitter data
-│   └── Other data
+|   ├── SUDO data
+|   ├── Twitter data
+|   └── Other data
 ├── Mastodon_harvester
-│   ├── mastodon_au
-│   ├── mastodon_world
-│   └── mastodon_toots_processing.py
+|   ├── mastodon_au
+|   ├── mastodon_world
+|   └── mastodon_toots_processing.py
 ├── ansible
-│   ├── mrc builder
-│   ├── couchDB builder
-│   ├── front-end builder
-│   └── couchdb-cluster
+|   ├── mrc builder
+|   ├── couchDB builder
+|   ├── front-end builder
+|   └── couchdb-cluster
 ├── flaskProject
-│   ├── app.py
-│   ├── flaskDocker
-│   └── runBackEnd.sh
+|   ├── app.py
+|   ├── flaskDocker
+|   └── runBackEnd.sh
 ├── front-end
-│   └── src
+|   └── src
 └── README.md
+
