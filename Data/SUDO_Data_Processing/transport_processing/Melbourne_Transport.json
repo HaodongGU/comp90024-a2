@@ -1,0 +1,2886 @@
+{
+    "Airport West": {
+        "coordinates": [
+            144.889906,
+            -37.713243
+        ],
+        "degree_centrality": 0.9414634,
+        "closeness_centrality": 80.8192,
+        "contour_catchment": 1.9089268,
+        "nodal_betweenness": 4.816052,
+        "nodal_connectivity": 4.491,
+        "nodal_resilience": -4.33048,
+        "composite_index": 9.720795,
+        "transfer_propensity": 2.7252767
+    },
+    "Alamein": {
+        "coordinates": [
+            145.079504,
+            -37.868134
+        ],
+        "degree_centrality": 1.8439025,
+        "closeness_centrality": 75.82595,
+        "contour_catchment": 2.4855044,
+        "nodal_betweenness": 2.5366983,
+        "nodal_connectivity": 0,
+        "nodal_resilience": -4.62074,
+        "composite_index": 7.168904,
+        "transfer_propensity": 0
+    },
+    "Altona": {
+        "coordinates": [
+            144.82927,
+            -37.867206
+        ],
+        "degree_centrality": 1.0487804,
+        "closeness_centrality": 83.00381,
+        "contour_catchment": 1.3196551,
+        "nodal_betweenness": 2.7876492,
+        "nodal_connectivity": 35.028,
+        "nodal_resilience": 3.8477054,
+        "composite_index": 11.578881,
+        "transfer_propensity": 0.14251387
+    },
+    "Armadale": {
+        "coordinates": [
+            145.018778,
+            -37.856106
+        ],
+        "degree_centrality": 0.86341465,
+        "closeness_centrality": 45.76893,
+        "contour_catchment": 17.943342,
+        "nodal_betweenness": 115.89671,
+        "nodal_connectivity": 112.086,
+        "nodal_resilience": -12.030996,
+        "composite_index": 23.203772,
+        "transfer_propensity": 2.5434315
+    },
+    "Arts Precinct": {
+        "coordinates": [
+            144.969234,
+            -37.821563
+        ],
+        "degree_centrality": 0.80487806,
+        "closeness_centrality": 39.617657,
+        "contour_catchment": 18.178001,
+        "nodal_betweenness": 85.47126,
+        "nodal_connectivity": 143.532,
+        "nodal_resilience": -5.1606965,
+        "composite_index": 24.551748,
+        "transfer_propensity": 1.6477966
+    },
+    "Ascot Vale (Union Rd)": {
+        "coordinates": [
+            144.916174,
+            -37.771734
+        ],
+        "degree_centrality": 1.0585365,
+        "closeness_centrality": 60.91873,
+        "contour_catchment": 2.9962513,
+        "nodal_betweenness": 4.5403976,
+        "nodal_connectivity": 20.916,
+        "nodal_resilience": 1.4972103,
+        "composite_index": 13.144419,
+        "transfer_propensity": 0.34571466
+    },
+    "Bentleigh": {
+        "coordinates": [
+            145.036976,
+            -37.916968
+        ],
+        "degree_centrality": 0.9170732,
+        "closeness_centrality": 59.85766,
+        "contour_catchment": 6.7315893,
+        "nodal_betweenness": 51.13249,
+        "nodal_connectivity": 32.382,
+        "nodal_resilience": -9.571366,
+        "composite_index": 16.567528,
+        "transfer_propensity": 0
+    },
+    "Box Hill": {
+        "coordinates": [
+            145.122141,
+            -37.819033
+        ],
+        "degree_centrality": 0.7853659,
+        "closeness_centrality": 70.381516,
+        "contour_catchment": 8.75938,
+        "nodal_betweenness": 41.647198,
+        "nodal_connectivity": 105.864,
+        "nodal_resilience": -8.789529,
+        "composite_index": 17.88603,
+        "transfer_propensity": 2.8800914
+    },
+    "Docklands (Victoria Harbour)": {
+        "coordinates": [
+            144.947317,
+            -37.820937
+        ],
+        "degree_centrality": 0.8902439,
+        "closeness_centrality": 41.88729,
+        "contour_catchment": 13.811098,
+        "nodal_betweenness": 22.61973,
+        "nodal_connectivity": 89.487,
+        "nodal_resilience": -2.7131982,
+        "composite_index": 20.781754,
+        "transfer_propensity": 1.2872399
+    },
+    "Broadmeadows": {
+        "coordinates": [
+            144.91962,
+            -37.682859
+        ],
+        "degree_centrality": 0.8487805,
+        "closeness_centrality": 89.66498,
+        "contour_catchment": 3.4436572,
+        "nodal_betweenness": 13.531216,
+        "nodal_connectivity": 76.86,
+        "nodal_resilience": -2.3332381,
+        "composite_index": 14.400745,
+        "transfer_propensity": 3.868943
+    },
+    "Brunswick (Sydney Rd)": {
+        "coordinates": [
+            144.961344,
+            -37.771637
+        ],
+        "degree_centrality": 1.0682927,
+        "closeness_centrality": 54.73822,
+        "contour_catchment": 7.158604,
+        "nodal_betweenness": 8.016721,
+        "nodal_connectivity": 19.92,
+        "nodal_resilience": -4.884989,
+        "composite_index": 14.695652,
+        "transfer_propensity": 0
+    },
+    "Bundoora RMIT": {
+        "coordinates": [
+            145.069249,
+            -37.678943
+        ],
+        "degree_centrality": 0.98536587,
+        "closeness_centrality": 96.59127,
+        "contour_catchment": 2.073675,
+        "nodal_betweenness": 2.8225758,
+        "nodal_connectivity": 4.5855,
+        "nodal_resilience": 1.5665319,
+        "composite_index": 9.526057,
+        "transfer_propensity": 0.07193891
+    },
+    "Burnley": {
+        "coordinates": [
+            145.008205,
+            -37.827423
+        ],
+        "degree_centrality": 0.87317073,
+        "closeness_centrality": 41.62227,
+        "contour_catchment": 19.67248,
+        "nodal_betweenness": 120.04201,
+        "nodal_connectivity": 196.608,
+        "nodal_resilience": -14.848945,
+        "composite_index": 24.367203,
+        "transfer_propensity": 9.675699
+    },
+    "Camberwell Station": {
+        "coordinates": [
+            145.057737,
+            -37.82673
+        ],
+        "degree_centrality": 0.89756095,
+        "closeness_centrality": 53.763172,
+        "contour_catchment": 13.833414,
+        "nodal_betweenness": 54.792526,
+        "nodal_connectivity": 149.448,
+        "nodal_resilience": -10.001797,
+        "composite_index": 20.48734,
+        "transfer_propensity": 10.372566
+    },
+    "Camberwell Junction": {
+        "coordinates": [
+            145.056657,
+            -37.831399
+        ],
+        "degree_centrality": 0.9268293,
+        "closeness_centrality": 56.29693,
+        "contour_catchment": 8.371613,
+        "nodal_betweenness": 26.306328,
+        "nodal_connectivity": 67.728,
+        "nodal_resilience": -2.1616518,
+        "composite_index": 17.948975,
+        "transfer_propensity": 1.347607
+    },
+    "Carlton (Lygon St)": {
+        "coordinates": [
+            144.967666,
+            -37.797211
+        ],
+        "degree_centrality": 0.96585363,
+        "closeness_centrality": 44.18166,
+        "contour_catchment": 12.872059,
+        "nodal_betweenness": 27.589449,
+        "nodal_connectivity": 36.684,
+        "nodal_resilience": -5.496585,
+        "composite_index": 19.070501,
+        "transfer_propensity": 3.7045386
+    },
+    "Carnegie": {
+        "coordinates": [
+            145.058571,
+            -37.886288
+        ],
+        "degree_centrality": 0.9609756,
+        "closeness_centrality": 49.096878,
+        "contour_catchment": 13.882409,
+        "nodal_betweenness": 99.011,
+        "nodal_connectivity": 32.382,
+        "nodal_resilience": -15.825841,
+        "composite_index": 19.667994,
+        "transfer_propensity": 0.036068812
+    },
+    "Caulfield": {
+        "coordinates": [
+            145.042022,
+            -37.877399
+        ],
+        "degree_centrality": 0.7707317,
+        "closeness_centrality": 45.86434,
+        "contour_catchment": 18.1894,
+        "nodal_betweenness": 171.81853,
+        "nodal_connectivity": 352.5,
+        "nodal_resilience": -13.20489,
+        "composite_index": 25.726149,
+        "transfer_propensity": 31.654045
+    },
+    "Chelsea": {
+        "coordinates": [
+            145.116032,
+            -38.052423
+        ],
+        "degree_centrality": 0.84390247,
+        "closeness_centrality": 95.099144,
+        "contour_catchment": 3.506814,
+        "nodal_betweenness": 18.117159,
+        "nodal_connectivity": 66.276,
+        "nodal_resilience": -1.0499642,
+        "composite_index": 14.560034,
+        "transfer_propensity": 1.24197
+    },
+    "Cheltenham": {
+        "coordinates": [
+            145.054532,
+            -37.966795
+        ],
+        "degree_centrality": 0.9170732,
+        "closeness_centrality": 73.69571,
+        "contour_catchment": 4.465839,
+        "nodal_betweenness": 36.869507,
+        "nodal_connectivity": 32.382,
+        "nodal_resilience": -3.4299078,
+        "composite_index": 15.302365,
+        "transfer_propensity": 0
+    },
+    "Clayton": {
+        "coordinates": [
+            145.120733,
+            -37.924797
+        ],
+        "degree_centrality": 0.9609756,
+        "closeness_centrality": 63.34049,
+        "contour_catchment": 7.850938,
+        "nodal_betweenness": 62.041145,
+        "nodal_connectivity": 32.382,
+        "nodal_resilience": -14.21713,
+        "composite_index": 16.36661,
+        "transfer_propensity": 0
+    },
+    "Clifton Hill Station": {
+        "coordinates": [
+            144.995031,
+            -37.788939
+        ],
+        "degree_centrality": 0.9268293,
+        "closeness_centrality": 46.423733,
+        "contour_catchment": 17.623674,
+        "nodal_betweenness": 87.61391,
+        "nodal_connectivity": 138.6,
+        "nodal_resilience": -17.278967,
+        "composite_index": 21.848196,
+        "transfer_propensity": 3.3033473
+    },
+    "Clifton Hill (Queens Pde)": {
+        "coordinates": [
+            144.992505,
+            -37.787882
+        ],
+        "degree_centrality": 0.95609754,
+        "closeness_centrality": 49.640976,
+        "contour_catchment": 10.631395,
+        "nodal_betweenness": 15.122559,
+        "nodal_connectivity": 43.488,
+        "nodal_resilience": -10.070425,
+        "composite_index": 16.978401,
+        "transfer_propensity": 5.9927816
+    },
+    "Coburg (Sydney Rd)": {
+        "coordinates": [
+            144.966483,
+            -37.741321
+        ],
+        "degree_centrality": 0.9170732,
+        "closeness_centrality": 65.93854,
+        "contour_catchment": 3.5774105,
+        "nodal_betweenness": 12.945891,
+        "nodal_connectivity": 41.22,
+        "nodal_resilience": -7.1709223,
+        "composite_index": 13.959896,
+        "transfer_propensity": 0.45369568
+    },
+    "Coburg Station": {
+        "coordinates": [
+            144.962933,
+            -37.74278
+        ],
+        "degree_centrality": 0.902439,
+        "closeness_centrality": 65.63297,
+        "contour_catchment": 6.594982,
+        "nodal_betweenness": 18.495663,
+        "nodal_connectivity": 58.212,
+        "nodal_resilience": -3.1797833,
+        "composite_index": 16.220566,
+        "transfer_propensity": 4.600239
+    },
+    "Collingwood (Smith St)": {
+        "coordinates": [
+            144.984221,
+            -37.799016
+        ],
+        "degree_centrality": 0.9756098,
+        "closeness_centrality": 48.263023,
+        "contour_catchment": 11.213091,
+        "nodal_betweenness": 19.248653,
+        "nodal_connectivity": 29.214,
+        "nodal_resilience": -12.988834,
+        "composite_index": 16.670984,
+        "transfer_propensity": 1.0191156
+    },
+    "Crown Casino": {
+        "coordinates": [
+            144.95715,
+            -37.825407
+        ],
+        "degree_centrality": 0.98536587,
+        "closeness_centrality": 42.904488,
+        "contour_catchment": 13.204742,
+        "nodal_betweenness": 38.308765,
+        "nodal_connectivity": 58.266,
+        "nodal_resilience": -9.472593,
+        "composite_index": 19.746508,
+        "transfer_propensity": 0.45441258
+    },
+    "Dandenong": {
+        "coordinates": [
+            145.209517,
+            -37.989907
+        ],
+        "degree_centrality": 0.86341465,
+        "closeness_centrality": 84.88917,
+        "contour_catchment": 5.2086244,
+        "nodal_betweenness": 39.242508,
+        "nodal_connectivity": 212.436,
+        "nodal_resilience": -9.792963,
+        "composite_index": 16.630558,
+        "transfer_propensity": 1.4708389
+    },
+    "Deakin University": {
+        "coordinates": [
+            145.114966,
+            -37.849958
+        ],
+        "degree_centrality": 1.0195122,
+        "closeness_centrality": 76.55895,
+        "contour_catchment": 3.7062018,
+        "nodal_betweenness": 12.250284,
+        "nodal_connectivity": 6.543,
+        "nodal_resilience": -9.531313,
+        "composite_index": 10.972713,
+        "transfer_propensity": 0
+    },
+    "Docklands (Harbour Esplanade)": {
+        "coordinates": [
+            144.944925,
+            -37.815003
+        ],
+        "degree_centrality": 0.8829268,
+        "closeness_centrality": 44.327682,
+        "contour_catchment": 12.298396,
+        "nodal_betweenness": 12.873217,
+        "nodal_connectivity": 57.768,
+        "nodal_resilience": 5.358206,
+        "composite_index": 19.449074,
+        "transfer_propensity": 0.34794304
+    },
+    "Docklands (Waterfront City)": {
+        "coordinates": [
+            144.937317,
+            -37.814927
+        ],
+        "degree_centrality": 0.9292683,
+        "closeness_centrality": 47.203587,
+        "contour_catchment": 10.50737,
+        "nodal_betweenness": 2.1049664,
+        "nodal_connectivity": 0,
+        "nodal_resilience": 7.7269325,
+        "composite_index": 13.169408,
+        "transfer_propensity": 0
+    },
+    "Doncaster": {
+        "coordinates": [
+            145.124861,
+            -37.787277
+        ],
+        "degree_centrality": 0.8,
+        "closeness_centrality": 64.87473,
+        "contour_catchment": 8.092909,
+        "nodal_betweenness": 21.479076,
+        "nodal_connectivity": 33.075,
+        "nodal_resilience": -24.669744,
+        "composite_index": 13.915065,
+        "transfer_propensity": 3.078074
+    },
+    "South Caulfield": {
+        "coordinates": [
+            145.022034,
+            -37.886759
+        ],
+        "degree_centrality": 1.0585365,
+        "closeness_centrality": 63.006855,
+        "contour_catchment": 7.015236,
+        "nodal_betweenness": 8.065792,
+        "nodal_connectivity": 29.88,
+        "nodal_resilience": -0.45244527,
+        "composite_index": 15.073551,
+        "transfer_propensity": 0
+    },
+    "East Brunswick (Lygon St)": {
+        "coordinates": [
+            144.970964,
+            -37.775858
+        ],
+        "degree_centrality": 1.0341463,
+        "closeness_centrality": 52.045563,
+        "contour_catchment": 7.577615,
+        "nodal_betweenness": 11.13535,
+        "nodal_connectivity": 9.96,
+        "nodal_resilience": -4.2057033,
+        "composite_index": 14.671894,
+        "transfer_propensity": 0
+    },
+    "East Brunswick (Nicholson St)": {
+        "coordinates": [
+            144.980132,
+            -37.7674
+        ],
+        "degree_centrality": 1.0682927,
+        "closeness_centrality": 61.88407,
+        "contour_catchment": 4.13563,
+        "nodal_betweenness": 2.1767359,
+        "nodal_connectivity": 0,
+        "nodal_resilience": -4.4753237,
+        "composite_index": 9.364216,
+        "transfer_propensity": 0
+    },
+    "East Burwood (Blackburn Rd)": {
+        "coordinates": [
+            145.151968,
+            -37.852571
+        ],
+        "degree_centrality": 1.0195122,
+        "closeness_centrality": 82.888145,
+        "contour_catchment": 2.8534453,
+        "nodal_betweenness": 10.328721,
+        "nodal_connectivity": 7.11,
+        "nodal_resilience": -10.044435,
+        "composite_index": 10.269404,
+        "transfer_propensity": 0
+    },
+    "East Burwood (Springvale Rd)": {
+        "coordinates": [
+            145.169327,
+            -37.85487
+        ],
+        "degree_centrality": 0.92195123,
+        "closeness_centrality": 84.250465,
+        "contour_catchment": 5.4410167,
+        "nodal_betweenness": 16.499239,
+        "nodal_connectivity": 25.866,
+        "nodal_resilience": -15.281129,
+        "composite_index": 12.577346,
+        "transfer_propensity": 2.1320593
+    },
+    "East Preston": {
+        "coordinates": [
+            145.011381,
+            -37.738793
+        ],
+        "degree_centrality": 0.89756095,
+        "closeness_centrality": 70.75008,
+        "contour_catchment": 3.9951034,
+        "nodal_betweenness": 16.519032,
+        "nodal_connectivity": 31.1985,
+        "nodal_resilience": -8.540386,
+        "composite_index": 13.67971,
+        "transfer_propensity": 2.700583
+    },
+    "East Richmond": {
+        "coordinates": [
+            144.997859,
+            -37.826107
+        ],
+        "degree_centrality": 0.9414634,
+        "closeness_centrality": 41.582806,
+        "contour_catchment": 19.835167,
+        "nodal_betweenness": 86.0392,
+        "nodal_connectivity": 162.72,
+        "nodal_resilience": -12.385239,
+        "composite_index": 23.517397,
+        "transfer_propensity": 1.1374133
+    },
+    "Elizabeth-Collins": {
+        "coordinates": [
+            144.964071,
+            -37.816184
+        ],
+        "degree_centrality": 0.87317073,
+        "closeness_centrality": 38.66266,
+        "contour_catchment": 19.964529,
+        "nodal_betweenness": 91.84505,
+        "nodal_connectivity": 146.412,
+        "nodal_resilience": -7.0611176,
+        "composite_index": 24.795938,
+        "transfer_propensity": 10.79784
+    },
+    "Eltham": {
+        "coordinates": [
+            145.147484,
+            -37.713931
+        ],
+        "degree_centrality": 0.92195123,
+        "closeness_centrality": 92.209,
+        "contour_catchment": 3.020602,
+        "nodal_betweenness": 5.2132354,
+        "nodal_connectivity": 30.5235,
+        "nodal_resilience": -5.7311196,
+        "composite_index": 11.891759,
+        "transfer_propensity": 0
+    },
+    "Emerald Hill": {
+        "coordinates": [
+            144.96155,
+            -37.83527
+        ],
+        "degree_centrality": 0.98536587,
+        "closeness_centrality": 50.499123,
+        "contour_catchment": 13.249488,
+        "nodal_betweenness": 10.065354,
+        "nodal_connectivity": 43.824,
+        "nodal_resilience": -1.7363976,
+        "composite_index": 18.06273,
+        "transfer_propensity": 0.49972272
+    },
+    "Essendon": {
+        "coordinates": [
+            144.916463,
+            -37.754938
+        ],
+        "degree_centrality": 0.83902436,
+        "closeness_centrality": 60.571243,
+        "contour_catchment": 7.6992493,
+        "nodal_betweenness": 43.90688,
+        "nodal_connectivity": 128.7,
+        "nodal_resilience": -10.285262,
+        "composite_index": 18.133293,
+        "transfer_propensity": 11.813229
+    },
+    "Exhibition-Flinders": {
+        "coordinates": [
+            144.972332,
+            -37.816054
+        ],
+        "degree_centrality": 0.9512195,
+        "closeness_centrality": 41.317657,
+        "contour_catchment": 18.132788,
+        "nodal_betweenness": 23.657022,
+        "nodal_connectivity": 50.796,
+        "nodal_resilience": -3.6649973,
+        "composite_index": 20.866014,
+        "transfer_propensity": 0
+    },
+    "Fitzroy (Brunswick St)": {
+        "coordinates": [
+            144.978525,
+            -37.79833
+        ],
+        "degree_centrality": 0.9902439,
+        "closeness_centrality": 45.92666,
+        "contour_catchment": 12.000438,
+        "nodal_betweenness": 18.713188,
+        "nodal_connectivity": 24.732,
+        "nodal_resilience": -13.738164,
+        "composite_index": 16.767315,
+        "transfer_propensity": 0.8848292
+    },
+    "Fitzroy (Nicholson St)": {
+        "coordinates": [
+            144.974891,
+            -37.797979
+        ],
+        "degree_centrality": 0.98536587,
+        "closeness_centrality": 44.57722,
+        "contour_catchment": 13.428631,
+        "nodal_betweenness": 18.038383,
+        "nodal_connectivity": 29.214,
+        "nodal_resilience": -13.532579,
+        "composite_index": 17.402576,
+        "transfer_propensity": 1.7668582
+    },
+    "Flagstaff": {
+        "coordinates": [
+            144.956414,
+            -37.811731
+        ],
+        "degree_centrality": 0.5902439,
+        "closeness_centrality": 39.63632,
+        "contour_catchment": 24.661856,
+        "nodal_betweenness": 136.77196,
+        "nodal_connectivity": 465.9825,
+        "nodal_resilience": -1.8146571,
+        "composite_index": 29.200695,
+        "transfer_propensity": 22.124008
+    },
+    "Flemington Bridge": {
+        "coordinates": [
+            144.939453,
+            -37.788208
+        ],
+        "degree_centrality": 0.96585363,
+        "closeness_centrality": 47.78234,
+        "contour_catchment": 9.993042,
+        "nodal_betweenness": 47.90954,
+        "nodal_connectivity": 124.524,
+        "nodal_resilience": -4.449907,
+        "composite_index": 20.288128,
+        "transfer_propensity": 2.7882164
+    },
+    "Flinders Street Station": {
+        "coordinates": [
+            144.966086,
+            -37.817874
+        ],
+        "degree_centrality": 0.2902439,
+        "closeness_centrality": 38.246487,
+        "contour_catchment": 27.093729,
+        "nodal_betweenness": 338.69525,
+        "nodal_connectivity": 1173.807,
+        "nodal_resilience": -5.2630625,
+        "composite_index": 35.61282,
+        "transfer_propensity": 133.22691
+    },
+    "Footscray": {
+        "coordinates": [
+            144.901906,
+            -37.801809
+        ],
+        "degree_centrality": 0.77560973,
+        "closeness_centrality": 46.98944,
+        "contour_catchment": 15.643849,
+        "nodal_betweenness": 105.399055,
+        "nodal_connectivity": 612.8595,
+        "nodal_resilience": -3.6328907,
+        "composite_index": 25.480764,
+        "transfer_propensity": 17.24492
+    },
+    "Frankston": {
+        "coordinates": [
+            145.125989,
+            -38.142723
+        ],
+        "degree_centrality": 0.8195122,
+        "closeness_centrality": 116.46727,
+        "contour_catchment": 2.2566764,
+        "nodal_betweenness": 8.831738,
+        "nodal_connectivity": 55.944,
+        "nodal_resilience": 1.9675914,
+        "composite_index": 12.91984,
+        "transfer_propensity": 2.2208493
+    },
+    "Gardenvale": {
+        "coordinates": [
+            145.004054,
+            -37.896687
+        ],
+        "degree_centrality": 0.95609754,
+        "closeness_centrality": 59.60422,
+        "contour_catchment": 11.410772,
+        "nodal_betweenness": 22.683352,
+        "nodal_connectivity": 44.688,
+        "nodal_resilience": -4.6622276,
+        "composite_index": 17.452063,
+        "transfer_propensity": 0
+    },
+    "Gardiner": {
+        "coordinates": [
+            145.052262,
+            -37.853449
+        ],
+        "degree_centrality": 0.95609754,
+        "closeness_centrality": 55.771854,
+        "contour_catchment": 12.421427,
+        "nodal_betweenness": 27.047577,
+        "nodal_connectivity": 79.704,
+        "nodal_resilience": 0.48062333,
+        "composite_index": 19.34614,
+        "transfer_propensity": 1.3248116
+    },
+    "Glen Iris": {
+        "coordinates": [
+            145.058291,
+            -37.85991
+        ],
+        "degree_centrality": 0.9609756,
+        "closeness_centrality": 57.943245,
+        "contour_catchment": 11.6354475,
+        "nodal_betweenness": 20.193172,
+        "nodal_connectivity": 48.156,
+        "nodal_resilience": 2.6273115,
+        "composite_index": 18.11331,
+        "transfer_propensity": 0.76041734
+    },
+    "Glen Waverley": {
+        "coordinates": [
+            145.162105,
+            -37.8796
+        ],
+        "degree_centrality": 0.9170732,
+        "closeness_centrality": 82.347534,
+        "contour_catchment": 4.9469843,
+        "nodal_betweenness": 12.22494,
+        "nodal_connectivity": 24.612,
+        "nodal_resilience": -7.891401,
+        "composite_index": 13.0429735,
+        "transfer_propensity": 1.8609616
+    },
+    "Glenferrie": {
+        "coordinates": [
+            145.035485,
+            -37.821462
+        ],
+        "degree_centrality": 0.8829268,
+        "closeness_centrality": 47.672413,
+        "contour_catchment": 17.490477,
+        "nodal_betweenness": 61.83366,
+        "nodal_connectivity": 79.704,
+        "nodal_resilience": -12.945001,
+        "composite_index": 20.974627,
+        "transfer_propensity": 1.4181426
+    },
+    "Glenhuntly": {
+        "coordinates": [
+            145.041952,
+            -37.889324
+        ],
+        "degree_centrality": 0.8585366,
+        "closeness_centrality": 51.534733,
+        "contour_catchment": 13.760064,
+        "nodal_betweenness": 65.44345,
+        "nodal_connectivity": 112.086,
+        "nodal_resilience": -10.977616,
+        "composite_index": 20.662037,
+        "transfer_propensity": 5.748634
+    },
+    "Glenroy": {
+        "coordinates": [
+            144.916915,
+            -37.704154
+        ],
+        "degree_centrality": 1,
+        "closeness_centrality": 82.50825,
+        "contour_catchment": 3.4442184,
+        "nodal_betweenness": 17.6795,
+        "nodal_connectivity": 16.191,
+        "nodal_resilience": -6.4162498,
+        "composite_index": 12.380084,
+        "transfer_propensity": 0
+    },
+    "Greensborough": {
+        "coordinates": [
+            145.10798,
+            -37.704003
+        ],
+        "degree_centrality": 0.84390247,
+        "closeness_centrality": 92.62814,
+        "contour_catchment": 4.9790463,
+        "nodal_betweenness": 13.864256,
+        "nodal_connectivity": 100.3275,
+        "nodal_resilience": -2.961889,
+        "composite_index": 15.1289625,
+        "transfer_propensity": 1.2262079
+    },
+    "Hampton": {
+        "coordinates": [
+            145.001469,
+            -37.938278
+        ],
+        "degree_centrality": 1.190244,
+        "closeness_centrality": 76.25788,
+        "contour_catchment": 4.616421,
+        "nodal_betweenness": 9.064209,
+        "nodal_connectivity": 21.588,
+        "nodal_resilience": 0.5351486,
+        "composite_index": 13.238667,
+        "transfer_propensity": 0
+    },
+    "Hawthorn": {
+        "coordinates": [
+            145.023705,
+            -37.821265
+        ],
+        "degree_centrality": 0.8926829,
+        "closeness_centrality": 44.636414,
+        "contour_catchment": 19.148558,
+        "nodal_betweenness": 81.1335,
+        "nodal_connectivity": 82.692,
+        "nodal_resilience": -15.628495,
+        "composite_index": 21.86123,
+        "transfer_propensity": 7.124345
+    },
+    "Haymarket": {
+        "coordinates": [
+            144.957189,
+            -37.801239
+        ],
+        "degree_centrality": 0.96585363,
+        "closeness_centrality": 43.82988,
+        "contour_catchment": 14.612361,
+        "nodal_betweenness": 39.812126,
+        "nodal_connectivity": 67.23,
+        "nodal_resilience": -8.718332,
+        "composite_index": 20.255789,
+        "transfer_propensity": 1.1987339
+    },
+    "Heidelberg": {
+        "coordinates": [
+            145.060618,
+            -37.75711
+        ],
+        "degree_centrality": 0.8780488,
+        "closeness_centrality": 75.19983,
+        "contour_catchment": 5.477968,
+        "nodal_betweenness": 21.015491,
+        "nodal_connectivity": 54.81,
+        "nodal_resilience": -5.669166,
+        "composite_index": 15.24724,
+        "transfer_propensity": 2.2422278
+    },
+    "Highpoint": {
+        "coordinates": [
+            144.885527,
+            -37.77559
+        ],
+        "degree_centrality": 1.7121952,
+        "closeness_centrality": 74.909195,
+        "contour_catchment": 1.5017205,
+        "nodal_betweenness": 4.1627884,
+        "nodal_connectivity": 7.488,
+        "nodal_resilience": -3.430039,
+        "composite_index": 9.322957,
+        "transfer_propensity": 0
+    },
+    "Holmesglen": {
+        "coordinates": [
+            145.091836,
+            -37.874337
+        ],
+        "degree_centrality": 0.8926829,
+        "closeness_centrality": 67.46315,
+        "contour_catchment": 7.471682,
+        "nodal_betweenness": 18.484047,
+        "nodal_connectivity": 69.3,
+        "nodal_resilience": 0.35858333,
+        "composite_index": 16.961008,
+        "transfer_propensity": 1.6817707
+    },
+    "Hoppers Crossing": {
+        "coordinates": [
+            144.701516,
+            -37.883167
+        ],
+        "degree_centrality": 0.9268293,
+        "closeness_centrality": 94.95451,
+        "contour_catchment": 1.5372679,
+        "nodal_betweenness": 7.42346,
+        "nodal_connectivity": 33.894,
+        "nodal_resilience": 7.119746,
+        "composite_index": 12.070338,
+        "transfer_propensity": 1.2263968
+    },
+    "Ivanhoe": {
+        "coordinates": [
+            145.045376,
+            -37.768906
+        ],
+        "degree_centrality": 0.99512196,
+        "closeness_centrality": 70.0442,
+        "contour_catchment": 4.6492133,
+        "nodal_betweenness": 23.487514,
+        "nodal_connectivity": 16.191,
+        "nodal_resilience": -6.857972,
+        "composite_index": 13.615924,
+        "transfer_propensity": 0
+    },
+    "Jewell": {
+        "coordinates": [
+            144.958644,
+            -37.774856
+        ],
+        "degree_centrality": 1.0390244,
+        "closeness_centrality": 55.395123,
+        "contour_catchment": 4.6018343,
+        "nodal_betweenness": 18.421892,
+        "nodal_connectivity": 32.382,
+        "nodal_resilience": -1.5275931,
+        "composite_index": 15.538361,
+        "transfer_propensity": 0
+    },
+    "Jolimont": {
+        "coordinates": [
+            144.983377,
+            -37.816436
+        ],
+        "degree_centrality": 0.8682927,
+        "closeness_centrality": 40.524464,
+        "contour_catchment": 21.140085,
+        "nodal_betweenness": 94.91336,
+        "nodal_connectivity": 177.336,
+        "nodal_resilience": -10.382555,
+        "composite_index": 24.60791,
+        "transfer_propensity": 5.4945793
+    },
+    "Kew Junction": {
+        "coordinates": [
+            145.028934,
+            -37.807377
+        ],
+        "degree_centrality": 0.9512195,
+        "closeness_centrality": 52.872047,
+        "contour_catchment": 10.091423,
+        "nodal_betweenness": 28.510918,
+        "nodal_connectivity": 56.88,
+        "nodal_resilience": -10.868358,
+        "composite_index": 17.471863,
+        "transfer_propensity": 1.536131
+    },
+    "Knox City": {
+        "coordinates": [
+            145.241352,
+            -37.870884
+        ],
+        "degree_centrality": 1.3951219,
+        "closeness_centrality": 106.24305,
+        "contour_catchment": 1.6886055,
+        "nodal_betweenness": 6.1782427,
+        "nodal_connectivity": 5.292,
+        "nodal_resilience": -4.2691903,
+        "composite_index": 8.527134,
+        "transfer_propensity": 0.13593806
+    },
+    "Kooyong": {
+        "coordinates": [
+            145.03233,
+            -37.839625
+        ],
+        "degree_centrality": 0.95853657,
+        "closeness_centrality": 50.144756,
+        "contour_catchment": 14.124993,
+        "nodal_betweenness": 31.578943,
+        "nodal_connectivity": 79.704,
+        "nodal_resilience": -1.831427,
+        "composite_index": 20.15871,
+        "transfer_propensity": 1.3277882
+    },
+    "Latrobe University": {
+        "coordinates": [
+            145.043103,
+            -37.716919
+        ],
+        "degree_centrality": 1.0146341,
+        "closeness_centrality": 83.51149,
+        "contour_catchment": 2.3587098,
+        "nodal_betweenness": 7.0307927,
+        "nodal_connectivity": 8.037,
+        "nodal_resilience": -3.0600786,
+        "composite_index": 10.719173,
+        "transfer_propensity": 0
+    },
+    "Malvern (Wattletree Rd)": {
+        "coordinates": [
+            145.028442,
+            -37.862402
+        ],
+        "degree_centrality": 1.0439024,
+        "closeness_centrality": 51.584293,
+        "contour_catchment": 9.562756,
+        "nodal_betweenness": 7.4404006,
+        "nodal_connectivity": 29.88,
+        "nodal_resilience": -3.3894155,
+        "composite_index": 16.2003,
+        "transfer_propensity": 0.33732387
+    },
+    "Malvern Station": {
+        "coordinates": [
+            145.02919,
+            -37.866269
+        ],
+        "degree_centrality": 0.83902436,
+        "closeness_centrality": 48.315365,
+        "contour_catchment": 16.272512,
+        "nodal_betweenness": 116.49383,
+        "nodal_connectivity": 112.086,
+        "nodal_resilience": -9.878361,
+        "composite_index": 22.955542,
+        "transfer_propensity": 7.3741803
+    },
+    "Market-Flinders": {
+        "coordinates": [
+            144.961097,
+            -37.819257
+        ],
+        "degree_centrality": 0.8292683,
+        "closeness_centrality": 40.024147,
+        "contour_catchment": 17.570023,
+        "nodal_betweenness": 51.06903,
+        "nodal_connectivity": 108.06,
+        "nodal_resilience": -8.168523,
+        "composite_index": 22.628214,
+        "transfer_propensity": 7.8957696
+    },
+    "Melbourne Central": {
+        "coordinates": [
+            144.962568,
+            -37.809934
+        ],
+        "degree_centrality": 0.4292683,
+        "closeness_centrality": 39.08661,
+        "contour_catchment": 25.130007,
+        "nodal_betweenness": 217.5019,
+        "nodal_connectivity": 1105.5555,
+        "nodal_resilience": -2.5002854,
+        "composite_index": 32.5423,
+        "transfer_propensity": 60.22004
+    },
+    "Melbourne University": {
+        "coordinates": [
+            144.964344,
+            -37.798351
+        ],
+        "degree_centrality": 0.8926829,
+        "closeness_centrality": 42.59334,
+        "contour_catchment": 13.213182,
+        "nodal_betweenness": 33.13818,
+        "nodal_connectivity": 27.39,
+        "nodal_resilience": -1.608924,
+        "composite_index": 19.89242,
+        "transfer_propensity": 0.11049981
+    },
+    "Mentone": {
+        "coordinates": [
+            145.065152,
+            -37.982063
+        ],
+        "degree_centrality": 0.81463414,
+        "closeness_centrality": 77.601364,
+        "contour_catchment": 4.2341394,
+        "nodal_betweenness": 29.70563,
+        "nodal_connectivity": 101.682,
+        "nodal_resilience": -1.438223,
+        "composite_index": 16.479864,
+        "transfer_propensity": 0.12669984
+    },
+    "Middle Brighton": {
+        "coordinates": [
+            144.996602,
+            -37.914704
+        ],
+        "degree_centrality": 1.190244,
+        "closeness_centrality": 66.40422,
+        "contour_catchment": 7.8250403,
+        "nodal_betweenness": 13.267396,
+        "nodal_connectivity": 21.588,
+        "nodal_resilience": -2.0111225,
+        "composite_index": 14.746523,
+        "transfer_propensity": 0
+    },
+    "Monash University": {
+        "coordinates": [
+            145.131386,
+            -37.91509
+        ],
+        "degree_centrality": 1.5365853,
+        "closeness_centrality": 64.42488,
+        "contour_catchment": 3.4757888,
+        "nodal_betweenness": 19.320097,
+        "nodal_connectivity": 4.914,
+        "nodal_resilience": -22.781193,
+        "composite_index": 9.331921,
+        "transfer_propensity": 0
+    },
+    "Moonee Ponds (Town Hall)": {
+        "coordinates": [
+            144.924952,
+            -37.767159
+        ],
+        "degree_centrality": 1.004878,
+        "closeness_centrality": 58.964706,
+        "contour_catchment": 5.6310725,
+        "nodal_betweenness": 8.4096985,
+        "nodal_connectivity": 26.892,
+        "nodal_resilience": -0.80744106,
+        "composite_index": 14.888688,
+        "transfer_propensity": 0.98122245
+    },
+    "Moonee Ponds Station": {
+        "coordinates": [
+            144.918922,
+            -37.765704
+        ],
+        "degree_centrality": 1,
+        "closeness_centrality": 57.079243,
+        "contour_catchment": 4.975015,
+        "nodal_betweenness": 44.61977,
+        "nodal_connectivity": 32.382,
+        "nodal_resilience": -11.630547,
+        "composite_index": 15.569333,
+        "transfer_propensity": 0
+    },
+    "Moorabbin": {
+        "coordinates": [
+            145.036588,
+            -37.934461
+        ],
+        "degree_centrality": 0.9170732,
+        "closeness_centrality": 65.973564,
+        "contour_catchment": 5.2155237,
+        "nodal_betweenness": 42.946552,
+        "nodal_connectivity": 32.382,
+        "nodal_resilience": -6.882244,
+        "composite_index": 15.7603855,
+        "transfer_propensity": 0
+    },
+    "Mordialloc": {
+        "coordinates": [
+            145.087292,
+            -38.006327
+        ],
+        "degree_centrality": 0.8195122,
+        "closeness_centrality": 85.271416,
+        "contour_catchment": 3.3478317,
+        "nodal_betweenness": 21.805485,
+        "nodal_connectivity": 66.276,
+        "nodal_resilience": 0.50680065,
+        "composite_index": 15.173709,
+        "transfer_propensity": 0
+    },
+    "Moreland": {
+        "coordinates": [
+            144.963158,
+            -37.755297
+        ],
+        "degree_centrality": 0.95609754,
+        "closeness_centrality": 62.185585,
+        "contour_catchment": 7.173027,
+        "nodal_betweenness": 20.660845,
+        "nodal_connectivity": 114.564,
+        "nodal_resilience": -1.5464796,
+        "composite_index": 17.522572,
+        "transfer_propensity": 1.321369
+    },
+    "Mount Waverley": {
+        "coordinates": [
+            145.128138,
+            -37.875234
+        ],
+        "degree_centrality": 1.0146341,
+        "closeness_centrality": 74.97754,
+        "contour_catchment": 4.8015747,
+        "nodal_betweenness": 9.65163,
+        "nodal_connectivity": 21.588,
+        "nodal_resilience": 0.5247575,
+        "composite_index": 13.690801,
+        "transfer_propensity": 0
+    },
+    "Newmarket": {
+        "coordinates": [
+            144.929104,
+            -37.78805
+        ],
+        "degree_centrality": 0.96585363,
+        "closeness_centrality": 49.01678,
+        "contour_catchment": 7.1386104,
+        "nodal_betweenness": 56.62781,
+        "nodal_connectivity": 70.983,
+        "nodal_resilience": -6.935096,
+        "composite_index": 18.813192,
+        "transfer_propensity": 3.1117811
+    },
+    "Newport": {
+        "coordinates": [
+            144.883467,
+            -37.842464
+        ],
+        "degree_centrality": 0.91219515,
+        "closeness_centrality": 59.22144,
+        "contour_catchment": 6.9020295,
+        "nodal_betweenness": 28.443869,
+        "nodal_connectivity": 80.955,
+        "nodal_resilience": 1.4854715,
+        "composite_index": 17.92264,
+        "transfer_propensity": 4.810863
+    },
+    "Nicholson-Victoria": {
+        "coordinates": [
+            144.973222,
+            -37.807925
+        ],
+        "degree_centrality": 0.86341465,
+        "closeness_centrality": 39.38095,
+        "contour_catchment": 16.176191,
+        "nodal_betweenness": 75.40542,
+        "nodal_connectivity": 136.428,
+        "nodal_resilience": -13.344225,
+        "composite_index": 22.770329,
+        "transfer_propensity": 4.7474003
+    },
+    "Niddrie (Keilor Rd)": {
+        "coordinates": [
+            144.892501,
+            -37.737356
+        ],
+        "degree_centrality": 1.0390244,
+        "closeness_centrality": 73.137245,
+        "contour_catchment": 1.7594367,
+        "nodal_betweenness": 8.332869,
+        "nodal_connectivity": 7.47,
+        "nodal_resilience": -6.947655,
+        "composite_index": 10.336224,
+        "transfer_propensity": 0
+    },
+    "North Brighton": {
+        "coordinates": [
+            145.002559,
+            -37.904757
+        ],
+        "degree_centrality": 1.190244,
+        "closeness_centrality": 62.50178,
+        "contour_catchment": 10.606517,
+        "nodal_betweenness": 18.501177,
+        "nodal_connectivity": 21.588,
+        "nodal_resilience": -3.4254026,
+        "composite_index": 15.8140955,
+        "transfer_propensity": 0
+    },
+    "North Melbourne Station": {
+        "coordinates": [
+            144.941784,
+            -37.807043
+        ],
+        "degree_centrality": 0.8195122,
+        "closeness_centrality": 41.100243,
+        "contour_catchment": 21.009209,
+        "nodal_betweenness": 194.11612,
+        "nodal_connectivity": 323.82,
+        "nodal_resilience": -4.8866158,
+        "composite_index": 27.977943,
+        "transfer_propensity": 22.290499
+    },
+    "North Melbourne (Victoria St)": {
+        "coordinates": [
+            144.949244,
+            -37.805197
+        ],
+        "degree_centrality": 1.004878,
+        "closeness_centrality": 43.039658,
+        "contour_catchment": 15.422229,
+        "nodal_betweenness": 12.87779,
+        "nodal_connectivity": 37.35,
+        "nodal_resilience": -3.7520363,
+        "composite_index": 19.064707,
+        "transfer_propensity": 0.17505826
+    },
+    "North Richmond Station": {
+        "coordinates": [
+            144.992245,
+            -37.809745
+        ],
+        "degree_centrality": 0.8585366,
+        "closeness_centrality": 42.346657,
+        "contour_catchment": 21.243565,
+        "nodal_betweenness": 102.18935,
+        "nodal_connectivity": 233.01,
+        "nodal_resilience": -19.396355,
+        "composite_index": 23.794106,
+        "transfer_propensity": 14.400564
+    },
+    "Northcote Station": {
+        "coordinates": [
+            144.995147,
+            -37.769797
+        ],
+        "degree_centrality": 0.98536587,
+        "closeness_centrality": 57.38534,
+        "contour_catchment": 5.6188154,
+        "nodal_betweenness": 33.50095,
+        "nodal_connectivity": 32.382,
+        "nodal_resilience": -11.131251,
+        "composite_index": 15.410717,
+        "transfer_propensity": 0
+    },
+    "Northcote (High St)": {
+        "coordinates": [
+            144.999044,
+            -37.769381
+        ],
+        "degree_centrality": 1.0146341,
+        "closeness_centrality": 60.47527,
+        "contour_catchment": 4.3534336,
+        "nodal_betweenness": 12.205804,
+        "nodal_connectivity": 14.94,
+        "nodal_resilience": -8.12873,
+        "composite_index": 13.115153,
+        "transfer_propensity": 0
+    },
+    "North Fitzroy": {
+        "coordinates": [
+            144.983732,
+            -37.783288
+        ],
+        "degree_centrality": 1.0634147,
+        "closeness_centrality": 52.953587,
+        "contour_catchment": 8.249853,
+        "nodal_betweenness": 5.830921,
+        "nodal_connectivity": 24.732,
+        "nodal_resilience": -7.3549533,
+        "composite_index": 14.884038,
+        "transfer_propensity": 0.124718726
+    },
+    "Northland": {
+        "coordinates": [
+            145.027856,
+            -37.740567
+        ],
+        "degree_centrality": 1.0585365,
+        "closeness_centrality": 83.324,
+        "contour_catchment": 2.466151,
+        "nodal_betweenness": 4.4812837,
+        "nodal_connectivity": 2.079,
+        "nodal_resilience": -7.3597546,
+        "composite_index": 8.45545,
+        "transfer_propensity": 0
+    },
+    "Nunawading": {
+        "coordinates": [
+            145.177735,
+            -37.820183
+        ],
+        "degree_centrality": 0.8195122,
+        "closeness_centrality": 80.21766,
+        "contour_catchment": 7.2096415,
+        "nodal_betweenness": 35.3773,
+        "nodal_connectivity": 123.06,
+        "nodal_resilience": -12.233083,
+        "composite_index": 16.471357,
+        "transfer_propensity": 4.8053875
+    },
+    "Oakleigh": {
+        "coordinates": [
+            145.088061,
+            -37.900395
+        ],
+        "degree_centrality": 0.8341463,
+        "closeness_centrality": 56.434658,
+        "contour_catchment": 10.017414,
+        "nodal_betweenness": 95.70167,
+        "nodal_connectivity": 144.648,
+        "nodal_resilience": -14.367716,
+        "composite_index": 20.199219,
+        "transfer_propensity": 2.7473419
+    },
+    "Parliament": {
+        "coordinates": [
+            144.973036,
+            -37.811416
+        ],
+        "degree_centrality": 0.44878048,
+        "closeness_centrality": 38.29629,
+        "contour_catchment": 26.39551,
+        "nodal_betweenness": 238.64601,
+        "nodal_connectivity": 1275.795,
+        "nodal_resilience": -7.4896026,
+        "composite_index": 32.634422,
+        "transfer_propensity": 76.541534
+    },
+    "Port Melbourne Station": {
+        "coordinates": [
+            144.933172,
+            -37.840359
+        ],
+        "degree_centrality": 1.0390244,
+        "closeness_centrality": 54.98973,
+        "contour_catchment": 8.531879,
+        "nodal_betweenness": 4.659137,
+        "nodal_connectivity": 0,
+        "nodal_resilience": -3.4387832,
+        "composite_index": 11.690153,
+        "transfer_propensity": 0
+    },
+    "Prahran (Commercial Rd)": {
+        "coordinates": [
+            144.994127,
+            -37.846811
+        ],
+        "degree_centrality": 0.9170732,
+        "closeness_centrality": 48.190975,
+        "contour_catchment": 12.99146,
+        "nodal_betweenness": 7.6599865,
+        "nodal_connectivity": 38.952,
+        "nodal_resilience": 3.3142292,
+        "composite_index": 18.258852,
+        "transfer_propensity": 0.40684545
+    },
+    "Prahran (High St)": {
+        "coordinates": [
+            144.993383,
+            -37.85181
+        ],
+        "degree_centrality": 1.0439024,
+        "closeness_centrality": 45.23873,
+        "contour_catchment": 10.692649,
+        "nodal_betweenness": 6.586206,
+        "nodal_connectivity": 29.88,
+        "nodal_resilience": -2.431402,
+        "composite_index": 17.152246,
+        "transfer_propensity": 0.14906427
+    },
+    "Prahran Station": {
+        "coordinates": [
+            144.989669,
+            -37.849819
+        ],
+        "degree_centrality": 1.0243902,
+        "closeness_centrality": 42.713196,
+        "contour_catchment": 17.099281,
+        "nodal_betweenness": 77.02736,
+        "nodal_connectivity": 79.704,
+        "nodal_resilience": -14.0293045,
+        "composite_index": 21.508484,
+        "transfer_propensity": 5.0682383
+    },
+    "Preston": {
+        "coordinates": [
+            145.000326,
+            -37.738681
+        ],
+        "degree_centrality": 0.8682927,
+        "closeness_centrality": 67.97141,
+        "contour_catchment": 7.0844517,
+        "nodal_betweenness": 39.572212,
+        "nodal_connectivity": 54.81,
+        "nodal_resilience": -12.749042,
+        "composite_index": 16.077288,
+        "transfer_propensity": 6.5946712
+    },
+    "Queen-Bourke": {
+        "coordinates": [
+            144.960699,
+            -37.814937
+        ],
+        "degree_centrality": 0.84390247,
+        "closeness_centrality": 40.264683,
+        "contour_catchment": 14.976663,
+        "nodal_betweenness": 37.676247,
+        "nodal_connectivity": 73.737,
+        "nodal_resilience": -2.3468037,
+        "composite_index": 21.860247,
+        "transfer_propensity": 3.4005387
+    },
+    "Queen-Latrobe": {
+        "coordinates": [
+            144.958925,
+            -37.811003
+        ],
+        "degree_centrality": 0.9512195,
+        "closeness_centrality": 40.8691,
+        "contour_catchment": 14.5940895,
+        "nodal_betweenness": 9.825036,
+        "nodal_connectivity": 40.3695,
+        "nodal_resilience": 4.5972953,
+        "composite_index": 19.61587,
+        "transfer_propensity": 1.5865737
+    },
+    "Queen-Lonsdale": {
+        "coordinates": [
+            144.959782,
+            -37.812946
+        ],
+        "degree_centrality": 0.87317073,
+        "closeness_centrality": 40.703537,
+        "contour_catchment": 13.872419,
+        "nodal_betweenness": 16.798788,
+        "nodal_connectivity": 53.865,
+        "nodal_resilience": 1.2455373,
+        "composite_index": 20.451653,
+        "transfer_propensity": 2.0329397
+    },
+    "QV Markets": {
+        "coordinates": [
+            144.95954,
+            -37.806291
+        ],
+        "degree_centrality": 1.0097561,
+        "closeness_centrality": 41.389782,
+        "contour_catchment": 16.40658,
+        "nodal_betweenness": 53.56162,
+        "nodal_connectivity": 49.8,
+        "nodal_resilience": -7.203697,
+        "composite_index": 21.180428,
+        "transfer_propensity": 0
+    },
+    "Reservoir": {
+        "coordinates": [
+            145.006704,
+            -37.716935
+        ],
+        "degree_centrality": 0.98536587,
+        "closeness_centrality": 76.143875,
+        "contour_catchment": 3.6732364,
+        "nodal_betweenness": 26.246885,
+        "nodal_connectivity": 16.191,
+        "nodal_resilience": -8.501563,
+        "composite_index": 12.940169,
+        "transfer_propensity": 0
+    },
+    "Richmond Station": {
+        "coordinates": [
+            144.988988,
+            -37.82458
+        ],
+        "degree_centrality": 0.61219513,
+        "closeness_centrality": 38.184513,
+        "contour_catchment": 26.248505,
+        "nodal_betweenness": 343.96396,
+        "nodal_connectivity": 964.404,
+        "nodal_resilience": -17.259073,
+        "composite_index": 31.86127,
+        "transfer_propensity": 106.51578
+    },
+    "Richmond (Bridge Rd)": {
+        "coordinates": [
+            144.990028,
+            -37.817562
+        ],
+        "degree_centrality": 0.9268293,
+        "closeness_centrality": 40.68478,
+        "contour_catchment": 20.125973,
+        "nodal_betweenness": 59.958355,
+        "nodal_connectivity": 42.66,
+        "nodal_resilience": -24.922354,
+        "composite_index": 20.026201,
+        "transfer_propensity": 7.8599973
+    },
+    "Richmond (Town Hall)": {
+        "coordinates": [
+            144.999113,
+            -37.818584
+        ],
+        "degree_centrality": 0.93658537,
+        "closeness_centrality": 43.59273,
+        "contour_catchment": 14.882431,
+        "nodal_betweenness": 31.973259,
+        "nodal_connectivity": 50.796,
+        "nodal_resilience": -12.643516,
+        "composite_index": 19.306437,
+        "transfer_propensity": 2.0346012
+    },
+    "Ringwood": {
+        "coordinates": [
+            145.229052,
+            -37.815809
+        ],
+        "degree_centrality": 0.87317073,
+        "closeness_centrality": 93.09871,
+        "contour_catchment": 4.3426137,
+        "nodal_betweenness": 21.751207,
+        "nodal_connectivity": 92.4,
+        "nodal_resilience": -3.0383859,
+        "composite_index": 15.182763,
+        "transfer_propensity": 2.0518236
+    },
+    "Riversdale": {
+        "coordinates": [
+            145.069575,
+            -37.832772
+        ],
+        "degree_centrality": 1.0390244,
+        "closeness_centrality": 59.690926,
+        "contour_catchment": 5.409449,
+        "nodal_betweenness": 12.204664,
+        "nodal_connectivity": 82.692,
+        "nodal_resilience": -4.7937326,
+        "composite_index": 15.73944,
+        "transfer_propensity": 1.3702466
+    },
+    "Rowville": {
+        "coordinates": [
+            145.234887,
+            -37.91758
+        ],
+        "degree_centrality": 1.2975609,
+        "closeness_centrality": 94.758026,
+        "contour_catchment": 3.6117845,
+        "nodal_betweenness": 4.953268,
+        "nodal_connectivity": 4.536,
+        "nodal_resilience": -14.205814,
+        "composite_index": 8.337233,
+        "transfer_propensity": 1.0905954
+    },
+    "Roxburgh Park": {
+        "coordinates": [
+            144.934517,
+            -37.638106
+        ],
+        "degree_centrality": 0.902439,
+        "closeness_centrality": 102.60812,
+        "contour_catchment": 2.5523758,
+        "nodal_betweenness": 4.2924304,
+        "nodal_connectivity": 53.109,
+        "nodal_resilience": 0.7890202,
+        "composite_index": 12.644265,
+        "transfer_propensity": 0.76225066
+    },
+    "Royal Park": {
+        "coordinates": [
+            144.951312,
+            -37.780945
+        ],
+        "degree_centrality": 0.98536587,
+        "closeness_centrality": 51.642952,
+        "contour_catchment": 9.671002,
+        "nodal_betweenness": 29.363377,
+        "nodal_connectivity": 63.513,
+        "nodal_resilience": -2.7954633,
+        "composite_index": 18.532217,
+        "transfer_propensity": 1.8721894
+    },
+    "Sandringham": {
+        "coordinates": [
+            145.004149,
+            -37.951672
+        ],
+        "degree_centrality": 1.190244,
+        "closeness_centrality": 81.23349,
+        "contour_catchment": 4.1313577,
+        "nodal_betweenness": 3.8036916,
+        "nodal_connectivity": 11.55,
+        "nodal_resilience": 1.1260401,
+        "composite_index": 11.676138,
+        "transfer_propensity": 0
+    },
+    "South Melbourne Beach": {
+        "coordinates": [
+            144.948254,
+            -37.847586
+        ],
+        "degree_centrality": 1.0585365,
+        "closeness_centrality": 61.838684,
+        "contour_catchment": 6.3816752,
+        "nodal_betweenness": 1.8236872,
+        "nodal_connectivity": 0,
+        "nodal_resilience": 0.7727887,
+        "composite_index": 10.597924,
+        "transfer_propensity": 0
+    },
+    "South Melbourne Station": {
+        "coordinates": [
+            144.955334,
+            -37.833253
+        ],
+        "degree_centrality": 1.0682927,
+        "closeness_centrality": 49.024586,
+        "contour_catchment": 11.6156,
+        "nodal_betweenness": 7.659169,
+        "nodal_connectivity": 14.94,
+        "nodal_resilience": -3.056248,
+        "composite_index": 16.180162,
+        "transfer_propensity": 0
+    },
+    "South Morang": {
+        "coordinates": [
+            145.067797,
+            -37.649039
+        ],
+        "degree_centrality": 0.8829268,
+        "closeness_centrality": 105.73015,
+        "contour_catchment": 3.022946,
+        "nodal_betweenness": 6.061071,
+        "nodal_connectivity": 56.5425,
+        "nodal_resilience": 0.324975,
+        "composite_index": 13.090423,
+        "transfer_propensity": 1.0084056
+    },
+    "South Yarra": {
+        "coordinates": [
+            144.991999,
+            -37.838992
+        ],
+        "degree_centrality": 0.7512195,
+        "closeness_centrality": 39.445465,
+        "contour_catchment": 20.965628,
+        "nodal_betweenness": 253.08022,
+        "nodal_connectivity": 365.328,
+        "nodal_resilience": -13.97777,
+        "composite_index": 28.413557,
+        "transfer_propensity": 27.426214
+    },
+    "Southbank": {
+        "coordinates": [
+            144.960868,
+            -37.823157
+        ],
+        "degree_centrality": 0.9609756,
+        "closeness_centrality": 42.180416,
+        "contour_catchment": 14.237675,
+        "nodal_betweenness": 21.254412,
+        "nodal_connectivity": 30.249,
+        "nodal_resilience": -9.51132,
+        "composite_index": 18.613897,
+        "transfer_propensity": 0.2354486
+    },
+    "Southern Cross Station": {
+        "coordinates": [
+            144.953718,
+            -37.818069
+        ],
+        "degree_centrality": 0.3804878,
+        "closeness_centrality": 39.23978,
+        "contour_catchment": 24.257164,
+        "nodal_betweenness": 253.56535,
+        "nodal_connectivity": 1172.9445,
+        "nodal_resilience": -3.9011002,
+        "composite_index": 33.19637,
+        "transfer_propensity": 82.165726
+    },
+    "Spencer-Flinders": {
+        "coordinates": [
+            144.955093,
+            -37.821081
+        ],
+        "degree_centrality": 0.8317073,
+        "closeness_centrality": 41.131195,
+        "contour_catchment": 15.937642,
+        "nodal_betweenness": 60.653732,
+        "nodal_connectivity": 109.062,
+        "nodal_resilience": -5.6716566,
+        "composite_index": 22.782345,
+        "transfer_propensity": 4.511053
+    },
+    "Spencer-Latrobe": {
+        "coordinates": [
+            144.951485,
+            -37.813163
+        ],
+        "degree_centrality": 0.88780487,
+        "closeness_centrality": 42.45466,
+        "contour_catchment": 14.552457,
+        "nodal_betweenness": 22.87972,
+        "nodal_connectivity": 75.768,
+        "nodal_resilience": 0.37761763,
+        "composite_index": 21.01555,
+        "transfer_propensity": 0.35564837
+    },
+    "Springvale": {
+        "coordinates": [
+            145.153037,
+            -37.949262
+        ],
+        "degree_centrality": 0.88780487,
+        "closeness_centrality": 69.81132,
+        "contour_catchment": 7.089077,
+        "nodal_betweenness": 58.070873,
+        "nodal_connectivity": 101.682,
+        "nodal_resilience": -14.32458,
+        "composite_index": 17.071686,
+        "transfer_propensity": 4.671582
+    },
+    "St Albans": {
+        "coordinates": [
+            144.79995,
+            -37.745037
+        ],
+        "degree_centrality": 1.0341463,
+        "closeness_centrality": 84.05349,
+        "contour_catchment": 3.3467164,
+        "nodal_betweenness": 6.9094305,
+        "nodal_connectivity": 16.191,
+        "nodal_resilience": 0.84802794,
+        "composite_index": 12.221447,
+        "transfer_propensity": 0
+    },
+    "St Kilda (Acland St)": {
+        "coordinates": [
+            144.980806,
+            -37.869521
+        ],
+        "degree_centrality": 1.0097561,
+        "closeness_centrality": 55.707172,
+        "contour_catchment": 9.690542,
+        "nodal_betweenness": 4.2479033,
+        "nodal_connectivity": 12.006,
+        "nodal_resilience": 3.6183157,
+        "composite_index": 15.04027,
+        "transfer_propensity": 0.17281686
+    },
+    "St Kilda (Fitzroy St)": {
+        "coordinates": [
+            144.974708,
+            -37.861321
+        ],
+        "degree_centrality": 0.93658537,
+        "closeness_centrality": 53.358585,
+        "contour_catchment": 11.84889,
+        "nodal_betweenness": 9.308312,
+        "nodal_connectivity": 61.752,
+        "nodal_resilience": 1.1625609,
+        "composite_index": 18.131939,
+        "transfer_propensity": 0.4635761
+    },
+    "St Kilda (Town Hall)": {
+        "coordinates": [
+            144.98717,
+            -37.867992
+        ],
+        "degree_centrality": 1.0097561,
+        "closeness_centrality": 51.38246,
+        "contour_catchment": 8.657158,
+        "nodal_betweenness": 9.616948,
+        "nodal_connectivity": 44.82,
+        "nodal_resilience": 3.39643,
+        "composite_index": 17.082466,
+        "transfer_propensity": 0
+    },
+    "St Kilda Junction": {
+        "coordinates": [
+            144.982999,
+            -37.855969
+        ],
+        "degree_centrality": 0.97073174,
+        "closeness_centrality": 45.890316,
+        "contour_catchment": 13.783651,
+        "nodal_betweenness": 34.023808,
+        "nodal_connectivity": 135.84,
+        "nodal_resilience": 0.8477819,
+        "composite_index": 21.408676,
+        "transfer_propensity": 3.233852
+    },
+    "St Kilda-Commercial": {
+        "coordinates": [
+            144.978682,
+            -37.844908
+        ],
+        "degree_centrality": 0.84390247,
+        "closeness_centrality": 44.266804,
+        "contour_catchment": 14.079036,
+        "nodal_betweenness": 47.452316,
+        "nodal_connectivity": 75.768,
+        "nodal_resilience": 0.12731941,
+        "composite_index": 21.822489,
+        "transfer_propensity": 0.79568666
+    },
+    "Domain": {
+        "coordinates": [
+            144.972211,
+            -37.832653
+        ],
+        "degree_centrality": 0.7853659,
+        "closeness_centrality": 42.1299,
+        "contour_catchment": 16.933575,
+        "nodal_betweenness": 64.827934,
+        "nodal_connectivity": 136.062,
+        "nodal_resilience": -2.6663556,
+        "composite_index": 23.68045,
+        "transfer_propensity": 1.3435432
+    },
+    "St Kilda-High": {
+        "coordinates": [
+            144.980724,
+            -37.850244
+        ],
+        "degree_centrality": 0.98536587,
+        "closeness_centrality": 45.05883,
+        "contour_catchment": 12.660818,
+        "nodal_betweenness": 37.622517,
+        "nodal_connectivity": 59.76,
+        "nodal_resilience": 0.07826675,
+        "composite_index": 20.49785,
+        "transfer_propensity": 0.60688365
+    },
+    "St Vincents Plaza": {
+        "coordinates": [
+            144.976281,
+            -37.808243
+        ],
+        "degree_centrality": 0.92439026,
+        "closeness_centrality": 39.902294,
+        "contour_catchment": 15.184732,
+        "nodal_betweenness": 65.59419,
+        "nodal_connectivity": 122.208,
+        "nodal_resilience": -18.21292,
+        "composite_index": 21.37803,
+        "transfer_propensity": 3.4934947
+    },
+    "Sunshine": {
+        "coordinates": [
+            144.832554,
+            -37.788144
+        ],
+        "degree_centrality": 0.80487806,
+        "closeness_centrality": 66.969826,
+        "contour_catchment": 6.3437896,
+        "nodal_betweenness": 40.35095,
+        "nodal_connectivity": 267.708,
+        "nodal_resilience": -1.7286156,
+        "composite_index": 19.144058,
+        "transfer_propensity": 6.4761434
+    },
+    "Swanston-Collins": {
+        "coordinates": [
+            144.966577,
+            -37.815473
+        ],
+        "degree_centrality": 0.7707317,
+        "closeness_centrality": 38.37878,
+        "contour_catchment": 20.116322,
+        "nodal_betweenness": 107.293755,
+        "nodal_connectivity": 206.172,
+        "nodal_resilience": -3.7340028,
+        "composite_index": 26.280344,
+        "transfer_propensity": 18.559864
+    },
+    "Sydenham": {
+        "coordinates": [
+            144.773868,
+            -37.701057
+        ],
+        "degree_centrality": 1.0341463,
+        "closeness_centrality": 98.99525,
+        "contour_catchment": 1.9693443,
+        "nodal_betweenness": 1.9145153,
+        "nodal_connectivity": 0,
+        "nodal_resilience": 2.7782962,
+        "composite_index": 7.5199604,
+        "transfer_propensity": 0
+    },
+    "Toorak Station": {
+        "coordinates": [
+            145.01356,
+            -37.850682
+        ],
+        "degree_centrality": 0.8585366,
+        "closeness_centrality": 44.950535,
+        "contour_catchment": 18.629335,
+        "nodal_betweenness": 119.03231,
+        "nodal_connectivity": 112.086,
+        "nodal_resilience": -11.677877,
+        "composite_index": 23.543795,
+        "transfer_propensity": 2.8487844
+    },
+    "Toorak (Chapel St)": {
+        "coordinates": [
+            144.99551,
+            -37.839485
+        ],
+        "degree_centrality": 1.0439024,
+        "closeness_centrality": 42.630684,
+        "contour_catchment": 14.298014,
+        "nodal_betweenness": 11.30452,
+        "nodal_connectivity": 29.88,
+        "nodal_resilience": -9.575138,
+        "composite_index": 17.77904,
+        "transfer_propensity": 0.58716327
+    },
+    "Toorak (Grange Rd)": {
+        "coordinates": [
+            145.010774,
+            -37.841286
+        ],
+        "degree_centrality": 1.0731708,
+        "closeness_centrality": 52.868343,
+        "contour_catchment": 8.37642,
+        "nodal_betweenness": 2.666983,
+        "nodal_connectivity": 4.98,
+        "nodal_resilience": -4.3746386,
+        "composite_index": 13.141032,
+        "transfer_propensity": 0
+    },
+    "Upfield": {
+        "coordinates": [
+            144.946485,
+            -37.665639
+        ],
+        "degree_centrality": 1.0390244,
+        "closeness_centrality": 93.33734,
+        "contour_catchment": 1.8971143,
+        "nodal_betweenness": 1.5338283,
+        "nodal_connectivity": 0,
+        "nodal_resilience": 1.3591686,
+        "composite_index": 7.547544,
+        "transfer_propensity": 0
+    },
+    "Victoria Park": {
+        "coordinates": [
+            144.994029,
+            -37.799945
+        ],
+        "degree_centrality": 0.8341463,
+        "closeness_centrality": 43.546097,
+        "contour_catchment": 21.024778,
+        "nodal_betweenness": 129.65797,
+        "nodal_connectivity": 433.44,
+        "nodal_resilience": -21.842327,
+        "composite_index": 24.668753,
+        "transfer_propensity": 19.91247
+    },
+    "Wattle Park": {
+        "coordinates": [
+            145.111135,
+            -37.837542
+        ],
+        "degree_centrality": 0.88780487,
+        "closeness_centrality": 70.13912,
+        "contour_catchment": 5.6817465,
+        "nodal_betweenness": 5.521186,
+        "nodal_connectivity": 9,
+        "nodal_resilience": -3.443077,
+        "composite_index": 12.732257,
+        "transfer_propensity": 0.6483885
+    },
+    "Werribee": {
+        "coordinates": [
+            144.660626,
+            -37.899612
+        ],
+        "degree_centrality": 0.91219515,
+        "closeness_centrality": 103.775826,
+        "contour_catchment": 2.1313555,
+        "nodal_betweenness": 2.8616416,
+        "nodal_connectivity": 29.3895,
+        "nodal_resilience": 8.55525,
+        "composite_index": 11.561103,
+        "transfer_propensity": 0.067227066
+    },
+    "West Coburg": {
+        "coordinates": [
+            144.945668,
+            -37.739163
+        ],
+        "degree_centrality": 0.92195123,
+        "closeness_centrality": 71.5151,
+        "contour_catchment": 4.267395,
+        "nodal_betweenness": 7.3451595,
+        "nodal_connectivity": 9.138,
+        "nodal_resilience": -3.8782501,
+        "composite_index": 12.252625,
+        "transfer_propensity": 0.026188424
+    },
+    "West Preston": {
+        "coordinates": [
+            144.989232,
+            -37.743866
+        ],
+        "degree_centrality": 0.9268293,
+        "closeness_centrality": 66.53139,
+        "contour_catchment": 4.1680365,
+        "nodal_betweenness": 14.223691,
+        "nodal_connectivity": 24.165,
+        "nodal_resilience": -8.783644,
+        "composite_index": 13.443997,
+        "transfer_propensity": 0.41019285
+    },
+    "Westgarth": {
+        "coordinates": [
+            144.998663,
+            -37.781229
+        ],
+        "degree_centrality": 0.9902439,
+        "closeness_centrality": 50.78539,
+        "contour_catchment": 6.2062125,
+        "nodal_betweenness": 33.80044,
+        "nodal_connectivity": 55.377,
+        "nodal_resilience": -12.088994,
+        "composite_index": 16.604807,
+        "transfer_propensity": 0.15104304
+    },
+    "William-Bourke": {
+        "coordinates": [
+            144.958218,
+            -37.81569
+        ],
+        "degree_centrality": 0.9317073,
+        "closeness_centrality": 41.215023,
+        "contour_catchment": 15.454625,
+        "nodal_betweenness": 31.505968,
+        "nodal_connectivity": 59.76,
+        "nodal_resilience": -3.6045964,
+        "composite_index": 20.978569,
+        "transfer_propensity": 0.6161641
+    },
+    "William-Lonsdale": {
+        "coordinates": [
+            144.957301,
+            -37.813698
+        ],
+        "degree_centrality": 0.88780487,
+        "closeness_centrality": 41.563877,
+        "contour_catchment": 15.023376,
+        "nodal_betweenness": 18.673521,
+        "nodal_connectivity": 28.548,
+        "nodal_resilience": -3.483126,
+        "composite_index": 19.526659,
+        "transfer_propensity": 0.5643928
+    },
+    "Williamstown": {
+        "coordinates": [
+            144.904933,
+            -37.867665
+        ],
+        "degree_centrality": 0.94634145,
+        "closeness_centrality": 75.31256,
+        "contour_catchment": 2.7195544,
+        "nodal_betweenness": 3.322843,
+        "nodal_connectivity": 0,
+        "nodal_resilience": 3.603327,
+        "composite_index": 9.0324745,
+        "transfer_propensity": 0
+    },
+    "Windsor": {
+        "coordinates": [
+            144.992132,
+            -37.857619
+        ],
+        "degree_centrality": 0.9902439,
+        "closeness_centrality": 45.083584,
+        "contour_catchment": 16.605513,
+        "nodal_betweenness": 67.854965,
+        "nodal_connectivity": 182.64,
+        "nodal_resilience": -10.708737,
+        "composite_index": 22.223263,
+        "transfer_propensity": 4.4069786
+    },
+    "Gladstone Park": {
+        "coordinates": [
+            144.882756,
+            -37.686974
+        ],
+        "degree_centrality": 1.1585366,
+        "closeness_centrality": 97.46634,
+        "contour_catchment": 1.4815655,
+        "nodal_betweenness": 5.8839173,
+        "nodal_connectivity": 6.048,
+        "nodal_resilience": -1.316372,
+        "composite_index": 9.378825,
+        "transfer_propensity": 1.1573157
+    },
+    "Brandon Park": {
+        "coordinates": [
+            145.161405,
+            -37.903583
+        ],
+        "degree_centrality": 1.2365854,
+        "closeness_centrality": 81.93034,
+        "contour_catchment": 3.971821,
+        "nodal_betweenness": 8.618009,
+        "nodal_connectivity": 1.512,
+        "nodal_resilience": -27.99692,
+        "composite_index": 6.4559407,
+        "transfer_propensity": 0
+    },
+    "Keon Park": {
+        "coordinates": [
+            145.011393,
+            -37.694825
+        ],
+        "degree_centrality": 0.9073171,
+        "closeness_centrality": 83.778465,
+        "contour_catchment": 4.177271,
+        "nodal_betweenness": 21.858198,
+        "nodal_connectivity": 53.109,
+        "nodal_resilience": -4.65326,
+        "composite_index": 14.540527,
+        "transfer_propensity": 1.2488849
+    },
+    "Mitcham": {
+        "coordinates": [
+            145.192022,
+            -37.81793
+        ],
+        "degree_centrality": 0.8195122,
+        "closeness_centrality": 82.97463,
+        "contour_catchment": 6.385327,
+        "nodal_betweenness": 27.155231,
+        "nodal_connectivity": 95.424,
+        "nodal_resilience": -7.1796293,
+        "composite_index": 16.10246,
+        "transfer_propensity": 2.8478549
+    },
+    "Milleara": {
+        "coordinates": [
+            144.86209,
+            -37.751044
+        ],
+        "degree_centrality": 1.0585365,
+        "closeness_centrality": 78.53263,
+        "contour_catchment": 1.8842896,
+        "nodal_betweenness": 2.9695678,
+        "nodal_connectivity": 2.079,
+        "nodal_resilience": -7.9462395,
+        "composite_index": 8.071128,
+        "transfer_propensity": 0
+    },
+    "West Heidelberg": {
+        "coordinates": [
+            145.041412,
+            -37.749745
+        ],
+        "degree_centrality": 1.0585365,
+        "closeness_centrality": 84.99888,
+        "contour_catchment": 1.7543856,
+        "nodal_betweenness": 4.4358907,
+        "nodal_connectivity": 2.079,
+        "nodal_resilience": -6.031263,
+        "composite_index": 8.182633,
+        "transfer_propensity": 0
+    },
+    "Blackburn": {
+        "coordinates": [
+            145.150243,
+            -37.820226
+        ],
+        "degree_centrality": 0.87317073,
+        "closeness_centrality": 76.70622,
+        "contour_catchment": 6.801357,
+        "nodal_betweenness": 32.36246,
+        "nodal_connectivity": 69.3,
+        "nodal_resilience": -9.87585,
+        "composite_index": 15.889507,
+        "transfer_propensity": 2.0363681
+    },
+    "Donvale": {
+        "coordinates": [
+            145.173766,
+            -37.790607
+        ],
+        "degree_centrality": 0.96585363,
+        "closeness_centrality": 74.944534,
+        "contour_catchment": 4.643811,
+        "nodal_betweenness": 11.60793,
+        "nodal_connectivity": 6.048,
+        "nodal_resilience": -24.66016,
+        "composite_index": 9.552457,
+        "transfer_propensity": 0.030287797
+    },
+    "The Pines": {
+        "coordinates": [
+            145.168902,
+            -37.763703
+        ],
+        "degree_centrality": 0.9536585,
+        "closeness_centrality": 79.76936,
+        "contour_catchment": 3.8271506,
+        "nodal_betweenness": 8.284288,
+        "nodal_connectivity": 26.46,
+        "nodal_resilience": -18.136108,
+        "composite_index": 11.210676,
+        "transfer_propensity": 0
+    },
+    "Templestowe": {
+        "coordinates": [
+            145.134856,
+            -37.75273
+        ],
+        "degree_centrality": 0.8926829,
+        "closeness_centrality": 74.28083,
+        "contour_catchment": 4.954996,
+        "nodal_betweenness": 11.335686,
+        "nodal_connectivity": 26.46,
+        "nodal_resilience": -12.867839,
+        "composite_index": 12.836592,
+        "transfer_propensity": 1.9213338
+    },
+    "Tullamarine Airport": {
+        "coordinates": [
+            144.848975,
+            -37.672018
+        ],
+        "degree_centrality": 1.4439025,
+        "closeness_centrality": 117.07273,
+        "contour_catchment": 0.8592737,
+        "nodal_betweenness": 2.0798795,
+        "nodal_connectivity": 0,
+        "nodal_resilience": -2.8030949,
+        "composite_index": 5.563044,
+        "transfer_propensity": 0
+    },
+    "Braybrook": {
+        "coordinates": [
+            144.86304,
+            -37.79274
+        ],
+        "degree_centrality": 1.2097561,
+        "closeness_centrality": 72.3167,
+        "contour_catchment": 2.976559,
+        "nodal_betweenness": 4.7310815,
+        "nodal_connectivity": 9.072,
+        "nodal_resilience": -5.7485714,
+        "composite_index": 10.709686,
+        "transfer_propensity": 0
+    },
+    "Altona North": {
+        "coordinates": [
+            144.848626,
+            -37.828035
+        ],
+        "degree_centrality": 1.0585365,
+        "closeness_centrality": 95.9708,
+        "contour_catchment": 1.1118354,
+        "nodal_betweenness": 2.0390804,
+        "nodal_connectivity": 2.079,
+        "nodal_resilience": -2.2249358,
+        "composite_index": 7.5792484,
+        "transfer_propensity": 0
+    },
+    "Balaclava": {
+        "coordinates": [
+            144.993509,
+            -37.868727
+        ],
+        "degree_centrality": 0.9756098,
+        "closeness_centrality": 48.714195,
+        "contour_catchment": 14.207487,
+        "nodal_betweenness": 50.323273,
+        "nodal_connectivity": 94.644,
+        "nodal_resilience": -8.432801,
+        "composite_index": 20.397772,
+        "transfer_propensity": 3.071803
+    },
+    "Craigieburn": {
+        "coordinates": [
+            144.942886,
+            -37.602311
+        ],
+        "degree_centrality": 1,
+        "closeness_centrality": 111.88422,
+        "contour_catchment": 1.7686803,
+        "nodal_betweenness": 0.6570692,
+        "nodal_connectivity": 0,
+        "nodal_resilience": 3.406171,
+        "composite_index": 6.915967,
+        "transfer_propensity": 0
+    },
+    "Elsternwick": {
+        "coordinates": [
+            145.000638,
+            -37.884336
+        ],
+        "degree_centrality": 0.8780488,
+        "closeness_centrality": 55.737026,
+        "contour_catchment": 12.215402,
+        "nodal_betweenness": 33.68891,
+        "nodal_connectivity": 175.284,
+        "nodal_resilience": -6.2857146,
+        "composite_index": 19.87594,
+        "transfer_propensity": 2.0685575
+    },
+    "North Richmond (Victoria St)": {
+        "coordinates": [
+            145.000726,
+            -37.810564
+        ],
+        "degree_centrality": 0.9804878,
+        "closeness_centrality": 46.711487,
+        "contour_catchment": 10.775557,
+        "nodal_betweenness": 14.045797,
+        "nodal_connectivity": 28.884,
+        "nodal_resilience": -3.681978,
+        "composite_index": 17.51336,
+        "transfer_propensity": 0.31040227
+    },
+    "Croydon": {
+        "coordinates": [
+            145.280183,
+            -37.795479
+        ],
+        "degree_centrality": 0.9756098,
+        "closeness_centrality": 111.21466,
+        "contour_catchment": 2.3303905,
+        "nodal_betweenness": 4.4362316,
+        "nodal_connectivity": 10.794,
+        "nodal_resilience": -0.7954114,
+        "composite_index": 10.393341,
+        "transfer_propensity": 0
+    },
+    "Lilydale": {
+        "coordinates": [
+            145.34696,
+            -37.756074
+        ],
+        "degree_centrality": 0.9756098,
+        "closeness_centrality": 139.36168,
+        "contour_catchment": 1.5202802,
+        "nodal_betweenness": 1.3946025,
+        "nodal_connectivity": 0,
+        "nodal_resilience": 1.2547396,
+        "composite_index": 6.5774984,
+        "transfer_propensity": 0
+    },
+    "Bayswater": {
+        "coordinates": [
+            145.267605,
+            -37.841621
+        ],
+        "degree_centrality": 0.97073174,
+        "closeness_centrality": 111.03529,
+        "contour_catchment": 2.5144002,
+        "nodal_betweenness": 7.128212,
+        "nodal_connectivity": 10.794,
+        "nodal_resilience": -0.5894431,
+        "composite_index": 10.794701,
+        "transfer_propensity": 0
+    },
+    "Boronia": {
+        "coordinates": [
+            145.284871,
+            -37.860474
+        ],
+        "degree_centrality": 0.97073174,
+        "closeness_centrality": 119.40105,
+        "contour_catchment": 2.5144002,
+        "nodal_betweenness": 3.9093144,
+        "nodal_connectivity": 10.794,
+        "nodal_resilience": 1.974543,
+        "composite_index": 10.376861,
+        "transfer_propensity": 0
+    },
+    "Belgrave": {
+        "coordinates": [
+            145.355499,
+            -37.909212
+        ],
+        "degree_centrality": 0.97073174,
+        "closeness_centrality": 160.211,
+        "contour_catchment": 1.2158442,
+        "nodal_betweenness": 1.1297747,
+        "nodal_connectivity": 0,
+        "nodal_resilience": 3.8275669,
+        "composite_index": 6.1107836,
+        "transfer_propensity": 0
+    },
+    "Cranbourne": {
+        "coordinates": [
+            145.281495,
+            -38.100474
+        ],
+        "degree_centrality": 0.9756098,
+        "closeness_centrality": 115.82622,
+        "contour_catchment": 3.0663214,
+        "nodal_betweenness": 6.9975066,
+        "nodal_connectivity": 50.526,
+        "nodal_resilience": -4.930528,
+        "composite_index": 12.091656,
+        "transfer_propensity": 0
+    },
+    "Narre Warren": {
+        "coordinates": [
+            145.303611,
+            -38.027448
+        ],
+        "degree_centrality": 0.9609756,
+        "closeness_centrality": 104.85658,
+        "contour_catchment": 3.1986854,
+        "nodal_betweenness": 8.687715,
+        "nodal_connectivity": 34.083,
+        "nodal_resilience": -2.306541,
+        "composite_index": 12.42568,
+        "transfer_propensity": 1.3459119
+    },
+    "Berwick": {
+        "coordinates": [
+            145.344171,
+            -38.038906
+        ],
+        "degree_centrality": 0.96585363,
+        "closeness_centrality": 113.961365,
+        "contour_catchment": 2.584841,
+        "nodal_betweenness": 4.6643944,
+        "nodal_connectivity": 16.191,
+        "nodal_resilience": -0.45098704,
+        "composite_index": 10.990946,
+        "transfer_propensity": 0
+    },
+    "Pakenham": {
+        "coordinates": [
+            145.485749,
+            -38.080824
+        ],
+        "degree_centrality": 0.96585363,
+        "closeness_centrality": 149.58176,
+        "contour_catchment": 1.7059889,
+        "nodal_betweenness": 1.5205367,
+        "nodal_connectivity": 0,
+        "nodal_resilience": 0.21524923,
+        "composite_index": 6.6153893,
+        "transfer_propensity": 0
+    },
+    "Huntingdale": {
+        "coordinates": [
+            145.102445,
+            -37.910953
+        ],
+        "degree_centrality": 0.9414634,
+        "closeness_centrality": 58.986732,
+        "contour_catchment": 7.9141974,
+        "nodal_betweenness": 89.90063,
+        "nodal_connectivity": 111.888,
+        "nodal_resilience": -18.047735,
+        "composite_index": 18.374191,
+        "transfer_propensity": 21.004122
+    },
+    "Laverton": {
+        "coordinates": [
+            144.77289,
+            -37.863846
+        ],
+        "degree_centrality": 0.9170732,
+        "closeness_centrality": 77.35222,
+        "contour_catchment": 3.2591343,
+        "nodal_betweenness": 12.220933,
+        "nodal_connectivity": 24.2865,
+        "nodal_resilience": 4.2683587,
+        "composite_index": 13.527595,
+        "transfer_propensity": 0.2088746
+    },
+    "Mulgrave": {
+        "coordinates": [
+            145.1587,
+            -37.918594
+        ],
+        "degree_centrality": 1.1585366,
+        "closeness_centrality": 71.20568,
+        "contour_catchment": 5.1530666,
+        "nodal_betweenness": 17.759874,
+        "nodal_connectivity": 9.072,
+        "nodal_resilience": -27.325928,
+        "composite_index": 10.072732,
+        "transfer_propensity": 2.1543438
+    },
+    "Port Melbourne (Bay St)": {
+        "coordinates": [
+            144.942326,
+            -37.83868
+        ],
+        "degree_centrality": 1.6097561,
+        "closeness_centrality": 55.83178,
+        "contour_catchment": 7.841648,
+        "nodal_betweenness": 3.0536013,
+        "nodal_connectivity": 1.512,
+        "nodal_resilience": -7.2455907,
+        "composite_index": 10.527279,
+        "transfer_propensity": 0
+    },
+    "Epping Plaza": {
+        "coordinates": [
+            145.017187,
+            -37.651187
+        ],
+        "degree_centrality": 1.4439025,
+        "closeness_centrality": 106.50351,
+        "contour_catchment": 1.1886096,
+        "nodal_betweenness": 2.684246,
+        "nodal_connectivity": 3.087,
+        "nodal_resilience": 2.0227401,
+        "composite_index": 7.6658735,
+        "transfer_propensity": 0
+    },
+    "North Caulfield": {
+        "coordinates": [
+            145.024665,
+            -37.872623
+        ],
+        "degree_centrality": 1.0146341,
+        "closeness_centrality": 54.96261,
+        "contour_catchment": 9.791036,
+        "nodal_betweenness": 12.653035,
+        "nodal_connectivity": 59.76,
+        "nodal_resilience": 0.061644092,
+        "composite_index": 17.586294,
+        "transfer_propensity": 1.1711287
+    },
+    "Victoria Gardens": {
+        "coordinates": [
+            145.009757,
+            -37.811447
+        ],
+        "degree_centrality": 1.0292683,
+        "closeness_centrality": 51.50883,
+        "contour_catchment": 8.99257,
+        "nodal_betweenness": 9.699441,
+        "nodal_connectivity": 8.964,
+        "nodal_resilience": -2.327924,
+        "composite_index": 15.099684,
+        "transfer_propensity": 0
+    },
+    "Chadstone": {
+        "coordinates": [
+            145.083683,
+            -37.887522
+        ],
+        "degree_centrality": 0.99512196,
+        "closeness_centrality": 63.623585,
+        "contour_catchment": 6.425906,
+        "nodal_betweenness": 7.79552,
+        "nodal_connectivity": 7.56,
+        "nodal_resilience": -8.71708,
+        "composite_index": 12.478828,
+        "transfer_propensity": 0.9251621
+    },
+    "Epping": {
+        "coordinates": [
+            145.031344,
+            -37.652397
+        ],
+        "degree_centrality": 0.8926829,
+        "closeness_centrality": 99.5271,
+        "contour_catchment": 2.5864415,
+        "nodal_betweenness": 14.226203,
+        "nodal_connectivity": 79.38,
+        "nodal_resilience": -0.6261151,
+        "composite_index": 13.944745,
+        "transfer_propensity": 2.3574884
+    },
+    "North Balwyn": {
+        "coordinates": [
+            145.070716,
+            -37.792709
+        ],
+        "degree_centrality": 0.9902439,
+        "closeness_centrality": 66.054855,
+        "contour_catchment": 4.062196,
+        "nodal_betweenness": 8.377192,
+        "nodal_connectivity": 24.732,
+        "nodal_resilience": -10.213563,
+        "composite_index": 12.728083,
+        "transfer_propensity": 0
+    },
+    "Williams Landing": {
+        "coordinates": [
+            144.746887,
+            -37.869819
+        ],
+        "degree_centrality": 0.9170732,
+        "closeness_centrality": 86.00627,
+        "contour_catchment": 2.4682603,
+        "nodal_betweenness": 10.216604,
+        "nodal_connectivity": 33.516,
+        "nodal_resilience": 6.1291347,
+        "composite_index": 13.068848,
+        "transfer_propensity": 1.448342
+    },
+    "Werribee Plaza": {
+        "coordinates": [
+            144.679202,
+            -37.876168
+        ],
+        "degree_centrality": 1.8829268,
+        "closeness_centrality": 106.74122,
+        "contour_catchment": 0.9441888,
+        "nodal_betweenness": 2.1059783,
+        "nodal_connectivity": 3.78,
+        "nodal_resilience": 2.489765,
+        "composite_index": 7.2488527,
+        "transfer_propensity": 0.027864369
+    },
+    "Burnside": {
+        "coordinates": [
+            144.748951,
+            -37.747182
+        ],
+        "degree_centrality": 1.8,
+        "closeness_centrality": 114.77166,
+        "contour_catchment": 0.73622555,
+        "nodal_betweenness": 1.2832719,
+        "nodal_connectivity": 0,
+        "nodal_resilience": -1.2949283,
+        "composite_index": 5.223517,
+        "transfer_propensity": 0
+    },
+    "Point Cook": {
+        "coordinates": [
+            144.732735,
+            -37.884423
+        ],
+        "degree_centrality": 1.9121951,
+        "closeness_centrality": 111.246,
+        "contour_catchment": 0.14969319,
+        "nodal_betweenness": 0.7125848,
+        "nodal_connectivity": 0,
+        "nodal_resilience": 6.038991,
+        "composite_index": 4.519374,
+        "transfer_propensity": 0
+    },
+    "Fountain Gate": {
+        "coordinates": [
+            145.30663,
+            -38.0204
+        ],
+        "degree_centrality": 1.9560976,
+        "closeness_centrality": 115.013954,
+        "contour_catchment": 0.18886568,
+        "nodal_betweenness": 0.6886451,
+        "nodal_connectivity": 0,
+        "nodal_resilience": -0.7998121,
+        "composite_index": 4.3908615,
+        "transfer_propensity": 0
+    },
+    "Mernda": {
+        "coordinates": [
+            145.095724,
+            -37.600612
+        ],
+        "degree_centrality": 1.8780488,
+        "closeness_centrality": 150.25696,
+        "contour_catchment": 0.48402452,
+        "nodal_betweenness": 0.41888916,
+        "nodal_connectivity": 0,
+        "nodal_resilience": 1.2075366,
+        "composite_index": 4.3527365,
+        "transfer_propensity": 0
+    },
+    "Tarneit": {
+        "coordinates": [
+            144.692529,
+            -37.830318
+        ],
+        "degree_centrality": 1.2170732,
+        "closeness_centrality": 81.543755,
+        "contour_catchment": 2.9428136,
+        "nodal_betweenness": 8.812631,
+        "nodal_connectivity": 51.975,
+        "nodal_resilience": 0.25134522,
+        "composite_index": 13.280724,
+        "transfer_propensity": 2.3739202
+    },
+    "Wyndham Vale": {
+        "coordinates": [
+            144.609457,
+            -37.871324
+        ],
+        "degree_centrality": 1.2219512,
+        "closeness_centrality": 96.068855,
+        "contour_catchment": 2.0887234,
+        "nodal_betweenness": 1.1421584,
+        "nodal_connectivity": 33.516,
+        "nodal_resilience": 3.585055,
+        "composite_index": 11.022429,
+        "transfer_propensity": 0
+    },
+    "Deer Park": {
+        "coordinates": [
+            144.772463,
+            -37.777647
+        ],
+        "degree_centrality": 1.2365854,
+        "closeness_centrality": 66.94653,
+        "contour_catchment": 2.1047785,
+        "nodal_betweenness": 2.1926408,
+        "nodal_connectivity": 0,
+        "nodal_resilience": 1.8514652,
+        "composite_index": 8.476659,
+        "transfer_propensity": 0
+    },
+    "Karingal": {
+        "coordinates": [
+            145.164542,
+            -38.154716
+        ],
+        "degree_centrality": 1.8146342,
+        "closeness_centrality": 137.90996,
+        "contour_catchment": 0.9438009,
+        "nodal_betweenness": 1.227985,
+        "nodal_connectivity": 2.268,
+        "nodal_resilience": 3.7453027,
+        "composite_index": 6.0671268,
+        "transfer_propensity": 0
+    },
+    "Hampton Park": {
+        "coordinates": [
+            145.267265,
+            -38.035597
+        ],
+        "degree_centrality": 1.8536586,
+        "closeness_centrality": 108.103294,
+        "contour_catchment": 2.187469,
+        "nodal_betweenness": 1.9175642,
+        "nodal_connectivity": 1.134,
+        "nodal_resilience": -8.307037,
+        "composite_index": 5.67082,
+        "transfer_propensity": 0
+    },
+    "Elizabeth-Bourke": {
+        "coordinates": [
+            144.962672,
+            -37.813105
+        ],
+        "degree_centrality": 0.79512197,
+        "closeness_centrality": 39.116196,
+        "contour_catchment": 19.53816,
+        "nodal_betweenness": 74.76085,
+        "nodal_connectivity": 254.01,
+        "nodal_resilience": -4.1629586,
+        "composite_index": 25.338522,
+        "transfer_propensity": 12.084461
+    },
+    "Swanston-Bourke": {
+        "coordinates": [
+            144.965163,
+            -37.812429
+        ],
+        "degree_centrality": 0.6878049,
+        "closeness_centrality": 38.948364,
+        "contour_catchment": 19.57204,
+        "nodal_betweenness": 77.51818,
+        "nodal_connectivity": 495.054,
+        "nodal_resilience": -1.3997856,
+        "composite_index": 26.82922,
+        "transfer_propensity": 8.266429
+    },
+    "Market-Collins": {
+        "coordinates": [
+            144.960164,
+            -37.817308
+        ],
+        "degree_centrality": 0.8487805,
+        "closeness_centrality": 39.734974,
+        "contour_catchment": 16.391191,
+        "nodal_betweenness": 71.49007,
+        "nodal_connectivity": 180.33,
+        "nodal_resilience": -7.191127,
+        "composite_index": 23.71837,
+        "transfer_propensity": 9.246597
+    }
+}

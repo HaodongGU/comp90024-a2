@@ -1,5 +1,6 @@
 {
     "token":"CIVg2xXqiSINoF2wlh2RMkk-L6GyRKTiY-RaXzRgm90",
     "url": "https://mastodon.world",
-    "db": "mastodon_t1"
+    "db": "mastodon_t1",
+    "server": "172.26.134.190"
 }

@@ -7,8 +7,8 @@ instance_flavor: uom.mse.1c4g
 
 # Volume
 volumes:
-  - vol_name: vol-backend
-    vol_size: 100
+  - vol_name: vol-demo
+    vol_size: 10
 
 # Security group
 security_groups:
@@ -39,6 +39,6 @@ security_groups:
 
 # Instance
 instances:
-  - name: backend
-    volumes: ["vol-backend"]
+  - name: demo
+    volumes: ["vol-demo"]
 
