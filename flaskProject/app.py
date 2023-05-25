@@ -1,3 +1,12 @@
+# Team: Group 68
+# City: Melbourne
+# Team members:
+# Jiashu Wu 1041990
+# Junjie Wang 1045793
+# Ruixiang Tang 1298221
+# Haodong Gu 1039081
+# Changwen Li 1360219
+
 from collections import defaultdict
 
 from flask import Flask, render_template, jsonify
@@ -21,18 +30,15 @@ hosts = ["172.26.135.221", "172.26.130.7", "172.26.134.190"]
 couches = [couchdb.Server(f"http://{admin}:{password}@{host}:5984/") for host in hosts]
 print("Connected to couchdb.")
 
-
 def get_db(name):
     for couch in couches:
         try:
             return couch[name]
         except Exception:
-            # if exception occurs, try next couch connection
-            continue
+            continue  # if exception occurs, try next couch connection
     raise Exception("No valid couchdb connection.")
 
 
-# total_sport_facility_suburb_db = couch['total_number_of_facility_suburb']
 sport_facility_suburb_db = get_db('sports_facility_suburb')
 public_transport_db = get_db('transport')
 employment_db = get_db('employment')
@@ -40,6 +46,7 @@ income_db = get_db('income')
 population_db = get_db('population_sa2_data')
 age_db = get_db('median_age_sa2_data')
 crime_db = get_db('crime_data')
+
 
 @app.route('/')
 def hello_world():  # put application's code here
