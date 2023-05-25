@@ -144,6 +144,8 @@ function BarChart() {
 const BoxPlotChart = () => {
   // Define the data for two sets
   const [data, setData] = useState([]);
+  // const browserWidth = window.innerWidth;
+  // console.log("browser width: !!!!!!!!!!!!!!!!!!!",browserWidth);
 
   // let tempData0 = [
   //   {
@@ -250,7 +252,7 @@ const BoxPlotChart = () => {
   };
 
   return (
-    <div>
+    <div style={{width:'75vw'}}>
       <h2>Sentiment Value of Different Topics</h2>
       <Plot data={data} layout={layout} />
     </div>
@@ -372,7 +374,7 @@ const PieChart = (props) => {
         </select>
         {/* <p>Selected: {selectedOption}</p> */}
       </div>
-      <div style={{ width: '600px', height: '600px'}}>
+      <div style={{ width: '100%'}}>
         <Pie data={rawData} options={options}/>
       </div>
     </div>
