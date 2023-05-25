@@ -3,6 +3,7 @@ FROM node:12-alpine
 
 # Set the working directory in the container
 WORKDIR /app
+ENV NODE_OPTIONS=--max_old_space_size=8196
 
 # Copy the package.json and package-lock.json files to the container
 COPY package*.json ./

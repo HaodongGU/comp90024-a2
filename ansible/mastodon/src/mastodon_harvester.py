@@ -23,7 +23,7 @@ with open('mastodon_info.json', 'r') as f:
 
 
     def upload2couchdb(toot):
-        couch = couchdb.Server('http://admin:admin@172.26.134.190:5984/')
+        couch = couchdb.Server('http://admin:admin@'+config["server"]+':5984/')
         try:
             db = couch.create(config["db"])
         except:

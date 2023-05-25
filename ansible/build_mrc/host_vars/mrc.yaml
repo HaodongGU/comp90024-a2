@@ -7,7 +7,7 @@ instance_flavor: uom.mse.1c4g
 
 # Volume
 volumes:
-  - vol_name: vol-backend
+  - vol_name: vol-demo
     vol_size: 100
 
 # Security group
@@ -33,12 +33,12 @@ security_groups:
   - name: backend
     description: "security group for cluster"
     protocol: tcp
-    port_range_min: 5000
-    port_range_max: 5000
+    port_range_min: 3000
+    port_range_max: 3000
     remote_ip_prefix: 0.0.0.0/0
 
 # Instance
 instances:
-  - name: backend
-    volumes: ["vol-backend"]
+  - name: demo
+    volumes: ["vol-demo"]
 
