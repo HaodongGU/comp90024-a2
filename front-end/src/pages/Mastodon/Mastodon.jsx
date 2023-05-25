@@ -38,15 +38,17 @@ function BarChart() {
     datasets: [
       {
         label: 'Mastodon Topics and Their Percentages',
-        backgroundColor: 'rgba(75,192,192,0.4)',
-        borderColor: 'rgba(75,192,192,1)',
+        // backgroundColor: 'rgba(255,99,132,0.4)',
+        // borderColor: 'rgba(255,99,132,1)',
+        backgroundColor: 'rgba(255, 99, 132, 0.5)',
+        borderColor: 'rgba(255, 99, 132, 0.5)',
         borderWidth: 1,
         data: mastPercentage, // Replace with your actual data values for Dataset 1
       },
       {
         label: 'Twitter Topics and Their Percentages',
-        backgroundColor: 'rgba(255,99,132,0.4)',
-        borderColor: 'rgba(255,99,132,1)',
+        backgroundColor: 'rgba(54, 162, 235, 0.5)',
+        borderColor: 'rgba(54, 162, 235, 0.5)',
         borderWidth: 1,
         data: twitterPercentage, // Replace with your actual data values for Dataset 2
       },
@@ -135,7 +137,7 @@ function BarChart() {
     <div>
       <h2>Proportions of Different Topics in Mastodon and Twitter Data</h2>
       <div style={{backgroundColor: 'white', color: 'black'}}>
-        <Bar data={data} options={options}/>
+        <Bar data={data} options={options} width={window.innerWidth} height={window.innerHeight*0.9}/>
       </div>
     </div>
   );
@@ -144,6 +146,8 @@ function BarChart() {
 const BoxPlotChart = () => {
   // Define the data for two sets
   const [data, setData] = useState([]);
+  // const browserWidth = window.innerWidth;
+  // console.log("browser width: !!!!!!!!!!!!!!!!!!!",browserWidth);
 
   // let tempData0 = [
   //   {
@@ -229,8 +233,8 @@ const BoxPlotChart = () => {
     title: 'Sentiment Value of Different Topics',
     yaxis: { title: 'Sentiment Value' },
     showlegend: true,
-    height: 600,
-    width: 1340,
+    height: window.innerHeight*0.8,
+    width: window.innerWidth*0.9 - 17.5,
     margin: {
       // l: 50,
       // r: 20,
@@ -250,7 +254,7 @@ const BoxPlotChart = () => {
   };
 
   return (
-    <div>
+    <div >
       <h2>Sentiment Value of Different Topics</h2>
       <Plot data={data} layout={layout} />
     </div>
@@ -359,7 +363,7 @@ const PieChart = (props) => {
   }
 
   return (
-    <div style={{flex:1}}>
+    <div style={{flex:1, width:'100%'}}>
       <p>Please choose a sentiment interval of <i><b>{props.source}</b></i> data: </p>
       <div >
         <select value={selectedOption} onChange={handleChange} style={{fontSize:'16px'}}>
@@ -372,7 +376,7 @@ const PieChart = (props) => {
         </select>
         {/* <p>Selected: {selectedOption}</p> */}
       </div>
-      <div style={{ width: '600px', height: '600px'}}>
+      <div >
         <Pie data={rawData} options={options}/>
       </div>
     </div>
