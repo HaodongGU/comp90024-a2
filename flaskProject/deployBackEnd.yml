@@ -1,0 +1,41 @@
+---
+- hosts: backend
+  become: yes
+  tasks:
+    - name: Ensure old container is removed
+      docker_container:
+        name: my_flask_app
+        state: absent
+        force_kill: yes
+        stop_timeout: 5
+
+
+    - name: Copy app.py
+      copy:
+        src: /Users/rex/Desktop/Comp90024_CCC/Assignment2/flaskProject/app.py
+        dest: /home/ubuntu/flaskDocker/app.py
+
+    - name: Copy Dockerfile
+      copy:
+        src: /Users/rex/Desktop/Comp90024_CCC/Assignment2/flaskProject/Dockerfile
+        dest: /home/ubuntu/flaskDocker/Dockerfile
+
+    - name: Copy requirements.txt
+      copy:
+        src: /Users/rex/Desktop/Comp90024_CCC/Assignment2/flaskProject/requirements.txt
+        dest: /home/ubuntu/flaskDocker/requirements.txt
+
+    - name: Build Docker image
+      docker_image:
+        build:
+          path: /home/ubuntu/flaskDocker
+          dockerfile: Dockerfile
+        name: flask_docker
+        source: build
+
+
+    - name: Run Docker container
+      docker_container:
+        name: my_flask_app
+        image: flask_docker
+        published_ports: 5000:5000
