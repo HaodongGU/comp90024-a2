@@ -1,0 +1,87 @@
+,FID,sa4_code11,sa4_name11,ste_code11,ste_name11,employed_fulltime,employed_parttime,not_in_labour_force,unemployed_total
+0,djsb_population_by_labour_force_status_sa4_2018.101,101,Capital Region,1,New South Wales,69300,40900,70500,5700
+1,djsb_population_by_labour_force_status_sa4_2018.102,102,Central Coast,1,New South Wales,113900,56000,96600,10600
+2,djsb_population_by_labour_force_status_sa4_2018.103,103,Central West,1,New South Wales,70400,30600,63700,5600
+3,djsb_population_by_labour_force_status_sa4_2018.104,104,Coffs Harbour - Grafton,1,New South Wales,41000,20300,48600,5800
+4,djsb_population_by_labour_force_status_sa4_2018.105,105,Far West and Orana,1,New South Wales,45600,10700,35000,1800
+5,djsb_population_by_labour_force_status_sa4_2018.106,106,Hunter Valley exc Newcastle,1,New South Wales,90700,44500,73900,8000
+6,djsb_population_by_labour_force_status_sa4_2018.107,107,Illawarra,1,New South Wales,93700,52100,99500,6700
+7,djsb_population_by_labour_force_status_sa4_2018.108,108,Mid North Coast,1,New South Wales,57300,36100,85100,4500
+8,djsb_population_by_labour_force_status_sa4_2018.109,109,Murray,1,New South Wales,30900,18900,42000,4800
+9,djsb_population_by_labour_force_status_sa4_2018.110,110,New England and North West,1,New South Wales,56300,25400,62000,5800
+10,djsb_population_by_labour_force_status_sa4_2018.111,111,Newcastle and Lake Macquarie,1,New South Wales,122300,60300,112500,11000
+11,djsb_population_by_labour_force_status_sa4_2018.112,112,Richmond - Tweed,1,New South Wales,64000,52300,84100,5900
+12,djsb_population_by_labour_force_status_sa4_2018.113,113,Riverina,1,New South Wales,55500,24900,42800,5100
+13,djsb_population_by_labour_force_status_sa4_2018.114,114,Southern Highlands and Shoalhaven,1,New South Wales,37800,18400,66300,4600
+14,djsb_population_by_labour_force_status_sa4_2018.115,115,Sydney - Baulkham Hills and Hawkesbury,1,New South Wales,98100,43300,45900,4100
+15,djsb_population_by_labour_force_status_sa4_2018.116,116,Sydney - Blacktown,1,New South Wales,135400,47700,89100,9900
+16,djsb_population_by_labour_force_status_sa4_2018.117,117,Sydney - City and Inner South,1,New South Wales,183600,46500,84200,10000
+17,djsb_population_by_labour_force_status_sa4_2018.118,118,Sydney - Eastern Suburbs,1,New South Wales,122900,46500,72300,4900
+18,djsb_population_by_labour_force_status_sa4_2018.119,119,Sydney - Inner South West,1,New South Wales,198100,91900,194800,17100
+19,djsb_population_by_labour_force_status_sa4_2018.120,120,Sydney - Inner West,1,New South Wales,136200,47000,76100,9000
+20,djsb_population_by_labour_force_status_sa4_2018.121,121,Sydney - North Sydney and Hornsby,1,New South Wales,168000,70700,108000,9100
+21,djsb_population_by_labour_force_status_sa4_2018.122,122,Sydney - Northern Beaches,1,New South Wales,101900,46400,65800,4800
+22,djsb_population_by_labour_force_status_sa4_2018.123,123,Sydney - Outer South West,1,New South Wales,101700,37400,72900,5600
+23,djsb_population_by_labour_force_status_sa4_2018.124,124,Sydney - Outer West and Blue Mountains,1,New South Wales,119400,47000,82600,6100
+24,djsb_population_by_labour_force_status_sa4_2018.125,125,Sydney - Parramatta,1,New South Wales,161200,64800,150300,14100
+25,djsb_population_by_labour_force_status_sa4_2018.126,126,Sydney - Ryde,1,New South Wales,73300,32400,53800,3800
+26,djsb_population_by_labour_force_status_sa4_2018.127,127,Sydney - South West,1,New South Wales,140300,49600,145700,12600
+27,djsb_population_by_labour_force_status_sa4_2018.128,128,Sydney - Sutherland,1,New South Wales,79000,42000,58700,3300
+28,djsb_population_by_labour_force_status_sa4_2018.201,201,Ballarat,2,Victoria,47700,28000,54400,3300
+29,djsb_population_by_labour_force_status_sa4_2018.202,202,Bendigo,2,Victoria,46100,25200,53100,4600
+30,djsb_population_by_labour_force_status_sa4_2018.203,203,Geelong,2,Victoria,91900,47000,94100,8600
+31,djsb_population_by_labour_force_status_sa4_2018.204,204,Hume,2,Victoria,55400,29100,54400,3200
+32,djsb_population_by_labour_force_status_sa4_2018.205,205,Latrobe - Gippsland,2,Victoria,78800,47400,94700,9300
+33,djsb_population_by_labour_force_status_sa4_2018.206,206,Melbourne - Inner,2,Victoria,299400,116600,161200,20700
+34,djsb_population_by_labour_force_status_sa4_2018.207,207,Melbourne - Inner East,2,Victoria,119400,81700,112500,12100
+35,djsb_population_by_labour_force_status_sa4_2018.208,208,Melbourne - Inner South,2,Victoria,151100,77000,120400,9100
+36,djsb_population_by_labour_force_status_sa4_2018.209,209,Melbourne - North East,2,Victoria,190600,92000,141600,13500
+37,djsb_population_by_labour_force_status_sa4_2018.210,210,Melbourne - North West,2,Victoria,127400,61700,117900,12800
+38,djsb_population_by_labour_force_status_sa4_2018.211,211,Melbourne - Outer East,2,Victoria,188100,96100,136600,11500
+39,djsb_population_by_labour_force_status_sa4_2018.212,212,Melbourne - South East,2,Victoria,294100,126100,221400,26700
+40,djsb_population_by_labour_force_status_sa4_2018.213,213,Melbourne - West,2,Victoria,268300,119000,216100,34600
+41,djsb_population_by_labour_force_status_sa4_2018.214,214,Mornington Peninsula,2,Victoria,97900,48400,95700,7900
+42,djsb_population_by_labour_force_status_sa4_2018.215,215,North West,2,Victoria,53300,24800,43600,3100
+43,djsb_population_by_labour_force_status_sa4_2018.216,216,Shepparton,2,Victoria,41400,21700,41000,3800
+44,djsb_population_by_labour_force_status_sa4_2018.217,217,Warrnambool and South West,2,Victoria,42900,24800,32200,2500
+45,djsb_population_by_labour_force_status_sa4_2018.301,301,Brisbane - East,3,Queensland,89700,35800,57500,6700
+46,djsb_population_by_labour_force_status_sa4_2018.302,302,Brisbane - North,3,Queensland,87100,36200,49000,7200
+47,djsb_population_by_labour_force_status_sa4_2018.303,303,Brisbane - South,3,Queensland,137200,62300,91400,11100
+48,djsb_population_by_labour_force_status_sa4_2018.304,304,Brisbane - West,3,Queensland,58300,33600,55500,5800
+49,djsb_population_by_labour_force_status_sa4_2018.305,305,Brisbane Inner City,3,Queensland,114800,50200,65900,6900
+50,djsb_population_by_labour_force_status_sa4_2018.306,306,Cairns,3,Queensland,77400,38400,78700,8100
+51,djsb_population_by_labour_force_status_sa4_2018.307,307,Darling Downs - Maranoa,3,Queensland,45000,18500,35800,3100
+52,djsb_population_by_labour_force_status_sa4_2018.308,308,Fitzroy,3,Queensland,78400,31700,57500,7800
+53,djsb_population_by_labour_force_status_sa4_2018.309,309,Gold Coast,3,Queensland,220000,112000,157800,15300
+54,djsb_population_by_labour_force_status_sa4_2018.310,310,Ipswich,3,Queensland,117600,45000,90900,14300
+55,djsb_population_by_labour_force_status_sa4_2018.311,311,Logan - Beaudesert,3,Queensland,108800,49400,91600,11500
+56,djsb_population_by_labour_force_status_sa4_2018.312,312,Mackay,3,Queensland,73200,25200,34100,3400
+57,djsb_population_by_labour_force_status_sa4_2018.313,313,Moreton Bay - North,3,Queensland,74700,38300,77800,10600
+58,djsb_population_by_labour_force_status_sa4_2018.314,314,Moreton Bay - South,3,Queensland,75700,33600,47300,6000
+59,djsb_population_by_labour_force_status_sa4_2018.315,315,Queensland - Outback,3,Queensland,26500,5800,24800,4200
+60,djsb_population_by_labour_force_status_sa4_2018.316,316,Sunshine Coast,3,Queensland,110300,67700,116200,11800
+61,djsb_population_by_labour_force_status_sa4_2018.317,317,Toowoomba,3,Queensland,51700,24100,44000,4300
+62,djsb_population_by_labour_force_status_sa4_2018.318,318,Townsville,3,Queensland,72900,35400,64600,11300
+63,djsb_population_by_labour_force_status_sa4_2018.319,319,Wide Bay,3,Queensland,76900,36300,119800,11500
+64,djsb_population_by_labour_force_status_sa4_2018.401,401,Adelaide - Central and Hills,4,South Australia,102400,54600,87700,6800
+65,djsb_population_by_labour_force_status_sa4_2018.402,402,Adelaide - North,4,South Australia,130800,69200,133800,15700
+66,djsb_population_by_labour_force_status_sa4_2018.403,403,Adelaide - South,4,South Australia,109800,67200,112700,11500
+67,djsb_population_by_labour_force_status_sa4_2018.404,404,Adelaide - West,4,South Australia,80600,39300,70400,8000
+68,djsb_population_by_labour_force_status_sa4_2018.405,405,Barossa - Yorke - Mid North,4,South Australia,32400,17900,41100,3200
+69,djsb_population_by_labour_force_status_sa4_2018.406,406,South Australia - Outback,4,South Australia,27600,12900,24800,2400
+70,djsb_population_by_labour_force_status_sa4_2018.407,407,South Australia - South East,4,South Australia,58800,34400,61800,4100
+71,djsb_population_by_labour_force_status_sa4_2018.501,501,Bunbury,5,Western Australia,59800,38200,40800,6400
+72,djsb_population_by_labour_force_status_sa4_2018.502,502,Mandurah,5,Western Australia,25400,13800,40400,3700
+73,djsb_population_by_labour_force_status_sa4_2018.503,503,Perth - Inner,5,Western Australia,69800,35500,42700,4400
+74,djsb_population_by_labour_force_status_sa4_2018.504,504,Perth - North East,5,Western Australia,96000,40200,67800,10400
+75,djsb_population_by_labour_force_status_sa4_2018.505,505,Perth - North West,5,Western Australia,201700,95600,136700,20300
+76,djsb_population_by_labour_force_status_sa4_2018.506,506,Perth - South East,5,Western Australia,181400,86600,131300,17500
+77,djsb_population_by_labour_force_status_sa4_2018.507,507,Perth - South West,5,Western Australia,138800,73000,114800,15400
+78,djsb_population_by_labour_force_status_sa4_2018.508,508,Western Australia - Outback,5,Western Australia,87100,29400,40500,7600
+79,djsb_population_by_labour_force_status_sa4_2018.509,509,Western Australia - Wheat Belt,5,Western Australia,43100,22900,42700,2200
+80,djsb_population_by_labour_force_status_sa4_2018.601,601,Hobart,6,Tasmania,69800,42800,68200,7200
+81,djsb_population_by_labour_force_status_sa4_2018.602,602,Launceston and North East,6,Tasmania,41800,26700,47200,4100
+82,djsb_population_by_labour_force_status_sa4_2018.603,603,South East,6,Tasmania,11200,6100,13900,1000
+83,djsb_population_by_labour_force_status_sa4_2018.604,604,West and North West,6,Tasmania,32900,17300,38400,3400
+84,djsb_population_by_labour_force_status_sa4_2018.701,701,Darwin,7,Northern Territory,69300,17300,25500,3300
+85,djsb_population_by_labour_force_status_sa4_2018.702,702,Northern Territory - Outback,7,Northern Territory,40300,11100,19800,2800
