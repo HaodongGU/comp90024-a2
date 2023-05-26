@@ -40,5 +40,5 @@ https://youtu.be/jPuNLwwAvxo
 | Junjie Wang   | Data collection, Data preprocessing, Topic classification, Sentiment analysis, Mastodon harvester deployment, CouchDB deployment, Perform data analysis 
 | Ruixiang Tang | Data collection, Backend development with MapReduce, Ansible for Backend, Docker for Backend 
 | Haodong Gu    | Data collection, Ansible for MRC, Ansible for Mastodon Harvester, Configure Couchdb Cluster, Docker for front-end 
-| Changwen Li   | Data collection, Frontend development 
+| Changwen Li   | Data collection, Frontend development, Frontend Deployment with Nginx and NPM, Demo Recording
 
