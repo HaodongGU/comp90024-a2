@@ -32,3 +32,13 @@ https://youtu.be/jPuNLwwAvxo
 - README.md
 
 
+## Team member && contribution
+
+| Name          |           Contribution                  
+|---------------|-------------------------------------------
+| Jiashu Wu     | Data collection, Data preprocessing, CouchDB deployment, CouchDB replication, Perform data analysis 
+| Junjie Wang   | Data collection, Data preprocessing, Topic classification, Sentiment analysis, Mastodon harvester deployment, CouchDB deployment, Perform data analysis 
+| Ruixiang Tang | Data collection, Backend development with MapReduce, Ansible for Backend, Docker for Backend 
+| Haodong Gu    | Data collection, Ansible for MRC, Ansible for Mastodon Harvester, Configure Couchdb Cluster, Docker for front-end 
+| Changwen Li   | Data collection, Frontend development 
+
