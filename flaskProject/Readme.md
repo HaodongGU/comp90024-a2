@@ -1,1 +1,1 @@
-# Deploy the backend by simply run ./runBackENd.sh
+# Deploy the backend by simply run ./runBackEnd.sh
